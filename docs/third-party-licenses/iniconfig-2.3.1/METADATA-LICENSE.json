@@ -1,0 +1,36 @@
+{
+  "Name": [
+    "iniconfig"
+  ],
+  "Version": [
+    "2.3.1"
+  ],
+  "License-Expression": [
+    "MIT"
+  ],
+  "License-File": [
+    "LICENSE"
+  ],
+  "Project-URL": [
+    "Homepage, https://github.com/pytest-dev/iniconfig"
+  ],
+  "Author-email": [
+    "Ronny Pfannschmidt <opensource@ronnypfannschmidt.de>, Holger Krekel <holger.krekel@gmail.com>"
+  ],
+  "Classifier": [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Utilities"
+  ]
+}

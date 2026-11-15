@@ -1,0 +1,16 @@
+import numpy as np
+r = np.array([-.02, -.01, 0., .01, .12])
+mean = r.mean()
+median = np.median(r)
+population = np.std(r, ddof=0)
+sample = np.std(r, ddof=1)
+print("均值/中位数", mean, median)
+print("总体/样本标准差", population, sample)
+print("25%、75%分位", np.quantile(r, [.25, .75], method="linear"))
+np.testing.assert_allclose(mean, .02)
+np.testing.assert_allclose(median, 0)
+np.testing.assert_allclose(sample, population * np.sqrt(5 / 4))
+without_extreme = r[:-1].mean()
+print("删去最后一条后的均值", without_extreme)
+np.testing.assert_allclose(without_extreme, -.005)
+

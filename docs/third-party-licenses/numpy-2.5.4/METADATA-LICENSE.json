@@ -1,0 +1,62 @@
+{
+  "Name": [
+    "numpy"
+  ],
+  "Version": [
+    "2.5.4"
+  ],
+  "License-Expression": [
+    "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0"
+  ],
+  "License-File": [
+    "LICENSE.txt",
+    "numpy/_core/include/numpy/libdivide/LICENSE.txt",
+    "numpy/_core/src/common/pythoncapi-compat/COPYING",
+    "numpy/_core/src/highway/LICENSE",
+    "numpy/_core/src/multiarray/dragon4_LICENSE.txt",
+    "numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+    "numpy/_core/src/umath/svml/LICENSE",
+    "numpy/fft/pocketfft/LICENSE.md",
+    "numpy/linalg/lapack_lite/LICENSE.txt",
+    "numpy/ma/LICENSE",
+    "numpy/random/LICENSE.md",
+    "numpy/random/src/distributions/LICENSE.md",
+    "numpy/random/src/mt19937/LICENSE.md",
+    "numpy/random/src/pcg64/LICENSE.md",
+    "numpy/random/src/philox/LICENSE.md",
+    "numpy/random/src/sfc64/LICENSE.md",
+    "numpy/random/src/splitmix64/LICENSE.md"
+  ],
+  "Project-URL": [
+    "homepage, https://numpy.org",
+    "documentation, https://numpy.org/doc/",
+    "source, https://github.com/numpy/numpy",
+    "download, https://pypi.org/project/numpy/#files",
+    "tracker, https://github.com/numpy/numpy/issues",
+    "release notes, https://numpy.org/doc/stable/release"
+  ],
+  "Author": [
+    "Travis E. Oliphant et al."
+  ],
+  "Classifier": [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Programming Language :: C",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Software Development",
+    "Topic :: Scientific/Engineering",
+    "Typing :: Typed",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Operating System :: MacOS"
+  ]
+}

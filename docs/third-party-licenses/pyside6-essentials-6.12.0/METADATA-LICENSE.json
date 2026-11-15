@@ -1,0 +1,52 @@
+{
+  "Name": [
+    "PySide6_Essentials"
+  ],
+  "Version": [
+    "6.12.0"
+  ],
+  "License": [
+    "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only"
+  ],
+  "License-File": [
+    "LicenseRef-Qt-Commercial.txt"
+  ],
+  "Project-URL": [
+    "Homepage, https://pyside.org",
+    "Documentation, https://doc.qt.io/qtforpython",
+    "Repository, https://code.qt.io/cgit/pyside/pyside-setup.git/",
+    "Changelog, https://code.qt.io/cgit/pyside/pyside-setup.git/tree/doc/changelogs",
+    "Tracker, https://qt-project.atlassian.net/browse/PYSIDE"
+  ],
+  "Author-email": [
+    "Qt for Python Team <pyside@qt-project.org>"
+  ],
+  "Classifier": [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Environment :: MacOS X",
+    "Environment :: X11 Applications :: Qt",
+    "Environment :: Win32 (MS Windows)",
+    "Intended Audience :: Developers",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: POSIX",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: C++",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+    "Topic :: Database",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Software Development :: User Interfaces",
+    "Topic :: Software Development :: Widget Sets"
+  ]
+}

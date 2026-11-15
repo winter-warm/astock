@@ -1,0 +1,43 @@
+{
+  "Name": [
+    "idna"
+  ],
+  "Version": [
+    "3.20"
+  ],
+  "License-Expression": [
+    "BSD-3-Clause"
+  ],
+  "License-File": [
+    "LICENSE.md"
+  ],
+  "Project-URL": [
+    "Changelog, https://github.com/kjd/idna/blob/master/HISTORY.md",
+    "Issue tracker, https://github.com/kjd/idna/issues",
+    "Source, https://github.com/kjd/idna"
+  ],
+  "Author-email": [
+    "Kim Davies <kim+pypi@gumleaf.org>"
+  ],
+  "Classifier": [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Internet :: Name Service (DNS)",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "Name": [
+    "tzdata"
+  ],
+  "Version": [
+    "2026.6"
+  ],
+  "License": [
+    "Apache-2.0"
+  ],
+  "License-File": [
+    "LICENSE",
+    "licenses/LICENSE_APACHE"
+  ],
+  "Home-page": [
+    "https://github.com/python/tzdata"
+  ],
+  "Project-URL": [
+    "Bug Reports, https://github.com/python/tzdata/issues",
+    "Source, https://github.com/python/tzdata",
+    "Documentation, https://tzdata.python.org"
+  ],
+  "Author": [
+    "Python Software Foundation"
+  ],
+  "Author-email": [
+    "datetime-sig@python.org"
+  ],
+  "Classifier": [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 2",
+    "Programming Language :: Python :: 3"
+  ]
+}

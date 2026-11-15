@@ -1,0 +1,39 @@
+{
+  "error": "",
+  "passed": true,
+  "searches": [
+    {
+      "query": "浦发",
+      "count": 1,
+      "filter_ms": 1.28
+    },
+    {
+      "query": "000001",
+      "count": 1,
+      "filter_ms": 1.04
+    },
+    {
+      "query": "沪深300",
+      "count": 1,
+      "filter_ms": 1.22
+    },
+    {
+      "query": "sh510300",
+      "count": 1,
+      "filter_ms": 0.98
+    }
+  ],
+  "device_pixel_ratio": 1.5,
+  "window": [
+    880,
+    620
+  ],
+  "timer_max_gap_ms": 47.91,
+  "records": 14,
+  "network_refresh_requested": false,
+  "segments": {},
+  "attempts": {},
+  "watchlist": [
+    "510300.SH"
+  ]
+}

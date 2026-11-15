@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "errors": [],
+  "lesson_count": 72,
+  "help_controls": 256,
+  "lab_status": "finished",
+  "display_tabs": 2,
+  "notebooks": 72,
+  "first_run_and_replay": true,
+  "initialization_preserves_learning_without_backup": true,
+  "preview_no_jobs": true,
+  "point_help_no_action": true,
+  "external_python_required_for_app": false,
+  "elapsed_seconds": 2.2969999999986612
+}

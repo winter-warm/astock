@@ -1,0 +1,97 @@
+{
+  "version": "0.4.0",
+  "passed": true,
+  "snapshot_digest": "c0a6c14cd68be97ecb9f962dec78c8e2d2b7258d7ae4751d2edb9e4ccc76a069",
+  "artifacts": [
+    {
+      "file": "AStock-0.4.0-source.zip",
+      "bytes": 8088238,
+      "sha256": "ccb0a9ac9c166e08dd71b6175be449cac22fecb1b20e7c4669af09743c9ad237"
+    },
+    {
+      "file": "AStock-0.4.0-Windows-x64.zip",
+      "bytes": 133366585,
+      "sha256": "280a7c92e1ce2f50e32d437f91c3d0f267ba1dea17e70adcd38d8184c0691008"
+    },
+    {
+      "file": "AStock-0.4.0-课程Notebook.zip",
+      "bytes": 1851903,
+      "sha256": "3db98c5a8a66ba63dd7f0fd3c1cdd9e9e770f8e9bf2c532af62f87c5bebf7fca"
+    }
+  ],
+  "content": {
+    "lessons": 72,
+    "modules": 12,
+    "examples": 80,
+    "manual_entries": 268,
+    "registered_control_creation_points": 251,
+    "task_paths": 6,
+    "interface_screenshots": 18
+  },
+  "validation": {
+    "pytest_passed": 533,
+    "pytest_failed": 0,
+    "pytest_skipped": 0,
+    "ruff_passed": true,
+    "notebooks_executed": 72,
+    "gui_matrices": 4,
+    "surfaces_per_matrix": 52,
+    "portable_acceptance_passed": true,
+    "release_gate_passed": true,
+    "source_archive_snapshot_verified": true
+  },
+  "reports": {
+    "prebuild": "output/tutorial-release-20261115-150546",
+    "portable": "output/release-check-20261115-151310/release-result.json",
+    "baseline": "docs/tutorial-release-baseline.json"
+  },
+  "preserved_old_data": "backups/user-data-20261115/legacy-AStock/data",
+  "scope": {
+    "offline_synthetic": true,
+    "real_model_api_called": false,
+    "broker_orders": false,
+    "one_hour_market_acceptance": false
+  },
+  "current_app": "dist/tutorials-0.4.0/AStock/AStock.exe",
+  "current_data": "data",
+  "release_directory": "dist/tutorials-0.4.0",
+  "project_status": "docs/PROJECT_STATUS.md",
+  "data_migration": "backups/user-data-20261115/manifest.json",
+  "synced_at": "2026-11-15",
+  "source_history": "backups/source-releases",
+  "delivery_history": "docs/releases/history",
+  "cleanup_report": "output/project-sync-20261115/cleanup-result.json",
+  "source_archive_note": "2026-11-15 同步进度文档与启动修复（GUI WindowStyle Normal）；616 个发布基线文件未变化。",
+  "maintenance_validation": {
+    "passed": true,
+    "date": "2026-11-15",
+    "baseline_files_verified": 616,
+    "release_gate_passed": true,
+    "windows_archive_unchanged": true,
+    "notebook_archive_unchanged": true,
+    "unpacked_windows_files_matched": 2849,
+    "user_data_hashes_verified": true,
+    "migration_smoke": {
+      "report": "output/project-sync-20261115/migration-smoke.json",
+      "passed": true,
+      "trades": 13
+    },
+    "source_archive_report": "output/startup-fix-20261115/source-archive-verification.json",
+    "deleted_bytes": 3764682020,
+    "deleted_items": 129,
+    "full_regression_rerun": false,
+    "notebooks_rerun": false
+  },
+  "startup_validation": {
+    "passed": true,
+    "date": "2026-11-15",
+    "root_cause": "GUI launched with WindowStyle Hidden",
+    "fix": "GUI Normal; launcher console Hidden",
+    "shortcut_exercised": "AStock.lnk",
+    "window_visible": true,
+    "window_minimized": false,
+    "before_report": "output/startup-fix-20261115/hidden-windows.json",
+    "after_report": "output/startup-fix-20261115/fixed-windows.json",
+    "source_launcher_syntax_checked": true
+  }
+}

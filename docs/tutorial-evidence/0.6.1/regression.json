@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "junit_written": true,
+  "tests": 619,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "pytest": {
+    "exit_code": 0,
+    "log": "output/tutorial-release-20261115-222453/pytest.log",
+    "sha256": "db7851095bb8f5921ea82782ec674209c9e09124b6900b99a2edae9384758545"
+  },
+  "lint": {
+    "exit_code": 0,
+    "log": "output/tutorial-release-20261115-222453/ruff.log",
+    "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+  },
+  "snapshot_digest": "9dfc6f109d37411fe1a98462f7057560df2b080c45c979e479d519d293c42669"
+}

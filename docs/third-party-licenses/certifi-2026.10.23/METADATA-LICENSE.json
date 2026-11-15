@@ -1,0 +1,44 @@
+{
+  "Name": [
+    "certifi"
+  ],
+  "Version": [
+    "2026.10.23"
+  ],
+  "License": [
+    "MPL-2.0"
+  ],
+  "License-File": [
+    "LICENSE"
+  ],
+  "Home-page": [
+    "https://github.com/certifi/python-certifi"
+  ],
+  "Project-URL": [
+    "Source, https://github.com/certifi/python-certifi"
+  ],
+  "Author": [
+    "Kenneth Reitz"
+  ],
+  "Author-email": [
+    "me@kennethreitz.com"
+  ],
+  "Classifier": [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15"
+  ]
+}

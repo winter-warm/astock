@@ -1,0 +1,32 @@
+{
+  "Name": [
+    "akshare"
+  ],
+  "Version": [
+    "1.20.42"
+  ],
+  "License": [
+    "MIT"
+  ],
+  "License-File": [
+    "LICENSE"
+  ],
+  "Project-URL": [
+    "Homepage, https://github.com/akfamily/akshare",
+    "Documentation, https://akshare.akfamily.xyz/",
+    "Changelog, https://akshare.akfamily.xyz/changelog.html",
+    "MCP Server (AKTools), https://akshare.akfamily.xyz/mcp.html"
+  ],
+  "Author-email": [
+    "AKFamily <albertandking@gmail.com>"
+  ],
+  "Classifier": [
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+  ]
+}

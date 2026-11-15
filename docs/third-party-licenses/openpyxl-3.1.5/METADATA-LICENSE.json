@@ -1,0 +1,42 @@
+{
+  "Name": [
+    "openpyxl"
+  ],
+  "Version": [
+    "3.1.5"
+  ],
+  "License": [
+    "MIT"
+  ],
+  "License-File": [
+    "LICENCE.rst"
+  ],
+  "Home-page": [
+    "https://openpyxl.readthedocs.io"
+  ],
+  "Project-URL": [
+    "Documentation, https://openpyxl.readthedocs.io/en/stable/",
+    "Source, https://foss.heptapod.net/openpyxl/openpyxl",
+    "Tracker, https://foss.heptapod.net/openpyxl/openpyxl/-/issues"
+  ],
+  "Author": [
+    "See AUTHORS"
+  ],
+  "Author-email": [
+    "charlie.clark@clark-consulting.eu"
+  ],
+  "Classifier": [
+    "Development Status :: 5 - Production/Stable",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11"
+  ]
+}

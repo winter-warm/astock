@@ -1,0 +1,29 @@
+{
+  "Name": [
+    "pyarrow"
+  ],
+  "Version": [
+    "23.0.1"
+  ],
+  "License-Expression": [
+    "Apache-2.0"
+  ],
+  "License-File": [
+    "LICENSE.txt",
+    "NOTICE.txt"
+  ],
+  "Project-URL": [
+    "Homepage, https://arrow.apache.org/",
+    "Documentation, https://arrow.apache.org/docs/python",
+    "Repository, https://github.com/apache/arrow",
+    "Issues, https://github.com/apache/arrow/issues"
+  ],
+  "Classifier": [
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: Free Threading :: 2 - Beta"
+  ]
+}

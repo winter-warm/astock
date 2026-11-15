@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "icon_present": true,
+  "window": {
+    "Handle": 6556664,
+    "ProcessId": 41832,
+    "Title": "AStock · 量化研究与仿真工作台",
+    "Visible": true,
+    "Minimized": false,
+    "Left": 0,
+    "Top": 0,
+    "Width": 1495,
+    "Height": 977
+  },
+  "isolated_data": "E:\\project\\astock\\output\\public-release-0.6.1\\icon-probe-data",
+  "executable": "E:\\project\\astock\\dist\\release-0.6.1\\AStock\\AStock.exe",
+  "checked_at": "2026-11-15T22:35:37.0164525+08:00"
+}

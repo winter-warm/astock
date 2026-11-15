@@ -1,0 +1,167 @@
+{
+  "passed": true,
+  "error": "",
+  "course_count": 4,
+  "practice_records": {
+    "0": {
+      "steps": [
+        "loaded",
+        "order",
+        "fill",
+        "trade"
+      ],
+      "route": "offline",
+      "attempt": "210d7eb3443b4a1aa747830a23fbee75",
+      "previous_completion": {},
+      "evidence": {
+        "loaded": {
+          "dataset": "1b0a15458b6b"
+        },
+        "order": {
+          "run": "ac10aab042f5"
+        },
+        "fill": {
+          "run": "ac10aab042f5",
+          "trade": "T000001"
+        },
+        "trade": {
+          "run": "ac10aab042f5",
+          "trade": "T000001"
+        }
+      }
+    },
+    "1": {
+      "steps": [
+        "loaded",
+        "changed",
+        "saved"
+      ],
+      "route": "offline",
+      "attempt": "e07d09acb5ea4e34ba7411f9b47c0d4f",
+      "previous_completion": {},
+      "evidence": {
+        "loaded": {
+          "strategy": "教学 · 双均线参数 e07d09ac"
+        },
+        "changed": {
+          "parameters": {
+            "fast": 10,
+            "slow": 20,
+            "allocation": 0.25
+          }
+        },
+        "saved": {
+          "strategy": "教学 · 双均线参数 e07d09ac",
+          "parameters": {
+            "fast": 10,
+            "slow": 20,
+            "allocation": 0.25
+          }
+        }
+      }
+    },
+    "2": {
+      "steps": [
+        "finished",
+        "metrics",
+        "trade"
+      ],
+      "route": "offline",
+      "attempt": "b76fac8a10b044038fd80c420336bb5e",
+      "previous_completion": {},
+      "evidence": {
+        "finished": {
+          "run": "ce22ddac0491",
+          "parameters": {
+            "fast": 10,
+            "slow": 20,
+            "allocation": 0.25
+          }
+        },
+        "metrics": {
+          "run": "ce22ddac0491"
+        },
+        "trade": {
+          "run": "ce22ddac0491",
+          "trade": "T000001"
+        }
+      }
+    },
+    "3": {
+      "steps": [
+        "account",
+        "quote",
+        "stopped"
+      ],
+      "route": "offline",
+      "attempt": "bd66458dec374a13b60955165995becc",
+      "previous_completion": {},
+      "evidence": {
+        "account": {
+          "run": "e504baf7b9d6",
+          "mode": "replay"
+        },
+        "quote": {
+          "run": "e504baf7b9d6",
+          "note": "合成快照回放；尚未接入在线行情"
+        },
+        "stopped": {
+          "run": "e504baf7b9d6",
+          "canceled": 1
+        }
+      }
+    }
+  },
+  "observations": [
+    {
+      "step": "first_quote_pending",
+      "run": "ac10aab042f5",
+      "mode": "replay",
+      "status": "PAUSED",
+      "orders": 1,
+      "trades": 0,
+      "frozen": "1010.01",
+      "guide": "第 1 课 · 报价：买一 9.99、卖一 10.00；限价 10.05 的委托正在等待。再推进一条行情观察成交。"
+    },
+    {
+      "step": "second_quote_filled",
+      "run": "ac10aab042f5",
+      "mode": "replay",
+      "status": "PAUSED",
+      "orders": 1,
+      "trades": 1,
+      "frozen": "0",
+      "guide": "第 1 课 · 底部切到成交，点击一行查看成交时刻与下单理由。"
+    },
+    {
+      "step": "backtest_finished_with_changed_parameters",
+      "run": "ce22ddac0491",
+      "mode": "backtest",
+      "status": "COMPLETED",
+      "orders": 15,
+      "trades": 15,
+      "frozen": "0",
+      "guide": "第 3 课 · 观察收益、最大回撤与手续费；合成样本结果不说明实际策略收益。"
+    },
+    {
+      "step": "offline_stopped_and_released",
+      "run": "e504baf7b9d6",
+      "mode": "replay",
+      "status": "STOPPED",
+      "orders": 2,
+      "trades": 1,
+      "frozen": "0",
+      "guide": "第 4 课 · 本节实作已完成。离线演练不代表已连接真实行情。"
+    }
+  ],
+  "offline_synthetic": true,
+  "online_requested": false,
+  "online_result": null,
+  "device_pixel_ratio": 1.5,
+  "window": [
+    1280,
+    760
+  ],
+  "timer_max_gap_ms": 187.01,
+  "one_hour_market_acceptance": false
+}

@@ -1,0 +1,33 @@
+{
+  "version": "0.1.6",
+  "created_at": "2026-11-14T15:40:35.5497271+08:00",
+  "status": "verified_patch_full_plan_in_progress",
+  "full_plan_complete": false,
+  "windows_package": "AStock-0.1.6-Windows-x64.zip",
+  "source_package": "AStock-0.1.6-source.zip",
+  "full_suite_passed": 199,
+  "lint_passed": true,
+  "build_log": "output/build-016.log",
+  "source_matches_workspace": true,
+  "source_archive_files": 67,
+  "release_evidence": "output/release-check-20261114-135614/release-result.json",
+  "windows_sha256": "651FCB1C82FFDAFFC03167937F1C6475A198EAC6265A0422996C376A87ACE6F6",
+  "source_sha256": "8128C0823CE110D0599855693B323AE137EFDDD3A808CA45E4561019CCDB28A3",
+  "public_quote_connectivity": true,
+  "one_hour_market_acceptance": false,
+  "calendar_compared_days": 1461,
+  "calendar_mismatches": 0,
+  "calendar_evidence": "output/calendar-016/comparison.json",
+  "coverage_ui_150_evidence": "output/quality-ui-016-150/quality-result.json",
+  "coverage_ui_125_evidence": "output/quality-ui-016-125/quality-result.json",
+  "real_daily_evidence": "output/quality-ui-016-history/quality-result.json",
+  "real_minute_passed": false,
+  "minute_evidence": "output/minute-check-016/probe.json",
+  "coverage_audit": "docs/PLAN_COVERAGE.md",
+  "remaining_work": [
+    "证券规则历史范围与逐日特殊状态、现有范围之外的日历依据、免费分钟接口接入验收",
+    "大报告导出、批量历史对比、未完成录制整理后台化",
+    "完整四课新手操作路径验证",
+    "开市连续一小时行情验收"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "Name": [
+    "setuptools"
+  ],
+  "Version": [
+    "84.2.1"
+  ],
+  "License-Expression": [
+    "MIT"
+  ],
+  "License-File": [
+    "LICENSE"
+  ],
+  "Project-URL": [
+    "Source, https://github.com/pypa/setuptools",
+    "Documentation, https://setuptools.pypa.io/",
+    "Changelog, https://setuptools.pypa.io/en/stable/history.html"
+  ],
+  "Author-email": [
+    "Python Packaging Authority <distutils-sig@python.org>"
+  ],
+  "Classifier": [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Archiving :: Packaging",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Utilities"
+  ]
+}

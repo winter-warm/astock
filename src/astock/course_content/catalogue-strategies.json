@@ -1,0 +1,695 @@
+[
+  {
+    "id": "q29",
+    "kind": "course",
+    "module": "指标到策略",
+    "title": "29 双均线趋势",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q29.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q28"
+    ],
+    "examples": [
+      {
+        "id": "q29",
+        "file": "examples/q29.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      },
+      {
+        "id": "q29-strategy",
+        "file": "examples/q29-strategy.py",
+        "environment": "strategy",
+        "label": "AStock 实际策略（在策略编辑器运行）"
+      }
+    ],
+    "sources": [
+      {
+        "title": "pandas shift",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.Series.shift.html"
+      }
+    ],
+    "check": {
+      "question": "价格 10、10、10、11 的最后两期均线是多少？",
+      "answers": [
+        "10.5"
+      ],
+      "explanation": "最后两个价格是 10 和 11，平均值为 (10+11)/2=10.5。"
+    }
+  },
+  {
+    "id": "q30",
+    "kind": "course",
+    "module": "指标到策略",
+    "title": "30 通道突破",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q30.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q29"
+    ],
+    "examples": [
+      {
+        "id": "q30",
+        "file": "examples/q30.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      },
+      {
+        "id": "q30-strategy",
+        "file": "examples/q30-strategy.py",
+        "environment": "strategy",
+        "label": "AStock 实际策略（在策略编辑器运行）"
+      }
+    ],
+    "sources": [
+      {
+        "title": "pandas rolling",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.Series.rolling.html"
+      }
+    ],
+    "check": {
+      "question": "此前三次收盘 11、12、11，本次收盘 13。用于判断突破的此前上沿是多少？",
+      "answers": [
+        "12"
+      ],
+      "explanation": "当前 13 不放进阈值窗口；此前三个数最大值为 12。"
+    }
+  },
+  {
+    "id": "q31",
+    "kind": "course",
+    "module": "指标到策略",
+    "title": "31 布林带均值回归",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q31.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q30"
+    ],
+    "examples": [
+      {
+        "id": "q31",
+        "file": "examples/q31.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      },
+      {
+        "id": "q31-strategy",
+        "file": "examples/q31-strategy.py",
+        "environment": "strategy",
+        "label": "AStock 实际策略（在策略编辑器运行）"
+      }
+    ],
+    "sources": [
+      {
+        "title": "pandas Rolling.std",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.core.window.rolling.Rolling.std.html"
+      }
+    ],
+    "check": {
+      "question": "本课独立布林示例计算标准差时，ddof 设为多少？",
+      "answers": [
+        "0"
+      ],
+      "explanation": "代码明确使用总体窗口标准差 ddof=0，改变为 1 会改变带宽。"
+    }
+  },
+  {
+    "id": "q32",
+    "kind": "course",
+    "module": "指标到策略",
+    "title": "32 RSI 与趋势过滤",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q32.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q31"
+    ],
+    "examples": [
+      {
+        "id": "q32",
+        "file": "examples/q32.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      },
+      {
+        "id": "q32-strategy",
+        "file": "examples/q32-strategy.py",
+        "environment": "strategy",
+        "label": "AStock 实际策略（在策略编辑器运行）"
+      }
+    ],
+    "sources": [
+      {
+        "title": "pandas diff",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.Series.diff.html"
+      },
+      {
+        "title": "rolling window",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.Series.rolling.html"
+      }
+    ],
+    "check": {
+      "question": "窗口涨幅合计 2、跌幅绝对值合计 1，简单平均口径的 RSI 约是多少？保留两位小数。",
+      "answers": [
+        "66.67"
+      ],
+      "explanation": "RSI=100×2/(2+1)=66.666…，四舍五入为 66.67。"
+    }
+  },
+  {
+    "id": "q33",
+    "kind": "course",
+    "module": "指标到策略",
+    "title": "33 ETF 动量轮动",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q33.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q32"
+    ],
+    "examples": [
+      {
+        "id": "q33",
+        "file": "examples/q33.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      },
+      {
+        "id": "q33-strategy",
+        "file": "examples/q33-strategy.py",
+        "environment": "strategy",
+        "label": "AStock 实际策略（在策略编辑器运行）"
+      }
+    ],
+    "sources": [
+      {
+        "title": "pandas shift",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.shift.html"
+      }
+    ],
+    "check": {
+      "question": "本课轮动目标为最强且动量为正的资产配置多少百分比？请输入整数百分数，不带符号。",
+      "answers": [
+        "80"
+      ],
+      "explanation": "目标权重为 0.8，其余为现金；实际账户执行可能暂时偏离。"
+    }
+  },
+  {
+    "id": "q34",
+    "kind": "course",
+    "module": "指标到策略",
+    "title": "34 信号确认与减少反复交易",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q34.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q33"
+    ],
+    "examples": [
+      {
+        "id": "q34",
+        "file": "examples/q34.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [],
+    "check": {
+      "question": "本课 count=2，需要连续多少次满足才形成切换？",
+      "answers": [
+        "2"
+      ],
+      "explanation": "连续两次满足才切换，中间失败会清零，不能累计不连续次数。"
+    }
+  },
+  {
+    "id": "q35",
+    "kind": "course",
+    "module": "指标到策略",
+    "title": "35 不同行情中的策略表现",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q35.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q34"
+    ],
+    "examples": [
+      {
+        "id": "q35",
+        "file": "examples/q35.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [],
+    "check": {
+      "question": "回撤基准中，程序将历史最高净值至少设为多少？",
+      "answers": [
+        "1",
+        "1.0"
+      ],
+      "explanation": "初始净值是 1，保留它才能记录第一期就亏损的回撤。"
+    }
+  },
+  {
+    "id": "q36",
+    "kind": "course",
+    "module": "指标到策略",
+    "title": "36 组合规则与消融实验",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q36.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q35"
+    ],
+    "examples": [
+      {
+        "id": "q36",
+        "file": "examples/q36.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [],
+    "check": {
+      "question": "两个过滤选项乘两个仓位选项，一共有多少组消融配置？",
+      "answers": [
+        "4"
+      ],
+      "explanation": "有无过滤分别与满仓/半仓组合，总共 2×2=4 组。"
+    }
+  },
+  {
+    "id": "q37",
+    "kind": "course",
+    "module": "可信回测",
+    "title": "37 亲手写回测器",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q37.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q36"
+    ],
+    "examples": [
+      {
+        "id": "q37",
+        "file": "examples/q37.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [],
+    "check": {
+      "question": "本课手写账本完整往返后，最终现金是多少元？",
+      "answers": [
+        "818.2",
+        "818.20"
+      ],
+      "explanation": "买 90 份支付 990.99，余 9.01；卖出净收 809.19，合计 818.20。"
+    }
+  },
+  {
+    "id": "q38",
+    "kind": "course",
+    "module": "可信回测",
+    "title": "38 事件驱动回测",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q38.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q37"
+    ],
+    "examples": [
+      {
+        "id": "q38",
+        "file": "examples/q38.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      },
+      {
+        "id": "q38-strategy",
+        "file": "examples/q38-strategy.py",
+        "environment": "strategy",
+        "label": "AStock 实际策略（在策略编辑器运行）"
+      }
+    ],
+    "sources": [],
+    "check": {
+      "question": "独立事件轨迹中，首次成交发生在第几个索引？从零计数。",
+      "answers": [
+        "1"
+      ],
+      "explanation": "索引 0 观察后提交；索引 1 的下一事件才提供成交机会。"
+    }
+  },
+  {
+    "id": "q39",
+    "kind": "course",
+    "module": "可信回测",
+    "title": "39 成交模型",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q39.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q38"
+    ],
+    "examples": [
+      {
+        "id": "q39",
+        "file": "examples/q39.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Backtrader 订单执行逻辑",
+        "url": "https://www.backtrader.com/docu/order-creation-execution/order-creation-execution/"
+      }
+    ],
+    "check": {
+      "question": "可见数量 1000、参与率 10%、请求 300 且价格允许，本例最多成交多少？",
+      "answers": [
+        "100"
+      ],
+      "explanation": "数量上限为 1000×0.1=100，再与请求数量取最小值。"
+    }
+  },
+  {
+    "id": "q40",
+    "kind": "course",
+    "module": "可信回测",
+    "title": "40 识别回测作弊",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q40.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q39"
+    ],
+    "examples": [
+      {
+        "id": "q40",
+        "file": "examples/q40.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [
+      {
+        "title": "scikit-learn 数据泄漏说明",
+        "url": "https://scikit-learn.org/stable/common_pitfalls.html#data-leakage"
+      }
+    ],
+    "check": {
+      "question": "把下一行价格移到当前行，示例调用 shift 的参数是多少？",
+      "answers": [
+        "-1"
+      ],
+      "explanation": "shift(-1) 将下一行移到本行，可以用于标签但不能偷作当期交易特征。"
+    }
+  },
+  {
+    "id": "q41",
+    "kind": "course",
+    "module": "可信回测",
+    "title": "41 样本外检验与参数稳定性",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q41.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q40"
+    ],
+    "examples": [
+      {
+        "id": "q41",
+        "file": "examples/q41.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [
+      {
+        "title": "scikit-learn TimeSeriesSplit",
+        "url": "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html"
+      }
+    ],
+    "check": {
+      "question": "本课 180 个观察值分为训练 90、验证 45，最后测试有多少个？",
+      "answers": [
+        "45"
+      ],
+      "explanation": "180-90-45=45，测试不参与周期选择。"
+    }
+  },
+  {
+    "id": "q42",
+    "kind": "course",
+    "module": "可信回测",
+    "title": "42 跨框架结果对照",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q42.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q41"
+    ],
+    "examples": [
+      {
+        "id": "q42",
+        "file": "examples/q42.py",
+        "environment": "notebook",
+        "label": "Backtrader 框架对照"
+      }
+    ],
+    "notebook_dependencies": [
+      "backtrader"
+    ],
+    "sources": [
+      {
+        "title": "Backtrader Cerebro",
+        "url": "https://www.backtrader.com/docu/cerebro/"
+      },
+      {
+        "title": "订单执行约定",
+        "url": "https://www.backtrader.com/docu/order-creation-execution/order-creation-execution/"
+      }
+    ],
+    "check": {
+      "question": "Backtrader 例中初始 1000，买 10 份于 11，期末估值 14.5，零费用权益是多少？",
+      "answers": [
+        "1035",
+        "1035.0"
+      ],
+      "explanation": "现金 1000-10×11=890，持仓 10×14.5=145，合计 1035。"
+    }
+  },
+  {
+    "id": "q43",
+    "kind": "course",
+    "module": "组合与风险",
+    "title": "43 一笔交易买多少",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q43.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q42"
+    ],
+    "examples": [
+      {
+        "id": "q43",
+        "file": "examples/q43.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [],
+    "check": {
+      "question": "权益 10 万、单笔风险 1%、入场 10、退出参考 8，不受其他限制时数量是多少？",
+      "answers": [
+        "500"
+      ],
+      "explanation": "预算 1000，单份距离 2，理论数量 500，且符合示例 100 单位取整。"
+    }
+  },
+  {
+    "id": "q44",
+    "kind": "course",
+    "module": "组合与风险",
+    "title": "44 止损与退出",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q44.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q43"
+    ],
+    "examples": [
+      {
+        "id": "q44",
+        "file": "examples/q44.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Backtrader 订单类型与触发执行",
+        "url": "https://www.backtrader.com/docu/order-creation-execution/order-creation-execution/"
+      }
+    ],
+    "check": {
+      "question": "本课移动退出示例首次触发信号是哪个索引？从零计数。",
+      "answers": [
+        "4"
+      ],
+      "explanation": "最高收盘 12，90% 线为 10.8，索引 4 的 10.5 首次跌破。"
+    }
+  },
+  {
+    "id": "q45",
+    "kind": "course",
+    "module": "组合与风险",
+    "title": "45 投资组合",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q45.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q44"
+    ],
+    "examples": [
+      {
+        "id": "q45",
+        "file": "examples/q45.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [
+      {
+        "title": "NumPy cov",
+        "url": "https://numpy.org/doc/stable/reference/generated/numpy.cov.html"
+      },
+      {
+        "title": "NumPy corrcoef",
+        "url": "https://numpy.org/doc/stable/reference/generated/numpy.corrcoef.html"
+      }
+    ],
+    "check": {
+      "question": "本课逆波动权重归一化后，各资产权重合计是多少？",
+      "answers": [
+        "1",
+        "1.0",
+        "100%"
+      ],
+      "explanation": "各分数除以它们的总和，因此权重合计为 1；不是收益保证。"
+    }
+  },
+  {
+    "id": "q46",
+    "kind": "course",
+    "module": "组合与风险",
+    "title": "46 再平衡与换手",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q46.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q45"
+    ],
+    "examples": [
+      {
+        "id": "q46",
+        "file": "examples/q46.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [],
+    "check": {
+      "question": "10 万权益从 70/30 调到 50/50，双边费率 0.1%，近似费用是多少元？",
+      "answers": [
+        "40",
+        "40.0"
+      ],
+      "explanation": "卖 20% 加买 20%，成交额合计 4 万，乘 0.001 得 40。"
+    }
+  },
+  {
+    "id": "q47",
+    "kind": "course",
+    "module": "组合与风险",
+    "title": "47 回撤控制与压力测试",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q47.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q46"
+    ],
+    "examples": [
+      {
+        "id": "q47",
+        "file": "examples/q47.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [],
+    "check": {
+      "question": "人为设定的一次压力冲击能否直接给出其真实发生概率？答能或不能。",
+      "answers": [
+        "不能",
+        "不能直接给出"
+      ],
+      "explanation": "压力样本用于检查反应，没有拟合事件概率分布，不能据此声称概率。"
+    }
+  },
+  {
+    "id": "q48",
+    "kind": "course",
+    "module": "组合与风险",
+    "title": "48 基础综合项目",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q48.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q47"
+    ],
+    "examples": [
+      {
+        "id": "q48",
+        "file": "examples/q48.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [],
+    "check": {
+      "question": "综合项目在第几个观察值处切分训练与测试？填 split 的值。",
+      "answers": [
+        "100"
+      ],
+      "explanation": "源码固定 split=100，周期选择只使用此前训练价格。"
+    }
+  }
+]

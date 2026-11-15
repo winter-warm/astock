@@ -1,0 +1,1083 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.15, pytest-9.2.0, pluggy-1.7.0 -- E:\project\astock\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+PySide6 6.12.0 -- Qt runtime 6.12.0 -- Qt compiled 6.12.0
+rootdir: E:\project\astock
+configfile: pyproject.toml
+testpaths: tests
+plugins: qt-4.5.0
+collecting ... collected 619 items
+
+tests/test_account_overview.py::test_switch_accounts_is_read_only_and_persists PASSED
+tests/test_account_overview.py::test_live_selected_account_updates_without_following_active_account PASSED
+tests/test_account_overview.py::test_missing_snapshot_clears_previous_account PASSED
+tests/test_app_initialization.py::test_application_reopens_and_preserves_learning_after_initialization[30] PASSED
+tests/test_app_initialization.py::test_application_reopens_and_preserves_learning_after_initialization[700] PASSED
+tests/test_backtest_analysis.py::test_intraday_drawdown_is_not_lost_when_daily_close_recovers PASSED
+tests/test_backtest_analysis.py::test_initial_loss_and_later_deeper_drawdown_reset_recovery PASSED
+tests/test_backtest_analysis.py::test_empty_and_zero_equity_do_not_invent_returns PASSED
+tests/test_backtest_analysis.py::test_monthly_returns_compound_and_missing_months_are_not_filled PASSED
+tests/test_backtest_analysis.py::test_equal_later_drawdown_keeps_first_episode_and_its_recovery PASSED
+tests/test_backtest_analysis.py::test_no_drawdown_reports_no_recovery_needed PASSED
+tests/test_backtest_setup.py::test_presets_are_nonoverlapping_and_keep_other_settings PASSED
+tests/test_backtest_setup.py::test_single_day_cannot_be_split PASSED
+tests/test_backtest_setup.py::test_reversed_dates_still_require_correction PASSED
+tests/test_backtest_strategy_identity.py::test_parameter_check_is_in_parameter_tab_and_not_strategy_toolbar PASSED
+tests/test_backtest_strategy_identity.py::test_editor_backtest_carries_unsaved_source_and_params_without_relabelling_old_result PASSED
+tests/test_backtest_strategy_identity.py::test_manual_strategy_choice_loads_saved_parameters_without_starting PASSED
+tests/test_backtest_strategy_identity.py::test_execution_controls_are_separate_and_report_export_uses_archive_selection PASSED
+tests/test_backtest_strategy_identity.py::test_quote_data_has_an_explicit_replay_start_without_live_controls PASSED
+tests/test_broker.py::test_no_same_quote_fill_and_duplicate_does_not_fill PASSED
+tests/test_broker.py::test_minimum_commission_is_per_order_not_per_partial_fill PASSED
+tests/test_broker.py::test_t_plus_one_and_next_day PASSED
+tests/test_broker.py::test_t_zero_etf_and_cancel_reservations PASSED
+tests/test_broker.py::test_stale_quotes_and_reconnect_gap_cannot_spend_accumulated_volume PASSED
+tests/test_broker.py::test_shared_liquidity_cannot_be_reused_between_orders PASSED
+tests/test_broker.py::test_invalid_sizes_ticks_money_and_session PASSED
+tests/test_broker.py::test_daily_signals_fill_at_next_open_and_expire_after_attempt PASSED
+tests/test_broker.py::test_sealed_limit_and_missing_opposite_quote_no_fill PASSED
+tests/test_broker.py::test_restore_keeps_cash_and_positions_but_cancels_orders PASSED
+tests/test_broker.py::test_dividend_receivable_and_split_do_not_create_equity PASSED
+tests/test_broker.py::test_out_of_order_is_ignored PASSED
+tests/test_broker.py::test_nan_and_invalid_config_rejected PASSED
+tests/test_broker.py::test_suspended_next_day_does_not_keep_daily_signal_alive PASSED
+tests/test_broker.py::test_invalid_corporate_action_is_atomic PASSED
+tests/test_broker.py::test_random_partial_orders_preserve_cash_and_position_invariants PASSED
+tests/test_catalog.py::test_all_sources_normalize_codes_listing_dates_and_do_not_invent_etf_attributes PASSED
+tests/test_catalog.py::test_bad_responses_reject_entire_partition[sz-bad0] PASSED
+tests/test_catalog.py::test_bad_responses_reject_entire_partition[sh_main-bad1] PASSED
+tests/test_catalog.py::test_bad_responses_reject_entire_partition[etf-bad2] PASSED
+tests/test_catalog.py::test_bad_responses_reject_entire_partition[sh_main-bad3] PASSED
+tests/test_catalog.py::test_bad_responses_reject_entire_partition[sz-bad4] PASSED
+tests/test_catalog.py::test_bad_responses_reject_entire_partition[etf-bad5] PASSED
+tests/test_catalog.py::test_partial_refresh_keeps_old_partition_timestamp_and_replaces_success_atomically PASSED
+tests/test_catalog.py::test_total_failure_and_cancel_do_not_overwrite_existing_cache PASSED
+tests/test_catalog.py::test_failed_atomic_replace_preserves_old_file_and_cleans_temp PASSED
+tests/test_catalog.py::test_bad_cache_is_not_presented_as_fresh_data PASSED
+tests/test_catalog.py::test_real_source_edge_codes_do_not_reject_other_valid_listings PASSED
+tests/test_catalog.py::test_watchlist_deduplicates_and_rejects_over_limit_without_modification PASSED
+tests/test_catalog.py::test_worker_catalog_dispatch_uses_provider_in_isolated_worker PASSED
+tests/test_catalog.py::test_offline_search_name_code_type_and_addition_persist_watchlist PASSED
+tests/test_catalog.py::test_cancel_ignores_old_results_and_closing_stops_worker PASSED
+tests/test_catalog.py::test_partial_failure_and_empty_search_are_visible_without_modal_error PASSED
+tests/test_catalog.py::test_name_search_ignores_exchange_spacing_and_full_width_letters PASSED
+tests/test_course_advanced.py::test_advanced_publication_contract PASSED
+tests/test_course_advanced.py::test_model_adapter_default_never_opens_network PASSED
+tests/test_course_advanced.py::test_model_adapter_rejects_unsafe_or_ambiguous_address[http://remote.example/v1] PASSED
+tests/test_course_advanced.py::test_model_adapter_rejects_unsafe_or_ambiguous_address[file:///tmp/private] PASSED
+tests/test_course_advanced.py::test_model_adapter_rejects_unsafe_or_ambiguous_address[https://user:secret@example.com/v1] PASSED
+tests/test_course_advanced.py::test_model_adapter_rejects_unsafe_or_ambiguous_address[https://example.com/v1?key=secret] PASSED
+tests/test_course_advanced.py::test_model_adapter_rejects_unsafe_or_ambiguous_address[https://example.com/v1#fragment] PASSED
+tests/test_course_advanced.py::test_model_adapter_request_and_call_budget_without_network PASSED
+tests/test_course_advanced.py::test_model_adapter_failure_is_bounded_and_sanitized[error0] PASSED
+tests/test_course_advanced.py::test_model_adapter_failure_is_bounded_and_sanitized[error1] PASSED
+tests/test_course_advanced.py::test_model_adapter_rejects_bad_response_without_retry[raw0] PASSED
+tests/test_course_advanced.py::test_model_adapter_rejects_bad_response_without_retry[not-json] PASSED
+tests/test_course_advanced.py::test_model_adapter_rejects_bad_response_without_retry[{"choices": [{"message": {"content": 123}}]}] PASSED
+tests/test_course_advanced.py::test_model_adapter_rejects_bad_response_without_retry[raw3] PASSED
+tests/test_course_advanced.py::test_ai_evaluator_returns_only_requested_interval {
+  "mode": "offline-authored",
+  "trace": [
+    {
+      "round": 0,
+      "hypothesis": {
+        "operator": "momentum",
+        "lookback": 3
+      },
+      "expression": "momentum(close, 3)",
+      "validation_mean": -0.000615914919972031
+    },
+    {
+      "round": 1,
+      "hypothesis": {
+        "operator": "momentum",
+        "lookback": 5
+      },
+      "expression": "momentum(close, 5)",
+      "validation_mean": -0.0001361848490690233
+    },
+    {
+      "round": 2,
+      "hypothesis": {
+        "operator": "momentum",
+        "lookback": 10
+      },
+      "expression": "momentum(close, 10)",
+      "validation_mean": -0.0003509121689272286
+    }
+  ],
+  "frozen": {
+    "operator": "momentum",
+    "lookback": 5
+  },
+  "holdout_mean": -0.00018386478528384888,
+  "real_model_calls": 0
+}
+PASSED
+tests/test_course_advanced.py::test_hypothesis_and_expression_semantics {
+  "name": "五期动量",
+  "operator": "momentum",
+  "lookback": 5,
+  "decision": "after_completed_bar",
+  "target_horizon": 1,
+  "candidate_id": "candidate-001"
+}
+预期拒绝： 只允许已定义算子
+0         NaN
+1         NaN
+2         NaN
+3    0.030000
+4    0.029703
+5    0.029412
+6    0.029126
+7    0.028846
+数值、未来不变性和非法候选拒绝：通过
+PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q49] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q50] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q51] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q52] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q53] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q54] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q55] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q56] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q57] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q58] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q59] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q60] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q61] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q62] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q63] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q64] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q65] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q66] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q67] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q68] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q69] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q70] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q71] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q72] PASSED
+tests/test_course_advanced.py::test_advanced_example_runs_with_assertions_on_cpu[q67-api] PASSED
+tests/test_course_display.py::test_display_limits_and_missing_points PASSED
+tests/test_course_display.py::test_iterable_table_stops_reading_after_display_limit PASSED
+tests/test_course_foundations.py::test_foundation_curriculum_contract PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[1] [(3, 10.2, False), (4, 10.2333, False), (5, 10.1, True)]
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[2] 实际成交： [(2, 8)]
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[3] 原列表 [9.0, 10.5, 9.8, 11.0]
+独立快照 [10.0, 10.5, 9.8, 11.0]
+最后三个价格 [10.5, 9.8, 11.0]
+逐期收益 [0.1667, -0.0667, 0.1224]
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[4] [None, None, 11.0, 10.666666666666666]
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[5] 教学标的 1050.0
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[6] BUY
+WAIT
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[7] 形状 (3, 2) (2, 2)
+逐期收益 [[ 0.1 -0.1]
+ [ 0.1  0.1]]
+固定权重组合收益 [0.02 0.1 ]
+视图会改变原数组；copy 保留独立快照。
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[8]              symbol  close  amount_for_100
+2026-01-05-A      A   10.0          1000.0
+2026-01-05-B      B   20.0          2000.0
+标签对齐 {'A': 11.0, 'B': 22.0}
+位置相加 [12. 21.]
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[9] 隔离行数 1
+   symbol       date  close
+000001.SZ 2026-01-05   10.0
+000001.SZ 2026-01-06   10.2
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[10] 原表
+               A     B
+observation          
+0            10  20.0
+1            11   NaN
+2            12  22.0
+3            13  24.0
+不填充的相邻收益
+                     A         B
+observation                    
+0                 NaN       NaN
+1            0.100000       NaN
+2            0.090909       NaN
+3            0.083333  0.090909
+前值填充产生的不同结果
+                     A         B
+observation                    
+0                 NaN       NaN
+1            0.100000  0.000000
+2            0.090909  0.100000
+3            0.083333  0.090909
+仅共同观察时刻 [0, 2, 3]
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[11]    close        ma3  prior_ma3  signal  lagged_signal
+0   10.0        NaN        NaN   False          False
+1   11.0        NaN        NaN   False          False
+2   12.0  11.000000        NaN    True          False
+3    9.0  10.666667  11.000000   False           True
+4   10.0  10.333333  10.666667   False          False
+5   13.0  10.666667  10.333333    True          False
+未来修改不影响前四行：通过；居中窗口不能直接作为当时信号。
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[12] 未复权价格收益 -0.02
+计入分红的持有收益 0.0
+示意复权序列 [9.8, 9.8]
+样本摘要 807d1de2105d97507fad8109b5451285850b624ce6faab415fd8e338bf3cf9c4
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[13] 简单收益 [ 0.1 -0.1]
+累计净值 [1.   1.1  0.99]
+简单相加 1.1102230246251565e-16 复利 -0.009999999999999898
+亏损20%后回本所需收益 0.25
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[14] 均值/中位数 0.02 0.0
+总体/样本标准差 0.05099019513592784 0.057008771254956896
+25%、75%分位 [-0.01  0.01]
+删去最后一条后的均值 -0.004999999999999999
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[15] 相关矩阵
+ [[ 1.  1. -1.]
+ [ 1.  1. -1.]
+ [-1. -1.  1.]]
+x 与 x² 的线性相关 0.0
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[16] 策略净值 [1.         1.02       1.0098     1.040094   1.01929212]
+基准净值 [1.       1.01     1.01     1.0302   1.019898]
+收益差百分点 -0.06058799999999476 相对净值收益 -0.0005940594059405946
+仅示范错误外推会得到多大数字 2.3328518240355924
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[17] 历史峰值 [100. 110. 110. 110. 111.]
+回撤 [ 0.   0.  -0.2 -0.1  0. ]
+最大回撤 0.19999999999999996 单期夏普 0.2305908979184059
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[18] 胜率 0.8 平均盈利 20.0 平均亏损 100.0
+每笔期望/实际平均 -3.9999999999999964 -4.0
+扣费总损益 -30.0
+单边名义换手 0.6 简化费用 6.0
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[19]  open  high  low  close  body  upper_shadow  lower_shadow  range  body_ratio
+ 10.0  12.0  9.0   11.0   1.0           1.0           1.0    3.0    0.333333
+ 11.0  11.5  9.5   10.0   1.0           0.5           0.5    2.0    0.500000
+ 10.0  10.0 10.0   10.0   0.0           0.0           0.0    0.0         NaN
+OHLC 相同，柱内先后顺序仍不同。
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[20]    close  prior_high  prior_low  breakout  breakdown
+0   10.0         NaN        NaN     False      False
+1   11.0         NaN        NaN     False      False
+2   12.0         NaN        NaN     False      False
+3   11.0        12.0       10.0     False      False
+4   13.0        12.0       11.0      True      False
+5   12.0        13.0       11.0     False      False
+6   10.0        13.0       11.0     False       True
+7    9.0        13.0       10.0     False       True
+事后局部高点不可原时刻直接交易 [False, False, True, False, True, False, False, False]
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[21]    close       SMA3  EMA3_seed_first
+0   10.0        NaN         10.00000
+1   11.0        NaN         10.50000
+2   12.0  11.000000         11.25000
+3    9.0  10.666667         10.12500
+4   10.0  10.333333         10.06250
+5   13.0  10.666667         11.53125
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[22]    close       DIF       DEA      hist   hist_x2
+0   10.0  0.000000  0.000000  0.000000  0.000000
+1   11.0  0.166667  0.083333  0.083333  0.166667
+2   12.0  0.361111  0.222222  0.138889  0.277778
+3   11.0  0.199074  0.210648 -0.011574 -0.023148
+4   10.0 -0.054784  0.077932 -0.132716 -0.265432
+5    9.0 -0.296939 -0.109504 -0.187436 -0.374871
+6   10.0 -0.161501 -0.135502 -0.025999 -0.051998
+7   12.0  0.243895  0.054196  0.189699  0.379397
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[23]  close      RSI3
+    10       NaN
+    11       NaN
+    10       NaN
+    12 75.000000
+    11 54.545455
+    13 75.000000
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[24]  high  low  close  RSV       K       D       J
+ 11.0  9.0   10.0  NaN     NaN     NaN     NaN
+ 12.0 10.0   11.0  NaN     NaN     NaN     NaN
+ 13.0 11.0   12.0 75.0 58.3333 52.7778 69.4444
+ 12.0  9.0   10.0 25.0 47.2222 50.9259 39.8148
+ 11.0  8.0    9.0 20.0 38.1481 46.6667 21.1111
+ 13.0 10.0   12.0 80.0 52.0988 48.4774 59.3416
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[25]    close    middle     upper     lower  bandwidth       %B
+0   10.0       NaN       NaN       NaN        NaN      NaN
+1   11.0       NaN       NaN       NaN        NaN      NaN
+2   12.0  11.00000  12.63299   9.36701    0.29691  0.80619
+3   11.0  11.33333  12.27614  10.39052    0.16638  0.32322
+4   10.0  11.00000  12.63299   9.36701    0.29691  0.19381
+5    9.0  10.00000  11.63299   8.36701    0.32660  0.19381
+6   10.0   9.66667  10.60948   8.72386    0.19506  0.67678
+7   13.0  10.66667  14.06601   7.26732    0.63738  0.84320
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[26]  high  low  close  TR     ATR3
+ 11.0  9.0   10.0 2.0      NaN
+ 13.0 12.0   12.5 3.0      NaN
+ 12.0 10.0   11.0 2.5 2.500000
+ 14.0 13.0   13.5 3.0 2.666667
+ 13.0 11.0   12.0 2.5 2.611111
+理论份额（尚未按证券单位取整） 191 止损距离 5.222222222222222
+合法跳空实验 TR [2.  5.  4.5 3.  2.5] ATR [       nan        nan 3.83333333 3.55555556 3.2037037 ]
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[27]    close  volume_shares    OBV  past_mean_volume  relative_volume
+0   10.0          100.0    0.0               NaN              NaN
+1   11.0          200.0  200.0               NaN              NaN
+2   11.0          300.0  200.0               NaN              NaN
+3   10.0          400.0 -200.0             200.0         2.000000
+4   12.0          500.0  300.0             300.0         1.666667
+同一会话累计量增量 [  0 300   0 500]
+PASSED
+tests/test_course_foundations.py::test_all_foundation_examples_run_offline[28]    close  trend  same_trend  volume_filter  combined
+0   10.0  False       False          False     False
+1   10.2  False       False          False     False
+2   10.1  False       False          False     False
+3   10.5   True        True           True      True
+4   10.8   True        True           True      True
+5   10.4   True        True          False     False
+6   10.9  False       False           True     False
+7   11.2   True        True           True      True
+8   10.7   True        True          False     False
+9   11.3  False       False           True     False
+基础信号次数 5 过滤后 3
+PASSED
+tests/test_course_foundations.py::test_indicator_outputs_use_serializable_lab_displays[19]  open  high  low  close  body  upper_shadow  lower_shadow  range  body_ratio
+ 10.0  12.0  9.0   11.0   1.0           1.0           1.0    3.0    0.333333
+ 11.0  11.5  9.5   10.0   1.0           0.5           0.5    2.0    0.500000
+ 10.0  10.0 10.0   10.0   0.0           0.0           0.0    0.0         NaN
+OHLC 相同，柱内先后顺序仍不同。
+PASSED
+tests/test_course_foundations.py::test_indicator_outputs_use_serializable_lab_displays[20]    close  prior_high  prior_low  breakout  breakdown
+0   10.0         NaN        NaN     False      False
+1   11.0         NaN        NaN     False      False
+2   12.0         NaN        NaN     False      False
+3   11.0        12.0       10.0     False      False
+4   13.0        12.0       11.0      True      False
+5   12.0        13.0       11.0     False      False
+6   10.0        13.0       11.0     False       True
+7    9.0        13.0       10.0     False       True
+事后局部高点不可原时刻直接交易 [False, False, True, False, True, False, False, False]
+PASSED
+tests/test_course_foundations.py::test_indicator_outputs_use_serializable_lab_displays[21]    close       SMA3  EMA3_seed_first
+0   10.0        NaN         10.00000
+1   11.0        NaN         10.50000
+2   12.0  11.000000         11.25000
+3    9.0  10.666667         10.12500
+4   10.0  10.333333         10.06250
+5   13.0  10.666667         11.53125
+PASSED
+tests/test_course_foundations.py::test_indicator_outputs_use_serializable_lab_displays[22]    close       DIF       DEA      hist   hist_x2
+0   10.0  0.000000  0.000000  0.000000  0.000000
+1   11.0  0.166667  0.083333  0.083333  0.166667
+2   12.0  0.361111  0.222222  0.138889  0.277778
+3   11.0  0.199074  0.210648 -0.011574 -0.023148
+4   10.0 -0.054784  0.077932 -0.132716 -0.265432
+5    9.0 -0.296939 -0.109504 -0.187436 -0.374871
+6   10.0 -0.161501 -0.135502 -0.025999 -0.051998
+7   12.0  0.243895  0.054196  0.189699  0.379397
+PASSED
+tests/test_course_foundations.py::test_indicator_outputs_use_serializable_lab_displays[23]  close      RSI3
+    10       NaN
+    11       NaN
+    10       NaN
+    12 75.000000
+    11 54.545455
+    13 75.000000
+PASSED
+tests/test_course_foundations.py::test_indicator_outputs_use_serializable_lab_displays[24]  high  low  close  RSV       K       D       J
+ 11.0  9.0   10.0  NaN     NaN     NaN     NaN
+ 12.0 10.0   11.0  NaN     NaN     NaN     NaN
+ 13.0 11.0   12.0 75.0 58.3333 52.7778 69.4444
+ 12.0  9.0   10.0 25.0 47.2222 50.9259 39.8148
+ 11.0  8.0    9.0 20.0 38.1481 46.6667 21.1111
+ 13.0 10.0   12.0 80.0 52.0988 48.4774 59.3416
+PASSED
+tests/test_course_foundations.py::test_indicator_outputs_use_serializable_lab_displays[25]    close    middle     upper     lower  bandwidth       %B
+0   10.0       NaN       NaN       NaN        NaN      NaN
+1   11.0       NaN       NaN       NaN        NaN      NaN
+2   12.0  11.00000  12.63299   9.36701    0.29691  0.80619
+3   11.0  11.33333  12.27614  10.39052    0.16638  0.32322
+4   10.0  11.00000  12.63299   9.36701    0.29691  0.19381
+5    9.0  10.00000  11.63299   8.36701    0.32660  0.19381
+6   10.0   9.66667  10.60948   8.72386    0.19506  0.67678
+7   13.0  10.66667  14.06601   7.26732    0.63738  0.84320
+PASSED
+tests/test_course_foundations.py::test_indicator_outputs_use_serializable_lab_displays[26]  high  low  close  TR     ATR3
+ 11.0  9.0   10.0 2.0      NaN
+ 13.0 12.0   12.5 3.0      NaN
+ 12.0 10.0   11.0 2.5 2.500000
+ 14.0 13.0   13.5 3.0 2.666667
+ 13.0 11.0   12.0 2.5 2.611111
+理论份额（尚未按证券单位取整） 191 止损距离 5.222222222222222
+合法跳空实验 TR [2.  5.  4.5 3.  2.5] ATR [       nan        nan 3.83333333 3.55555556 3.2037037 ]
+PASSED
+tests/test_course_foundations.py::test_indicator_outputs_use_serializable_lab_displays[27]    close  volume_shares    OBV  past_mean_volume  relative_volume
+0   10.0          100.0    0.0               NaN              NaN
+1   11.0          200.0  200.0               NaN              NaN
+2   11.0          300.0  200.0               NaN              NaN
+3   10.0          400.0 -200.0             200.0         2.000000
+4   12.0          500.0  300.0             300.0         1.666667
+同一会话累计量增量 [  0 300   0 500]
+PASSED
+tests/test_course_foundations.py::test_indicator_outputs_use_serializable_lab_displays[28]    close  trend  same_trend  volume_filter  combined
+0   10.0  False       False          False     False
+1   10.2  False       False          False     False
+2   10.1  False       False          False     False
+3   10.5   True        True           True      True
+4   10.8   True        True           True      True
+5   10.4   True        True          False     False
+6   10.9  False       False           True     False
+7   11.2   True        True           True      True
+8   10.7   True        True          False     False
+9   11.3  False       False           True     False
+基础信号次数 5 过滤后 3
+PASSED
+tests/test_course_foundations.py::test_rsi_scaling_and_direction_invariants  close      RSI3
+    10       NaN
+    11       NaN
+    10       NaN
+    12 75.000000
+    11 54.545455
+    13 75.000000
+PASSED
+tests/test_course_foundations.py::test_rolling_features_do_not_depend_on_future_rows    close        ma3  prior_ma3  signal  lagged_signal
+0   10.0        NaN        NaN   False          False
+1   11.0        NaN        NaN   False          False
+2   12.0  11.000000        NaN    True          False
+3    9.0  10.666667  11.000000   False           True
+4   10.0  10.333333  10.666667   False          False
+5   13.0  10.666667  10.333333    True          False
+未来修改不影响前四行：通过；居中窗口不能直接作为当时信号。
+PASSED
+tests/test_course_foundations.py::test_atr_rejects_invalid_ohlc_and_handles_scale  high  low  close  TR     ATR3
+ 11.0  9.0   10.0 2.0      NaN
+ 13.0 12.0   12.5 3.0      NaN
+ 12.0 10.0   11.0 2.5 2.500000
+ 14.0 13.0   13.5 3.0 2.666667
+ 13.0 11.0   12.0 2.5 2.611111
+理论份额（尚未按证券单位取整） 191 止损距离 5.222222222222222
+合法跳空实验 TR [2.  5.  4.5 3.  2.5] ATR [       nan        nan 3.83333333 3.55555556 3.2037037 ]
+PASSED
+tests/test_course_foundations.py::test_q06_actual_strategy_fills_and_reconciles PASSED
+tests/test_course_library.py::test_published_resources_and_in_app_examples_execute PASSED
+tests/test_course_library.py::test_incomplete_catalogue_cannot_pass_release PASSED
+tests/test_course_library.py::test_bounded_output_does_not_accumulate_after_truncation PASSED
+tests/test_course_library.py::test_worker_success_error_timeout_cancel_and_utf8 PASSED
+tests/test_course_library.py::test_reader_retains_drafts_and_does_not_complete_drafts PASSED
+tests/test_course_library.py::test_explanation_never_activates_control_and_escape_cleans_overlay PASSED
+tests/test_course_notebooks.py::test_notebook_sources_are_exact_reader_sources PASSED
+tests/test_course_notebooks.py::test_export_never_overwrites_previous_work PASSED
+tests/test_course_reading.py::test_qt_markdown_preserves_published_chinese_text PASSED
+tests/test_course_reading.py::test_hidden_answers_keep_code_headings_and_navigation_intact PASSED
+tests/test_course_reading.py::test_bookmarks_checks_and_positions_are_separate_from_legacy_progress PASSED
+tests/test_course_strategies.py::test_strategy_curriculum_has_complete_text_and_separate_exercises PASSED
+tests/test_course_strategies.py::test_calculation_examples[29]    close  fast     slow  target  held     net
+0   10.0   NaN      NaN     0.0   0.0  0.0000
+1   10.0  10.0      NaN     0.0   0.0  0.0000
+2   10.0  10.0  10.0000     0.0   0.0  0.0000
+3   11.0  10.5  10.3333     1.0   0.0  0.0000
+4   12.0  11.5  11.0000     1.0   1.0  0.0899
+5   13.0  12.5  12.0000     1.0   1.0  0.0833
+6   12.0  12.5  12.3333     1.0   1.0 -0.0769
+7   11.0  11.5  12.0000     0.0   1.0 -0.0833
+8   10.0  10.5  11.0000     0.0   0.0 -0.0010
+9    9.0   9.5  10.0000     0.0   0.0 -0.0000
+PASSED
+tests/test_course_strategies.py::test_calculation_examples[30]    close  prior_high  prior_low  target
+0   10.0         NaN        NaN       0
+1   11.0         NaN        NaN       0
+2   12.0         NaN        NaN       0
+3   11.0        12.0       10.0       0
+4   13.0        12.0       11.0       1
+5   12.0        13.0       11.0       1
+6   10.0        13.0       11.0       0
+7    9.0        13.0       10.0       0
+PASSED
+tests/test_course_strategies.py::test_calculation_examples[31]     close    mean  lower  target       reason
+0    10.0     NaN    NaN       0           等待
+1    10.2     NaN    NaN       0           等待
+2     9.8  10.000  9.837       1         低于下轨
+3    10.0  10.000  9.837       0  回归均值或收盘止损信号
+4     8.0   9.267  8.367       1         低于下轨
+5     8.5   8.833  7.983       1           等待
+6     9.5   8.667  8.043       0  回归均值或收盘止损信号
+7    10.0   9.333  8.710       0           等待
+8     7.0   8.833  7.521       1         低于下轨
+9     6.0   7.667  5.967       0  回归均值或收盘止损信号
+10    5.0   6.000  5.184       1         低于下轨
+PASSED
+tests/test_course_strategies.py::test_calculation_examples[32]    close     rsi  rebound  trend  filtered
+0   12.0     NaN    False  False     False
+1   11.0     NaN    False  False     False
+2   10.0     NaN    False  False     False
+3    9.0    0.00    False  False     False
+4    8.0    0.00    False  False     False
+5    9.0   33.33    False  False     False
+6   10.0   66.67     True   True      True
+7   11.0  100.00    False   True     False
+8   10.0   66.67    False  False     False
+9   12.0   75.00    False   True     False
+PASSED
+tests/test_course_strategies.py::test_calculation_examples[33] 动量
+        A      B
+0    NaN    NaN
+1    NaN    NaN
+2  0.200  0.040
+3  0.000  0.039
+4 -0.167  0.058
+5 -0.182  0.132
+目标权重
+      A    B
+0  0.0  0.0
+1  0.0  0.0
+2  0.8  0.0
+3  0.0  0.8
+4  0.0  0.8
+5  0.0  0.8
+滞后一期的组合收益 [0.0, 0.0, 0.0, -0.0667, 0.0302, 0.0727]
+PASSED
+tests/test_course_strategies.py::test_calculation_examples[34] 立即判断 [0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1] 切换 5
+确认后 [0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1] 切换 3
+PASSED
+tests/test_course_strategies.py::test_calculation_examples[35]  情景      收益  最大回撤  成本比例合计
+ 上涨  0.4644 0.000   0.001
+ 下跌  0.0000 0.000   0.000
+ 震荡 -0.6162 0.617   0.019
+高波动 -0.8220 0.822   0.049
+PASSED
+tests/test_course_strategies.py::test_calculation_examples[36]     波动过滤   仓位      收益    换手
+0  False  1.0  0.2715  11.0
+1   True  1.0  0.0673  13.0
+2  False  0.5  0.1299   5.5
+3   True  0.5  0.0346   6.5
+PASSED
+tests/test_course_strategies.py::test_calculation_examples[37] 成交 [(1, 'BUY', 90, 11.0), (3, 'SELL', 90, 9.0)]
+逐日账本 [(0, 1000.0, 0, 1000.0), (1, 9.010000000000105, 90, 1044.0100000000002), (2, 9.010000000000105, 90, 999.0100000000001), (3, 818.2000000000002, 0, 818.2000000000002)]
+PASSED
+tests/test_course_strategies.py::test_calculation_examples[38] [(0, 'observe', 10), (0, 'submit', 100), (1, 'fill', 100), (1, 'observe', 11), (2, 'observe', 12)]
+PASSED
+tests/test_course_strategies.py::test_calculation_examples[39] 正常 (100, Decimal('10.01')) 限价不足 (0, None) 低参与 (10, Decimal('10.01'))
+PASSED
+tests/test_course_strategies.py::test_calculation_examples[40] 因果信号 [False, False, False, True, False, True, False, True]
+偷看明天 [True, False, True, False, True, False, True, False]
+过去信号未来扰动测试：因果规则通过，作弊规则失败。
+只看存活 0.15000000000000002 完整小样本 -0.19999999999999998
+PASSED
+tests/test_course_strategies.py::test_calculation_examples[41] 训练候选 {3: 0.47102120071402664, 5: 0.377986298143006, 10: 0.2789268831848146} 固定参数 3
+验证 0.25420463058816245 最终测试 0.21443122648756652
+PASSED
+tests/test_course_strategies.py::test_calculation_examples[43] 一元风险距离 1000 两元 500 现金不足 0
+PASSED
+tests/test_course_strategies.py::test_calculation_examples[44] 收盘退出信号 [False, False, False, False, True, True]
+信号日 4 下一开盘 9.0
+止损线 9.5 跳空开盘 8.0 价格差 1.5
+PASSED
+tests/test_course_strategies.py::test_calculation_examples[45] 波动 [0.01643168 0.00336155] 等权 [0.5 0.5] 逆波动 [0.16983324 0.83016676]
+等权波动 0.007488324245116526 逆波动组合波动 0.0027457188970775753
+相关矩阵 [[ 1.         -0.51596917]
+ [-0.51596917  1.        ]]
+PASSED
+tests/test_course_strategies.py::test_calculation_examples[46] 目标 [0.5 0.5] 双边成交占净值 0.4 费用 40.0
+PASSED
+tests/test_course_strategies.py::test_calculation_examples[47] 基础 (0.01153684651896758, 0.025919200000000142) 高成本 (-0.00042646735000018143, 0.02980000000000005) 额外跳空 (-0.09168119904419225, 0.12531519999999996)
+PASSED
+tests/test_course_strategies.py::test_calculation_examples[48] {
+  "data_kind": "synthetic",
+  "sha256": "4c55994ac13e3dbbd7ad9c94e848ebec7e475fe4213b407936fb62fcf173812e",
+  "split": 100,
+  "chosen_period": 3,
+  "train": {
+    "3": {
+      "return": 0.19710145437947735,
+      "drawdown": 0.0017938177464636995,
+      "turnover": 4.5
+    },
+    "5": {
+      "return": 0.16204365378003116,
+      "drawdown": 0.0044285689603058565,
+      "turnover": 4.5
+    },
+    "10": {
+      "return": 0.11723728284651891,
+      "drawdown": 0.011185997767982792,
+      "turnover": 4.5
+    }
+  },
+  "test": {
+    "return": 0.11216207900937003,
+    "drawdown": 0.002377123945141002,
+    "turnover": 2.5
+  },
+  "stress": {
+    "return": 0.10110261948056087,
+    "drawdown": 0.0043733678191877345,
+    "turnover": 2.5
+  },
+  "limitation": "简化目标权重研究，非A股真实撮合，不是盈利证据"
+}
+PASSED
+tests/test_course_strategies.py::test_actual_strategy_engine_execution[29] PASSED
+tests/test_course_strategies.py::test_actual_strategy_engine_execution[30] PASSED
+tests/test_course_strategies.py::test_actual_strategy_engine_execution[31] PASSED
+tests/test_course_strategies.py::test_actual_strategy_engine_execution[32] PASSED
+tests/test_course_strategies.py::test_actual_strategy_engine_execution[33] PASSED
+tests/test_course_strategies.py::test_actual_strategy_engine_execution[38] PASSED
+tests/test_course_strategies.py::test_handwritten_ledger_has_no_same_day_fill_and_reconciles 成交 [(1, 'BUY', 90, 11.0), (3, 'SELL', 90, 9.0)]
+逐日账本 [(0, 1000.0, 0, 1000.0), (1, 9.010000000000105, 90, 1044.0100000000002), (2, 9.010000000000105, 90, 999.0100000000001), (3, 818.2000000000002, 0, 818.2000000000002)]
+PASSED
+tests/test_data.py::test_demo_round_trip_and_hash_guard PASSED
+tests/test_data.py::test_missing_action_blocks_factor_change PASSED
+tests/test_data.py::test_tencent_parser_units_and_timestamps PASSED
+tests/test_data.py::test_parameter_forms_are_parsed_without_executing_code PASSED
+tests/test_data_identity_and_replay_speed.py::test_data_origin_is_explicit_without_claiming_unknown_imports_are_real[meta0-\u5408\u6210\u6559\u5b66\u6570\u636e] PASSED
+tests/test_data_identity_and_replay_speed.py::test_data_origin_is_explicit_without_claiming_unknown_imports_are_real[meta1-\u5408\u6210\u6559\u5b66\u6570\u636e] PASSED
+tests/test_data_identity_and_replay_speed.py::test_data_origin_is_explicit_without_claiming_unknown_imports_are_real[meta2-\u771f\u5b9e\u5386\u53f2\u6570\u636e] PASSED
+tests/test_data_identity_and_replay_speed.py::test_data_origin_is_explicit_without_claiming_unknown_imports_are_real[meta3-\u771f\u5b9e\u5386\u53f2\u6570\u636e \xb7 \u6307\u6570\uff08\u7814\u7a76\u7528\uff09] PASSED
+tests/test_data_identity_and_replay_speed.py::test_data_origin_is_explicit_without_claiming_unknown_imports_are_real[meta4-\u771f\u5b9e\u884c\u60c5\u5f55\u5236] PASSED
+tests/test_data_identity_and_replay_speed.py::test_data_origin_is_explicit_without_claiming_unknown_imports_are_real[meta5-\u5bfc\u5165\u6570\u636e \xb7 \u771f\u5b9e\u6027\u5f85\u6838\u5bf9] PASSED
+tests/test_data_identity_and_replay_speed.py::test_data_origin_is_explicit_without_claiming_unknown_imports_are_real[meta6-\u5bfc\u5165\u6570\u636e \xb7 \u771f\u5b9e\u6027\u5f85\u6838\u5bf9] PASSED
+tests/test_data_identity_and_replay_speed.py::test_replay_speed_controls_current_run_or_next_preset[backtest-RUNNING-quote-False-False] PASSED
+tests/test_data_identity_and_replay_speed.py::test_replay_speed_controls_current_run_or_next_preset[backtest-PAUSED-bar-False-False] PASSED
+tests/test_data_identity_and_replay_speed.py::test_replay_speed_controls_current_run_or_next_preset[replay-RUNNING-bar-True-True] PASSED
+tests/test_data_identity_and_replay_speed.py::test_replay_speed_controls_current_run_or_next_preset[replay-PAUSED-quote-True-True] PASSED
+tests/test_data_identity_and_replay_speed.py::test_replay_speed_controls_current_run_or_next_preset[backtest-COMPLETED-quote-True-False] PASSED
+tests/test_data_identity_and_replay_speed.py::test_replay_speed_controls_current_run_or_next_preset[replay-COMPLETED-bar-False-False] PASSED
+tests/test_data_identity_and_replay_speed.py::test_replay_speed_controls_current_run_or_next_preset[None-None-bar-False-False] PASSED
+tests/test_data_identity_and_replay_speed.py::test_replay_speed_controls_current_run_or_next_preset[None-None-quote-True-False] PASSED
+tests/test_data_identity_and_replay_speed.py::test_new_teaching_selection_uses_v2_and_explicit_name PASSED
+tests/test_data_identity_and_replay_speed.py::test_chart_identity_is_from_its_run_not_from_next_dataset PASSED
+tests/test_data_jobs.py::test_streaming_preview_validates_all_rows_and_limits_only_the_chart PASSED
+tests/test_data_jobs.py::test_late_action_cannot_validate_an_earlier_factor_change PASSED
+tests/test_data_jobs.py::test_background_import_keeps_ui_events_flowing_and_publishes_only_on_success PASSED
+tests/test_data_jobs.py::test_import_cancel_and_corrupt_package_never_publish_partial_dataset PASSED
+tests/test_data_jobs.py::test_successful_unpublished_result_is_cleaned_when_owner_discards_it[cancel] PASSED
+tests/test_data_jobs.py::test_successful_unpublished_result_is_cleaned_when_owner_discards_it[close] PASSED
+tests/test_data_jobs.py::test_preview_race_cannot_replace_newer_dataset_or_change_user_mode PASSED
+tests/test_data_jobs.py::test_closing_window_terminates_pending_data_jobs PASSED
+tests/test_data_jobs.py::test_many_trade_rows_remain_accessible_without_cell_allocation PASSED
+tests/test_data_jobs.py::test_long_input_manifest_is_summarized_without_removing_saved_parts PASSED
+tests/test_data_jobs.py::test_queued_account_updates_paint_only_latest_state PASSED
+tests/test_data_jobs.py::test_narrow_quote_preview_has_readable_axis_and_no_artificial_zero PASSED
+tests/test_data_jobs.py::test_old_trade_loads_exact_history_and_survives_account_refresh PASSED
+tests/test_data_jobs.py::test_trade_context_honors_observation_cutoff_and_missing_time PASSED
+tests/test_data_jobs.py::test_date_ticks_point_at_actual_candles PASSED
+tests/test_data_jobs.py::test_etf_candles_preserve_subyuan_price_range PASSED
+tests/test_data_quality.py::test_exchange_announcements_and_makeup_weekends[2023-01-02-False] PASSED
+tests/test_data_quality.py::test_exchange_announcements_and_makeup_weekends[2023-01-03-True] PASSED
+tests/test_data_quality.py::test_exchange_announcements_and_makeup_weekends[2023-01-28-False] PASSED
+tests/test_data_quality.py::test_exchange_announcements_and_makeup_weekends[2023-05-03-False] PASSED
+tests/test_data_quality.py::test_exchange_announcements_and_makeup_weekends[2024-02-09-False] PASSED
+tests/test_data_quality.py::test_exchange_announcements_and_makeup_weekends[2024-02-18-False] PASSED
+tests/test_data_quality.py::test_exchange_announcements_and_makeup_weekends[2024-02-19-True] PASSED
+tests/test_data_quality.py::test_exchange_announcements_and_makeup_weekends[2024-09-17-False] PASSED
+tests/test_data_quality.py::test_exchange_announcements_and_makeup_weekends[2025-01-27-True] PASSED
+tests/test_data_quality.py::test_exchange_announcements_and_makeup_weekends[2025-01-28-False] PASSED
+tests/test_data_quality.py::test_exchange_announcements_and_makeup_weekends[2025-02-04-False] PASSED
+tests/test_data_quality.py::test_exchange_announcements_and_makeup_weekends[2025-02-05-True] PASSED
+tests/test_data_quality.py::test_exchange_announcements_and_makeup_weekends[2026-01-04-False] PASSED
+tests/test_data_quality.py::test_exchange_announcements_and_makeup_weekends[2026-02-23-False] PASSED
+tests/test_data_quality.py::test_exchange_announcements_and_makeup_weekends[2026-02-24-True] PASSED
+tests/test_data_quality.py::test_exchange_announcements_and_makeup_weekends[2026-02-28-False] PASSED
+tests/test_data_quality.py::test_exchange_announcements_and_makeup_weekends[2026-04-06-False] PASSED
+tests/test_data_quality.py::test_exchange_announcements_and_makeup_weekends[2026-06-19-False] PASSED
+tests/test_data_quality.py::test_exchange_announcements_and_makeup_weekends[2026-09-25-False] PASSED
+tests/test_data_quality.py::test_exchange_announcements_and_makeup_weekends[2026-10-08-True] PASSED
+tests/test_data_quality.py::test_exchange_announcements_and_makeup_weekends[2022-12-30-None] PASSED
+tests/test_data_quality.py::test_exchange_announcements_and_makeup_weekends[2027-01-04-None] PASSED
+tests/test_data_quality.py::test_daily_holiday_and_weekend_are_not_missing_observations PASSED
+tests/test_data_quality.py::test_requested_edges_and_middle_gap_are_distinguished_and_fully_exportable PASSED
+tests/test_data_quality.py::test_each_symbol_has_its_own_coverage_against_the_shared_requested_range PASSED
+tests/test_data_quality.py::test_minute_gap_excludes_lunch_and_partial_day_edges PASSED
+tests/test_data_quality.py::test_full_day_minute_expectations_match_exchange_continuous_session[600000.SH-237] PASSED
+tests/test_data_quality.py::test_full_day_minute_expectations_match_exchange_continuous_session[510300.SH-237] PASSED
+tests/test_data_quality.py::test_full_day_minute_expectations_match_exchange_continuous_session[159915.SZ-237] PASSED
+tests/test_data_quality.py::test_auction_bar_and_marked_suspension_are_explained_not_mislabeled_missing PASSED
+tests/test_data_quality.py::test_closed_day_is_visible_to_inspection_but_blocks_real_backtest PASSED
+tests/test_data_quality.py::test_calendar_unknown_range_is_not_guessed_from_weekdays PASSED
+tests/test_data_quality.py::test_unknown_long_requested_range_is_summarized_without_iterating_it PASSED
+tests/test_data_quality.py::test_holiday_corporate_action_is_rejected_before_account_changes PASSED
+tests/test_data_quality.py::test_old_metadata_cannot_forge_actual_dates_or_claim_no_gaps PASSED
+tests/test_data_quality.py::test_mixed_bar_periods_are_rejected_instead_of_using_first_period PASSED
+tests/test_data_quality.py::test_holiday_quotes_do_not_fill_or_advance_account_but_teaching_calendar_is_explicit PASSED
+tests/test_data_quality.py::test_run_keeps_quality_and_calendar_version_in_report_and_manifest PASSED
+tests/test_data_quality.py::test_quality_window_reads_unverified_data_without_mutating_it_and_publishes_full_report PASSED
+tests/test_data_quality.py::test_cancel_quality_drops_stale_completion_and_never_publishes PASSED
+tests/test_demo_candles.py::test_synthetic_candles_have_valid_varied_shapes_and_session_continuity PASSED
+tests/test_demo_candles.py::test_demo_prices_are_reproducible_across_independent_directories PASSED
+tests/test_demo_candles.py::test_new_demo_is_added_once_without_rewriting_old_manifests_or_quotes PASSED
+tests/test_download_presets.py::test_download_presets_are_relative_editable_and_do_not_start_download PASSED
+tests/test_engine.py::test_all_templates_complete_with_cash_invariants[\u53cc\u5747\u7ebf\u8d8b\u52bf] PASSED
+tests/test_engine.py::test_all_templates_complete_with_cash_invariants[\u533a\u95f4\u7a81\u7834] PASSED
+tests/test_engine.py::test_all_templates_complete_with_cash_invariants[ETF \u52a8\u91cf\u8f6e\u52a8] PASSED
+tests/test_engine.py::test_recording_replay_is_deterministic_and_accounts_are_isolated PASSED
+tests/test_engine.py::test_pausing_and_single_stepping_preserve_replay_result PASSED
+tests/test_engine.py::test_export_and_database_restore_manifest PASSED
+tests/test_engine.py::test_timeout_terminates_strategy_worker PASSED
+tests/test_engine.py::test_pause_single_step_does_not_advance_future_history PASSED
+tests/test_engine.py::test_strategy_exception_exposes_line_number_without_crashing_parent PASSED
+tests/test_engine.py::test_order_journal_preserves_submitted_state PASSED
+tests/test_equity_accounting.py::test_entitlement_payment_and_listing_are_three_separate_account_events PASSED
+tests/test_equity_accounting.py::test_restore_does_not_repeat_entitlement_or_payment[False] PASSED
+tests/test_equity_accounting.py::test_restore_does_not_repeat_entitlement_or_payment[True] PASSED
+tests/test_equity_accounting.py::test_dividend_is_still_payable_after_all_original_shares_are_sold PASSED
+tests/test_equity_accounting.py::test_same_event_id_on_two_symbols_and_two_entitlements_pay_once_each PASSED
+tests/test_equity_accounting.py::test_bad_action_is_rejected_before_any_cash_order_or_clock_change[change0] PASSED
+tests/test_equity_accounting.py::test_bad_action_is_rejected_before_any_cash_order_or_clock_change[change1] PASSED
+tests/test_equity_accounting.py::test_bad_action_is_rejected_before_any_cash_order_or_clock_change[change2] PASSED
+tests/test_equity_accounting.py::test_bad_action_is_rejected_before_any_cash_order_or_clock_change[change3] PASSED
+tests/test_equity_accounting.py::test_bad_action_is_rejected_before_any_cash_order_or_clock_change[change4] PASSED
+tests/test_equity_accounting.py::test_bad_action_is_rejected_before_any_cash_order_or_clock_change[change5] PASSED
+tests/test_equity_accounting.py::test_bad_action_is_rejected_before_any_cash_order_or_clock_change[change6] PASSED
+tests/test_equity_accounting.py::test_bad_action_is_rejected_before_any_cash_order_or_clock_change[change7] PASSED
+tests/test_equity_accounting.py::test_bad_action_is_rejected_before_any_cash_order_or_clock_change[change8] PASSED
+tests/test_equity_accounting.py::test_bad_action_is_rejected_before_any_cash_order_or_clock_change[change9] PASSED
+tests/test_equity_accounting.py::test_bad_action_is_rejected_before_any_cash_order_or_clock_change[change10] PASSED
+tests/test_equity_accounting.py::test_conflicting_duplicate_cannot_overwrite_an_existing_entitlement PASSED
+tests/test_equity_accounting.py::test_fractional_lots_with_integral_account_entitlement_are_not_rejected PASSED
+tests/test_equity_accounting.py::test_ledger_detects_corruption_even_after_corporate_actions[cash] PASSED
+tests/test_equity_accounting.py::test_ledger_detects_corruption_even_after_corporate_actions[quantity] PASSED
+tests/test_equity_accounting.py::test_ledger_detects_corruption_even_after_corporate_actions[receivable] PASSED
+tests/test_equity_accounting.py::test_ledger_detects_corruption_even_after_corporate_actions[fee] PASSED
+tests/test_equity_accounting.py::test_ledger_detects_corruption_even_after_corporate_actions[cost] PASSED
+tests/test_equity_accounting.py::test_ledger_detects_corruption_even_after_corporate_actions[missing] PASSED
+tests/test_equity_accounting.py::test_ledger_detects_corruption_even_after_corporate_actions[duplicate] PASSED
+tests/test_equity_accounting.py::test_ledger_detects_corruption_even_after_corporate_actions[payment] PASSED
+tests/test_equity_accounting.py::test_old_snapshot_with_equity_history_is_viewable_but_never_silently_reconciled PASSED
+tests/test_equity_accounting.py::test_real_strategy_equity_journals_roundtrip_sqlite_and_export PASSED
+tests/test_equity_accounting.py::test_import_blocks_missing_share_availability_date_before_running PASSED
+tests/test_etf_reference.py::test_actual_exchange_excerpts_classify_t0_t1_and_twenty_without_lof PASSED
+tests/test_etf_reference.py::test_malformed_exchange_lists_never_become_default_t1[empty] PASSED
+tests/test_etf_reference.py::test_malformed_exchange_lists_never_become_default_t1[duplicate] PASSED
+tests/test_etf_reference.py::test_malformed_exchange_lists_never_become_default_t1[not_subset] PASSED
+tests/test_etf_reference.py::test_malformed_exchange_lists_never_become_default_t1[missing_category] PASSED
+tests/test_etf_reference.py::test_malformed_exchange_lists_never_become_default_t1[new_category] PASSED
+tests/test_etf_reference.py::test_malformed_exchange_lists_never_become_default_t1[mismatched_category] PASSED
+tests/test_etf_reference.py::test_malformed_exchange_lists_never_become_default_t1[wrong_date] PASSED
+tests/test_etf_reference.py::test_sse_incomplete_pagination_is_rejected[empty] PASSED
+tests/test_etf_reference.py::test_sse_incomplete_pagination_is_rejected[truncated] PASSED
+tests/test_etf_reference.py::test_sse_incomplete_pagination_is_rejected[page] PASSED
+tests/test_etf_reference.py::test_sse_incomplete_pagination_is_rejected[data] PASSED
+tests/test_etf_reference.py::test_sse_incomplete_pagination_is_rejected[error] PASSED
+tests/test_etf_reference.py::test_sz_export_count_non_etf_and_mixed_source_date_fail_closed PASSED
+tests/test_etf_reference.py::test_refresh_persists_reference_and_does_not_mutate_rules_or_old_cache PASSED
+tests/test_etf_reference.py::test_legacy_cache_remains_usable_and_cannot_mislabel_reference PASSED
+tests/test_etf_reference.py::test_attribute_tampering_and_wrong_exchange_do_not_load_as_valid PASSED
+tests/test_etf_reference.py::test_gui_reference_default_difference_and_readonly_history_view PASSED
+tests/test_help_registry.py::test_spinbox_editor_maps_to_registered_parent PASSED
+tests/test_help_registry.py::test_point_help_consumes_business_click PASSED
+tests/test_help_registry.py::test_all_registered_entries_have_explanation PASSED
+tests/test_help_registry.py::test_disabled_control_can_be_explained_without_changing_state PASSED
+tests/test_help_registry.py::test_reopen_help_after_parent_dialog_is_destroyed PASSED
+tests/test_help_registry.py::test_disabled_menu_action_explanation_uses_action_state PASSED
+tests/test_historical_status.py::test_observed_st_suspension_removal_agrees_with_company_announcement PASSED
+tests/test_historical_status.py::test_current_name_and_listing_status_do_not_rewrite_past_state PASSED
+tests/test_historical_status.py::test_missing_middle_session_becomes_unknown_and_is_never_forward_filled PASSED
+tests/test_historical_status.py::test_empty_response_does_not_certify_normal_trading PASSED
+tests/test_historical_status.py::test_invalid_response_fails_whole_request[duplicate] PASSED
+tests/test_historical_status.py::test_invalid_response_fails_whole_request[unordered] PASSED
+tests/test_historical_status.py::test_invalid_response_fails_whole_request[wrong_code] PASSED
+tests/test_historical_status.py::test_invalid_response_fails_whole_request[missing_flag] PASSED
+tests/test_historical_status.py::test_invalid_response_fails_whole_request[bad_flag] PASSED
+tests/test_historical_status.py::test_invalid_response_fails_whole_request[outside] PASSED
+tests/test_historical_status.py::test_ipo_five_sessions_skip_national_holiday_and_do_not_count_calendar_days PASSED
+tests/test_historical_status.py::test_delisting_is_dated_not_current_status_inferred PASSED
+tests/test_historical_status.py::test_etf_not_labeled_stock_or_given_inferred_t0 PASSED
+tests/test_historical_status.py::test_pagination_failure_after_some_rows_is_not_partial_success PASSED
+tests/test_historical_status.py::test_raw_state_evidence_is_persisted_and_manual_edits_are_distinguished PASSED
+tests/test_historical_status.py::test_modified_raw_evidence_fails_before_publishing PASSED
+tests/test_historical_status.py::test_known_suspension_explains_missing_price_without_creating_a_bar PASSED
+tests/test_historical_status.py::test_day_missing_both_price_and_state_still_blocks_backtest PASSED
+tests/test_historical_status.py::test_preview_cancel_preserves_manual_input_and_apply_is_not_save PASSED
+tests/test_historical_status.py::test_status_fetch_timeout_terminates_worker_and_reports_actionable_error PASSED
+tests/test_historical_status.py::test_status_socket_reports_eof_instead_of_sdk_receive_loop PASSED
+tests/test_historical_status.py::test_status_transport_failure_restores_sdk_and_global_socket_settings PASSED
+tests/test_index_research.py::test_known_indices_have_research_rules_without_confusing_stock_codes[000001.SH] PASSED
+tests/test_index_research.py::test_known_indices_have_research_rules_without_confusing_stock_codes[399001.SZ] PASSED
+tests/test_index_research.py::test_known_indices_have_research_rules_without_confusing_stock_codes[399006.SZ] PASSED
+tests/test_index_research.py::test_known_indices_have_research_rules_without_confusing_stock_codes[000300.SH] PASSED
+tests/test_index_research.py::test_known_indices_have_research_rules_without_confusing_stock_codes[000905.SH] PASSED
+tests/test_index_research.py::test_known_indices_have_research_rules_without_confusing_stock_codes[000852.SH] PASSED
+tests/test_index_research.py::test_known_indices_have_research_rules_without_confusing_stock_codes[000688.SH] PASSED
+tests/test_index_research.py::test_known_indices_have_research_rules_without_confusing_stock_codes[000016.SH] PASSED
+tests/test_index_research.py::test_index_orders_are_explicitly_rejected_without_cash_or_positions[BUY] PASSED
+tests/test_index_research.py::test_index_orders_are_explicitly_rejected_without_cash_or_positions[SELL] PASSED
+tests/test_index_research.py::test_index_dataset_can_run_strategy_history_and_explanations_without_trading[1d] PASSED
+tests/test_index_research.py::test_index_dataset_can_run_strategy_history_and_explanations_without_trading[60m] PASSED
+tests/test_input_archive.py::test_live_inputs_replay_original_latency_duplicates_and_arrival_order PASSED
+tests/test_input_archive.py::test_recorder_preserves_duplicate_inputs_and_blocks_received_clock_regression PASSED
+tests/test_input_archive.py::test_committed_archive_prefix_ignores_orphan_and_detects_tampering PASSED
+tests/test_input_archive.py::test_capture_write_failure_stops_account_and_preserves_input_in_sqlite PASSED
+tests/test_input_archive.py::test_multi_day_automatic_archive_is_retained_but_cannot_bypass_action_check PASSED
+tests/test_instruction_preview.py::test_preview_never_starts_job_or_creates_files[report] PASSED
+tests/test_instruction_preview.py::test_preview_never_starts_job_or_creates_files[compare] PASSED
+tests/test_instruction_preview.py::test_preview_never_starts_job_or_creates_files[recover] PASSED
+tests/test_instruction_preview.py::test_preview_never_starts_job_or_creates_files[quality] PASSED
+tests/test_learning_guide.py::test_reading_is_not_practice_and_glossary_cannot_mark_the_previous_lesson PASSED
+tests/test_learning_guide.py::test_modified_parameters_survive_next_lesson_and_original_code_is_preserved PASSED
+tests/test_learning_guide.py::test_invalid_or_reverted_parameters_do_not_earn_saved_step PASSED
+tests/test_learning_guide.py::test_two_step_lesson_has_no_same_quote_fill_and_requires_trade_selection PASSED
+tests/test_learning_guide.py::test_offline_live_lesson_keeps_network_off_and_cancels_pending_order PASSED
+tests/test_learning_guide.py::test_different_account_and_failed_trade_lookup_do_not_complete_practice PASSED
+tests/test_learning_guide.py::test_saved_progress_and_parameters_reopen_without_starting_strategy PASSED
+tests/test_learning_guide.py::test_hiding_guidance_keeps_work_and_context_buttons_return_to_correct_account PASSED
+tests/test_learning_guide.py::test_reading_mode_restores_panels_and_keeps_execution_controls_reachable PASSED
+tests/test_learning_guide.py::test_new_account_does_not_replace_lesson_evidence_and_early_stop_can_restart PASSED
+tests/test_learning_guide.py::test_preparing_next_lesson_clears_old_account_display_but_keeps_history PASSED
+tests/test_live_rule_lifecycle.py::test_live_account_cross_day_cancels_then_updates_without_resetting_positions PASSED
+tests/test_live_rule_lifecycle.py::test_same_day_change_cannot_rewrite_previously_used_rule PASSED
+tests/test_live_rule_lifecycle.py::test_fresh_cache_avoids_network_and_failed_rules_leave_no_account_directory PASSED
+tests/test_live_rule_lifecycle.py::test_ui_cancel_and_late_reply_cannot_create_or_modify_account PASSED
+tests/test_live_rule_lifecycle.py::test_ui_preparation_error_and_selected_account_change_keep_target PASSED
+tests/test_live_rules.py::test_observation_applies_only_today_and_preserves_original_rules_and_evidence PASSED
+tests/test_live_rules.py::test_stale_cross_day_and_future_observations_are_rejected[offset0] PASSED
+tests/test_live_rules.py::test_stale_cross_day_and_future_observations_are_rejected[offset1] PASSED
+tests/test_live_rules.py::test_stale_cross_day_and_future_observations_are_rejected[offset2] PASSED
+tests/test_live_rules.py::test_current_day_source_date_required_and_weekends_use_last_session PASSED
+tests/test_live_rules.py::test_fresh_t0_rule_allows_intraday_sell_and_next_day_blocks_orders PASSED
+tests/test_live_rules.py::test_stock_only_does_not_require_etf_catalog_and_missing_etf_is_not_guessed PASSED
+tests/test_manual_etf_price.py::test_opposite_price_uses_instrument_tick_for_new_etf_codes[0-158000.SZ-.001] PASSED
+tests/test_manual_etf_price.py::test_opposite_price_uses_instrument_tick_for_new_etf_codes[0-159915.SZ-.001] PASSED
+tests/test_manual_etf_price.py::test_opposite_price_uses_instrument_tick_for_new_etf_codes[0-551300.SH-.001] PASSED
+tests/test_manual_etf_price.py::test_opposite_price_uses_instrument_tick_for_new_etf_codes[0-600000.SH-.01] PASSED
+tests/test_manual_etf_price.py::test_opposite_price_uses_instrument_tick_for_new_etf_codes[1-158000.SZ-.001] PASSED
+tests/test_manual_etf_price.py::test_opposite_price_uses_instrument_tick_for_new_etf_codes[1-159915.SZ-.001] PASSED
+tests/test_manual_etf_price.py::test_opposite_price_uses_instrument_tick_for_new_etf_codes[1-551300.SH-.001] PASSED
+tests/test_manual_etf_price.py::test_opposite_price_uses_instrument_tick_for_new_etf_codes[1-600000.SH-.01] PASSED
+tests/test_market_failures.py::test_history_normalization_uses_provider_units_and_checks_action_dates PASSED
+tests/test_market_failures.py::test_unavailable_corporate_evidence_is_preserved_as_blocked_data PASSED
+tests/test_market_failures.py::test_malformed_and_nonfinite_public_quotes_are_not_accepted PASSED
+tests/test_market_failures.py::test_sina_factor_rows_support_etf_extra_columns_and_js_footer PASSED
+tests/test_market_failures.py::test_collector_retries_with_backoff_recovers_and_records_failures PASSED
+tests/test_market_validation.py::test_full_hour_coverage_and_report PASSED
+tests/test_market_validation.py::test_incomplete_evidence_cannot_pass[missing] PASSED
+tests/test_market_validation.py::test_incomplete_evidence_cannot_pass[duplicate] PASSED
+tests/test_market_validation.py::test_incomplete_evidence_cannot_pass[empty] PASSED
+tests/test_market_validation.py::test_incomplete_evidence_cannot_pass[future] PASSED
+tests/test_market_validation.py::test_incomplete_evidence_cannot_pass[stale] PASSED
+tests/test_market_validation.py::test_incomplete_evidence_cannot_pass[failure] PASSED
+tests/test_market_validation.py::test_incomplete_evidence_cannot_pass[closed] PASSED
+tests/test_market_validation.py::test_incomplete_evidence_cannot_pass[frozen] PASSED
+tests/test_market_validation.py::test_incomplete_evidence_cannot_pass[gap] PASSED
+tests/test_market_validation.py::test_incomplete_evidence_cannot_pass[short] PASSED
+tests/test_market_validation.py::test_empty_and_partial_responses_are_not_connectivity_success PASSED
+tests/test_minute_boundaries.py::test_completed_interval_boundaries[600000.SH-1m-09:30-False] PASSED
+tests/test_minute_boundaries.py::test_completed_interval_boundaries[600000.SH-1m-09:31-True] PASSED
+tests/test_minute_boundaries.py::test_completed_interval_boundaries[600000.SH-1m-11:30-True] PASSED
+tests/test_minute_boundaries.py::test_completed_interval_boundaries[600000.SH-1m-11:31-False] PASSED
+tests/test_minute_boundaries.py::test_completed_interval_boundaries[600000.SH-1m-13:00-False] PASSED
+tests/test_minute_boundaries.py::test_completed_interval_boundaries[600000.SH-1m-13:01-True] PASSED
+tests/test_minute_boundaries.py::test_completed_interval_boundaries[600000.SH-1m-14:57-True] PASSED
+tests/test_minute_boundaries.py::test_completed_interval_boundaries[600000.SH-1m-14:58-False] PASSED
+tests/test_minute_boundaries.py::test_completed_interval_boundaries[600000.SH-5m-15:00-False] PASSED
+tests/test_minute_boundaries.py::test_completed_interval_boundaries[510300.SH-5m-15:00-False] PASSED
+tests/test_minute_boundaries.py::test_completed_interval_boundaries[159915.SZ-1m-14:57-True] PASSED
+tests/test_minute_boundaries.py::test_completed_interval_boundaries[159915.SZ-1m-15:00-False] PASSED
+tests/test_minute_boundaries.py::test_completed_interval_boundaries[600000.SH-60m-11:30-True] PASSED
+tests/test_minute_boundaries.py::test_completed_interval_boundaries[600000.SH-60m-13:30-False] PASSED
+tests/test_minute_boundaries.py::test_completed_interval_boundaries[600000.SH-5m-11:29-False] PASSED
+tests/test_minute_boundaries.py::test_completed_interval_boundaries[600000.SH-2m-11:30-False] PASSED
+tests/test_minute_boundaries.py::test_next_completed_minute_can_fill_at_session_end_or_after_lunch[11:29-11:30] PASSED
+tests/test_minute_boundaries.py::test_next_completed_minute_can_fill_at_session_end_or_after_lunch[14:56-14:57] PASSED
+tests/test_minute_boundaries.py::test_next_completed_minute_can_fill_at_session_end_or_after_lunch[11:30-13:01] PASSED
+tests/test_minute_boundaries.py::test_order_submitted_inside_a_bar_cannot_fill_at_that_bars_past_open PASSED
+tests/test_minute_boundaries.py::test_auction_interval_cannot_fill_or_trigger_strategy_callback PASSED
+tests/test_minute_history.py::test_minute_reference_is_prior_session_not_prior_bar_or_future_daily_close PASSED
+tests/test_minute_history.py::test_eastmoney_has_own_volume_contract PASSED
+tests/test_minute_history.py::test_missing_prior_session_is_not_replaced_by_older_or_same_day_close PASSED
+tests/test_minute_history.py::test_weekend_reference_uses_actual_exchange_session PASSED
+tests/test_minute_history.py::test_unfinished_and_outside_request_bars_are_excluded_without_filling_gaps PASSED
+tests/test_minute_history.py::test_no_requested_coverage_has_actionable_actual_range PASSED
+tests/test_minute_history.py::test_duplicate_or_out_of_order_source_is_not_silently_sorted[times0] PASSED
+tests/test_minute_history.py::test_duplicate_or_out_of_order_source_is_not_silently_sorted[times1] PASSED
+tests/test_minute_history.py::test_invalid_quantity_is_not_truncated_into_liquidity[-1] PASSED
+tests/test_minute_history.py::test_invalid_quantity_is_not_truncated_into_liquidity[1.5] PASSED
+tests/test_minute_history.py::test_invalid_quantity_is_not_truncated_into_liquidity[NaN] PASSED
+tests/test_minute_history.py::test_first_day_ex_rights_requires_reference_even_with_no_overnight_position PASSED
+tests/test_minute_history.py::test_provider_zero_open_is_preserved_and_flagged PASSED
+tests/test_minute_history.py::test_disconnect_does_not_claim_unproven_ip_ban PASSED
+tests/test_minute_history.py::test_download_persists_adapter_provenance_and_all_symbols PASSED
+tests/test_minute_history.py::test_missing_reference_or_action_evidence_is_saved_but_blocks_run PASSED
+tests/test_minute_history.py::test_repeated_history_symbols_are_requested_once PASSED
+tests/test_minute_history.py::test_legacy_download_cannot_silently_reuse_moving_minute_reference PASSED
+tests/test_minute_history.py::test_download_dialog_source_dates_and_wrapped_guidance_fit PASSED
+tests/test_model_browser.py::test_saved_model_selection_survives_refresh_and_name_filter PASSED
+tests/test_model_browser.py::test_row_buttons_dispatch_selected_model_before_backtest PASSED
+tests/test_model_browser.py::test_same_name_template_and_saved_model_keep_distinct_identity PASSED
+tests/test_model_trading.py::test_tasks_only_list_live_accounts_and_refresh_keeps_identity PASSED
+tests/test_model_trading.py::test_new_task_preserves_current_source_and_uses_existing_start_path PASSED
+tests/test_model_trading.py::test_invalid_symbols_or_cancel_do_not_start_or_replace_model PASSED
+tests/test_navigation_rebuild.py::test_one_navigation_and_default_inline_editor PASSED
+tests/test_navigation_rebuild.py::test_data_page_defaults_to_historical_data_and_selects_without_run PASSED
+tests/test_navigation_rebuild.py::test_switching_workspaces_preserves_draft_and_does_not_run_or_save PASSED
+tests/test_onboarding_reset.py::test_full_initialization_keeps_learning_without_backups PASSED
+tests/test_onboarding_reset.py::test_reset_refuses_live_writer_before_deleting_files PASSED
+tests/test_onboarding_reset.py::test_reset_refuses_program_source_directories[pyproject.toml] PASSED
+tests/test_onboarding_reset.py::test_reset_refuses_program_source_directories[portable.flag] PASSED
+tests/test_onboarding_reset.py::test_reset_refuses_program_source_directories[AStock.exe] PASSED
+tests/test_onboarding_reset.py::test_reset_refuses_non_astock_database PASSED
+tests/test_onboarding_reset.py::test_reset_failure_reports_partial_deletion_and_preserves_progress PASSED
+tests/test_onboarding_reset.py::test_first_launch_skip_replay_and_completion_keep_draft PASSED
+tests/test_onboarding_reset.py::test_reset_confirmation_defaults_to_cancel_and_makes_no_changes PASSED
+tests/test_onboarding_reset.py::test_escape_dismissal_is_remembered PASSED
+tests/test_onboarding_reset.py::test_real_window_reset_shutdown_and_fresh_window_preserve_course_state PASSED
+tests/test_order_events.py::test_custom_cancel_delivers_one_immutable_update_and_releases_cash PASSED
+tests/test_order_events.py::test_partial_then_fill_callback_keeps_original_quantities PASSED
+tests/test_order_events.py::test_daily_partial_and_expiry_both_reach_strategy PASSED
+tests/test_order_events.py::test_terminal_callbacks_cannot_reopen_orders[pause] PASSED
+tests/test_order_events.py::test_terminal_callbacks_cannot_reopen_orders[stop] PASSED
+tests/test_order_events.py::test_terminal_callbacks_cannot_reopen_orders[finish] PASSED
+tests/test_order_events.py::test_after_hours_expiry_still_sends_order_callback PASSED
+tests/test_order_events.py::test_stale_and_no_volume_explain_waiting_without_duplicate_callbacks PASSED
+tests/test_order_events.py::test_callback_generated_order_does_not_overtake_earlier_expiry PASSED
+tests/test_order_events.py::test_unbounded_callback_orders_stop_without_losing_journal PASSED
+tests/test_qmt_workspace.py::test_navigation_preserves_editor_and_practice_and_quiz_progress PASSED
+tests/test_qmt_workspace.py::test_copy_model_preserves_unsaved_original_and_parameters PASSED
+tests/test_qmt_workspace.py::test_new_model_runs_in_real_strategy_process PASSED
+tests/test_qmt_workspace.py::test_backtest_entry_corrects_live_mode_and_rejects_quote_data PASSED
+tests/test_qmt_workspace.py::test_expanded_analysis_and_practice_navigation_restore_context PASSED
+tests/test_qmt_workspace.py::test_strategy_picker_returns_to_inline_editor_and_preserves_unsaved_changes PASSED
+tests/test_qmt_workspace.py::test_editor_settings_tabs_reach_actual_controls PASSED
+tests/test_qmt_workspace.py::test_backtest_overview_uses_actual_account_and_opens_trade_details PASSED
+tests/test_recording_recovery.py::test_live_writer_is_skipped_and_abrupt_exit_releases_os_lease PASSED
+tests/test_recording_recovery.py::test_recovery_preserves_duplicates_and_original_parts_and_is_idempotent PASSED
+tests/test_recording_recovery.py::test_interrupted_publication_retries_without_duplicate_or_lost_data[metadata] PASSED
+tests/test_recording_recovery.py::test_interrupted_publication_retries_without_duplicate_or_lost_data[marker] PASSED
+tests/test_recording_recovery.py::test_recovery_isolates_bad_directory_and_skips_writer PASSED
+tests/test_recording_recovery.py::test_missing_part_or_reversed_received_clock_is_not_published PASSED
+tests/test_recording_recovery.py::test_unknown_same_name_file_is_preserved_and_cross_day_requires_equity_check PASSED
+tests/test_recording_recovery.py::test_cancel_after_a_completed_directory_retains_it_and_raw_unfinished_parts PASSED
+tests/test_recording_recovery.py::test_market_stop_recording_never_merges_parts_and_collector_continues PASSED
+tests/test_recording_recovery.py::test_empty_recording_and_invalid_path_do_not_create_fake_dataset PASSED
+tests/test_recovery.py::test_queued_update_stays_at_committed_revision_until_delayed_serialization PASSED
+tests/test_recovery.py::test_corrupt_account_is_isolated_and_other_accounts_still_recover PASSED
+tests/test_recovery.py::test_forced_engine_kill_after_partial_fill_recovers_exact_account[False] PASSED
+tests/test_recovery.py::test_forced_engine_kill_after_partial_fill_recovers_exact_account[True] PASSED
+tests/test_recovery.py::test_engine_process_restart_restores_account_but_does_not_replay_orders PASSED
+tests/test_recovery.py::test_single_step_strategy_error_stops_account_and_engine_remains_usable[raise RuntimeError("single-step-failure")-single-step-failure] PASSED
+tests/test_recovery.py::test_single_step_strategy_error_stops_account_and_engine_remains_usable[ctx.explain("bad-log", payload=object())-\u89e3\u91ca\u4fe1\u606f\u987b\u4f7f\u7528] PASSED
+tests/test_report_jobs.py::test_report_uses_one_saved_snapshot_even_if_run_changes_during_export PASSED
+tests/test_report_jobs.py::test_mismatched_or_incomplete_report_is_never_published PASSED
+tests/test_report_jobs.py::test_comparison_is_a_consistent_view_and_keeps_bad_rows_visible PASSED
+tests/test_report_jobs.py::test_comparison_separates_materially_different_assumptions[cash] PASSED
+tests/test_report_jobs.py::test_comparison_separates_materially_different_assumptions[rules] PASSED
+tests/test_report_jobs.py::test_comparison_separates_materially_different_assumptions[engine] PASSED
+tests/test_report_jobs.py::test_comparison_separates_materially_different_assumptions[clock] PASSED
+tests/test_report_jobs.py::test_comparison_separates_materially_different_assumptions[data] PASSED
+tests/test_report_jobs.py::test_comparison_separates_materially_different_assumptions[config] PASSED
+tests/test_report_jobs.py::test_background_export_does_not_follow_account_switch_and_close_stops_workers PASSED
+tests/test_report_jobs.py::test_comparison_refresh_close_and_large_table_remain_usable PASSED
+tests/test_report_jobs.py::test_unreadable_database_is_an_inline_error_not_a_modal_block PASSED
+tests/test_report_jobs.py::test_large_report_exports_every_fixture_row_without_blocking_ui PASSED
+tests/test_rule_activation.py::test_context_before_activation_does_not_expose_later_t0_or_future_time PASSED
+tests/test_rule_activation.py::test_recorded_rule_activation_does_not_trade_earlier_replay_inputs PASSED
+tests/test_rule_history.py::test_risk_warning_changes_at_effective_date_not_consultation_date[600000.SH-.05-.10] PASSED
+tests/test_rule_history.py::test_risk_warning_changes_at_effective_date_not_consultation_date[000001.SZ-.05-.10] PASSED
+tests/test_rule_history.py::test_risk_warning_changes_at_effective_date_not_consultation_date[688001.SH-.20-.20] PASSED
+tests/test_rule_history.py::test_risk_warning_changes_at_effective_date_not_consultation_date[300001.SZ-.20-.20] PASSED
+tests/test_rule_history.py::test_sse_etf_auction_change_matches_quotes_bars_and_coverage[2026-07-03-True] PASSED
+tests/test_rule_history.py::test_sse_etf_auction_change_matches_quotes_bars_and_coverage[2026-07-06-False] PASSED
+tests/test_rule_history.py::test_timeline_does_not_leak_future_status_into_strategy_context PASSED
+tests/test_rule_history.py::test_known_unlimited_period_can_trade_above_standard_limit_then_returns_to_limit PASSED
+tests/test_rule_history.py::test_nontrading_period_expires_pending_daily_orders_and_rejects_new[suspended] PASSED
+tests/test_rule_history.py::test_nontrading_period_expires_pending_daily_orders_and_rejects_new[unlisted] PASSED
+tests/test_rule_history.py::test_nontrading_period_expires_pending_daily_orders_and_rejects_new[unknown] PASSED
+tests/test_rule_history.py::test_etf_t0_interval_uses_current_rule_and_roundtrips_snapshot PASSED
+tests/test_rule_history.py::test_gap_blocks_backtest_but_still_allows_inspection PASSED
+tests/test_rule_history.py::test_reject_ambiguous_or_invalid_rule_intervals[periods0-\u4ea4\u53e0] PASSED
+tests/test_rule_history.py::test_reject_ambiguous_or_invalid_rule_intervals[periods1-\u5012\u7f6e] PASSED
+tests/test_rule_history.py::test_reject_ambiguous_or_invalid_rule_intervals[periods2-\u6765\u6e90] PASSED
+tests/test_rule_history.py::test_reject_ambiguous_or_invalid_rule_intervals[periods3-YYYY] PASSED
+tests/test_rule_history.py::test_reject_ambiguous_or_invalid_rule_intervals[periods4-T\\+0] PASSED
+tests/test_rule_history.py::test_reject_ambiguous_or_invalid_rule_intervals[periods5-\u4e0d\u80fd\u53e6\u586b] PASSED
+tests/test_rule_history.py::test_risk_warning_daily_buy_cap_includes_fills_and_open_orders PASSED
+tests/test_rule_history.py::test_daily_intent_uses_execution_day_price_limit_without_peeking_at_future PASSED
+tests/test_rule_history.py::test_explicit_unlimited_quotes_keep_price_cage_and_next_quote_fill PASSED
+tests/test_rule_history.py::test_missing_limits_do_not_fill_a_preexisting_quote_order PASSED
+tests/test_rule_history.py::test_china_date_drives_rule_and_t1_even_with_foreign_timezone PASSED
+tests/test_rule_history.py::test_revision_preserves_original_and_unverified_rights_flag PASSED
+tests/test_rule_history.py::test_revision_rejects_missing_dates_or_concurrent_metadata_change PASSED
+tests/test_rule_history.py::test_graphical_editor_validates_source_then_saves_independent_revision PASSED
+tests/test_runtime.py::test_windowless_provider_progress_and_print_do_not_fail PASSED
+tests/test_runtime.py::test_existing_console_or_capture_streams_are_preserved PASSED
+tests/test_runtime.py::test_frozen_worker_dispatch_has_streams_before_freeze_support PASSED
+tests/test_simplified_learning.py::test_learning_navigation_contains_only_72_courses_and_restores_progress PASSED
+tests/test_simplified_learning.py::test_pending_reading_position_is_canceled_when_reader_is_destroyed PASSED
+tests/test_single_instance.py::test_default_launches_share_user_lock_and_data_lock PASSED
+tests/test_single_instance.py::test_second_process_activates_existing_and_never_constructs_window PASSED
+tests/test_single_instance.py::test_activation_during_reset_waits_for_new_window PASSED
+tests/test_single_instance.py::test_running_legacy_portable_is_activated_before_creating_locks PASSED
+tests/test_single_instance.py::test_launcher_data_argument_still_checks_user_wide_instance PASSED
+tests/test_strategy_settings_entrypoints.py::test_strategy_reference_keeps_editor_draft_parameters_and_learning PASSED
+tests/test_strategy_settings_entrypoints.py::test_quote_settings_can_select_bars_and_apply_only_on_save[False] PASSED
+tests/test_strategy_settings_entrypoints.py::test_quote_settings_can_select_bars_and_apply_only_on_save[True] PASSED
+tests/test_strategy_settings_entrypoints.py::test_settings_capital_boundary_round_trips_without_silent_clamping[minimum] PASSED
+tests/test_strategy_settings_entrypoints.py::test_settings_capital_boundary_round_trips_without_silent_clamping[maximum] PASSED
+tests/test_strategy_settings_entrypoints.py::test_view_menu_hints_and_reset_keep_current_workspace[0] PASSED
+tests/test_strategy_settings_entrypoints.py::test_view_menu_hints_and_reset_keep_current_workspace[1] PASSED
+tests/test_strategy_settings_entrypoints.py::test_view_menu_hints_and_reset_keep_current_workspace[2] PASSED
+tests/test_strategy_settings_entrypoints.py::test_view_menu_hints_and_reset_keep_current_workspace[3] PASSED
+tests/test_strategy_settings_entrypoints.py::test_view_menu_hints_and_reset_keep_current_workspace[4] PASSED
+tests/test_strategy_settings_entrypoints.py::test_view_menu_hints_and_reset_keep_current_workspace[5] PASSED
+tests/test_task_guide.py::test_all_task_steps_have_real_stable_targets PASSED
+tests/test_task_guide.py::test_task_navigation_never_activates_business_controls PASSED
+tests/test_tutorial_integration.py::test_destroyed_parent_tour_supports_next_help_and_shutdown[reopen] PASSED
+tests/test_tutorial_integration.py::test_destroyed_parent_tour_supports_next_help_and_shutdown[close] PASSED
+tests/test_tutorial_integration.py::test_destroyed_parent_point_help_can_be_replaced PASSED
+tests/test_tutorial_integration.py::test_main_window_instruction_preview_never_starts_jobs[quality] PASSED
+tests/test_tutorial_integration.py::test_main_window_instruction_preview_never_starts_jobs[report] PASSED
+tests/test_tutorial_integration.py::test_main_window_instruction_preview_never_starts_jobs[compare] PASSED
+tests/test_tutorial_integration.py::test_main_window_instruction_preview_never_starts_jobs[recover] PASSED
+tests/test_tutorial_integration.py::test_task_navigation_preserves_unsaved_model_without_business_actions PASSED
+tests/test_tutorial_integration.py::test_first_run_tour_targets_visible_and_never_saves_or_starts PASSED
+tests/test_tutorial_integration.py::test_tour_chapters_reveal_controls_and_restore_debug_view[False] PASSED
+tests/test_tutorial_integration.py::test_tour_chapters_reveal_controls_and_restore_debug_view[True] PASSED
+tests/test_tutorial_release.py::test_clean_matching_evidence_passes PASSED
+tests/test_tutorial_release.py::test_code_or_text_change_invalidates_review PASSED
+tests/test_tutorial_release.py::test_old_report_or_changed_evidence_is_rejected PASSED
+tests/test_tutorial_release.py::test_missing_baseline_is_not_silently_created PASSED
+tests/test_ui.py::test_first_use_has_offline_data_and_relevant_parameter_help PASSED
+tests/test_ui.py::test_panel_title_controls_can_float_redock_and_reopen PASSED
+tests/test_ui.py::test_scrolling_analysis_does_not_hide_current_mode_or_main_controls PASSED
+tests/test_ui.py::test_equity_lesson_preserves_editor_and_explains_cash_vs_receivable PASSED
+tests/test_ui.py::test_switching_template_saves_user_work PASSED
+tests/test_ui.py::test_syntax_error_has_readable_feedback_and_location PASSED
+tests/test_ui.py::test_teaching_actions_select_correct_modes_and_progress_persists PASSED
+tests/test_ui.py::test_toggle_theme_and_docks_can_be_restored PASSED
+tests/test_ui.py::test_double_start_does_not_create_duplicate_accounts PASSED
+tests/test_ui.py::test_large_font_and_small_window_keep_primary_controls_reachable PASSED
+tests/test_ui.py::test_keyboard_save_and_runtime_source_are_separate PASSED
+tests/test_ui.py::test_high_scaling_small_screen_uses_reachable_compact_layout[450] PASSED
+tests/test_ui.py::test_high_scaling_small_screen_uses_reachable_compact_layout[550] PASSED
+tests/test_ui.py::test_quote_age_keeps_advancing_without_new_messages PASSED
+tests/test_ui.py::test_account_and_market_status_remain_visible_without_bottom_panel PASSED
+tests/test_ui.py::test_first_single_step_creates_account_and_advances_once PASSED
+tests/test_ui.py::test_live_mode_does_not_offer_single_step PASSED
+tests/test_ui.py::test_custom_indicator_values_are_visible_in_ui_and_report PASSED
+tests/test_ui.py::test_equity_chart_short_height_keeps_readable_numeric_ticks PASSED
+tests/test_ui.py::test_live_input_capture_count_and_replay_limit_are_explained PASSED
+tests/test_ui.py::test_trade_detail_chart_does_not_overlap_explanation_in_short_window PASSED
+tests/test_window_lifecycle.py::test_close_without_workers_does_not_create_queue_feeders PASSED
+tests/test_window_lifecycle.py::test_close_releases_existing_feeders_and_original_replaced_queues PASSED
+tests/test_window_lifecycle.py::test_hidden_compatibility_controls_are_destroyed_with_the_window PASSED
+tests/test_workspace_isolation_review.py::test_switching_modes_restores_the_correct_control_account PASSED
+tests/test_workspace_isolation_review.py::test_late_foreign_mode_update_cannot_replace_backtest_results PASSED
+tests/test_workspace_isolation_review.py::test_created_run_stays_selected_after_returning_from_editor[False] PASSED
+tests/test_workspace_isolation_review.py::test_created_run_stays_selected_after_returning_from_editor[True] PASSED
+tests/test_workspace_isolation_review.py::test_step_controls_the_selected_run_when_new_run_data_differs PASSED
+tests/test_workspace_isolation_review.py::test_created_account_mode_survives_an_unrelated_background_error PASSED
+tests/test_workspace_isolation_review.py::test_stale_order_row_cannot_cancel_same_number_in_another_account PASSED
+tests/test_workspace_isolation_review.py::test_simulated_trade_details_stay_out_of_historical_results PASSED
+
+- generated xml file: E:\project\astock\output\tutorial-release-20261115-222453\pytest.xml -
+======================= 619 passed in 185.25s (0:03:05) =======================

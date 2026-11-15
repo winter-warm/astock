@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "error": "",
+  "fixture_is_synthetic": true,
+  "timer_max_gap_ms": 101.22,
+  "dataset_id": "500c1e9a814f",
+  "device_pixel_ratio": 1.5,
+  "summary": "教学虚拟日历 · 缺少 114 根 K 线 · 不参与连续竞价撮合 1 · 已标记停牌 1",
+  "explanation": "区间内缺少应有周期的柱，可能是无成交、停牌或来源漏数。软件保留原始时刻，指标不会把缺口填成重复价格。",
+  "row_count": 4,
+  "report": "E:\\project\\astock\\output\\release-check-20261115-174623\\解压 验收\\AStock\\data\\reports\\data-quality\\500c1e9a814f-2a26f9024189--coverage-v3.html",
+  "quality": {
+    "version": "coverage-v3",
+    "dataset_id": "500c1e9a814f",
+    "dataset_sha256": "2a26f9024189220cc321aa613fe96b15a81fbed8a4a869aa63b59c93f84b04ca",
+    "dataset_name": "教学 · 识别分钟缺口与停牌标记",
+    "calendar": {
+      "version": "synthetic-weekdays-v1",
+      "source": "教学虚拟日历，仅排除周末",
+      "sha256": ""
+    },
+    "counts": {
+      "suspended": 1,
+      "outside_session": 1,
+      "missing_bar": 114,
+      "expected_bars": 119,
+      "missing_bars_total": 114
+    },
+    "actions_verified": true,
+    "basis": "数据实际首末时刻",
+    "details": [
+      {
+        "kind": "suspended",
+        "symbol": "600000.SH",
+        "start": "2026-11-13T14:57:00+08:00",
+        "end": "2026-11-13T14:57:00+08:00",
+        "count": 1,
+        "unit": "条"
+      },
+      {
+        "kind": "outside_session",
+        "symbol": "600000.SH",
+        "start": "2026-11-13T15:00:00+08:00",
+        "end": "2026-11-13T15:00:00+08:00",
+        "count": 1,
+        "unit": "条"
+      },
+      {
+        "kind": "missing_bar",
+        "symbol": "600000.SH",
+        "start": "2026-11-13T13:02:00+08:00",
+        "end": "2026-11-13T13:02:00+08:00",
+        "count": 1,
+        "unit": "根 K 线"
+      },
+      {
+        "kind": "missing_bar",
+        "symbol": "600000.SH",
+        "start": "2026-11-13T13:04:00+08:00",
+        "end": "2026-11-13T14:56:00+08:00",
+        "count": 113,
+        "unit": "根 K 线"
+      }
+    ],
+    "details_complete": true,
+    "note": "缺口只表示预期时段没有记录，可能是停牌、未上市或上游未覆盖；须核对原因。指标周期按实际记录计算，不补值。",
+    "start": "2026-11-13T11:29:00+08:00",
+    "end": "2026-11-13T15:00:00+08:00",
+    "observed_start": "2026-11-13T11:29:00+08:00",
+    "observed_end": "2026-11-13T15:00:00+08:00",
+    "status": "review"
+  }
+}

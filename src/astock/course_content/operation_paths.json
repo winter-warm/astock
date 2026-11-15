@@ -1,0 +1,269 @@
+[
+  {
+    "id": "first-backtest",
+    "title": "第一次离线回测：策略 → 数据 → 运行 → 结果",
+    "steps": [
+      {
+        "title": "准备离线数据",
+        "route": "左侧数据中心 → 数据管理窗口",
+        "target": "window.MainWindow.open_data_center.grid",
+        "instruction": "单击合成教学日线数据行，阅读右侧来源、覆盖与权益说明。日线用于历史回测，快照用于回放。",
+        "expect": "选中行与详情是同一数据；明确标记为合成教学行情。"
+      },
+      {
+        "title": "使用数据",
+        "route": "数据中心 → 使用所选数据",
+        "target": "window.MainWindow.open_data_center.button4",
+        "instruction": "核对行后点击使用所选数据。窗口关闭后检查工作台数据下拉框；这一步不会开始交易。",
+        "expect": "工作台显示所选名称，预览加载完成。若仍在加载，可等待或取消预览。"
+      },
+      {
+        "title": "选择研究模型",
+        "route": "写策略 → 模板与已存策略 → 选择模板",
+        "target": "model_browser.ModelBrowser.__init__.models",
+        "instruction": "从选择窗口载入教学模板，返回写策略页面检查源码和参数。修改前可另存副本并输入新名称。",
+        "expect": "写策略页面显示所选名称；保存后副本可从模板与已存策略中找到。"
+      },
+      {
+        "title": "设置日期和基准",
+        "route": "左侧历史回测 → 回测设置",
+        "target": "window.MainWindow._backtest_page.button",
+        "instruction": "点击写策略页的去回测，当前草稿和参数成为待运行策略；先核对顶部名称与来源，再打开回测设置，核对区间、基准和本金。保存设置不会启动回测。",
+        "expect": "日期在数据覆盖范围内，开始不晚于结束；界面显示本次区间。"
+      },
+      {
+        "title": "核对费用并启动",
+        "route": "写策略 → 右侧回测参数；随后历史回测 → 开始回测",
+        "target": "window.MainWindow._backtest_page.button7",
+        "instruction": "在写策略右侧核对佣金万分数、最低佣金元、滑点价格单位与参与率，再去回测并点击开始回测。每次新建独立账户，不继续旧结果。需要暂停或单步才勾选展开运行控制。",
+        "expect": "账户状态由准备变为运行，时刻向前推进；错误时先阅读日志而非重复启动。"
+      },
+      {
+        "title": "检查订单和成交",
+        "route": "历史回测 → 操作记录 → 下单与状态 / 成交明细",
+        "target": "window.MainWindow._backtest_page.activity_trades",
+        "instruction": "对照委托时间、成交时间、证券、方向、数量与费用。选中成交行在图上定位，查看理由；委托被接受不等于已经成交。",
+        "expect": "成交记录与图上标记对应；未成交和拒绝能在委托状态中解释。"
+      },
+      {
+        "title": "阅读绩效",
+        "route": "历史回测 → 净值与回撤",
+        "target": "window.MainWindow._backtest_page.equity_chart",
+        "instruction": "同时看收益、最大回撤、费用与成交数，再看基准。不要只凭曲线上升判断策略有效。完成后可导出报告记录本次依据。 导出报告与运行对比统一从账户与记录进入。",
+        "expect": "观察截至时刻、数据及费用与研究记录一致；完成状态不代表策略在真实市场盈利。"
+      }
+    ]
+  },
+  {
+    "id": "prepare-data",
+    "title": "准备历史数据：下载、检查覆盖、修订规则",
+    "steps": [
+      {
+        "title": "打开下载表单",
+        "route": "左侧数据中心 → 数据管理窗口 → 下载历史行情",
+        "target": "window.MainWindow.download_dialog.symbols",
+        "instruction": "输入带交易所后缀的代码，可先用证券目录按名称核对。多个证券按表单格式分隔。",
+        "expect": "代码属于本次研究范围，未把名称当作代码提交。"
+      },
+      {
+        "title": "设置频率与来源",
+        "route": "历史下载窗口 → 周期 / 来源 / 起止日期",
+        "target": "window.MainWindow.download_dialog.period",
+        "instruction": "先选日线或分钟频率，再核对来源支持的范围。填写日期或点击最近天数预设，预设只填表，不下载。",
+        "expect": "来源、周期与日期能描述同一实验；分钟数据可能只能返回较短窗口。"
+      },
+      {
+        "title": "开始并等待",
+        "route": "历史下载窗口 → 开始下载",
+        "target": "window.MainWindow.download_dialog.download_button",
+        "instruction": "点击开始下载，在工作台观察进度。取消下载只终止本轮，原数据保留。失败时按提示改正输入或检查来源。",
+        "expect": "成功数据出现在数据中心；下载成功仍要检查覆盖和权益。"
+      },
+      {
+        "title": "检查覆盖",
+        "route": "数据中心选中数据 → 检查缺口",
+        "target": "quality_ui.QualityDialog.__init__.table",
+        "instruction": "真实检查会立即启动后台任务。完成后点选缺口行阅读证券、时间和数量；需要全部区间时打开完整报告。检查失败先读错误，不以空表代替检查通过。",
+        "expect": "区分缺口、未覆盖和已知停牌，不能用前值填充来冒充真实行情。"
+      },
+      {
+        "title": "查看历史规则",
+        "route": "数据中心选中数据 → 证券规则",
+        "target": "rule_history_ui.RuleHistoryDialog.__init__.grid",
+        "instruction": "按证券添加有效日期区间并填写来源；股票状态建议先获取、预览再采用，ETF 当前资料不能直接覆盖全部历史。",
+        "expect": "区间有证据、不冲突，涨跌幅和可卖规则符合该证券与日期。"
+      },
+      {
+        "title": "另存并选新版本",
+        "route": "证券规则窗口 → 检查并另存版本",
+        "target": "rule_history_ui.RuleHistoryDialog.__init__.save_button",
+        "instruction": "完成检查后另存修订版，返回数据中心选择新版本。旧数据和旧账户的依据保持可追溯。",
+        "expect": "新版本的规则与权益要求通过；存在未解决错误时不能把版本生成当作可回测证明。"
+      }
+    ]
+  },
+  {
+    "id": "edit-model",
+    "title": "编辑策略：副本、参数、错误与保存",
+    "steps": [
+      {
+        "title": "新建或打开",
+        "route": "写策略 → 新建策略，或模板与已存策略",
+        "target": "model_browser.ModelBrowser.__init__.button",
+        "instruction": "新建时输入未使用的名称。已有模型若要保留原版，先另存副本；同名不直接覆盖。",
+        "expect": "写策略页面标题显示自己的策略名。"
+      },
+      {
+        "title": "编写源码",
+        "route": "写策略 → 中央源码区",
+        "target": "window.MainWindow._research_page.editor",
+        "instruction": "在 PARAMETERS 中声明参数，在 UserStrategy 回调里编写规则。接口说明可查看函数列表。注意 history 返回价格序列，周期含义取决于输入数据。",
+        "expect": "源码没有引用不存在的接口；回调参数和缩进正确。"
+      },
+      {
+        "title": "重建参数表",
+        "route": "写策略 → 右侧参数设置 → 检查参数",
+        "target": "window.MainWindow._build_parameters.check_parameters_button",
+        "instruction": "修改 PARAMETERS 后点击检查参数。右侧会按声明生成整数、小数、开关和文字输入；再调整实际运行值。",
+        "expect": "表单标签、范围、默认值符合声明；报错时定位行号并修复。"
+      },
+      {
+        "title": "保存并试运行",
+        "route": "写策略 → 保存 → 去回测 → 开始回测",
+        "target": "strategy_editor_window.StrategyEditorWindow.__init__.button",
+        "instruction": "按 Ctrl+S 或点击保存，再去回测核对待运行策略、数据与区间。保存只说明源码与参数存储成功，点击开始回测才执行策略。",
+        "expect": "模型列表有已保存副本；实际运行日志能指出初始化和每个订单的原因。"
+      },
+      {
+        "title": "切换页面",
+        "route": "写策略 → 模板与已存策略",
+        "target": "strategy_editor_window.StrategyEditorWindow.__init__.library_button",
+        "instruction": "切换页面保留当前草稿，但不自动保存。需要存档时先点击保存；需要不同版本时另存副本。",
+        "expect": "回到写策略页面时草稿保持；保存后能在模板与已存策略中找到版本。"
+      }
+    ]
+  },
+  {
+    "id": "manual-trade",
+    "title": "虚拟手动交易：报价、委托、撤单与停止",
+    "steps": [
+      {
+        "title": "选择在线证券",
+        "route": "数据中心 → 证券搜索 / 添加自选",
+        "target": "catalog_ui.CatalogDialog.__init__.search",
+        "instruction": "按代码或名称搜索，选中行后加入在线标的。可多选，最多 20 个；修改在线列表后需要重新连接。",
+        "expect": "工作台在线代码列表包含正确交易所后缀，没有重复项。"
+      },
+      {
+        "title": "连接并核对报价",
+        "route": "模拟交易 → 连接行情",
+        "target": "window.MainWindow._live_page.connect_button",
+        "instruction": "点击连接，核对行情时间与年龄。休市可选择教学快照进行回放；不要把离线数据当作实时连接成功。",
+        "expect": "报价有效且新鲜；已连接并不表示已经创建账户或启动策略。"
+      },
+      {
+        "title": "建立手动账户",
+        "route": "模拟交易 → 手动练习 → 建立练习账户",
+        "target": "window.MainWindow._live_page.create_manual_button",
+        "instruction": "核对证券与虚拟资金后点击建立，等待规则准备完成。该账户与自动策略账户分开。",
+        "expect": "当前账户明确为手动练习；准备失败时没有半成品账户。"
+      },
+      {
+        "title": "填写委托",
+        "route": "手动练习 → 代码 / 方向 / 数量 / 限价",
+        "target": "window.MainWindow._live_page.manual_qty",
+        "instruction": "数量为股或份额，价格是买入最高价或卖出最低价。可点击取对手价辅助填写，提交前再核对新鲜度、买入单位和可卖数量。",
+        "expect": "参数与所选账户一致；持有数量不自动等于可卖数量。"
+      },
+      {
+        "title": "提交并核对结果",
+        "route": "手动练习 → 提交模拟委托",
+        "target": "window.MainWindow._live_page.button3",
+        "instruction": "点击一次提交，再到委托表查看等待、部分成交、已成交或拒绝。不要因未立即成交重复提交相同指令。",
+        "expect": "每笔委托有自己的状态和理由，资金冻结随执行变化。"
+      },
+      {
+        "title": "撤销或停止",
+        "route": "账户与执行 → 选中委托 → 撤销选中委托；或顶部停止并撤单",
+        "target": "window.MainWindow._build_bottom.button",
+        "instruction": "撤单前核对订单编号与账户；已成交部分无法撤回。结束整个账户使用停止并撤单，再确认剩余委托和冻结资金。",
+        "expect": "未成交余额被撤销；历史成交与结果仍可查看。"
+      }
+    ]
+  },
+  {
+    "id": "compare-report",
+    "title": "结果复盘：成交定位、运行对比和报告",
+    "steps": [
+      {
+        "title": "选中历史运行",
+        "route": "账户与记录 → 账户选择 → 在所属工作区查看",
+        "target": "account_overview.AccountOverview.__init__.selector",
+        "instruction": "在归档中选择要检查的运行，核对策略名、模式、状态和观察时刻。点击在所属工作区查看，回测进入历史回测，实时与手动账户进入模拟交易；查看不会重新执行。",
+        "expect": "图表、持仓与成交列表属于同一个运行。"
+      },
+      {
+        "title": "定位成交",
+        "route": "历史回测 → 操作记录 → 成交明细 → 单击一行",
+        "target": "window.MainWindow._backtest_page.activity_trades",
+        "instruction": "核对时间、成交价、费用和买卖理由，图表定位后可放大局部。返回最新行情解除固定定位。",
+        "expect": "图上证券和时间对应所选成交，不把局部视图误认作全部数据。"
+      },
+      {
+        "title": "比较运行",
+        "route": "账户与记录 → 运行对比",
+        "target": "operations_ui.OperationDialog.__init__.table",
+        "instruction": "比较前核对数据、费用、规则、本金、引擎版本与观察时点。依据不同的结果不能直接按收益给策略排名。",
+        "expect": "比较表说明依据，失败运行不被当作零收益正常样本。"
+      },
+      {
+        "title": "导出报告",
+        "route": "账户与记录 → 选择账户 → 导出所选报告",
+        "target": "account_overview.AccountOverview.__init__.report_button",
+        "instruction": "导出绑定点击时的账户，以后台读取时已保存的快照为准。等待成功后打开报告；取消不发布未完成报告。",
+        "expect": "报告目录包含 HTML、CSV 和 JSON；观察截至时刻与本次复盘一致。"
+      }
+    ]
+  },
+  {
+    "id": "study-course",
+    "title": "长期学习：阅读、练习、自测与 Notebook",
+    "steps": [
+      {
+        "title": "找到课程",
+        "route": "左侧量化课程",
+        "target": "course_ui.CourseLibrary.__init__.search",
+        "instruction": "输入术语或课名搜索，选中目录条目。只看书签可进一步筛选，清空搜索并取消书签筛选恢复所有条目。",
+        "expect": "正文标题和目录一致；可以按模块顺序学习或回看先修内容。"
+      },
+      {
+        "title": "先读后练",
+        "route": "阅读器 → 本课目录 / 显示练习答案",
+        "target": "course_ui.CourseLibrary.__init__.toc",
+        "instruction": "从目录跳到概念、手算、代码或练习。先独立作答，再勾选显示练习答案；标记已读仅记录阅读。",
+        "expect": "能解释公式中的每个量和示例数据的单位。"
+      },
+      {
+        "title": "运行基础代码",
+        "route": "Python 练习 → 示例选择 → 运行练习",
+        "target": "course_ui.CourseLibrary.__init__.run_button",
+        "instruction": "选择标记为软件内 Python 的示例，修改一个参数后运行，比较输出、表格和曲线。停止只终止课程进程；每次运行工作目录独立。",
+        "expect": "输出与手算一致，成功运行不自动通过知识自测。"
+      },
+      {
+        "title": "知识自测",
+        "route": "本课知识自测 → 答案输入 → 检查答案",
+        "target": "course_ui.CourseLibrary.__init__.check_input",
+        "instruction": "按题目要求输入数字或简短文字并检查。答对记录本版自测通过；代码运行和知识自测分开记录。",
+        "expect": "回答正确后有解释；正文或题目更新后需要重新核对。"
+      },
+      {
+        "title": "策略与进阶环境",
+        "route": "示例标签为策略编辑器或外部 Notebook",
+        "target": "course_ui.CourseLibrary.__init__.export_button",
+        "instruction": "策略例点击载入策略教学副本后去编辑器检查数据再运行。进阶例导出 Notebook，打开目录，用 PowerShell 7 执行 Start-Notebook.ps1。可一次导出全部课程。",
+        "expect": "Notebook 使用独立锁定环境；首次安装需联网，AI 默认离线回放，真实接口需显式配置。"
+      }
+    ]
+  }
+]

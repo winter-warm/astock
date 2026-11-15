@@ -1,0 +1,28 @@
+{
+  "version": "0.1.5",
+  "created_at": "2026-11-14T13:30:52.1016606+08:00",
+  "status": "verified_patch_full_plan_in_progress",
+  "full_plan_complete": false,
+  "windows_package": "AStock-0.1.5-Windows-x64.zip",
+  "source_package": "AStock-0.1.5-source.zip",
+  "full_suite_passed": 159,
+  "lint_passed": true,
+  "source_matches_workspace": true,
+  "source_archive_files": 60,
+  "release_evidence": "output/release-check-20261114-132936/release-result.json",
+  "windows_sha256": "552B35A36635F0E06D808F41063528BE30F83956BE48F0BA69F19100F5B7295F",
+  "source_sha256": "7D675E285BAFCEB108214A79457E586690271EEC465926072384C60356AE44A8",
+  "public_quote_connectivity": true,
+  "one_hour_market_acceptance": false,
+  "catalog_public_sources_passed": true,
+  "catalog_records": 6150,
+  "catalog_ui_150_evidence": "output/catalog-ui-015-150/catalog-result.json",
+  "catalog_ui_125_evidence": "output/catalog-ui-015-125/catalog-result.json",
+  "coverage_audit": "docs/PLAN_COVERAGE.md",
+  "remaining_work": [
+    "证券规则历史范围、交易日历和行情缺口诊断、免费分钟接口验证",
+    "大报告导出、批量历史对比、未完成录制整理后台化",
+    "完整四课新手操作路径验证",
+    "开市连续一小时行情验收"
+  ]
+}

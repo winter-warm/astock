@@ -1,0 +1,50 @@
+{
+  "Name": [
+    "altgraph"
+  ],
+  "Version": [
+    "0.17.5"
+  ],
+  "License": [
+    "MIT"
+  ],
+  "License-File": [
+    "LICENSE"
+  ],
+  "Home-page": [
+    "https://altgraph.readthedocs.io"
+  ],
+  "Project-URL": [
+    "Documentation, https://altgraph.readthedocs.io/en/latest/",
+    "Issue tracker, https://github.com/ronaldoussoren/altgraph/issues",
+    "Repository, https://github.com/ronaldoussoren/altgraph"
+  ],
+  "Author": [
+    "Ronald Oussoren"
+  ],
+  "Author-email": [
+    "ronaldoussoren@mac.com"
+  ],
+  "Classifier": [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 2",
+    "Programming Language :: Python :: 2.7",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.4",
+    "Programming Language :: Python :: 3.5",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Scientific/Engineering :: Visualization"
+  ]
+}

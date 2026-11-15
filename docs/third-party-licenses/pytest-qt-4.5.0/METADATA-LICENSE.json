@@ -1,0 +1,40 @@
+{
+  "Name": [
+    "pytest-qt"
+  ],
+  "Version": [
+    "4.5.0"
+  ],
+  "License": [
+    "MIT"
+  ],
+  "License-File": [
+    "LICENSE"
+  ],
+  "Home-page": [
+    "http://github.com/pytest-dev/pytest-qt"
+  ],
+  "Author": [
+    "Bruno Oliveira"
+  ],
+  "Author-email": [
+    "nicoddemus@gmail.com"
+  ],
+  "Classifier": [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: Pytest",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Desktop Environment :: Window Managers",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: User Interfaces"
+  ]
+}

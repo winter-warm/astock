@@ -1,0 +1,2 @@
+# Release evidence hashes exact file bytes. Preserve line endings on checkout.
+* -text

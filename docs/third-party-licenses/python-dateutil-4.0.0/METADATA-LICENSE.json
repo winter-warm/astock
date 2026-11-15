@@ -1,0 +1,38 @@
+{
+  "Name": [
+    "python-dateutil"
+  ],
+  "Version": [
+    "4.0.0"
+  ],
+  "License-Expression": [
+    "BSD-3-Clause"
+  ],
+  "License-File": [
+    "AUTHORS.md",
+    "LICENSE"
+  ],
+  "Project-URL": [
+    "Homepage, https://github.com/dateutil/dateutil",
+    "Documentation, https://dateutil.readthedocs.io/en/stable/",
+    "Source, https://github.com/dateutil/dateutil"
+  ],
+  "Author-email": [
+    "Gustavo Niemeyer <gustavo@niemeyer.net>"
+  ],
+  "Classifier": [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+    "Programming Language :: Python :: Free Threading :: 2 - Beta",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Software Development :: Libraries"
+  ]
+}

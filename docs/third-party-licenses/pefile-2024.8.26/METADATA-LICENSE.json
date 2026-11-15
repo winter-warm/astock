@@ -1,0 +1,32 @@
+{
+  "Name": [
+    "pefile"
+  ],
+  "Version": [
+    "2024.8.26"
+  ],
+  "License": [
+    "MIT"
+  ],
+  "License-File": [
+    "LICENSE"
+  ],
+  "Home-page": [
+    "https://github.com/erocarrera/pefile"
+  ],
+  "Author": [
+    "Ero Carrera"
+  ],
+  "Author-email": [
+    "ero.carrera@gmail.com"
+  ],
+  "Classifier": [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+  ]
+}

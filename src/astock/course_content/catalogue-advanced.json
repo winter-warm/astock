@@ -1,0 +1,1033 @@
+[
+  {
+    "id": "q49",
+    "kind": "course",
+    "module": "因子研究",
+    "title": "49 指标、因子与排序",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q49.md",
+    "check": {
+      "question": "两只证券各占一半，随后收益为3%和-1%，忽略费用的组合收益是多少？",
+      "answers": [
+        "1%",
+        "0.01",
+        "百分之一"
+      ],
+      "explanation": "等权收益为0.5×3%+0.5×(-1%)=1%。"
+    },
+    "examples": [
+      {
+        "id": "q49",
+        "file": "examples/q49.py",
+        "environment": "notebook",
+        "label": "指标、因子与排序：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "pandas"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q48"
+    ],
+    "sources": [
+      {
+        "title": "pandas 排名接口",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rank.html"
+      },
+      {
+        "title": "ML4T 作者配套研究项目",
+        "url": "https://github.com/stefan-jansen/machine-learning-for-trading"
+      }
+    ]
+  },
+  {
+    "id": "q50",
+    "kind": "course",
+    "module": "因子研究",
+    "title": "50 价量因子",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q50.md",
+    "check": {
+      "question": "二十期动量 P[t]/P[t-20]-1，从零编号且无缺失时，首个有效行号是多少？",
+      "answers": [
+        "20"
+      ],
+      "explanation": "第20行第一次同时有当前位置与二十期前价格。"
+    },
+    "examples": [
+      {
+        "id": "q50",
+        "file": "examples/q50.py",
+        "environment": "notebook",
+        "label": "价量因子：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "pandas"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q49"
+    ],
+    "sources": [
+      {
+        "title": "pandas pct_change",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.pct_change.html"
+      },
+      {
+        "title": "滚动窗口",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rolling.html"
+      }
+    ]
+  },
+  {
+    "id": "q51",
+    "kind": "course",
+    "module": "因子研究",
+    "title": "51 基本面与公告时点",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q51.md",
+    "check": {
+      "question": "本课四月可见EPS为0.4，六月修订为0.3；四月历史决策应使用哪个值？",
+      "answers": [
+        "0.4"
+      ],
+      "explanation": "修订在六月才可知，不能回填并改变四月的信息集。"
+    },
+    "examples": [
+      {
+        "id": "q51",
+        "file": "examples/q51.py",
+        "environment": "notebook",
+        "label": "基本面与公告时点：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "pandas"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q50"
+    ],
+    "sources": [
+      {
+        "title": "pandas merge_asof",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.merge_asof.html"
+      },
+      {
+        "title": "ML4T 研究代码与数据说明",
+        "url": "https://github.com/stefan-jansen/machine-learning-for-trading"
+      }
+    ]
+  },
+  {
+    "id": "q52",
+    "kind": "course",
+    "module": "因子研究",
+    "title": "52 因子预处理",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q52.md",
+    "check": {
+      "question": "一个行业只有一只证券，减去行业均值后的因子值是多少？",
+      "answers": [
+        "0",
+        "零"
+      ],
+      "explanation": "组均值等于自身，残差为零，同时应记录行业样本不足。"
+    },
+    "examples": [
+      {
+        "id": "q52",
+        "file": "examples/q52.py",
+        "environment": "notebook",
+        "label": "因子预处理：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "pandas"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q51"
+    ],
+    "sources": [
+      {
+        "title": "pandas groupby transform",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.core.groupby.SeriesGroupBy.transform.html"
+      },
+      {
+        "title": "scikit-learn 数据泄漏与预处理",
+        "url": "https://scikit-learn.org/stable/common_pitfalls.html"
+      }
+    ]
+  },
+  {
+    "id": "q53",
+    "kind": "course",
+    "module": "因子研究",
+    "title": "53 IC 与分组评价",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q53.md",
+    "check": {
+      "question": "四个无并列样本的排名差平方和为4，Rank IC是多少？",
+      "answers": [
+        "0.6",
+        ".6"
+      ],
+      "explanation": "1-6×4/(4×(4²-1))=0.6。"
+    },
+    "examples": [
+      {
+        "id": "q53",
+        "file": "examples/q53.py",
+        "environment": "notebook",
+        "label": "IC 与分组评价：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "pandas"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q52"
+    ],
+    "sources": [
+      {
+        "title": "pandas corr",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.Series.corr.html"
+      },
+      {
+        "title": "SciPy Spearman 相关说明",
+        "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html"
+      }
+    ]
+  },
+  {
+    "id": "q54",
+    "kind": "course",
+    "module": "因子研究",
+    "title": "54 多因子项目",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q54.md",
+    "check": {
+      "question": "两个因子完全相同，等权相加是否增加新信息？请答是或否。",
+      "answers": [
+        "否",
+        "不是",
+        "没有"
+      ],
+      "explanation": "相同因子只会重复相同排序，不增加独立信息。"
+    },
+    "examples": [
+      {
+        "id": "q54",
+        "file": "examples/q54.py",
+        "environment": "notebook",
+        "label": "多因子项目：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy"
+    ],
+    "estimated_minutes": 75,
+    "prerequisites": [
+      "q53"
+    ],
+    "sources": [
+      {
+        "title": "scikit-learn 交叉验证与模型选择",
+        "url": "https://scikit-learn.org/stable/modules/cross_validation.html"
+      },
+      {
+        "title": "ML4T 作者研究流程",
+        "url": "https://github.com/stefan-jansen/machine-learning-for-trading"
+      }
+    ]
+  },
+  {
+    "id": "q55",
+    "kind": "course",
+    "module": "机器学习",
+    "title": "55 任务与标签",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q55.md",
+    "check": {
+      "question": "标签为102/101-1时，它是否严格大于1%？请答是或否。",
+      "answers": [
+        "否",
+        "不是",
+        "不大于"
+      ],
+      "explanation": "结果约0.990099%，小于1%。"
+    },
+    "examples": [
+      {
+        "id": "q55",
+        "file": "examples/q55.py",
+        "environment": "notebook",
+        "label": "任务与标签：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "pandas"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q54"
+    ],
+    "sources": [
+      {
+        "title": "scikit-learn 监督学习",
+        "url": "https://scikit-learn.org/stable/supervised_learning.html"
+      },
+      {
+        "title": "时间序列交叉验证",
+        "url": "https://scikit-learn.org/stable/modules/cross_validation.html#time-series-split"
+      }
+    ]
+  },
+  {
+    "id": "q56",
+    "kind": "course",
+    "module": "机器学习",
+    "title": "56 特征工程与泄漏",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q56.md",
+    "check": {
+      "question": "标准化器按训练段拟合，测试段均值不为零一定是错误吗？请答是或否。",
+      "answers": [
+        "否",
+        "不是"
+      ],
+      "explanation": "测试分布可以变化，应使用冻结训练尺度观察漂移。"
+    },
+    "examples": [
+      {
+        "id": "q56",
+        "file": "examples/q56.py",
+        "environment": "notebook",
+        "label": "特征工程与泄漏：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "scikit-learn"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q55"
+    ],
+    "sources": [
+      {
+        "title": "scikit-learn 常见陷阱",
+        "url": "https://scikit-learn.org/stable/common_pitfalls.html"
+      },
+      {
+        "title": "Pipeline",
+        "url": "https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html"
+      }
+    ]
+  },
+  {
+    "id": "q57",
+    "kind": "course",
+    "module": "机器学习",
+    "title": "57 简单基线",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q57.md",
+    "check": {
+      "question": "两组概率按0.5阈值分类完全相同，log loss是否仍可能不同？请答是或否。",
+      "answers": [
+        "是",
+        "可能"
+      ],
+      "explanation": "分类只看阈值两侧，log loss还评价概率置信度。"
+    },
+    "examples": [
+      {
+        "id": "q57",
+        "file": "examples/q57.py",
+        "environment": "notebook",
+        "label": "简单基线：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "scikit-learn"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q56"
+    ],
+    "sources": [
+      {
+        "title": "岭回归",
+        "url": "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html"
+      },
+      {
+        "title": "逻辑回归",
+        "url": "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html"
+      }
+    ]
+  },
+  {
+    "id": "q58",
+    "kind": "course",
+    "module": "机器学习",
+    "title": "58 树模型与集成",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q58.md",
+    "check": {
+      "question": "树模型不要求标准化，是否就可以用未来数据计算特征？请答是或否。",
+      "answers": [
+        "否",
+        "不可以",
+        "不能"
+      ],
+      "explanation": "预处理尺度要求与信息可知时间是两回事。"
+    },
+    "examples": [
+      {
+        "id": "q58",
+        "file": "examples/q58.py",
+        "environment": "notebook",
+        "label": "树模型与集成：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "scikit-learn"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q57"
+    ],
+    "sources": [
+      {
+        "title": "随机森林",
+        "url": "https://scikit-learn.org/stable/modules/ensemble.html#forest"
+      },
+      {
+        "title": "直方图梯度提升",
+        "url": "https://scikit-learn.org/stable/modules/ensemble.html#histogram-based-gradient-boosting"
+      }
+    ]
+  },
+  {
+    "id": "q59",
+    "kind": "course",
+    "module": "机器学习",
+    "title": "59 时间序列验证",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q59.md",
+    "check": {
+      "question": "训练行84的标签向后覆盖5期，标签结束行号是多少？",
+      "answers": [
+        "89"
+      ],
+      "explanation": "84+5=89；验证从90开始时该标签没有进入验证区间。"
+    },
+    "examples": [
+      {
+        "id": "q59",
+        "file": "examples/q59.py",
+        "environment": "notebook",
+        "label": "时间序列验证：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "scikit-learn"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q58"
+    ],
+    "sources": [
+      {
+        "title": "TimeSeriesSplit 参数与示例",
+        "url": "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html"
+      },
+      {
+        "title": "ML4T 时间序列研究",
+        "url": "https://github.com/stefan-jansen/machine-learning-for-trading"
+      }
+    ]
+  },
+  {
+    "id": "q60",
+    "kind": "course",
+    "module": "机器学习",
+    "title": "60 预测转持仓",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q60.md",
+    "check": {
+      "question": "目标仓位依次0、0.5、0.5、0，累计交易名义金额占净值比例是多少？",
+      "answers": [
+        "1",
+        "100%"
+      ],
+      "explanation": "绝对变动分别为0、0.5、0、0.5，总计1。"
+    },
+    "examples": [
+      {
+        "id": "q60",
+        "file": "examples/q60.py",
+        "environment": "notebook",
+        "label": "预测转持仓：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "scikit-learn"
+    ],
+    "estimated_minutes": 75,
+    "prerequisites": [
+      "q59"
+    ],
+    "sources": [
+      {
+        "title": "概率预测与校准",
+        "url": "https://scikit-learn.org/stable/modules/calibration.html"
+      },
+      {
+        "title": "分类阈值调整",
+        "url": "https://scikit-learn.org/stable/modules/classification_threshold.html"
+      }
+    ]
+  },
+  {
+    "id": "q61",
+    "kind": "course",
+    "module": "深度模型",
+    "title": "61 PyTorch 训练流程",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q61.md",
+    "check": {
+      "question": "对y=2x+1，x=0.5的目标值是多少？",
+      "answers": [
+        "2",
+        "2.0"
+      ],
+      "explanation": "2×0.5+1=2，用于核对已知关系的小模型。"
+    },
+    "examples": [
+      {
+        "id": "q61",
+        "file": "examples/q61.py",
+        "environment": "notebook",
+        "label": "PyTorch 训练流程：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "matplotlib",
+      "torch"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q60"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch 基础训练流程",
+        "url": "https://docs.pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html"
+      },
+      {
+        "title": "自动求导入门",
+        "url": "https://docs.pytorch.org/tutorials/beginner/basics/autogradqs_tutorial.html"
+      }
+    ]
+  },
+  {
+    "id": "q62",
+    "kind": "course",
+    "module": "深度模型",
+    "title": "62 构造序列样本",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q62.md",
+    "check": {
+      "question": "六十个观测、八期输入窗口、预测下一期，一共能形成多少个有效样本？",
+      "answers": [
+        "52"
+      ],
+      "explanation": "决策索引7到58，共58-7+1=52行。"
+    },
+    "examples": [
+      {
+        "id": "q62",
+        "file": "examples/q62.py",
+        "environment": "notebook",
+        "label": "构造序列样本：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "torch"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q61"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch Dataset 与 DataLoader",
+        "url": "https://docs.pytorch.org/docs/stable/data.html"
+      },
+      {
+        "title": "TensorDataset",
+        "url": "https://docs.pytorch.org/docs/stable/data.html#torch.utils.data.TensorDataset"
+      }
+    ]
+  },
+  {
+    "id": "q63",
+    "kind": "course",
+    "module": "深度模型",
+    "title": "63 MLP",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q63.md",
+    "check": {
+      "question": "八输入、十六隐藏单元、一输出的两层MLP（含偏置）共有多少参数？",
+      "answers": [
+        "161"
+      ],
+      "explanation": "第一层8×16+16，第二层16×1+1，合计161。"
+    },
+    "examples": [
+      {
+        "id": "q63",
+        "file": "examples/q63.py",
+        "environment": "notebook",
+        "label": "MLP：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "matplotlib",
+      "numpy",
+      "torch"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q62"
+    ],
+    "sources": [
+      {
+        "title": "nn.Module",
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.Module.html"
+      },
+      {
+        "title": "保存与加载模型",
+        "url": "https://docs.pytorch.org/tutorials/beginner/saving_loading_models.html"
+      }
+    ]
+  },
+  {
+    "id": "q64",
+    "kind": "course",
+    "module": "深度模型",
+    "title": "64 LSTM",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q64.md",
+    "check": {
+      "question": "hidden_size=8是否表示预测未来八期？请答是或否。",
+      "answers": [
+        "否",
+        "不是"
+      ],
+      "explanation": "它表示内部状态维度，预测期由标签定义。"
+    },
+    "examples": [
+      {
+        "id": "q64",
+        "file": "examples/q64.py",
+        "environment": "notebook",
+        "label": "LSTM：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "torch"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q63"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch LSTM 接口",
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.LSTM.html"
+      },
+      {
+        "title": "梯度裁剪",
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.utils.clip_grad_norm_.html"
+      }
+    ]
+  },
+  {
+    "id": "q65",
+    "kind": "course",
+    "module": "深度模型",
+    "title": "65 Attention 与 Transformer",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q65.md",
+    "check": {
+      "question": "因果掩码是否能修复输入生成时使用全样本标准化造成的泄漏？请答是或否。",
+      "answers": [
+        "否",
+        "不能"
+      ],
+      "explanation": "泄漏发生在输入生成阶段，网络内遮罩不能撤销它。"
+    },
+    "examples": [
+      {
+        "id": "q65",
+        "file": "examples/q65.py",
+        "environment": "notebook",
+        "label": "Attention 与 Transformer：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "torch"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q64"
+    ],
+    "sources": [
+      {
+        "title": "TransformerEncoder",
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.TransformerEncoder.html"
+      },
+      {
+        "title": "TransformerEncoderLayer",
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.TransformerEncoderLayer.html"
+      }
+    ]
+  },
+  {
+    "id": "q66",
+    "kind": "course",
+    "module": "深度模型",
+    "title": "66 模型对照实验",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q66.md",
+    "check": {
+      "question": "读完测试表后，是否能把测试误差最低者替换为原定验证赢家并仍称独立测试？请答是或否。",
+      "answers": [
+        "否",
+        "不能"
+      ],
+      "explanation": "这会用测试反馈选模型，测试已经参与研究决策。"
+    },
+    "examples": [
+      {
+        "id": "q66",
+        "file": "examples/q66.py",
+        "environment": "notebook",
+        "label": "模型对照实验：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "scikit-learn",
+      "torch"
+    ],
+    "estimated_minutes": 75,
+    "prerequisites": [
+      "q65"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch 可复现性说明",
+        "url": "https://docs.pytorch.org/docs/stable/notes/randomness.html"
+      },
+      {
+        "title": "scikit-learn 模型比较",
+        "url": "https://scikit-learn.org/stable/modules/cross_validation.html"
+      }
+    ]
+  },
+  {
+    "id": "q67",
+    "kind": "course",
+    "module": "AI 辅助研究",
+    "title": "67 大模型的用途",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q67.md",
+    "check": {
+      "question": "默认offline-authored模式的真实模型调用次数是多少？",
+      "answers": [
+        "0",
+        "零"
+      ],
+      "explanation": "离线响应由作者编写，只检验流程，不连接真实服务。"
+    },
+    "examples": [
+      {
+        "id": "q67",
+        "file": "examples/q67.py",
+        "environment": "notebook",
+        "label": "大模型的用途：完整可运行示例"
+      },
+      {
+        "id": "q67-api",
+        "file": "examples/q67-api.py",
+        "environment": "notebook",
+        "label": "可选真实聊天接口适配器（默认离线）"
+      }
+    ],
+    "notebook_dependencies": [],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q66"
+    ],
+    "sources": [
+      {
+        "title": "Python urllib 请求接口",
+        "url": "https://docs.python.org/3/library/urllib.request.html"
+      },
+      {
+        "title": "NVIDIA 多智能体研究示例",
+        "url": "https://developer.nvidia.com/blog/automating-and-optimizing-financial-signal-discovery-with-multi-agent-systems/"
+      }
+    ]
+  },
+  {
+    "id": "q68",
+    "kind": "course",
+    "module": "AI 辅助研究",
+    "title": "68 可检验的研究假设",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q68.md",
+    "check": {
+      "question": "本课固定的target_horizon是多少？",
+      "answers": [
+        "1"
+      ],
+      "explanation": "统一预测下一期，保证候选回答同一问题并使用一致时间边界。"
+    },
+    "examples": [
+      {
+        "id": "q68",
+        "file": "examples/q68.py",
+        "environment": "notebook",
+        "label": "可检验的研究假设：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q67"
+    ],
+    "sources": [
+      {
+        "title": "Python dataclasses",
+        "url": "https://docs.python.org/3/library/dataclasses.html"
+      },
+      {
+        "title": "NVIDIA 算子约束思路",
+        "url": "https://developer.nvidia.com/blog/automating-and-optimizing-financial-signal-discovery-with-multi-agent-systems/"
+      }
+    ]
+  },
+  {
+    "id": "q69",
+    "kind": "course",
+    "module": "AI 辅助研究",
+    "title": "69 生成代码与检查",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q69.md",
+    "check": {
+      "question": "价格100、101、102、103，三期动量的最后一个值是多少？",
+      "answers": [
+        "3%",
+        "0.03",
+        "百分之三"
+      ],
+      "explanation": "103/100-1=0.03。"
+    },
+    "examples": [
+      {
+        "id": "q69",
+        "file": "examples/q69.py",
+        "environment": "notebook",
+        "label": "生成代码与检查：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "pandas"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q68"
+    ],
+    "sources": [
+      {
+        "title": "Python ast",
+        "url": "https://docs.python.org/3/library/ast.html"
+      },
+      {
+        "title": "pandas shift",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.Series.shift.html"
+      }
+    ]
+  },
+  {
+    "id": "q70",
+    "kind": "course",
+    "module": "AI 辅助研究",
+    "title": "70 建立评估流程",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q70.md",
+    "check": {
+      "question": "SHA256摘要是否可以证明策略盈利？请答是或否。",
+      "answers": [
+        "否",
+        "不能"
+      ],
+      "explanation": "摘要绑定配置内容，盈利与正确性仍需独立评价。"
+    },
+    "examples": [
+      {
+        "id": "q70",
+        "file": "examples/q70.py",
+        "environment": "notebook",
+        "label": "建立评估流程：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "pandas"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q69"
+    ],
+    "sources": [
+      {
+        "title": "100,170) 有七十行。报告如果写成包含第 170 行，会造成样本数对不上。收益最后一行没有下一期标签，应该排除而不是填零。换手首行的建仓成本也应明确，本例通过目标变化计算，但在独立子区间中是否重新空仓需要单独约定。\n\n当前代码在全序列上计算目标变化后再取区间，表示评价区间继承此前研究信号所形成的目标状态，而不是每段必定重新建仓。若需要每段空仓开始，应在切片后重算首期换手。两种口径都可研究，但不能在候选之间混用。\n\n## 参数实验\n保持冻结窗口不变，将费用提高一倍，只报告净收益变化，不重新选赢家。然后另开一个实验，允许重新在验证段选择，比较两个问题的差别：前者是成本敏感性，后者是另一套研究选择。\n\n再将测试标签改成极端值，确认验证赢家不变。代码最后已经包含这一检查。它不能阻止研究者手动看测试，但能确认程序中的选择依赖没有越界。\n\n## 读懂所有候选都亏损的结果\n本课固定数据的一次运行中，四个窗口在验证段的平均扣费收益都为负，窗口五只是其中数值最高的候选。最优候选与值得部署之间没有等号。一个严谨的研究系统完全可以保留“选择结果”和“是否达到预设门槛”两个字段：前者总能按排序给出一个名字，后者可以拒绝全部候选。为了讲清选择流程，本例继续展示冻结测试，但不把它当成交易建议。\n\n冻结窗口五以后，测试平均扣费收益约为负零点零零零二零七。它说明这组人工数据和成本规则下没有形成正的单期平均表现。不要立即改变窗口直到测试变正；可以先检查成本扣除位置、持仓是否使用了未来信号、样本是否足够，再提出新的研究问题。若这些实现都正确，负结果就应如实进入研究记录。\n\n目标持仓在完整时间轴上计算，因此截取验证和测试区间时，第一天的换手可能延续前一天的目标状态。这适合解释“已有策略连续运行到此区间”的表现。若研究的是每个区间单独从现金启动，就应在区间起点重新计算首笔建仓成本。两种口径都可以定义，关键是不要把连续持仓口径的结果写成从零启动的账户收益。\n\n候选摘要绑定的是规则与配置，不会自动绑定数据内容。若原始价格文件被替换而配置摘要不变，两次结果仍不可直接视为同一实验。完整记录应同时保存数据摘要、时间范围、费用参数、代码版本与候选清单。本例先演示配置冻结，毕业项目再补上数据与环境信息，让记录逐步变得完整。\n\n自动化容易在几秒内试几十条候选。候选越多，验证段出现偶然赢家的机会越大，哪怕每条都没有稳定信息。可以做一次预先定义的对照：加入十条随机信号，使用同样排序规则，观察验证最好者到了测试是否维持优势。这个练习不是为了从随机信号里找赚钱秘诀，而是理解为什么需要记录失败候选与总尝试次数。\n\n对评价程序本身，也可以构造答案已知的输入。全程零持仓应得到零毛收益与零交易成本；固定半仓在起点建仓后不应每天重复收取建仓成本；改变测试标签不应改变验证赢家。这些检查验证账目和依赖关系，通常比把某次收益的小数硬编码成标准答案更能发现真实错误。\n\n## 练习\n1. 为什么保存全部候选？\n2. SHA256 能证明策略赚钱吗？\n3. 如果测试不好，能否将详细测试反馈用于继续搜索？\n\n## 参考答案\n1. 为了记录研究自由度、失败与重复，避免只展示偶然最佳结果。\n2. 不能，它只绑定内容身份，不替代正确性或有效性验证。\n3. 可以开展新的探索，但该段不能继续被称为独立最终测试。\n\n## 继续学习\n下一课把假设、表达式生成和评价串起来，仍使用相同的数据边界与实验预算。\n\n## 参考资料\n[scikit-learn 模型选择",
+        "url": "https://scikit-learn.org/stable/modules/cross_validation.html"
+      },
+      {
+        "title": "Python hashlib",
+        "url": "https://docs.python.org/3/library/hashlib.html"
+      }
+    ]
+  },
+  {
+    "id": "q71",
+    "kind": "course",
+    "module": "AI 辅助研究",
+    "title": "71 多智能体研究循环",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q71.md",
+    "check": {
+      "question": "本课真实模式一个候选完整经过三个角色，最多发出多少次请求？",
+      "answers": [
+        "3",
+        "三"
+      ],
+      "explanation": "每个角色一次，共三次；客户端没有自动重试。"
+    },
+    "examples": [
+      {
+        "id": "q71",
+        "file": "examples/q71.py",
+        "environment": "notebook",
+        "label": "多智能体研究循环：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "pandas"
+    ],
+    "estimated_minutes": 75,
+    "prerequisites": [
+      "q70"
+    ],
+    "sources": [
+      {
+        "title": "NVIDIA 多智能体信号发现",
+        "url": "https://developer.nvidia.com/blog/automating-and-optimizing-financial-signal-discovery-with-multi-agent-systems/"
+      },
+      {
+        "title": "Python 正则表达式",
+        "url": "https://docs.python.org/3/library/re.html"
+      }
+    ]
+  },
+  {
+    "id": "q72",
+    "kind": "course",
+    "module": "AI 辅助研究",
+    "title": "72 毕业项目",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q72.md",
+    "check": {
+      "question": "为计算相对初始本金的回撤，净值序列开头应补入哪个基准数值？",
+      "answers": [
+        "1",
+        "1.0"
+      ],
+      "explanation": "初始权益为1，保证首期亏损被纳入回撤。"
+    },
+    "examples": [
+      {
+        "id": "q72",
+        "file": "examples/q72.py",
+        "environment": "notebook",
+        "label": "毕业项目：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "scikit-learn"
+    ],
+    "estimated_minutes": 75,
+    "prerequisites": [
+      "q71"
+    ],
+    "sources": [
+      {
+        "title": "ML4T 作者项目",
+        "url": "https://github.com/stefan-jansen/machine-learning-for-trading"
+      },
+      {
+        "title": "scikit-learn 研究常见陷阱",
+        "url": "https://scikit-learn.org/stable/common_pitfalls.html"
+      }
+    ]
+  }
+]

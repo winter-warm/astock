@@ -1,0 +1,592 @@
+{
+  "passed": true,
+  "execution": {
+    "exit_code": 0,
+    "log": "output/tutorial-release-20261115-173811/notebooks.log",
+    "sha256": "4838c47efa03bc05f332e15841ac767239abfe6d0539f523f9cb4f13f792536d"
+  },
+  "detail": {
+    "python": "E:\\project\\astock\\output\\notebook-qa-env\\Scripts\\python.exe",
+    "passed": true,
+    "records": [
+      {
+        "file": "q01.ipynb",
+        "source_sha256": "4c36665b7a298f0ee82974909509847a6aacc06912ae3a4814cdb2b058e02843",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q01",
+        "seconds": 1.625
+      },
+      {
+        "file": "q02.ipynb",
+        "source_sha256": "914a5d181a4f592333680c66da08e2ee2560554d2458366a03f01fe5e2c4de70",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q02",
+        "seconds": 1.156
+      },
+      {
+        "file": "q03.ipynb",
+        "source_sha256": "3d2fb7385aa20605e50eba11dd355829625dc211a220dd4427998d415a946da7",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q03",
+        "seconds": 1.437
+      },
+      {
+        "file": "q04.ipynb",
+        "source_sha256": "c878e8c6aa9ff44743f8832c7f59d05d2c36c5034fedd20fb9f09d19ee949609",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q04",
+        "seconds": 1.438
+      },
+      {
+        "file": "q05.ipynb",
+        "source_sha256": "b2e045d2d2b1109f9519951a00a25e077e124b1ce1f7f7afd4754a7c0593c8e4",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q05",
+        "seconds": 1.469
+      },
+      {
+        "file": "q06.ipynb",
+        "source_sha256": "2fba026751c8a564ee0f8bce30fbaf09bdf6725ba869469c63cae505532edf41",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q06",
+        "seconds": 1.5
+      },
+      {
+        "file": "q07.ipynb",
+        "source_sha256": "2b8f664156e1cb66b13bad57ddf41f84aedba2763f5852cd504c5ec4c26c2cf6",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q07",
+        "seconds": 1.562
+      },
+      {
+        "file": "q08.ipynb",
+        "source_sha256": "58f5b3184b0619e0715ba33eb60190ffc1d39737abe713cca89ad9a6bda005ce",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q08",
+        "seconds": 1.735
+      },
+      {
+        "file": "q09.ipynb",
+        "source_sha256": "f95ce74b8f7d7b99cea75aee6619da3208a4cfa4788bdd72a1332cae2ec21c11",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q09",
+        "seconds": 1.953
+      },
+      {
+        "file": "q10.ipynb",
+        "source_sha256": "79b3f386363025e080325e2976fef4f94c2a74a314cdbe6d4ee59323207a1b2e",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q10",
+        "seconds": 1.968
+      },
+      {
+        "file": "q11.ipynb",
+        "source_sha256": "3ea284642a16aa45f45494764d8cef4ac79c82b09bbe4713b18ccfc7a7a49939",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q11",
+        "seconds": 1.985
+      },
+      {
+        "file": "q12.ipynb",
+        "source_sha256": "385da2a64dfa23eb2de57cd6cd9621d0311656b7bab4fa6d55beb76149a2f2be",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q12",
+        "seconds": 1.687
+      },
+      {
+        "file": "q13.ipynb",
+        "source_sha256": "1e62fd2e75d36a3ca50852c4335392aad584c1f2d90309b20aff3504dd9a02ca",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q13",
+        "seconds": 1.313
+      },
+      {
+        "file": "q14.ipynb",
+        "source_sha256": "2ccf8c502c872ffe019eaf82eab84f15e7636d15cbc6655b6c6a5de801d36a8b",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q14",
+        "seconds": 1.578
+      },
+      {
+        "file": "q15.ipynb",
+        "source_sha256": "7f76d4080da262a5a84a0ba148cb4afd64d82fa29cc932397e2b21071c4a7d9c",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q15",
+        "seconds": 1.625
+      },
+      {
+        "file": "q16.ipynb",
+        "source_sha256": "506ba876a91309d327c4996fb83c870dc19f9f396e61a47d56fbc5d85a1d21f7",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q16",
+        "seconds": 1.546
+      },
+      {
+        "file": "q17.ipynb",
+        "source_sha256": "95597286d690c8d68952f0fea727eee53528551cb37acb1762ab50c0a9e5a980",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q17",
+        "seconds": 1.532
+      },
+      {
+        "file": "q18.ipynb",
+        "source_sha256": "0da3551e81cf4c1e35722bca42fb6914286e0e529c58410052074d9bfd2a89a5",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q18",
+        "seconds": 1.562
+      },
+      {
+        "file": "q19.ipynb",
+        "source_sha256": "24aa72d92d2097e1420c5432175493201a713edc96ca9f7606ffcb7799e996ac",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q19",
+        "seconds": 1.703
+      },
+      {
+        "file": "q20.ipynb",
+        "source_sha256": "f8fd66004fe9a7be563b324a7838571eef6cbb7475253be0dade3c964fd0e5ae",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q20",
+        "seconds": 1.922
+      },
+      {
+        "file": "q21.ipynb",
+        "source_sha256": "c45fb84bae561bae0bb4f71248f2f51d21b057bf687df4bcd73aee182c46df56",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q21",
+        "seconds": 1.656
+      },
+      {
+        "file": "q22.ipynb",
+        "source_sha256": "c38df406db14d9f90d52218e12527fb4f23952d079f9da481d45e2155ad469ab",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q22",
+        "seconds": 1.75
+      },
+      {
+        "file": "q23.ipynb",
+        "source_sha256": "588ac23b4a2445bc3d182050da13df5f437bb8d9910e781e6b085bf2f864b2cb",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q23",
+        "seconds": 2.0
+      },
+      {
+        "file": "q24.ipynb",
+        "source_sha256": "f31da3857311b6228d7a5c3dcd705a34000b5bb993ed57f04bdf407889cb482a",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q24",
+        "seconds": 1.688
+      },
+      {
+        "file": "q25.ipynb",
+        "source_sha256": "7634a8821aa362c5addf7a0774bddb257493ba5940bf83e96d7d7f233a484742",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q25",
+        "seconds": 1.719
+      },
+      {
+        "file": "q26.ipynb",
+        "source_sha256": "e6216f8e8c38dc62f274fcd6c1bf6c651796b452baaa1bc97642ef13d0b6b4a3",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q26",
+        "seconds": 1.765
+      },
+      {
+        "file": "q27.ipynb",
+        "source_sha256": "f1f0092e3c2c68c9536eb169c756af5b7d66df0789910147be817e4b700a0aae",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q27",
+        "seconds": 1.735
+      },
+      {
+        "file": "q28.ipynb",
+        "source_sha256": "b7495c2e2260771f8293c875f506dcbdfc0f33f18c3f04490ee9d056f89b892b",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q28",
+        "seconds": 1.64
+      },
+      {
+        "file": "q29.ipynb",
+        "source_sha256": "2bca0b691fe9110752c8a8315caea3841b3c92af6f50d703e961223aeeef360c",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q29",
+        "seconds": 1.688
+      },
+      {
+        "file": "q30.ipynb",
+        "source_sha256": "0cef8309eaa36ebead00a67d9a97ffe55c552b5025dbb1d3c34860fa35bc1e77",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q30",
+        "seconds": 1.719
+      },
+      {
+        "file": "q31.ipynb",
+        "source_sha256": "8be7b7a63609b1b152276793ad27e4eab2bf10275a4a5842a93de01b3a1d96fb",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q31",
+        "seconds": 1.703
+      },
+      {
+        "file": "q32.ipynb",
+        "source_sha256": "60d6d87c3e146413c7b57dbe508240ec224f2b0a929fcdd72b46c6b6ccb2bbfe",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q32",
+        "seconds": 1.718
+      },
+      {
+        "file": "q33.ipynb",
+        "source_sha256": "c97ad3711a47923bb51348854e153550f8451e494911311860347350bfb2db59",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q33",
+        "seconds": 1.969
+      },
+      {
+        "file": "q34.ipynb",
+        "source_sha256": "4d30faec756991d6019a32e595c60b58bfdb2ac434162bc918a1df614c9665e6",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q34",
+        "seconds": 1.219
+      },
+      {
+        "file": "q35.ipynb",
+        "source_sha256": "61eff2ee4c0caa2898ae835acbfd1fcb270be192a57834cc3cddb4d972827267",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q35",
+        "seconds": 1.672
+      },
+      {
+        "file": "q36.ipynb",
+        "source_sha256": "8012fa39905a63a25cd3440072ba34f33b11b71d3866b5ff01c8c3793d6d9b23",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q36",
+        "seconds": 1.922
+      },
+      {
+        "file": "q37.ipynb",
+        "source_sha256": "ee135316a7b0607146d3006ad92e91488a4ee3b72c9737de2e226c1010aeada6",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q37",
+        "seconds": 1.453
+      },
+      {
+        "file": "q38.ipynb",
+        "source_sha256": "4d23e016c678d41f71b9a30ee80b478aff9a4780123fef34c3df6cc2955765fb",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q38",
+        "seconds": 1.438
+      },
+      {
+        "file": "q39.ipynb",
+        "source_sha256": "801b91c8f06afe67f539b7605a25c8f16bf45fc4e99af6c34389c5bf6b57177a",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q39",
+        "seconds": 1.188
+      },
+      {
+        "file": "q40.ipynb",
+        "source_sha256": "50094fe9ed947dd8cb35898a62e55a1ffeed7b5af64dd76cfc7a9bc75f0ab5f7",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q40",
+        "seconds": 1.968
+      },
+      {
+        "file": "q41.ipynb",
+        "source_sha256": "2e6e8f47816d9f3e5aa3b3fe9dfacc82bb0318b0ce034fcf31636895cbe9493c",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q41",
+        "seconds": 1.954
+      },
+      {
+        "file": "q42.ipynb",
+        "source_sha256": "543dc07089b240f968c224d0c0cf2795190f0c956d5a623657725a9988773638",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q42",
+        "seconds": 1.906
+      },
+      {
+        "file": "q43.ipynb",
+        "source_sha256": "111a546a77cf4ab5a5a6df938a34b5e976f4f82c81bd653d22f9cabd3d1020ac",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q43",
+        "seconds": 1.234
+      },
+      {
+        "file": "q44.ipynb",
+        "source_sha256": "3c4e1cd6b8ff4748b3905fb195dab7011e7aaa1d006a17b68f4d6e368c73936b",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q44",
+        "seconds": 1.485
+      },
+      {
+        "file": "q45.ipynb",
+        "source_sha256": "b4fe8e7c0f689b3b7f97ee8a7903a9d3d7faf4f35b3a38abdfa3267eddbead5c",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q45",
+        "seconds": 1.281
+      },
+      {
+        "file": "q46.ipynb",
+        "source_sha256": "bc0b0ee8258cd3997e460d40c33fc60550e2ff35e8720a1d45747cd6b39b804c",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q46",
+        "seconds": 1.297
+      },
+      {
+        "file": "q47.ipynb",
+        "source_sha256": "2ef9976f52bf874e59f80d05754048338517243f26593f0bebcd5606e10ab413",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q47",
+        "seconds": 1.265
+      },
+      {
+        "file": "q48.ipynb",
+        "source_sha256": "33b1e56c4e1cf3d526dbb8accfaa76f7d14a03ebf4b2135779eb2d11b9429f39",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q48",
+        "seconds": 1.672
+      },
+      {
+        "file": "q49.ipynb",
+        "source_sha256": "2c448d13ad341bcc6c796fd444f56af9d07ece932dc17d62e8220947d6bc2112",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q49",
+        "seconds": 1.75
+      },
+      {
+        "file": "q50.ipynb",
+        "source_sha256": "7425261779d95058f13652ab58a720ca967ca9f888d2e23a071d5edba33af921",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q50",
+        "seconds": 1.75
+      },
+      {
+        "file": "q51.ipynb",
+        "source_sha256": "fcdd23b0a4f64444be6020c646cbef6bc0f9326b4315d90f7a86d98be036e1ed",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q51",
+        "seconds": 1.984
+      },
+      {
+        "file": "q52.ipynb",
+        "source_sha256": "11acd571e602091285f759e4a93e567e732e31b2412f51e8be7d327fd8d0b7a3",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q52",
+        "seconds": 2.0
+      },
+      {
+        "file": "q53.ipynb",
+        "source_sha256": "c56e595f365b274e63e0a251cbc200e3ca4baa398249ca6e39a15797c966f397",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q53",
+        "seconds": 1.656
+      },
+      {
+        "file": "q54.ipynb",
+        "source_sha256": "aff768994f123f6db9f0b982d7d2a680b6cdb28c4da343e2ef11b7c4761482b9",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q54",
+        "seconds": 1.344
+      },
+      {
+        "file": "q55.ipynb",
+        "source_sha256": "b2f246086ca7ecc3edbc7160a6ec28ef16c96e3d70b277abcb87cc8ae063a436",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q55",
+        "seconds": 1.656
+      },
+      {
+        "file": "q56.ipynb",
+        "source_sha256": "31443b555b99952e037a94df761f5952ef0e95aebb6439d82dc8fb8ded343f73",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q56",
+        "seconds": 2.703
+      },
+      {
+        "file": "q57.ipynb",
+        "source_sha256": "151b939abc70479b89be395fe1c42b80e08c0b45a2d1b90ef179d00b1e2934a6",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q57",
+        "seconds": 2.828
+      },
+      {
+        "file": "q58.ipynb",
+        "source_sha256": "be26303269b3a0ac79bfb112f4e50b98dae562f7e98367721dfe227e9bd57de4",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q58",
+        "seconds": 3.047
+      },
+      {
+        "file": "q59.ipynb",
+        "source_sha256": "2014727094c189da557377de4c4c5be7c6fbe3e01cc73b9677b48b978a3dac15",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q59",
+        "seconds": 2.844
+      },
+      {
+        "file": "q60.ipynb",
+        "source_sha256": "b2287844ad5419b7e32e2a705bcfd34b0395eee03b39c7f83fc5dc9da6108751",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q60",
+        "seconds": 2.843
+      },
+      {
+        "file": "q61.ipynb",
+        "source_sha256": "f3164c97ad4130277bca089f9f05e0ce12f7ce56613e71d390dee6d01fa1929c",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q61",
+        "seconds": 6.36
+      },
+      {
+        "file": "q62.ipynb",
+        "source_sha256": "0d39a576e85305e47643e73b4af7b89a30b07b29f1a245f1cc1dcecf8ba1199c",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q62",
+        "seconds": 3.781
+      },
+      {
+        "file": "q63.ipynb",
+        "source_sha256": "b0683994712c548d4aa09aa55224fb5859e6c5ed753954d52551650f886c9ad5",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q63",
+        "seconds": 5.891
+      },
+      {
+        "file": "q64.ipynb",
+        "source_sha256": "f1b77affd410113ce7f2f8954cde1195f8641bae5c9b9e79c8d4b340b34bc18c",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q64",
+        "seconds": 5.437
+      },
+      {
+        "file": "q65.ipynb",
+        "source_sha256": "2ab6e9bccd39e9d6b93c82318aa0a1122ba594d6ca6747b5705186861432908c",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q65",
+        "seconds": 5.312
+      },
+      {
+        "file": "q66.ipynb",
+        "source_sha256": "602e3fa69baba5ad5b223a9e220e82a4c0218092109877d57c5a2430291b68d0",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q66",
+        "seconds": 7.125
+      },
+      {
+        "file": "q67.ipynb",
+        "source_sha256": "6c5bf7c932e37efb0e72b423036b0385d247adafcec659d39c173a4b6e12faf9",
+        "passed": true,
+        "executed_cells": 2,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q67",
+        "seconds": 1.25
+      },
+      {
+        "file": "q68.ipynb",
+        "source_sha256": "93e1ce8ccd85b6d75c4b6109760720535e33054c7e4961119af34826655c34fd",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q68",
+        "seconds": 1.188
+      },
+      {
+        "file": "q69.ipynb",
+        "source_sha256": "5a58d6085622df8b1b03fd4239f3f3d59a01cb5b4f7a1fcce0186aee71e85229",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q69",
+        "seconds": 1.656
+      },
+      {
+        "file": "q70.ipynb",
+        "source_sha256": "e796899be1196f615bab22a6568b826e98fd80dff0e282a56109924f56828aea",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q70",
+        "seconds": 1.687
+      },
+      {
+        "file": "q71.ipynb",
+        "source_sha256": "7d1d45bdafefa741bc76073689bb19a57bcbfc8272ff5c6ccc23aa32f66f1408",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q71",
+        "seconds": 1.641
+      },
+      {
+        "file": "q72.ipynb",
+        "source_sha256": "9702d6acaea8100aa58f6528dd9757b1774109a1c570ab4a5cd0d9f3c55988d9",
+        "passed": true,
+        "executed_cells": 1,
+        "workspace": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\workspaces\\q72",
+        "seconds": 2.969
+      }
+    ]
+  },
+  "detail_path": "E:\\project\\astock\\output\\notebook-check\\AStock课程-2e7c235cc862\\execution-report.json",
+  "snapshot_digest": "e83b4f1eccb7fc356f41b29e318bcb6696a91ceeb68e0008c5c32912a46d328e"
+}

@@ -1,0 +1,28 @@
+{
+  "version": "0.1.3",
+  "created_at": "2026-11-13T23:03:00.2550142+08:00",
+  "status": "verified_patch_full_plan_in_progress",
+  "full_plan_complete": false,
+  "windows_package": "AStock-0.1.3-Windows-x64.zip",
+  "source_package": "AStock-0.1.3-source.zip",
+  "tests_passed": 85,
+  "lint_passed": true,
+  "source_matches_workspace": true,
+  "release_evidence": "output/release-check-20261113-225928/release-result.json",
+  "windows_sha256": "7CB22506259F80577461018E5AC8EE8F4490D10FAA2D5853A1A1C15619E08C43",
+  "source_sha256": "471A2677ACD42585394C13281A4DC616E5D41A95E6A5D0D19AC5A08FE41CFB2D",
+  "public_quote_connectivity": true,
+  "one_hour_market_acceptance": false,
+  "live_input_evidence": "output/live-input-012/result.json",
+  "live_input_replay_evidence": "output/live-input-012/replay.json",
+  "responsiveness_evidence": "output/responsiveness-013-fixed/result.json",
+  "source_125_percent_evidence": "output/qa-013-125/smoke-result.json",
+  "coverage_audit": "docs/PLAN_COVERAGE.md",
+  "remaining_work": [
+    "证券资料与规则历史范围、交易日历和行情缺口诊断、分钟边界验证",
+    "权益事件现金与持仓流水守恒",
+    "大报告导出、批量历史对比、未完成录制整理后台化",
+    "完整新手操作路径验证",
+    "开市连续一小时行情验收"
+  ]
+}

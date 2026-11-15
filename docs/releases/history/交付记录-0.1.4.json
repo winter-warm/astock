@@ -1,0 +1,27 @@
+{
+  "version": "0.1.4",
+  "created_at": "2026-11-14T11:39:37.7622474+08:00",
+  "status": "verified_patch_full_plan_in_progress",
+  "full_plan_complete": false,
+  "windows_package": "AStock-0.1.4-Windows-x64.zip",
+  "source_package": "AStock-0.1.4-source.zip",
+  "full_suite_passed_before_final_chart_fix": 140,
+  "focused_ui_tests_passed_after_final_chart_fix": 35,
+  "distinct_tests_verified": 141,
+  "lint_passed": true,
+  "source_matches_workspace": true,
+  "release_evidence": "output/release-check-20261114-113806/release-result.json",
+  "windows_sha256": "21872F9457E76E1D5FDDCD89303825893BAB00F2F740203D0703DB449A5F4BE2",
+  "source_sha256": "2B0FF96CA58B23795603FF6D1C31DA813F6793C008F936CFE01AFCBD23D71F1C",
+  "public_quote_connectivity": true,
+  "one_hour_market_acceptance": false,
+  "equity_ui_150_evidence": "output/equity-ui-014-final/result.json",
+  "equity_ui_125_evidence": "output/equity-ui-014-125/result.json",
+  "coverage_audit": "docs/PLAN_COVERAGE.md",
+  "remaining_work": [
+    "证券资料与规则历史范围、交易日历和行情缺口诊断、免费分钟接口验证",
+    "大报告导出、批量历史对比、未完成录制整理后台化",
+    "完整四课新手操作路径验证",
+    "开市连续一小时行情验收"
+  ]
+}

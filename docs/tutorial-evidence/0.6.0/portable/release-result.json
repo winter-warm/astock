@@ -1,0 +1,579 @@
+{
+  "live_rules": null,
+  "catalog": {
+    "error": "",
+    "passed": true,
+    "searches": [
+      {
+        "query": "浦发",
+        "count": 1,
+        "filter_ms": 1.29
+      },
+      {
+        "query": "000001",
+        "count": 1,
+        "filter_ms": 1.03
+      },
+      {
+        "query": "沪深300",
+        "count": 1,
+        "filter_ms": 1.04
+      },
+      {
+        "query": "sh510300",
+        "count": 1,
+        "filter_ms": 0.55
+      }
+    ],
+    "device_pixel_ratio": 1.5,
+    "window": [
+      880,
+      620
+    ],
+    "timer_max_gap_ms": 48.53,
+    "records": 14,
+    "network_refresh_requested": false,
+    "segments": {},
+    "attempts": {},
+    "watchlist": [
+      "510300.SH"
+    ]
+  },
+  "historical_status": null,
+  "learning": {
+    "passed": true,
+    "error": "",
+    "course_count": 4,
+    "practice_records": {
+      "0": {
+        "steps": [
+          "loaded",
+          "order",
+          "fill",
+          "trade"
+        ],
+        "route": "offline",
+        "attempt": "7a0a988fb3df4d7cbb1052dc1b98c560",
+        "previous_completion": {},
+        "evidence": {
+          "loaded": {
+            "dataset": "8f5864f36e17"
+          },
+          "order": {
+            "run": "ea398a27c5b4"
+          },
+          "fill": {
+            "run": "ea398a27c5b4",
+            "trade": "T000001"
+          },
+          "trade": {
+            "run": "ea398a27c5b4",
+            "trade": "T000001"
+          }
+        }
+      },
+      "1": {
+        "steps": [
+          "loaded",
+          "changed",
+          "saved"
+        ],
+        "route": "offline",
+        "attempt": "1b77287253ff45f5adf19d20d7d818fc",
+        "previous_completion": {},
+        "evidence": {
+          "loaded": {
+            "strategy": "教学 · 双均线参数 1b772872"
+          },
+          "changed": {
+            "parameters": {
+              "fast": 10,
+              "slow": 20,
+              "allocation": 0.25
+            }
+          },
+          "saved": {
+            "strategy": "教学 · 双均线参数 1b772872",
+            "parameters": {
+              "fast": 10,
+              "slow": 20,
+              "allocation": 0.25
+            }
+          }
+        }
+      },
+      "2": {
+        "steps": [
+          "finished",
+          "metrics",
+          "trade"
+        ],
+        "route": "offline",
+        "attempt": "b00845b7146a494193359c81b4744fcc",
+        "previous_completion": {},
+        "evidence": {
+          "finished": {
+            "run": "5b2320a6e6cb",
+            "parameters": {
+              "fast": 10,
+              "slow": 20,
+              "allocation": 0.25
+            }
+          },
+          "metrics": {
+            "run": "5b2320a6e6cb"
+          },
+          "trade": {
+            "run": "5b2320a6e6cb",
+            "trade": "T000001"
+          }
+        }
+      },
+      "3": {
+        "steps": [
+          "account",
+          "quote",
+          "stopped"
+        ],
+        "route": "offline",
+        "attempt": "41c8c85e26a749c499be3c731d2b4a94",
+        "previous_completion": {},
+        "evidence": {
+          "account": {
+            "run": "81f3a5c7ee7e",
+            "mode": "replay"
+          },
+          "quote": {
+            "run": "81f3a5c7ee7e",
+            "note": "合成快照回放；尚未接入在线行情"
+          },
+          "stopped": {
+            "run": "81f3a5c7ee7e",
+            "canceled": 1
+          }
+        }
+      }
+    },
+    "observations": [
+      {
+        "step": "first_quote_pending",
+        "run": "ea398a27c5b4",
+        "mode": "replay",
+        "status": "PAUSED",
+        "orders": 1,
+        "trades": 0,
+        "frozen": "1010.01",
+        "guide": "第 1 课 · 报价：买一 9.99、卖一 10.00；限价 10.05 的委托正在等待。再推进一条行情观察成交。"
+      },
+      {
+        "step": "second_quote_filled",
+        "run": "ea398a27c5b4",
+        "mode": "replay",
+        "status": "PAUSED",
+        "orders": 1,
+        "trades": 1,
+        "frozen": "0",
+        "guide": "第 1 课 · 底部切到成交，点击一行查看成交时刻与下单理由。"
+      },
+      {
+        "step": "backtest_finished_with_changed_parameters",
+        "run": "5b2320a6e6cb",
+        "mode": "backtest",
+        "status": "COMPLETED",
+        "orders": 15,
+        "trades": 15,
+        "frozen": "0",
+        "guide": "第 3 课 · 观察收益、最大回撤与手续费；合成样本结果不说明实际策略收益。"
+      },
+      {
+        "step": "offline_stopped_and_released",
+        "run": "81f3a5c7ee7e",
+        "mode": "replay",
+        "status": "STOPPED",
+        "orders": 2,
+        "trades": 1,
+        "frozen": "0",
+        "guide": "第 4 课 · 本节实作已完成。离线演练不代表已连接真实行情。"
+      }
+    ],
+    "offline_synthetic": true,
+    "online_requested": false,
+    "online_result": null,
+    "device_pixel_ratio": 1.5,
+    "window": [
+      1280,
+      760
+    ],
+    "timer_max_gap_ms": 497.3,
+    "one_hour_market_acceptance": false
+  },
+  "operations": {
+    "passed": true,
+    "error": "",
+    "recording_fixture_is_synthetic": true,
+    "timer_max_gap_ms": 0,
+    "device_pixel_ratio": 1.5,
+    "exported_report": null,
+    "comparison_rows": 0,
+    "recovery": null
+  },
+  "online_probe": false,
+  "portable_data_created": true,
+  "courses": {
+    "passed": true,
+    "errors": [],
+    "lesson_count": 72,
+    "help_controls": 256,
+    "lab_status": "finished",
+    "display_tabs": 2,
+    "notebooks": 72,
+    "first_run_and_replay": true,
+    "initialization_preserves_learning_without_backup": true,
+    "preview_no_jobs": true,
+    "point_help_no_action": true,
+    "external_python_required_for_app": false,
+    "elapsed_seconds": 2.2969999999986612
+  },
+  "one_hour_market_acceptance": false,
+  "cases": [
+    {
+      "status": "COMPLETED",
+      "mode": "backtest",
+      "statistics": {
+        "equity": 121281.36,
+        "return": 0.21281360000000005,
+        "max_drawdown": 0.005594752707809958,
+        "fees": 103.84,
+        "trades": 13,
+        "realized": 12470.94,
+        "dividends_paid": 0.0,
+        "dividends_receivable": 0.0,
+        "profitable_sells": 0.8,
+        "benchmark_return": 0.15086206896551735
+      },
+      "orders": 13,
+      "trades": 13,
+      "engine_alive": true,
+      "window": [
+        1280,
+        760
+      ],
+      "device_pixel_ratio": 1.5,
+      "preview_rows": 180,
+      "preview_ready": true,
+      "trade_rows": 13,
+      "equity_rows": 0,
+      "equity_entries": 0,
+      "available_positions": {
+        "510300.SH": 6500,
+        "518880.SH": 3700,
+        "159915.SZ": 11900
+      }
+    },
+    {
+      "status": "COMPLETED",
+      "mode": "replay",
+      "statistics": {
+        "equity": 100291.71,
+        "return": 0.002917100000000117,
+        "max_drawdown": 0.0053202999999999445,
+        "fees": 58.99,
+        "trades": 22,
+        "realized": 497.76,
+        "dividends_paid": 0.0,
+        "dividends_receivable": 0.0,
+        "profitable_sells": 0.6666666666666666,
+        "benchmark_return": 0.008181818181818068
+      },
+      "orders": 8,
+      "trades": 22,
+      "engine_alive": true,
+      "window": [
+        1280,
+        760
+      ],
+      "device_pixel_ratio": 1.5,
+      "preview_rows": 360,
+      "preview_ready": true,
+      "trade_rows": 22,
+      "equity_rows": 0,
+      "equity_entries": 0,
+      "available_positions": {
+        "510300.SH": 0,
+        "159915.SZ": 0,
+        "518880.SH": 0
+      }
+    },
+    {
+      "status": "COMPLETED",
+      "mode": "backtest",
+      "statistics": {
+        "equity": 99993.99,
+        "return": -6.009999999989635E-05,
+        "max_drawdown": 6.009999999989635E-05,
+        "fees": 5.01,
+        "trades": 1,
+        "realized": 0.0,
+        "dividends_paid": 100.0,
+        "dividends_receivable": 0.0,
+        "profitable_sells": null,
+        "benchmark_return": -0.55
+      },
+      "orders": 1,
+      "trades": 1,
+      "engine_alive": true,
+      "window": [
+        1280,
+        760
+      ],
+      "device_pixel_ratio": 1.5,
+      "preview_rows": 5,
+      "preview_ready": true,
+      "trade_rows": 1,
+      "equity_rows": 2,
+      "equity_entries": 2,
+      "available_positions": {
+        "600000.SH": 200
+      }
+    }
+  ],
+  "quality": {
+    "passed": true,
+    "error": "",
+    "fixture_is_synthetic": true,
+    "timer_max_gap_ms": 101.22,
+    "dataset_id": "500c1e9a814f",
+    "device_pixel_ratio": 1.5,
+    "summary": "教学虚拟日历 · 缺少 114 根 K 线 · 不参与连续竞价撮合 1 · 已标记停牌 1",
+    "explanation": "区间内缺少应有周期的柱，可能是无成交、停牌或来源漏数。软件保留原始时刻，指标不会把缺口填成重复价格。",
+    "row_count": 4,
+    "report": "E:\\project\\astock\\output\\release-check-20261115-174623\\解压 验收\\AStock\\data\\reports\\data-quality\\500c1e9a814f-2a26f9024189--coverage-v3.html",
+    "quality": {
+      "version": "coverage-v3",
+      "dataset_id": "500c1e9a814f",
+      "dataset_sha256": "2a26f9024189220cc321aa613fe96b15a81fbed8a4a869aa63b59c93f84b04ca",
+      "dataset_name": "教学 · 识别分钟缺口与停牌标记",
+      "calendar": {
+        "version": "synthetic-weekdays-v1",
+        "source": "教学虚拟日历，仅排除周末",
+        "sha256": ""
+      },
+      "counts": {
+        "suspended": 1,
+        "outside_session": 1,
+        "missing_bar": 114,
+        "expected_bars": 119,
+        "missing_bars_total": 114
+      },
+      "actions_verified": true,
+      "basis": "数据实际首末时刻",
+      "details": [
+        {
+          "kind": "suspended",
+          "symbol": "600000.SH",
+          "start": "2026-11-13T14:57:00+08:00",
+          "end": "2026-11-13T14:57:00+08:00",
+          "count": 1,
+          "unit": "条"
+        },
+        {
+          "kind": "outside_session",
+          "symbol": "600000.SH",
+          "start": "2026-11-13T15:00:00+08:00",
+          "end": "2026-11-13T15:00:00+08:00",
+          "count": 1,
+          "unit": "条"
+        },
+        {
+          "kind": "missing_bar",
+          "symbol": "600000.SH",
+          "start": "2026-11-13T13:02:00+08:00",
+          "end": "2026-11-13T13:02:00+08:00",
+          "count": 1,
+          "unit": "根 K 线"
+        },
+        {
+          "kind": "missing_bar",
+          "symbol": "600000.SH",
+          "start": "2026-11-13T13:04:00+08:00",
+          "end": "2026-11-13T14:56:00+08:00",
+          "count": 113,
+          "unit": "根 K 线"
+        }
+      ],
+      "details_complete": true,
+      "note": "缺口只表示预期时段没有记录，可能是停牌、未上市或上游未覆盖；须核对原因。指标周期按实际记录计算，不补值。",
+      "start": "2026-11-13T11:29:00+08:00",
+      "end": "2026-11-13T15:00:00+08:00",
+      "observed_start": "2026-11-13T11:29:00+08:00",
+      "observed_end": "2026-11-13T15:00:00+08:00",
+      "status": "review"
+    }
+  },
+  "archive_sha256": "933825226004AC38EDBC1C1B1DBCC85EC8D52992E4EC1825A0385F183AC0537C",
+  "rules": {
+    "passed": true,
+    "error": "",
+    "fixture_is_synthetic": true,
+    "timer_max_gap_ms": 94.0,
+    "device_pixel_ratio": 1.5,
+    "window": [
+      1280,
+      760
+    ],
+    "revised_id": "c982a303eedd",
+    "source_preserved": true,
+    "statistics": {
+      "equity": 99987.98,
+      "return": -0.00012020000000001474,
+      "max_drawdown": 0.00012020000000001474,
+      "fees": 10.02,
+      "trades": 2,
+      "realized": 0.0,
+      "dividends_paid": 0.0,
+      "dividends_receivable": 0.0,
+      "profitable_sells": null,
+      "benchmark_return": 0.0
+    },
+    "orders": [
+      {
+        "__type__": "Order",
+        "id": "O000001",
+        "symbol": "600000.SH",
+        "side": "BUY",
+        "quantity": 100,
+        "price": {
+          "__decimal__": "10.6"
+        },
+        "created": {
+          "__datetime__": "2026-07-02T15:00:00+08:00"
+        },
+        "sequence": 1,
+        "reason": "检查当日风险警示涨跌幅",
+        "status": "REJECTED",
+        "filled": 0,
+        "notional": {
+          "__decimal__": "0"
+        },
+        "commission": {
+          "__decimal__": "0"
+        },
+        "transfer_fee": {
+          "__decimal__": "0"
+        },
+        "stamp_fee": {
+          "__decimal__": "0"
+        },
+        "fees": {
+          "__decimal__": "0"
+        },
+        "note": "下一日开盘委托价超出成交日价格范围 9.50–10.50",
+        "next_open": true
+      },
+      {
+        "__type__": "Order",
+        "id": "O000002",
+        "symbol": "600000.SH",
+        "side": "BUY",
+        "quantity": 100,
+        "price": {
+          "__decimal__": "10.6"
+        },
+        "created": {
+          "__datetime__": "2026-07-03T15:00:00+08:00"
+        },
+        "sequence": 2,
+        "reason": "检查当日风险警示涨跌幅",
+        "status": "FILLED",
+        "filled": 100,
+        "notional": {
+          "__decimal__": "1001.00"
+        },
+        "commission": {
+          "__decimal__": "5.0"
+        },
+        "transfer_fee": {
+          "__decimal__": "0.01"
+        },
+        "stamp_fee": {
+          "__decimal__": "0"
+        },
+        "fees": {
+          "__decimal__": "5.01"
+        },
+        "note": "全部成交",
+        "next_open": true
+      },
+      {
+        "__type__": "Order",
+        "id": "O000003",
+        "symbol": "600000.SH",
+        "side": "BUY",
+        "quantity": 100,
+        "price": {
+          "__decimal__": "10.6"
+        },
+        "created": {
+          "__datetime__": "2026-07-06T15:00:00+08:00"
+        },
+        "sequence": 3,
+        "reason": "检查当日风险警示涨跌幅",
+        "status": "FILLED",
+        "filled": 100,
+        "notional": {
+          "__decimal__": "1001.00"
+        },
+        "commission": {
+          "__decimal__": "5.0"
+        },
+        "transfer_fee": {
+          "__decimal__": "0.01"
+        },
+        "stamp_fee": {
+          "__decimal__": "0"
+        },
+        "fees": {
+          "__decimal__": "5.01"
+        },
+        "note": "全部成交",
+        "next_open": true
+      },
+      {
+        "__type__": "Order",
+        "id": "O000004",
+        "symbol": "600000.SH",
+        "side": "BUY",
+        "quantity": 100,
+        "price": {
+          "__decimal__": "10.6"
+        },
+        "created": {
+          "__datetime__": "2026-07-07T15:00:00+08:00"
+        },
+        "sequence": 4,
+        "reason": "检查当日风险警示涨跌幅",
+        "status": "CANCELED",
+        "filled": 0,
+        "notional": {
+          "__decimal__": "0"
+        },
+        "commission": {
+          "__decimal__": "0"
+        },
+        "transfer_fee": {
+          "__decimal__": "0"
+        },
+        "stamp_fee": {
+          "__decimal__": "0"
+        },
+        "fees": {
+          "__decimal__": "0"
+        },
+        "note": "数据结束，撤销剩余委托",
+        "next_open": true
+      }
+    ],
+    "rule_engine": "cn-date-rules-v3"
+  },
+  "minute": null
+}

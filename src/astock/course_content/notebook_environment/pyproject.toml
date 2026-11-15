@@ -1,0 +1,26 @@
+[project]
+name = "astock-course-notebooks"
+version = "1.0.0"
+description = "AStock 量化课程独立 Notebook 环境"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "numpy>=2,<3",
+  "pandas>=2.2,<3",
+  "scipy>=1.14,<2",
+  "scikit-learn>=1.6,<2",
+  "matplotlib>=3.9,<4",
+  "jupyterlab>=4,<5",
+  "ipykernel>=6,<8",
+  "nbclient>=0.10,<1",
+  "nbformat>=5,<6",
+  "torch>=2.6,<3",
+  "backtrader==1.9.78.123",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }

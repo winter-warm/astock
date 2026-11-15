@@ -1,0 +1,38 @@
+{
+  "Name": [
+    "pyqtgraph"
+  ],
+  "Version": [
+    "0.14.0"
+  ],
+  "License": [
+    "MIT"
+  ],
+  "License-File": [
+    "LICENSE.txt"
+  ],
+  "Home-page": [
+    "http://www.pyqtgraph.org"
+  ],
+  "Project-URL": [
+    "Documentation, https://pyqtgraph.readthedocs.io",
+    "Source, https://github.com/pyqtgraph/pyqtgraph"
+  ],
+  "Author": [
+    "Luke Campagnola"
+  ],
+  "Author-email": [
+    "luke.campagnola@gmail.com"
+  ],
+  "Classifier": [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Development Status :: 4 - Beta",
+    "Environment :: Other Environment",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Topic :: Software Development :: User Interfaces"
+  ]
+}

@@ -1,0 +1,5184 @@
+[
+  {
+    "id": "study-roadmap",
+    "kind": "manual",
+    "module": "课程开始前",
+    "title": "学习路线、建议节奏与参考材料",
+    "status": "published",
+    "version": 1,
+    "body": "manual/study-roadmap.md"
+  },
+  {
+    "id": "interface-atlas",
+    "kind": "manual",
+    "module": "界面图解",
+    "title": "界面图解：窗口、编号与操作位置",
+    "status": "published",
+    "version": 1,
+    "body": "manual/interface-atlas.md"
+  },
+  {
+    "id": "q01",
+    "kind": "course",
+    "module": "交易经验到量化研究",
+    "title": "01 把交易经验写成可检验的规则",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q01.md",
+    "examples": [
+      {
+        "id": "q01",
+        "file": "examples/q01.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "此前三次均价为10.1，当前收盘10.3，按本课严格高于规则信号是否为真？填写 True 或 False。",
+      "answers": [
+        "true",
+        "真"
+      ],
+      "explanation": "10.3 大于 10.1，所以信号为 True；信号仍不是已经成交的订单。"
+    }
+  },
+  {
+    "id": "q02",
+    "kind": "course",
+    "module": "交易经验到量化研究",
+    "title": "02 数据、信号与成交的时间关系",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q02.md",
+    "examples": [
+      {
+        "id": "q02",
+        "file": "examples/q02.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "q02 人工样本中，索引1收盘形成意图，索引2（第三条观察）开盘为8，样例记录的成交价是多少？",
+      "answers": [
+        "8",
+        "8.0"
+      ],
+      "explanation": "样例先记录买入意图，再在下一条行情按开盘价8记录模型成交；并未回到产生信号的收盘成交。"
+    }
+  },
+  {
+    "id": "q03",
+    "kind": "course",
+    "module": "面向 C++ 学习者的 Python",
+    "title": "03 Python 与 C++ 的关键差异",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q03.md",
+    "examples": [
+      {
+        "id": "q03",
+        "file": "examples/q03.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "prices 的首项原为10.0，先 copy 保存 snapshot，再通过 alias 把原列表首项改9.0；snapshot 首项是多少？",
+      "answers": [
+        "10",
+        "10.0"
+      ],
+      "explanation": "浅复制创建了独立的外层列表，本例元素是数值，所以原列表首项替换不影响副本首项。"
+    }
+  },
+  {
+    "id": "q04",
+    "kind": "course",
+    "module": "面向 C++ 学习者的 Python",
+    "title": "04 函数、类与策略回调",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q04.md",
+    "examples": [
+      {
+        "id": "q04",
+        "file": "examples/q04.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "三期 RollingMean 依次收到10、11、12，首次有效均值是多少？",
+      "answers": [
+        "11",
+        "11.0"
+      ],
+      "explanation": "三个价格之和33，除以周期3得到11；此前未凑齐窗口返回 None。"
+    }
+  },
+  {
+    "id": "q05",
+    "kind": "course",
+    "module": "面向 C++ 学习者的 Python",
+    "title": "05 运行和调试 Python 项目",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q05.md",
+    "examples": [
+      {
+        "id": "q05",
+        "file": "examples/q05.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "q05 读出的收盘价为10.5，乘100得到多少？",
+      "answers": [
+        "1050",
+        "1050.0"
+      ],
+      "explanation": "先 float 转成数值，再乘数量100，结果1050；如果保留字符串，乘整数会重复文本。"
+    }
+  },
+  {
+    "id": "q06",
+    "kind": "course",
+    "module": "面向 C++ 学习者的 Python",
+    "title": "06 编写第一份 AStock 策略",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q06.md",
+    "examples": [
+      {
+        "id": "q06",
+        "file": "examples/q06.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      },
+      {
+        "id": "q06-strategy",
+        "file": "examples/q06-strategy.py",
+        "environment": "strategy",
+        "label": "AStock 均线策略与引擎回测"
+      }
+    ],
+    "check": {
+      "question": "价格12、11、10，周期3，quantity=100、available=0且无待成交单；decide 返回什么？",
+      "answers": [
+        "wait",
+        "等待"
+      ],
+      "explanation": "当前价格低于均值，但可卖数量为0，因此不能产生本例卖出决策，返回 WAIT。"
+    }
+  },
+  {
+    "id": "q07",
+    "kind": "course",
+    "module": "金融数据",
+    "title": "07 NumPy 数组",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q07.md",
+    "examples": [
+      {
+        "id": "q07",
+        "file": "examples/q07.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "第一期两资产收益分别10%和-10%，权重60%和40%，组合收益是多少？请用百分数填写。",
+      "answers": [
+        "2%",
+        "2％",
+        "百分之二"
+      ],
+      "explanation": "0.6×10%+0.4×(-10%)=2%；权重沿证券维求加权和。"
+    }
+  },
+  {
+    "id": "q08",
+    "kind": "course",
+    "module": "金融数据",
+    "title": "08 pandas 表格",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q08.md",
+    "examples": [
+      {
+        "id": "q08",
+        "file": "examples/q08.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "两个 Series 的 A 标签分别对应1与10，即使行顺序相反，对齐相加后的 A 值是多少？",
+      "answers": [
+        "11",
+        "11.0"
+      ],
+      "explanation": "pandas 按标签对齐，A 与 A 相加得11，而不是按屏幕上的行位置盲目相加。"
+    }
+  },
+  {
+    "id": "q09",
+    "kind": "course",
+    "module": "金融数据",
+    "title": "09 CSV 与日期",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q09.md",
+    "examples": [
+      {
+        "id": "q09",
+        "file": "examples/q09.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "q09 样例 CSV 中有一个无法解析的日期，errors='coerce' 后隔离表应有几行？",
+      "answers": [
+        "1",
+        "一"
+      ],
+      "explanation": "无法解析的日期成为 NaT，并被日期有效性检查隔离；不能把它当成可排序的正常时间。"
+    }
+  },
+  {
+    "id": "q10",
+    "kind": "course",
+    "module": "金融数据",
+    "title": "10 缺失数据与多证券对齐",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q10.md",
+    "examples": [
+      {
+        "id": "q10",
+        "file": "examples/q10.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "相邻两个观察点之一的价格缺失，pct_change(fill_method=None) 得到的收益应为 NaN 还是0？",
+      "answers": [
+        "nan",
+        "缺失"
+      ],
+      "explanation": "缺少价格端点，收益不可计算；零收益是一个确定数值，不能代替未知值。"
+    }
+  },
+  {
+    "id": "q11",
+    "kind": "course",
+    "module": "金融数据",
+    "title": "11 滚动计算与时间移动",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q11.md",
+    "examples": [
+      {
+        "id": "q11",
+        "file": "examples/q11.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "价格10、11、12、9，在索引3处，此前三期均值 prior_ma3 是多少？",
+      "answers": [
+        "11",
+        "11.0"
+      ],
+      "explanation": "索引3之前的三个价格是10、11、12，均值11；包含当前9的三期均值则为32/3。"
+    }
+  },
+  {
+    "id": "q12",
+    "kind": "course",
+    "module": "金融数据",
+    "title": "12 真实数据与复权",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q12.md",
+    "examples": [
+      {
+        "id": "q12",
+        "file": "examples/q12.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "人工分红例：昨价10，现价9.8，每份现金分红0.2，忽略费用的持有总收益为多少百分比？",
+      "answers": [
+        "0%",
+        "0％",
+        "0",
+        "零"
+      ],
+      "explanation": "价格变化为-0.2，现金权益为+0.2，总财富不变，所以收益为0%。"
+    }
+  },
+  {
+    "id": "q13",
+    "kind": "course",
+    "module": "量化数学与统计",
+    "title": "13 收益率与复利",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q13.md",
+    "examples": [
+      {
+        "id": "q13",
+        "file": "examples/q13.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "先上涨10%再下跌10%，累计收益是多少百分比？",
+      "answers": [
+        "-1%",
+        "-1％",
+        "负百分之一"
+      ],
+      "explanation": "1.1×0.9−1=-0.01，即-1%；百分数不能按时间直接相加。"
+    }
+  },
+  {
+    "id": "q14",
+    "kind": "course",
+    "module": "量化数学与统计",
+    "title": "14 描述统计",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q14.md",
+    "examples": [
+      {
+        "id": "q14",
+        "file": "examples/q14.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "收益样本-2%、-1%、0%、1%、12%的中位数是多少百分比？",
+      "answers": [
+        "0%",
+        "0％",
+        "0",
+        "零"
+      ],
+      "explanation": "五个有序数的中位数是第三个0%；它不是样本均值2%。"
+    }
+  },
+  {
+    "id": "q15",
+    "kind": "course",
+    "module": "量化数学与统计",
+    "title": "15 相关性",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q15.md",
+    "examples": [
+      {
+        "id": "q15",
+        "file": "examples/q15.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "非常量序列 A 与 -A 的 Pearson 相关系数是多少？",
+      "answers": [
+        "-1",
+        "-1.0"
+      ],
+      "explanation": "每个中心化偏差恰好反号，标准化协方差为-1，是完全负线性关系。"
+    }
+  },
+  {
+    "id": "q16",
+    "kind": "course",
+    "module": "量化数学与统计",
+    "title": "16 净值、基准与年化",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q16.md",
+    "examples": [
+      {
+        "id": "q16",
+        "file": "examples/q16.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "两年净值从1增长到1.21，等效年复合收益是多少百分比？",
+      "answers": [
+        "10%",
+        "10％",
+        "百分之十"
+      ],
+      "explanation": "sqrt(1.21)−1=0.1；连续两年各10%才得到总增长21%。"
+    }
+  },
+  {
+    "id": "q17",
+    "kind": "course",
+    "module": "量化数学与统计",
+    "title": "17 回撤、波动与夏普",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q17.md",
+    "examples": [
+      {
+        "id": "q17",
+        "file": "examples/q17.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "权益路径100→110→88→99→111的最大回撤幅度是多少百分比？",
+      "answers": [
+        "20%",
+        "20％",
+        "百分之二十"
+      ],
+      "explanation": "峰值110到谷底88，88/110−1=-20%，按正损失幅度报告20%。"
+    }
+  },
+  {
+    "id": "q18",
+    "kind": "course",
+    "module": "量化数学与统计",
+    "title": "18 胜率、盈亏比与成本",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q18.md",
+    "examples": [
+      {
+        "id": "q18",
+        "file": "examples/q18.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "五笔毛盈亏为20、20、20、20、-100，每笔成本2，总净盈亏是多少？",
+      "answers": [
+        "-30",
+        "-30.0"
+      ],
+      "explanation": "毛合计-20，五笔成本共10，净合计-30。80%胜率没有保证盈利。"
+    }
+  },
+  {
+    "id": "q19",
+    "kind": "course",
+    "module": "看图与技术指标",
+    "title": "19 K 线表示什么",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q19.md",
+    "examples": [
+      {
+        "id": "q19",
+        "file": "examples/q19.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "开盘10、最高12、最低9、收盘11，这根K线的全幅是多少？",
+      "answers": [
+        "3",
+        "3.0"
+      ],
+      "explanation": "全幅是最高减最低，即12−9=3，等于实体1加上影1加下影1。"
+    }
+  },
+  {
+    "id": "q20",
+    "kind": "course",
+    "module": "看图与技术指标",
+    "title": "20 趋势与价格位置",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q20.md",
+    "examples": [
+      {
+        "id": "q20",
+        "file": "examples/q20.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "当前收盘13，此前三个收盘11、12、11，历史突破上沿是多少？",
+      "answers": [
+        "12",
+        "12.0"
+      ],
+      "explanation": "此前窗口的最高值为12，当前13不参与构造这个过去上沿。"
+    }
+  },
+  {
+    "id": "q21",
+    "kind": "course",
+    "module": "看图与技术指标",
+    "title": "21 MA 与 EMA",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q21.md",
+    "examples": [
+      {
+        "id": "q21",
+        "file": "examples/q21.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "三期 EMA 权重0.5、初值10，依次输入11与12后，最新 EMA 是多少？",
+      "answers": [
+        "11.25"
+      ],
+      "explanation": "第一次更新为10.5，第二次为0.5×12+0.5×10.5=11.25。"
+    }
+  },
+  {
+    "id": "q22",
+    "kind": "course",
+    "module": "看图与技术指标",
+    "title": "22 MACD",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q22.md",
+    "examples": [
+      {
+        "id": "q22",
+        "file": "examples/q22.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "MACD 人工例初始快慢线均10，下一价11，快3慢5，则 DIF 是多少？可填写分数。",
+      "answers": [
+        "1/6",
+        "0.1666666667",
+        "0.1667"
+      ],
+      "explanation": "快线10.5，慢线10+1/3，两者差1/6；信号线此时是1/12。"
+    }
+  },
+  {
+    "id": "q23",
+    "kind": "course",
+    "module": "看图与技术指标",
+    "title": "23 RSI",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q23.md",
+    "examples": [
+      {
+        "id": "q23",
+        "file": "examples/q23.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "三期 RSI 首批差分为+1、-1、+2，按本课种子计算首次 RSI 是多少？",
+      "answers": [
+        "75",
+        "75.0"
+      ],
+      "explanation": "平均上涨1、平均下跌1/3，因此100×1/(1+1/3)=75。"
+    }
+  },
+  {
+    "id": "q24",
+    "kind": "course",
+    "module": "看图与技术指标",
+    "title": "24 KDJ",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q24.md",
+    "examples": [
+      {
+        "id": "q24",
+        "file": "examples/q24.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "KDJ 窗口最高13、最低9、当前收盘12，则 RSV 是多少？",
+      "answers": [
+        "75",
+        "75.0"
+      ],
+      "explanation": "100×(12−9)/(13−9)=75，表示区间位置，不表示上涨概率。"
+    }
+  },
+  {
+    "id": "q25",
+    "kind": "course",
+    "module": "看图与技术指标",
+    "title": "25 布林带",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q25.md",
+    "examples": [
+      {
+        "id": "q25",
+        "file": "examples/q25.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "价格10、11、12，以总体口径 ddof=0 计算方差是多少？可填写分数。",
+      "answers": [
+        "2/3",
+        "0.6666666667",
+        "0.6667"
+      ],
+      "explanation": "均值11，平方离差之和2，除以样本个数3得到2/3；标准差还需开方。"
+    }
+  },
+  {
+    "id": "q26",
+    "kind": "course",
+    "module": "看图与技术指标",
+    "title": "26 ATR",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q26.md",
+    "examples": [
+      {
+        "id": "q26",
+        "file": "examples/q26.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "最高13、最低12、前收盘10，该期真实波幅 TR 是多少？",
+      "answers": [
+        "3",
+        "3.0"
+      ],
+      "explanation": "max(13−12, |13−10|, |12−10|)=max(1,3,2)=3，包含跳空影响。"
+    }
+  },
+  {
+    "id": "q27",
+    "kind": "course",
+    "module": "看图与技术指标",
+    "title": "27 成交量、量比与 OBV",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q27.md",
+    "examples": [
+      {
+        "id": "q27",
+        "file": "examples/q27.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "本课 OBV 初值0，后续涨日量200、平日量300、跌日量400、涨日量500，末值是多少？",
+      "answers": [
+        "300",
+        "300.0"
+      ],
+      "explanation": "0+200+0−400+500=300；平收日按本课约定贡献0。"
+    }
+  },
+  {
+    "id": "q28",
+    "kind": "course",
+    "module": "看图与技术指标",
+    "title": "28 指标组合与冲突",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q28.md",
+    "examples": [
+      {
+        "id": "q28",
+        "file": "examples/q28.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "q28 人工样例趋势状态共5次，加入成交量条件后组合状态共几次？",
+      "answers": [
+        "3",
+        "三"
+      ],
+      "explanation": "相交筛选后保留3次，数量变少只能证明筛选更严格，不能单独证明净收益更好。"
+    }
+  },
+  {
+    "id": "q29",
+    "kind": "course",
+    "module": "指标到策略",
+    "title": "29 双均线趋势",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q29.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q28"
+    ],
+    "examples": [
+      {
+        "id": "q29",
+        "file": "examples/q29.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      },
+      {
+        "id": "q29-strategy",
+        "file": "examples/q29-strategy.py",
+        "environment": "strategy",
+        "label": "AStock 实际策略（在策略编辑器运行）"
+      }
+    ],
+    "sources": [
+      {
+        "title": "pandas shift",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.Series.shift.html"
+      }
+    ],
+    "check": {
+      "question": "价格 10、10、10、11 的最后两期均线是多少？",
+      "answers": [
+        "10.5"
+      ],
+      "explanation": "最后两个价格是 10 和 11，平均值为 (10+11)/2=10.5。"
+    }
+  },
+  {
+    "id": "q30",
+    "kind": "course",
+    "module": "指标到策略",
+    "title": "30 通道突破",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q30.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q29"
+    ],
+    "examples": [
+      {
+        "id": "q30",
+        "file": "examples/q30.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      },
+      {
+        "id": "q30-strategy",
+        "file": "examples/q30-strategy.py",
+        "environment": "strategy",
+        "label": "AStock 实际策略（在策略编辑器运行）"
+      }
+    ],
+    "sources": [
+      {
+        "title": "pandas rolling",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.Series.rolling.html"
+      }
+    ],
+    "check": {
+      "question": "此前三次收盘 11、12、11，本次收盘 13。用于判断突破的此前上沿是多少？",
+      "answers": [
+        "12"
+      ],
+      "explanation": "当前 13 不放进阈值窗口；此前三个数最大值为 12。"
+    }
+  },
+  {
+    "id": "q31",
+    "kind": "course",
+    "module": "指标到策略",
+    "title": "31 布林带均值回归",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q31.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q30"
+    ],
+    "examples": [
+      {
+        "id": "q31",
+        "file": "examples/q31.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      },
+      {
+        "id": "q31-strategy",
+        "file": "examples/q31-strategy.py",
+        "environment": "strategy",
+        "label": "AStock 实际策略（在策略编辑器运行）"
+      }
+    ],
+    "sources": [
+      {
+        "title": "pandas Rolling.std",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.core.window.rolling.Rolling.std.html"
+      }
+    ],
+    "check": {
+      "question": "本课独立布林示例计算标准差时，ddof 设为多少？",
+      "answers": [
+        "0"
+      ],
+      "explanation": "代码明确使用总体窗口标准差 ddof=0，改变为 1 会改变带宽。"
+    }
+  },
+  {
+    "id": "q32",
+    "kind": "course",
+    "module": "指标到策略",
+    "title": "32 RSI 与趋势过滤",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q32.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q31"
+    ],
+    "examples": [
+      {
+        "id": "q32",
+        "file": "examples/q32.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      },
+      {
+        "id": "q32-strategy",
+        "file": "examples/q32-strategy.py",
+        "environment": "strategy",
+        "label": "AStock 实际策略（在策略编辑器运行）"
+      }
+    ],
+    "sources": [
+      {
+        "title": "pandas diff",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.Series.diff.html"
+      },
+      {
+        "title": "rolling window",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.Series.rolling.html"
+      }
+    ],
+    "check": {
+      "question": "窗口涨幅合计 2、跌幅绝对值合计 1，简单平均口径的 RSI 约是多少？保留两位小数。",
+      "answers": [
+        "66.67"
+      ],
+      "explanation": "RSI=100×2/(2+1)=66.666…，四舍五入为 66.67。"
+    }
+  },
+  {
+    "id": "q33",
+    "kind": "course",
+    "module": "指标到策略",
+    "title": "33 ETF 动量轮动",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q33.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q32"
+    ],
+    "examples": [
+      {
+        "id": "q33",
+        "file": "examples/q33.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      },
+      {
+        "id": "q33-strategy",
+        "file": "examples/q33-strategy.py",
+        "environment": "strategy",
+        "label": "AStock 实际策略（在策略编辑器运行）"
+      }
+    ],
+    "sources": [
+      {
+        "title": "pandas shift",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.shift.html"
+      }
+    ],
+    "check": {
+      "question": "本课轮动目标为最强且动量为正的资产配置多少百分比？请输入整数百分数，不带符号。",
+      "answers": [
+        "80"
+      ],
+      "explanation": "目标权重为 0.8，其余为现金；实际账户执行可能暂时偏离。"
+    }
+  },
+  {
+    "id": "q34",
+    "kind": "course",
+    "module": "指标到策略",
+    "title": "34 信号确认与减少反复交易",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q34.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q33"
+    ],
+    "examples": [
+      {
+        "id": "q34",
+        "file": "examples/q34.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [],
+    "check": {
+      "question": "本课 count=2，需要连续多少次满足才形成切换？",
+      "answers": [
+        "2"
+      ],
+      "explanation": "连续两次满足才切换，中间失败会清零，不能累计不连续次数。"
+    }
+  },
+  {
+    "id": "q35",
+    "kind": "course",
+    "module": "指标到策略",
+    "title": "35 不同行情中的策略表现",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q35.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q34"
+    ],
+    "examples": [
+      {
+        "id": "q35",
+        "file": "examples/q35.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [],
+    "check": {
+      "question": "回撤基准中，程序将历史最高净值至少设为多少？",
+      "answers": [
+        "1",
+        "1.0"
+      ],
+      "explanation": "初始净值是 1，保留它才能记录第一期就亏损的回撤。"
+    }
+  },
+  {
+    "id": "q36",
+    "kind": "course",
+    "module": "指标到策略",
+    "title": "36 组合规则与消融实验",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q36.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q35"
+    ],
+    "examples": [
+      {
+        "id": "q36",
+        "file": "examples/q36.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [],
+    "check": {
+      "question": "两个过滤选项乘两个仓位选项，一共有多少组消融配置？",
+      "answers": [
+        "4"
+      ],
+      "explanation": "有无过滤分别与满仓/半仓组合，总共 2×2=4 组。"
+    }
+  },
+  {
+    "id": "q37",
+    "kind": "course",
+    "module": "可信回测",
+    "title": "37 亲手写回测器",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q37.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q36"
+    ],
+    "examples": [
+      {
+        "id": "q37",
+        "file": "examples/q37.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [],
+    "check": {
+      "question": "本课手写账本完整往返后，最终现金是多少元？",
+      "answers": [
+        "818.2",
+        "818.20"
+      ],
+      "explanation": "买 90 份支付 990.99，余 9.01；卖出净收 809.19，合计 818.20。"
+    }
+  },
+  {
+    "id": "q38",
+    "kind": "course",
+    "module": "可信回测",
+    "title": "38 事件驱动回测",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q38.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q37"
+    ],
+    "examples": [
+      {
+        "id": "q38",
+        "file": "examples/q38.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      },
+      {
+        "id": "q38-strategy",
+        "file": "examples/q38-strategy.py",
+        "environment": "strategy",
+        "label": "AStock 实际策略（在策略编辑器运行）"
+      }
+    ],
+    "sources": [],
+    "check": {
+      "question": "独立事件轨迹中，首次成交发生在第几个索引？从零计数。",
+      "answers": [
+        "1"
+      ],
+      "explanation": "索引 0 观察后提交；索引 1 的下一事件才提供成交机会。"
+    }
+  },
+  {
+    "id": "q39",
+    "kind": "course",
+    "module": "可信回测",
+    "title": "39 成交模型",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q39.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q38"
+    ],
+    "examples": [
+      {
+        "id": "q39",
+        "file": "examples/q39.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Backtrader 订单执行逻辑",
+        "url": "https://www.backtrader.com/docu/order-creation-execution/order-creation-execution/"
+      }
+    ],
+    "check": {
+      "question": "可见数量 1000、参与率 10%、请求 300 且价格允许，本例最多成交多少？",
+      "answers": [
+        "100"
+      ],
+      "explanation": "数量上限为 1000×0.1=100，再与请求数量取最小值。"
+    }
+  },
+  {
+    "id": "q40",
+    "kind": "course",
+    "module": "可信回测",
+    "title": "40 识别回测作弊",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q40.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q39"
+    ],
+    "examples": [
+      {
+        "id": "q40",
+        "file": "examples/q40.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [
+      {
+        "title": "scikit-learn 数据泄漏说明",
+        "url": "https://scikit-learn.org/stable/common_pitfalls.html#data-leakage"
+      }
+    ],
+    "check": {
+      "question": "把下一行价格移到当前行，示例调用 shift 的参数是多少？",
+      "answers": [
+        "-1"
+      ],
+      "explanation": "shift(-1) 将下一行移到本行，可以用于标签但不能偷作当期交易特征。"
+    }
+  },
+  {
+    "id": "q41",
+    "kind": "course",
+    "module": "可信回测",
+    "title": "41 样本外检验与参数稳定性",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q41.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q40"
+    ],
+    "examples": [
+      {
+        "id": "q41",
+        "file": "examples/q41.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [
+      {
+        "title": "scikit-learn TimeSeriesSplit",
+        "url": "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html"
+      }
+    ],
+    "check": {
+      "question": "本课 180 个观察值分为训练 90、验证 45，最后测试有多少个？",
+      "answers": [
+        "45"
+      ],
+      "explanation": "180-90-45=45，测试不参与周期选择。"
+    }
+  },
+  {
+    "id": "q42",
+    "kind": "course",
+    "module": "可信回测",
+    "title": "42 跨框架结果对照",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q42.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q41"
+    ],
+    "examples": [
+      {
+        "id": "q42",
+        "file": "examples/q42.py",
+        "environment": "notebook",
+        "label": "Backtrader 框架对照"
+      }
+    ],
+    "notebook_dependencies": [
+      "backtrader"
+    ],
+    "sources": [
+      {
+        "title": "Backtrader Cerebro",
+        "url": "https://www.backtrader.com/docu/cerebro/"
+      },
+      {
+        "title": "订单执行约定",
+        "url": "https://www.backtrader.com/docu/order-creation-execution/order-creation-execution/"
+      }
+    ],
+    "check": {
+      "question": "Backtrader 例中初始 1000，买 10 份于 11，期末估值 14.5，零费用权益是多少？",
+      "answers": [
+        "1035",
+        "1035.0"
+      ],
+      "explanation": "现金 1000-10×11=890，持仓 10×14.5=145，合计 1035。"
+    }
+  },
+  {
+    "id": "q43",
+    "kind": "course",
+    "module": "组合与风险",
+    "title": "43 一笔交易买多少",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q43.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q42"
+    ],
+    "examples": [
+      {
+        "id": "q43",
+        "file": "examples/q43.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [],
+    "check": {
+      "question": "权益 10 万、单笔风险 1%、入场 10、退出参考 8，不受其他限制时数量是多少？",
+      "answers": [
+        "500"
+      ],
+      "explanation": "预算 1000，单份距离 2，理论数量 500，且符合示例 100 单位取整。"
+    }
+  },
+  {
+    "id": "q44",
+    "kind": "course",
+    "module": "组合与风险",
+    "title": "44 止损与退出",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q44.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q43"
+    ],
+    "examples": [
+      {
+        "id": "q44",
+        "file": "examples/q44.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [
+      {
+        "title": "Backtrader 订单类型与触发执行",
+        "url": "https://www.backtrader.com/docu/order-creation-execution/order-creation-execution/"
+      }
+    ],
+    "check": {
+      "question": "本课移动退出示例首次触发信号是哪个索引？从零计数。",
+      "answers": [
+        "4"
+      ],
+      "explanation": "最高收盘 12，90% 线为 10.8，索引 4 的 10.5 首次跌破。"
+    }
+  },
+  {
+    "id": "q45",
+    "kind": "course",
+    "module": "组合与风险",
+    "title": "45 投资组合",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q45.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q44"
+    ],
+    "examples": [
+      {
+        "id": "q45",
+        "file": "examples/q45.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [
+      {
+        "title": "NumPy cov",
+        "url": "https://numpy.org/doc/stable/reference/generated/numpy.cov.html"
+      },
+      {
+        "title": "NumPy corrcoef",
+        "url": "https://numpy.org/doc/stable/reference/generated/numpy.corrcoef.html"
+      }
+    ],
+    "check": {
+      "question": "本课逆波动权重归一化后，各资产权重合计是多少？",
+      "answers": [
+        "1",
+        "1.0",
+        "100%"
+      ],
+      "explanation": "各分数除以它们的总和，因此权重合计为 1；不是收益保证。"
+    }
+  },
+  {
+    "id": "q46",
+    "kind": "course",
+    "module": "组合与风险",
+    "title": "46 再平衡与换手",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q46.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q45"
+    ],
+    "examples": [
+      {
+        "id": "q46",
+        "file": "examples/q46.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [],
+    "check": {
+      "question": "10 万权益从 70/30 调到 50/50，双边费率 0.1%，近似费用是多少元？",
+      "answers": [
+        "40",
+        "40.0"
+      ],
+      "explanation": "卖 20% 加买 20%，成交额合计 4 万，乘 0.001 得 40。"
+    }
+  },
+  {
+    "id": "q47",
+    "kind": "course",
+    "module": "组合与风险",
+    "title": "47 回撤控制与压力测试",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q47.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q46"
+    ],
+    "examples": [
+      {
+        "id": "q47",
+        "file": "examples/q47.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [],
+    "check": {
+      "question": "人为设定的一次压力冲击能否直接给出其真实发生概率？答能或不能。",
+      "answers": [
+        "不能",
+        "不能直接给出"
+      ],
+      "explanation": "压力样本用于检查反应，没有拟合事件概率分布，不能据此声称概率。"
+    }
+  },
+  {
+    "id": "q48",
+    "kind": "course",
+    "module": "组合与风险",
+    "title": "48 基础综合项目",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q48.md",
+    "estimated_minutes": 50,
+    "prerequisites": [
+      "q47"
+    ],
+    "examples": [
+      {
+        "id": "q48",
+        "file": "examples/q48.py",
+        "environment": "lab",
+        "label": "独立计算与断言实验"
+      }
+    ],
+    "sources": [],
+    "check": {
+      "question": "综合项目在第几个观察值处切分训练与测试？填 split 的值。",
+      "answers": [
+        "100"
+      ],
+      "explanation": "源码固定 split=100，周期选择只使用此前训练价格。"
+    }
+  },
+  {
+    "id": "q49",
+    "kind": "course",
+    "module": "因子研究",
+    "title": "49 指标、因子与排序",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q49.md",
+    "check": {
+      "question": "两只证券各占一半，随后收益为3%和-1%，忽略费用的组合收益是多少？",
+      "answers": [
+        "1%",
+        "0.01",
+        "百分之一"
+      ],
+      "explanation": "等权收益为0.5×3%+0.5×(-1%)=1%。"
+    },
+    "examples": [
+      {
+        "id": "q49",
+        "file": "examples/q49.py",
+        "environment": "notebook",
+        "label": "指标、因子与排序：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "pandas"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q48"
+    ],
+    "sources": [
+      {
+        "title": "pandas 排名接口",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rank.html"
+      },
+      {
+        "title": "ML4T 作者配套研究项目",
+        "url": "https://github.com/stefan-jansen/machine-learning-for-trading"
+      }
+    ]
+  },
+  {
+    "id": "q50",
+    "kind": "course",
+    "module": "因子研究",
+    "title": "50 价量因子",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q50.md",
+    "check": {
+      "question": "二十期动量 P[t]/P[t-20]-1，从零编号且无缺失时，首个有效行号是多少？",
+      "answers": [
+        "20"
+      ],
+      "explanation": "第20行第一次同时有当前位置与二十期前价格。"
+    },
+    "examples": [
+      {
+        "id": "q50",
+        "file": "examples/q50.py",
+        "environment": "notebook",
+        "label": "价量因子：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "pandas"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q49"
+    ],
+    "sources": [
+      {
+        "title": "pandas pct_change",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.pct_change.html"
+      },
+      {
+        "title": "滚动窗口",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rolling.html"
+      }
+    ]
+  },
+  {
+    "id": "q51",
+    "kind": "course",
+    "module": "因子研究",
+    "title": "51 基本面与公告时点",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q51.md",
+    "check": {
+      "question": "本课四月可见EPS为0.4，六月修订为0.3；四月历史决策应使用哪个值？",
+      "answers": [
+        "0.4"
+      ],
+      "explanation": "修订在六月才可知，不能回填并改变四月的信息集。"
+    },
+    "examples": [
+      {
+        "id": "q51",
+        "file": "examples/q51.py",
+        "environment": "notebook",
+        "label": "基本面与公告时点：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "pandas"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q50"
+    ],
+    "sources": [
+      {
+        "title": "pandas merge_asof",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.merge_asof.html"
+      },
+      {
+        "title": "ML4T 研究代码与数据说明",
+        "url": "https://github.com/stefan-jansen/machine-learning-for-trading"
+      }
+    ]
+  },
+  {
+    "id": "q52",
+    "kind": "course",
+    "module": "因子研究",
+    "title": "52 因子预处理",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q52.md",
+    "check": {
+      "question": "一个行业只有一只证券，减去行业均值后的因子值是多少？",
+      "answers": [
+        "0",
+        "零"
+      ],
+      "explanation": "组均值等于自身，残差为零，同时应记录行业样本不足。"
+    },
+    "examples": [
+      {
+        "id": "q52",
+        "file": "examples/q52.py",
+        "environment": "notebook",
+        "label": "因子预处理：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "pandas"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q51"
+    ],
+    "sources": [
+      {
+        "title": "pandas groupby transform",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.core.groupby.SeriesGroupBy.transform.html"
+      },
+      {
+        "title": "scikit-learn 数据泄漏与预处理",
+        "url": "https://scikit-learn.org/stable/common_pitfalls.html"
+      }
+    ]
+  },
+  {
+    "id": "q53",
+    "kind": "course",
+    "module": "因子研究",
+    "title": "53 IC 与分组评价",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q53.md",
+    "check": {
+      "question": "四个无并列样本的排名差平方和为4，Rank IC是多少？",
+      "answers": [
+        "0.6",
+        ".6"
+      ],
+      "explanation": "1-6×4/(4×(4²-1))=0.6。"
+    },
+    "examples": [
+      {
+        "id": "q53",
+        "file": "examples/q53.py",
+        "environment": "notebook",
+        "label": "IC 与分组评价：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "pandas"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q52"
+    ],
+    "sources": [
+      {
+        "title": "pandas corr",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.Series.corr.html"
+      },
+      {
+        "title": "SciPy Spearman 相关说明",
+        "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html"
+      }
+    ]
+  },
+  {
+    "id": "q54",
+    "kind": "course",
+    "module": "因子研究",
+    "title": "54 多因子项目",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q54.md",
+    "check": {
+      "question": "两个因子完全相同，等权相加是否增加新信息？请答是或否。",
+      "answers": [
+        "否",
+        "不是",
+        "没有"
+      ],
+      "explanation": "相同因子只会重复相同排序，不增加独立信息。"
+    },
+    "examples": [
+      {
+        "id": "q54",
+        "file": "examples/q54.py",
+        "environment": "notebook",
+        "label": "多因子项目：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy"
+    ],
+    "estimated_minutes": 75,
+    "prerequisites": [
+      "q53"
+    ],
+    "sources": [
+      {
+        "title": "scikit-learn 交叉验证与模型选择",
+        "url": "https://scikit-learn.org/stable/modules/cross_validation.html"
+      },
+      {
+        "title": "ML4T 作者研究流程",
+        "url": "https://github.com/stefan-jansen/machine-learning-for-trading"
+      }
+    ]
+  },
+  {
+    "id": "q55",
+    "kind": "course",
+    "module": "机器学习",
+    "title": "55 任务与标签",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q55.md",
+    "check": {
+      "question": "标签为102/101-1时，它是否严格大于1%？请答是或否。",
+      "answers": [
+        "否",
+        "不是",
+        "不大于"
+      ],
+      "explanation": "结果约0.990099%，小于1%。"
+    },
+    "examples": [
+      {
+        "id": "q55",
+        "file": "examples/q55.py",
+        "environment": "notebook",
+        "label": "任务与标签：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "pandas"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q54"
+    ],
+    "sources": [
+      {
+        "title": "scikit-learn 监督学习",
+        "url": "https://scikit-learn.org/stable/supervised_learning.html"
+      },
+      {
+        "title": "时间序列交叉验证",
+        "url": "https://scikit-learn.org/stable/modules/cross_validation.html#time-series-split"
+      }
+    ]
+  },
+  {
+    "id": "q56",
+    "kind": "course",
+    "module": "机器学习",
+    "title": "56 特征工程与泄漏",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q56.md",
+    "check": {
+      "question": "标准化器按训练段拟合，测试段均值不为零一定是错误吗？请答是或否。",
+      "answers": [
+        "否",
+        "不是"
+      ],
+      "explanation": "测试分布可以变化，应使用冻结训练尺度观察漂移。"
+    },
+    "examples": [
+      {
+        "id": "q56",
+        "file": "examples/q56.py",
+        "environment": "notebook",
+        "label": "特征工程与泄漏：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "scikit-learn"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q55"
+    ],
+    "sources": [
+      {
+        "title": "scikit-learn 常见陷阱",
+        "url": "https://scikit-learn.org/stable/common_pitfalls.html"
+      },
+      {
+        "title": "Pipeline",
+        "url": "https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html"
+      }
+    ]
+  },
+  {
+    "id": "q57",
+    "kind": "course",
+    "module": "机器学习",
+    "title": "57 简单基线",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q57.md",
+    "check": {
+      "question": "两组概率按0.5阈值分类完全相同，log loss是否仍可能不同？请答是或否。",
+      "answers": [
+        "是",
+        "可能"
+      ],
+      "explanation": "分类只看阈值两侧，log loss还评价概率置信度。"
+    },
+    "examples": [
+      {
+        "id": "q57",
+        "file": "examples/q57.py",
+        "environment": "notebook",
+        "label": "简单基线：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "scikit-learn"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q56"
+    ],
+    "sources": [
+      {
+        "title": "岭回归",
+        "url": "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html"
+      },
+      {
+        "title": "逻辑回归",
+        "url": "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html"
+      }
+    ]
+  },
+  {
+    "id": "q58",
+    "kind": "course",
+    "module": "机器学习",
+    "title": "58 树模型与集成",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q58.md",
+    "check": {
+      "question": "树模型不要求标准化，是否就可以用未来数据计算特征？请答是或否。",
+      "answers": [
+        "否",
+        "不可以",
+        "不能"
+      ],
+      "explanation": "预处理尺度要求与信息可知时间是两回事。"
+    },
+    "examples": [
+      {
+        "id": "q58",
+        "file": "examples/q58.py",
+        "environment": "notebook",
+        "label": "树模型与集成：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "scikit-learn"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q57"
+    ],
+    "sources": [
+      {
+        "title": "随机森林",
+        "url": "https://scikit-learn.org/stable/modules/ensemble.html#forest"
+      },
+      {
+        "title": "直方图梯度提升",
+        "url": "https://scikit-learn.org/stable/modules/ensemble.html#histogram-based-gradient-boosting"
+      }
+    ]
+  },
+  {
+    "id": "q59",
+    "kind": "course",
+    "module": "机器学习",
+    "title": "59 时间序列验证",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q59.md",
+    "check": {
+      "question": "训练行84的标签向后覆盖5期，标签结束行号是多少？",
+      "answers": [
+        "89"
+      ],
+      "explanation": "84+5=89；验证从90开始时该标签没有进入验证区间。"
+    },
+    "examples": [
+      {
+        "id": "q59",
+        "file": "examples/q59.py",
+        "environment": "notebook",
+        "label": "时间序列验证：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "scikit-learn"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q58"
+    ],
+    "sources": [
+      {
+        "title": "TimeSeriesSplit 参数与示例",
+        "url": "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html"
+      },
+      {
+        "title": "ML4T 时间序列研究",
+        "url": "https://github.com/stefan-jansen/machine-learning-for-trading"
+      }
+    ]
+  },
+  {
+    "id": "q60",
+    "kind": "course",
+    "module": "机器学习",
+    "title": "60 预测转持仓",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q60.md",
+    "check": {
+      "question": "目标仓位依次0、0.5、0.5、0，累计交易名义金额占净值比例是多少？",
+      "answers": [
+        "1",
+        "100%"
+      ],
+      "explanation": "绝对变动分别为0、0.5、0、0.5，总计1。"
+    },
+    "examples": [
+      {
+        "id": "q60",
+        "file": "examples/q60.py",
+        "environment": "notebook",
+        "label": "预测转持仓：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "scikit-learn"
+    ],
+    "estimated_minutes": 75,
+    "prerequisites": [
+      "q59"
+    ],
+    "sources": [
+      {
+        "title": "概率预测与校准",
+        "url": "https://scikit-learn.org/stable/modules/calibration.html"
+      },
+      {
+        "title": "分类阈值调整",
+        "url": "https://scikit-learn.org/stable/modules/classification_threshold.html"
+      }
+    ]
+  },
+  {
+    "id": "q61",
+    "kind": "course",
+    "module": "深度模型",
+    "title": "61 PyTorch 训练流程",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q61.md",
+    "check": {
+      "question": "对y=2x+1，x=0.5的目标值是多少？",
+      "answers": [
+        "2",
+        "2.0"
+      ],
+      "explanation": "2×0.5+1=2，用于核对已知关系的小模型。"
+    },
+    "examples": [
+      {
+        "id": "q61",
+        "file": "examples/q61.py",
+        "environment": "notebook",
+        "label": "PyTorch 训练流程：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "matplotlib",
+      "torch"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q60"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch 基础训练流程",
+        "url": "https://docs.pytorch.org/tutorials/beginner/basics/quickstart_tutorial.html"
+      },
+      {
+        "title": "自动求导入门",
+        "url": "https://docs.pytorch.org/tutorials/beginner/basics/autogradqs_tutorial.html"
+      }
+    ]
+  },
+  {
+    "id": "q62",
+    "kind": "course",
+    "module": "深度模型",
+    "title": "62 构造序列样本",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q62.md",
+    "check": {
+      "question": "六十个观测、八期输入窗口、预测下一期，一共能形成多少个有效样本？",
+      "answers": [
+        "52"
+      ],
+      "explanation": "决策索引7到58，共58-7+1=52行。"
+    },
+    "examples": [
+      {
+        "id": "q62",
+        "file": "examples/q62.py",
+        "environment": "notebook",
+        "label": "构造序列样本：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "torch"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q61"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch Dataset 与 DataLoader",
+        "url": "https://docs.pytorch.org/docs/stable/data.html"
+      },
+      {
+        "title": "TensorDataset",
+        "url": "https://docs.pytorch.org/docs/stable/data.html#torch.utils.data.TensorDataset"
+      }
+    ]
+  },
+  {
+    "id": "q63",
+    "kind": "course",
+    "module": "深度模型",
+    "title": "63 MLP",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q63.md",
+    "check": {
+      "question": "八输入、十六隐藏单元、一输出的两层MLP（含偏置）共有多少参数？",
+      "answers": [
+        "161"
+      ],
+      "explanation": "第一层8×16+16，第二层16×1+1，合计161。"
+    },
+    "examples": [
+      {
+        "id": "q63",
+        "file": "examples/q63.py",
+        "environment": "notebook",
+        "label": "MLP：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "matplotlib",
+      "numpy",
+      "torch"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q62"
+    ],
+    "sources": [
+      {
+        "title": "nn.Module",
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.Module.html"
+      },
+      {
+        "title": "保存与加载模型",
+        "url": "https://docs.pytorch.org/tutorials/beginner/saving_loading_models.html"
+      }
+    ]
+  },
+  {
+    "id": "q64",
+    "kind": "course",
+    "module": "深度模型",
+    "title": "64 LSTM",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q64.md",
+    "check": {
+      "question": "hidden_size=8是否表示预测未来八期？请答是或否。",
+      "answers": [
+        "否",
+        "不是"
+      ],
+      "explanation": "它表示内部状态维度，预测期由标签定义。"
+    },
+    "examples": [
+      {
+        "id": "q64",
+        "file": "examples/q64.py",
+        "environment": "notebook",
+        "label": "LSTM：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "torch"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q63"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch LSTM 接口",
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.LSTM.html"
+      },
+      {
+        "title": "梯度裁剪",
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.utils.clip_grad_norm_.html"
+      }
+    ]
+  },
+  {
+    "id": "q65",
+    "kind": "course",
+    "module": "深度模型",
+    "title": "65 Attention 与 Transformer",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q65.md",
+    "check": {
+      "question": "因果掩码是否能修复输入生成时使用全样本标准化造成的泄漏？请答是或否。",
+      "answers": [
+        "否",
+        "不能"
+      ],
+      "explanation": "泄漏发生在输入生成阶段，网络内遮罩不能撤销它。"
+    },
+    "examples": [
+      {
+        "id": "q65",
+        "file": "examples/q65.py",
+        "environment": "notebook",
+        "label": "Attention 与 Transformer：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "torch"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q64"
+    ],
+    "sources": [
+      {
+        "title": "TransformerEncoder",
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.TransformerEncoder.html"
+      },
+      {
+        "title": "TransformerEncoderLayer",
+        "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.TransformerEncoderLayer.html"
+      }
+    ]
+  },
+  {
+    "id": "q66",
+    "kind": "course",
+    "module": "深度模型",
+    "title": "66 模型对照实验",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q66.md",
+    "check": {
+      "question": "读完测试表后，是否能把测试误差最低者替换为原定验证赢家并仍称独立测试？请答是或否。",
+      "answers": [
+        "否",
+        "不能"
+      ],
+      "explanation": "这会用测试反馈选模型，测试已经参与研究决策。"
+    },
+    "examples": [
+      {
+        "id": "q66",
+        "file": "examples/q66.py",
+        "environment": "notebook",
+        "label": "模型对照实验：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "scikit-learn",
+      "torch"
+    ],
+    "estimated_minutes": 75,
+    "prerequisites": [
+      "q65"
+    ],
+    "sources": [
+      {
+        "title": "PyTorch 可复现性说明",
+        "url": "https://docs.pytorch.org/docs/stable/notes/randomness.html"
+      },
+      {
+        "title": "scikit-learn 模型比较",
+        "url": "https://scikit-learn.org/stable/modules/cross_validation.html"
+      }
+    ]
+  },
+  {
+    "id": "q67",
+    "kind": "course",
+    "module": "AI 辅助研究",
+    "title": "67 大模型的用途",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q67.md",
+    "check": {
+      "question": "默认offline-authored模式的真实模型调用次数是多少？",
+      "answers": [
+        "0",
+        "零"
+      ],
+      "explanation": "离线响应由作者编写，只检验流程，不连接真实服务。"
+    },
+    "examples": [
+      {
+        "id": "q67",
+        "file": "examples/q67.py",
+        "environment": "notebook",
+        "label": "大模型的用途：完整可运行示例"
+      },
+      {
+        "id": "q67-api",
+        "file": "examples/q67-api.py",
+        "environment": "notebook",
+        "label": "可选真实聊天接口适配器（默认离线）"
+      }
+    ],
+    "notebook_dependencies": [],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q66"
+    ],
+    "sources": [
+      {
+        "title": "Python urllib 请求接口",
+        "url": "https://docs.python.org/3/library/urllib.request.html"
+      },
+      {
+        "title": "NVIDIA 多智能体研究示例",
+        "url": "https://developer.nvidia.com/blog/automating-and-optimizing-financial-signal-discovery-with-multi-agent-systems/"
+      }
+    ]
+  },
+  {
+    "id": "q68",
+    "kind": "course",
+    "module": "AI 辅助研究",
+    "title": "68 可检验的研究假设",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q68.md",
+    "check": {
+      "question": "本课固定的target_horizon是多少？",
+      "answers": [
+        "1"
+      ],
+      "explanation": "统一预测下一期，保证候选回答同一问题并使用一致时间边界。"
+    },
+    "examples": [
+      {
+        "id": "q68",
+        "file": "examples/q68.py",
+        "environment": "notebook",
+        "label": "可检验的研究假设：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q67"
+    ],
+    "sources": [
+      {
+        "title": "Python dataclasses",
+        "url": "https://docs.python.org/3/library/dataclasses.html"
+      },
+      {
+        "title": "NVIDIA 算子约束思路",
+        "url": "https://developer.nvidia.com/blog/automating-and-optimizing-financial-signal-discovery-with-multi-agent-systems/"
+      }
+    ]
+  },
+  {
+    "id": "q69",
+    "kind": "course",
+    "module": "AI 辅助研究",
+    "title": "69 生成代码与检查",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q69.md",
+    "check": {
+      "question": "价格100、101、102、103，三期动量的最后一个值是多少？",
+      "answers": [
+        "3%",
+        "0.03",
+        "百分之三"
+      ],
+      "explanation": "103/100-1=0.03。"
+    },
+    "examples": [
+      {
+        "id": "q69",
+        "file": "examples/q69.py",
+        "environment": "notebook",
+        "label": "生成代码与检查：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "pandas"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q68"
+    ],
+    "sources": [
+      {
+        "title": "Python ast",
+        "url": "https://docs.python.org/3/library/ast.html"
+      },
+      {
+        "title": "pandas shift",
+        "url": "https://pandas.pydata.org/docs/reference/api/pandas.Series.shift.html"
+      }
+    ]
+  },
+  {
+    "id": "q70",
+    "kind": "course",
+    "module": "AI 辅助研究",
+    "title": "70 建立评估流程",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q70.md",
+    "check": {
+      "question": "SHA256摘要是否可以证明策略盈利？请答是或否。",
+      "answers": [
+        "否",
+        "不能"
+      ],
+      "explanation": "摘要绑定配置内容，盈利与正确性仍需独立评价。"
+    },
+    "examples": [
+      {
+        "id": "q70",
+        "file": "examples/q70.py",
+        "environment": "notebook",
+        "label": "建立评估流程：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "pandas"
+    ],
+    "estimated_minutes": 55,
+    "prerequisites": [
+      "q69"
+    ],
+    "sources": [
+      {
+        "title": "100,170) 有七十行。报告如果写成包含第 170 行，会造成样本数对不上。收益最后一行没有下一期标签，应该排除而不是填零。换手首行的建仓成本也应明确，本例通过目标变化计算，但在独立子区间中是否重新空仓需要单独约定。\n\n当前代码在全序列上计算目标变化后再取区间，表示评价区间继承此前研究信号所形成的目标状态，而不是每段必定重新建仓。若需要每段空仓开始，应在切片后重算首期换手。两种口径都可研究，但不能在候选之间混用。\n\n## 参数实验\n保持冻结窗口不变，将费用提高一倍，只报告净收益变化，不重新选赢家。然后另开一个实验，允许重新在验证段选择，比较两个问题的差别：前者是成本敏感性，后者是另一套研究选择。\n\n再将测试标签改成极端值，确认验证赢家不变。代码最后已经包含这一检查。它不能阻止研究者手动看测试，但能确认程序中的选择依赖没有越界。\n\n## 读懂所有候选都亏损的结果\n本课固定数据的一次运行中，四个窗口在验证段的平均扣费收益都为负，窗口五只是其中数值最高的候选。最优候选与值得部署之间没有等号。一个严谨的研究系统完全可以保留“选择结果”和“是否达到预设门槛”两个字段：前者总能按排序给出一个名字，后者可以拒绝全部候选。为了讲清选择流程，本例继续展示冻结测试，但不把它当成交易建议。\n\n冻结窗口五以后，测试平均扣费收益约为负零点零零零二零七。它说明这组人工数据和成本规则下没有形成正的单期平均表现。不要立即改变窗口直到测试变正；可以先检查成本扣除位置、持仓是否使用了未来信号、样本是否足够，再提出新的研究问题。若这些实现都正确，负结果就应如实进入研究记录。\n\n目标持仓在完整时间轴上计算，因此截取验证和测试区间时，第一天的换手可能延续前一天的目标状态。这适合解释“已有策略连续运行到此区间”的表现。若研究的是每个区间单独从现金启动，就应在区间起点重新计算首笔建仓成本。两种口径都可以定义，关键是不要把连续持仓口径的结果写成从零启动的账户收益。\n\n候选摘要绑定的是规则与配置，不会自动绑定数据内容。若原始价格文件被替换而配置摘要不变，两次结果仍不可直接视为同一实验。完整记录应同时保存数据摘要、时间范围、费用参数、代码版本与候选清单。本例先演示配置冻结，毕业项目再补上数据与环境信息，让记录逐步变得完整。\n\n自动化容易在几秒内试几十条候选。候选越多，验证段出现偶然赢家的机会越大，哪怕每条都没有稳定信息。可以做一次预先定义的对照：加入十条随机信号，使用同样排序规则，观察验证最好者到了测试是否维持优势。这个练习不是为了从随机信号里找赚钱秘诀，而是理解为什么需要记录失败候选与总尝试次数。\n\n对评价程序本身，也可以构造答案已知的输入。全程零持仓应得到零毛收益与零交易成本；固定半仓在起点建仓后不应每天重复收取建仓成本；改变测试标签不应改变验证赢家。这些检查验证账目和依赖关系，通常比把某次收益的小数硬编码成标准答案更能发现真实错误。\n\n## 练习\n1. 为什么保存全部候选？\n2. SHA256 能证明策略赚钱吗？\n3. 如果测试不好，能否将详细测试反馈用于继续搜索？\n\n## 参考答案\n1. 为了记录研究自由度、失败与重复，避免只展示偶然最佳结果。\n2. 不能，它只绑定内容身份，不替代正确性或有效性验证。\n3. 可以开展新的探索，但该段不能继续被称为独立最终测试。\n\n## 继续学习\n下一课把假设、表达式生成和评价串起来，仍使用相同的数据边界与实验预算。\n\n## 参考资料\n[scikit-learn 模型选择",
+        "url": "https://scikit-learn.org/stable/modules/cross_validation.html"
+      },
+      {
+        "title": "Python hashlib",
+        "url": "https://docs.python.org/3/library/hashlib.html"
+      }
+    ]
+  },
+  {
+    "id": "q71",
+    "kind": "course",
+    "module": "AI 辅助研究",
+    "title": "71 多智能体研究循环",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q71.md",
+    "check": {
+      "question": "本课真实模式一个候选完整经过三个角色，最多发出多少次请求？",
+      "answers": [
+        "3",
+        "三"
+      ],
+      "explanation": "每个角色一次，共三次；客户端没有自动重试。"
+    },
+    "examples": [
+      {
+        "id": "q71",
+        "file": "examples/q71.py",
+        "environment": "notebook",
+        "label": "多智能体研究循环：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "pandas"
+    ],
+    "estimated_minutes": 75,
+    "prerequisites": [
+      "q70"
+    ],
+    "sources": [
+      {
+        "title": "NVIDIA 多智能体信号发现",
+        "url": "https://developer.nvidia.com/blog/automating-and-optimizing-financial-signal-discovery-with-multi-agent-systems/"
+      },
+      {
+        "title": "Python 正则表达式",
+        "url": "https://docs.python.org/3/library/re.html"
+      }
+    ]
+  },
+  {
+    "id": "q72",
+    "kind": "course",
+    "module": "AI 辅助研究",
+    "title": "72 毕业项目",
+    "status": "published",
+    "version": 1,
+    "body": "lessons/q72.md",
+    "check": {
+      "question": "为计算相对初始本金的回撤，净值序列开头应补入哪个基准数值？",
+      "answers": [
+        "1",
+        "1.0"
+      ],
+      "explanation": "初始权益为1，保证首期亏损被纳入回撤。"
+    },
+    "examples": [
+      {
+        "id": "q72",
+        "file": "examples/q72.py",
+        "environment": "notebook",
+        "label": "毕业项目：完整可运行示例"
+      }
+    ],
+    "notebook_dependencies": [
+      "numpy",
+      "scikit-learn"
+    ],
+    "estimated_minutes": 75,
+    "prerequisites": [
+      "q71"
+    ],
+    "sources": [
+      {
+        "title": "ML4T 作者项目",
+        "url": "https://github.com/stefan-jansen/machine-learning-for-trading"
+      },
+      {
+        "title": "scikit-learn 研究常见陷阱",
+        "url": "https://scikit-learn.org/stable/common_pitfalls.html"
+      }
+    ]
+  },
+  {
+    "id": "manual-1",
+    "kind": "manual",
+    "module": "软件操作",
+    "title": "安装与备份",
+    "status": "published",
+    "version": 1,
+    "body": "manual/manual-1.md"
+  },
+  {
+    "id": "manual-2",
+    "kind": "manual",
+    "module": "软件操作",
+    "title": "页面与布局",
+    "status": "published",
+    "version": 1,
+    "body": "manual/manual-2.md"
+  },
+  {
+    "id": "manual-3",
+    "kind": "manual",
+    "module": "软件操作",
+    "title": "模型与编辑器",
+    "status": "published",
+    "version": 1,
+    "body": "manual/manual-3.md"
+  },
+  {
+    "id": "manual-4",
+    "kind": "manual",
+    "module": "软件操作",
+    "title": "数据中心",
+    "status": "published",
+    "version": 1,
+    "body": "manual/manual-4.md"
+  },
+  {
+    "id": "manual-5",
+    "kind": "manual",
+    "module": "软件操作",
+    "title": "回测与结果",
+    "status": "published",
+    "version": 1,
+    "body": "manual/manual-5.md"
+  },
+  {
+    "id": "manual-6",
+    "kind": "manual",
+    "module": "软件操作",
+    "title": "行情与实时仿真",
+    "status": "published",
+    "version": 1,
+    "body": "manual/manual-6.md"
+  },
+  {
+    "id": "manual-7",
+    "kind": "manual",
+    "module": "软件操作",
+    "title": "手动账户与流水",
+    "status": "published",
+    "version": 1,
+    "body": "manual/manual-7.md"
+  },
+  {
+    "id": "manual-8",
+    "kind": "manual",
+    "module": "软件操作",
+    "title": "报告与学习记录",
+    "status": "published",
+    "version": 1,
+    "body": "manual/manual-8.md"
+  },
+  {
+    "id": "system-dialogs",
+    "kind": "manual",
+    "module": "文件与确认窗口",
+    "title": "名称输入、文件选择与确认窗口",
+    "status": "published",
+    "version": 1,
+    "body": "manual/file-dialogs.md"
+  },
+  {
+    "id": "help-account_overview.AccountOverview.__init__.selector",
+    "kind": "manual",
+    "module": "账户与记录",
+    "title": "选择要查看的虚拟账户",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/account_overview.AccountOverview.__init__.selector.md",
+    "help_id": "account_overview.AccountOverview.__init__.selector"
+  },
+  {
+    "id": "help-account_overview.AccountOverview.__init__.details",
+    "kind": "manual",
+    "module": "账户与记录",
+    "title": "查看账户详情",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/account_overview.AccountOverview.__init__.details.md",
+    "help_id": "account_overview.AccountOverview.__init__.details"
+  },
+  {
+    "id": "help-account_overview.AccountOverview.__init__.report_button",
+    "kind": "manual",
+    "module": "账户与记录",
+    "title": "导出所选报告",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/account_overview.AccountOverview.__init__.report_button.md",
+    "help_id": "account_overview.AccountOverview.__init__.report_button"
+  },
+  {
+    "id": "help-account_overview.AccountOverview.__init__.compare_button",
+    "kind": "manual",
+    "module": "账户与记录",
+    "title": "运行对比",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/account_overview.AccountOverview.__init__.compare_button.md",
+    "help_id": "account_overview.AccountOverview.__init__.compare_button"
+  },
+  {
+    "id": "help-account_overview.AccountOverview.__init__.tabs",
+    "kind": "manual",
+    "module": "账户与记录",
+    "title": "在账户持仓、近期操作、日志及工作区导航之间切换",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/account_overview.AccountOverview.__init__.tabs.md",
+    "help_id": "account_overview.AccountOverview.__init__.tabs"
+  },
+  {
+    "id": "help-account_overview.AccountOverview.__init__.positions",
+    "kind": "manual",
+    "module": "账户与记录",
+    "title": "持仓数量与可卖数量分别显示；成本金额不是单价，估值价格决定当前市值",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/account_overview.AccountOverview.__init__.positions.md",
+    "help_id": "account_overview.AccountOverview.__init__.positions"
+  },
+  {
+    "id": "help-account_overview.AccountOverview.__init__.operations",
+    "kind": "manual",
+    "module": "账户与记录",
+    "title": "按时间查看最近订单与成交",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/account_overview.AccountOverview.__init__.operations.md",
+    "help_id": "account_overview.AccountOverview.__init__.operations"
+  },
+  {
+    "id": "help-account_overview.AccountOverview.__init__.logs",
+    "kind": "manual",
+    "module": "账户与记录",
+    "title": "查看所选账户的近期运行记录，先对照时间再定位策略解释或错误",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/account_overview.AccountOverview.__init__.logs.md",
+    "help_id": "account_overview.AccountOverview.__init__.logs"
+  },
+  {
+    "id": "help-account_overview.AccountOverview.__init__.manifest",
+    "kind": "manual",
+    "module": "账户与记录",
+    "title": "只读查看归档记录保存时的策略、参数、数据和规则，内容属于所选运行，不随当前编辑草稿变化",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/account_overview.AccountOverview.__init__.manifest.md",
+    "help_id": "account_overview.AccountOverview.__init__.manifest"
+  },
+  {
+    "id": "help-account_overview.AccountOverview.__init__.button",
+    "kind": "manual",
+    "module": "账户与记录",
+    "title": "刷新",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/account_overview.AccountOverview.__init__.button.md",
+    "help_id": "account_overview.AccountOverview.__init__.button"
+  },
+  {
+    "id": "help-backtest_setup.BacktestSetup.__init__.dataset",
+    "kind": "manual",
+    "module": "回测设置",
+    "title": "选择本次运行使用的数据",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/backtest_setup.BacktestSetup.__init__.dataset.md",
+    "help_id": "backtest_setup.BacktestSetup.__init__.dataset"
+  },
+  {
+    "id": "help-backtest_setup.BacktestSetup.__init__.benchmark",
+    "kind": "manual",
+    "module": "回测设置",
+    "title": "选择数据包中一只证券作为价格买入持有基准",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/backtest_setup.BacktestSetup.__init__.benchmark.md",
+    "help_id": "backtest_setup.BacktestSetup.__init__.benchmark"
+  },
+  {
+    "id": "help-backtest_setup.BacktestSetup.__init__.capital",
+    "kind": "manual",
+    "module": "回测设置",
+    "title": "输入新回测初始资金，单位元",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/backtest_setup.BacktestSetup.__init__.capital.md",
+    "help_id": "backtest_setup.BacktestSetup.__init__.capital"
+  },
+  {
+    "id": "help-backtest_setup.BacktestSetup.__init__.actions",
+    "kind": "manual",
+    "module": "回测设置",
+    "title": "保存应用当前数据、日期、基准和资金设置，取消放弃此次表单修改",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/backtest_setup.BacktestSetup.__init__.actions.md",
+    "help_id": "backtest_setup.BacktestSetup.__init__.actions"
+  },
+  {
+    "id": "help-backtest_setup.BacktestSetup.__init__.control",
+    "kind": "manual",
+    "module": "回测设置",
+    "title": "选择全部区间、前半段探索或后半段检验",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/backtest_setup.BacktestSetup.__init__.control.md",
+    "help_id": "backtest_setup.BacktestSetup.__init__.control"
+  },
+  {
+    "id": "help-backtest_setup.BacktestSetup.__init__.field",
+    "kind": "manual",
+    "module": "回测设置",
+    "title": "填写开始日期或结束日期，范围受数据覆盖约束",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/backtest_setup.BacktestSetup.__init__.field.md",
+    "help_id": "backtest_setup.BacktestSetup.__init__.field"
+  },
+  {
+    "id": "help-backtest_workspace.BacktestOverview.__init__.symbol_combo",
+    "kind": "manual",
+    "module": "回测总览",
+    "title": "切换回测总览所看的证券",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/backtest_workspace.BacktestOverview.__init__.symbol_combo.md",
+    "help_id": "backtest_workspace.BacktestOverview.__init__.symbol_combo"
+  },
+  {
+    "id": "help-backtest_workspace.BacktestOverview.__init__.price_chart",
+    "kind": "manual",
+    "module": "回测总览",
+    "title": "上部展示所选证券的价格 K 线或报价曲线和买卖标记，下部为成交量",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/backtest_workspace.BacktestOverview.__init__.price_chart.md",
+    "help_id": "backtest_workspace.BacktestOverview.__init__.price_chart"
+  },
+  {
+    "id": "help-backtest_workspace.BacktestOverview.__init__.equity_chart",
+    "kind": "manual",
+    "module": "回测总览",
+    "title": "上部比较策略权益和基准曲线，下部显示回撤百分比",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/backtest_workspace.BacktestOverview.__init__.equity_chart.md",
+    "help_id": "backtest_workspace.BacktestOverview.__init__.equity_chart"
+  },
+  {
+    "id": "help-backtest_workspace.BacktestOverview.__init__.performance",
+    "kind": "manual",
+    "module": "回测总览",
+    "title": "显示完整已运行区间的绩效指标",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/backtest_workspace.BacktestOverview.__init__.performance.md",
+    "help_id": "backtest_workspace.BacktestOverview.__init__.performance"
+  },
+  {
+    "id": "help-backtest_workspace.BacktestOverview.__init__.trades",
+    "kind": "manual",
+    "module": "回测总览",
+    "title": "本证券成交表：时间是成交时点，方向是买卖，数量为股/份，价格为实际模拟执行价",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/backtest_workspace.BacktestOverview.__init__.trades.md",
+    "help_id": "backtest_workspace.BacktestOverview.__init__.trades"
+  },
+  {
+    "id": "help-backtest_workspace.BacktestOverview.__init__.guidance",
+    "kind": "manual",
+    "module": "回测总览",
+    "title": "显示当前回测结果的阅读指引",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/backtest_workspace.BacktestOverview.__init__.guidance.md",
+    "help_id": "backtest_workspace.BacktestOverview.__init__.guidance"
+  },
+  {
+    "id": "help-backtest_workspace.BacktestOverview.__init__.button",
+    "kind": "manual",
+    "module": "回测总览",
+    "title": "分月收益与回撤诊断",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/backtest_workspace.BacktestOverview.__init__.button.md",
+    "help_id": "backtest_workspace.BacktestOverview.__init__.button"
+  },
+  {
+    "id": "help-backtest_workspace.BacktestOverview.__init__.button2",
+    "kind": "manual",
+    "module": "回测总览",
+    "title": "回测使用教程",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/backtest_workspace.BacktestOverview.__init__.button2.md",
+    "help_id": "backtest_workspace.BacktestOverview.__init__.button2"
+  },
+  {
+    "id": "help-catalog_ui.CatalogDialog.__init__.search",
+    "kind": "manual",
+    "module": "证券目录",
+    "title": "按证券代码或名称搜索，支持输入部分名称或代码",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/catalog_ui.CatalogDialog.__init__.search.md",
+    "help_id": "catalog_ui.CatalogDialog.__init__.search"
+  },
+  {
+    "id": "help-catalog_ui.CatalogDialog.__init__.category",
+    "kind": "manual",
+    "module": "证券目录",
+    "title": "筛选全部、股票或 ETF，与搜索文本同时生效",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/catalog_ui.CatalogDialog.__init__.category.md",
+    "help_id": "catalog_ui.CatalogDialog.__init__.category"
+  },
+  {
+    "id": "help-catalog_ui.CatalogDialog.__init__.refresh_button",
+    "kind": "manual",
+    "module": "证券目录",
+    "title": "更新目录",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/catalog_ui.CatalogDialog.__init__.refresh_button.md",
+    "help_id": "catalog_ui.CatalogDialog.__init__.refresh_button"
+  },
+  {
+    "id": "help-catalog_ui.CatalogDialog.__init__.cancel_button",
+    "kind": "manual",
+    "module": "证券目录",
+    "title": "取消更新",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/catalog_ui.CatalogDialog.__init__.cancel_button.md",
+    "help_id": "catalog_ui.CatalogDialog.__init__.cancel_button"
+  },
+  {
+    "id": "help-catalog_ui.CatalogDialog.__init__.table",
+    "kind": "manual",
+    "module": "证券目录",
+    "title": "目录列为代码、名称、类别、板块、上市日期；未提供日期不等于未上市",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/catalog_ui.CatalogDialog.__init__.table.md",
+    "help_id": "catalog_ui.CatalogDialog.__init__.table"
+  },
+  {
+    "id": "help-catalog_ui.CatalogDialog.__init__.details",
+    "kind": "manual",
+    "module": "证券目录",
+    "title": "显示所选证券的规则、来源与获取时间",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/catalog_ui.CatalogDialog.__init__.details.md",
+    "help_id": "catalog_ui.CatalogDialog.__init__.details"
+  },
+  {
+    "id": "help-catalog_ui.CatalogDialog.__init__.add_button",
+    "kind": "manual",
+    "module": "证券目录",
+    "title": "加入在线标的",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/catalog_ui.CatalogDialog.__init__.add_button.md",
+    "help_id": "catalog_ui.CatalogDialog.__init__.add_button"
+  },
+  {
+    "id": "help-catalog_ui.CatalogDialog.__init__.button",
+    "kind": "manual",
+    "module": "证券目录",
+    "title": "关闭",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/catalog_ui.CatalogDialog.__init__.button.md",
+    "help_id": "catalog_ui.CatalogDialog.__init__.button"
+  },
+  {
+    "id": "help-control_help.ControlTour.__init__.button",
+    "kind": "manual",
+    "module": "逐步讲解",
+    "title": "上一步和下一步只切换被讲解的控件，不执行它们的动作；结束讲解或 Esc 关闭步骤卡并移除高亮",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/control_help.ControlTour.__init__.button.md",
+    "help_id": "control_help.ControlTour.__init__.button"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.__init__.search",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "搜索 72 课的课名、术语和正文",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.__init__.search.md",
+    "help_id": "course_ui.CourseLibrary.__init__.search"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.__init__.bookmarks_only",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "只看书签",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.__init__.bookmarks_only.md",
+    "help_id": "course_ui.CourseLibrary.__init__.bookmarks_only"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.__init__.tree",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "按 12 个模块选择 72 课量化课程，可展开或折叠",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.__init__.tree.md",
+    "help_id": "course_ui.CourseLibrary.__init__.tree"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.__init__.toc",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "本课标题目录",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.__init__.toc.md",
+    "help_id": "course_ui.CourseLibrary.__init__.toc"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.__init__.bookmark",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "添加书签",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.__init__.bookmark.md",
+    "help_id": "course_ui.CourseLibrary.__init__.bookmark"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.__init__.answers",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "显示练习答案",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.__init__.answers.md",
+    "help_id": "course_ui.CourseLibrary.__init__.answers"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.__init__.body",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "阅读正文、公式、完整代码与参考链接",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.__init__.body.md",
+    "help_id": "course_ui.CourseLibrary.__init__.body"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.__init__.examples",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "选择本课的某个完整示例",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.__init__.examples.md",
+    "help_id": "course_ui.CourseLibrary.__init__.examples"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.__init__.code",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "编辑当前示例草稿，切课时本地保存",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.__init__.code.md",
+    "help_id": "course_ui.CourseLibrary.__init__.code"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.__init__.run_button",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "运行练习",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.__init__.run_button.md",
+    "help_id": "course_ui.CourseLibrary.__init__.run_button"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.__init__.stop_button",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "停止",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.__init__.stop_button.md",
+    "help_id": "course_ui.CourseLibrary.__init__.stop_button"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.__init__.reset_button",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "还原本课示例",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.__init__.reset_button.md",
+    "help_id": "course_ui.CourseLibrary.__init__.reset_button"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.__init__.load_strategy_button",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "载入策略教学副本",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.__init__.load_strategy_button.md",
+    "help_id": "course_ui.CourseLibrary.__init__.load_strategy_button"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.__init__.export_button",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "导出本课 Notebook",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.__init__.export_button.md",
+    "help_id": "course_ui.CourseLibrary.__init__.export_button"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.__init__.open_export_button",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "打开导出目录",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.__init__.open_export_button.md",
+    "help_id": "course_ui.CourseLibrary.__init__.open_export_button"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.__init__.export_all_button",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "导出全部课程 Notebook",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.__init__.export_all_button.md",
+    "help_id": "course_ui.CourseLibrary.__init__.export_all_button"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.__init__.output",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "只读显示本次代码输出或错误",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.__init__.output.md",
+    "help_id": "course_ui.CourseLibrary.__init__.output"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.__init__.displays",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "在本次练习输出的表格与图表之间切换",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.__init__.displays.md",
+    "help_id": "course_ui.CourseLibrary.__init__.displays"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.__init__.check_input",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "输入本课知识题要求的数字或简短文字",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.__init__.check_input.md",
+    "help_id": "course_ui.CourseLibrary.__init__.check_input"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.__init__.check_button",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "检查答案",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.__init__.check_button.md",
+    "help_id": "course_ui.CourseLibrary.__init__.check_button"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.__init__.button",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "上一节/下一节按筛选后目录移动；标记已读只保存阅读；字号按钮改变正文大小；复制代码复制当前草稿",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.__init__.button.md",
+    "help_id": "course_ui.CourseLibrary.__init__.button"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.render_displays.widget",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "只读查看本次 Python 练习提交的结果表，列名来自示例",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.render_displays.widget.md",
+    "help_id": "course_ui.CourseLibrary.render_displays.widget"
+  },
+  {
+    "id": "help-course_ui.CourseLibrary.render_displays.widget2",
+    "kind": "manual",
+    "module": "长期课程阅读器",
+    "title": "查看本次练习的折线或柱图，横轴为观察序号，图例区分序列",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/course_ui.CourseLibrary.render_displays.widget2.md",
+    "help_id": "course_ui.CourseLibrary.render_displays.widget2"
+  },
+  {
+    "id": "help-help_controller.HelpController.explain.text",
+    "kind": "manual",
+    "module": "控件解释",
+    "title": "阅读所选控件用途、操作顺序、当前提示和可用状态",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/help_controller.HelpController.explain.text.md",
+    "help_id": "help_controller.HelpController.explain.text"
+  },
+  {
+    "id": "help-help_controller.HelpController.explain.actions",
+    "kind": "manual",
+    "module": "控件解释",
+    "title": "关闭控件说明窗口，回到原界面",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/help_controller.HelpController.explain.actions.md",
+    "help_id": "help_controller.HelpController.explain.actions"
+  },
+  {
+    "id": "help-model_browser.ModelBrowser.__init__.search",
+    "kind": "manual",
+    "module": "模板与已存策略",
+    "title": "按模型名称筛选模板和已保存模型，清空恢复全部",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/model_browser.ModelBrowser.__init__.search.md",
+    "help_id": "model_browser.ModelBrowser.__init__.search"
+  },
+  {
+    "id": "help-model_browser.ModelBrowser.__init__.models",
+    "kind": "manual",
+    "module": "模板与已存策略",
+    "title": "名称标识模型，类型区分模板与已保存版本，说明介绍用途",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/model_browser.ModelBrowser.__init__.models.md",
+    "help_id": "model_browser.ModelBrowser.__init__.models"
+  },
+  {
+    "id": "help-model_browser.ModelBrowser.context_menu.addAction",
+    "kind": "manual",
+    "module": "模板与已存策略",
+    "title": "编辑策略",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/model_browser.ModelBrowser.context_menu.addAction.md",
+    "help_id": "model_browser.ModelBrowser.context_menu.addAction"
+  },
+  {
+    "id": "help-model_browser.ModelBrowser.context_menu.addAction2",
+    "kind": "manual",
+    "module": "模板与已存策略",
+    "title": "去历史回测",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/model_browser.ModelBrowser.context_menu.addAction2.md",
+    "help_id": "model_browser.ModelBrowser.context_menu.addAction2"
+  },
+  {
+    "id": "help-model_browser.ModelBrowser.__init__.button",
+    "kind": "manual",
+    "module": "模板与已存策略",
+    "title": "新建策略",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/model_browser.ModelBrowser.__init__.button.md",
+    "help_id": "model_browser.ModelBrowser.__init__.button"
+  },
+  {
+    "id": "help-model_browser.ModelBrowser.__init__.button2",
+    "kind": "manual",
+    "module": "模板与已存策略",
+    "title": "导入策略",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/model_browser.ModelBrowser.__init__.button2.md",
+    "help_id": "model_browser.ModelBrowser.__init__.button2"
+  },
+  {
+    "id": "help-model_browser.ModelBrowser.__init__.button3",
+    "kind": "manual",
+    "module": "模板与已存策略",
+    "title": "刷新",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/model_browser.ModelBrowser.__init__.button3.md",
+    "help_id": "model_browser.ModelBrowser.__init__.button3"
+  },
+  {
+    "id": "help-model_browser.ModelBrowser.refresh.action",
+    "kind": "manual",
+    "module": "模板与已存策略",
+    "title": "行内编辑打开对应策略；行内去回测载入该行策略并进入历史回测准备",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/model_browser.ModelBrowser.refresh.action.md",
+    "help_id": "model_browser.ModelBrowser.refresh.action"
+  },
+  {
+    "id": "help-model_trading.TradingTasks.__init__.create_button",
+    "kind": "manual",
+    "module": "模拟交易",
+    "title": "新建策略交易",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/model_trading.TradingTasks.__init__.create_button.md",
+    "help_id": "model_trading.TradingTasks.__init__.create_button"
+  },
+  {
+    "id": "help-model_trading.TradingTasks.__init__.view_button",
+    "kind": "manual",
+    "module": "模拟交易",
+    "title": "查看账户",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/model_trading.TradingTasks.__init__.view_button.md",
+    "help_id": "model_trading.TradingTasks.__init__.view_button"
+  },
+  {
+    "id": "help-model_trading.TradingTasks.__init__.accounts",
+    "kind": "manual",
+    "module": "模拟交易",
+    "title": "查看策略名、模式、虚拟账户和状态",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/model_trading.TradingTasks.__init__.accounts.md",
+    "help_id": "model_trading.TradingTasks.__init__.accounts"
+  },
+  {
+    "id": "help-model_trading.TradingTasks.new_task.model",
+    "kind": "manual",
+    "module": "模拟交易",
+    "title": "选择新策略交易使用的模板或已保存模型",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/model_trading.TradingTasks.new_task.model.md",
+    "help_id": "model_trading.TradingTasks.new_task.model"
+  },
+  {
+    "id": "help-model_trading.TradingTasks.new_task.symbols",
+    "kind": "manual",
+    "module": "模拟交易",
+    "title": "输入新账户的证券代码，逗号分隔并带交易所后缀，最多 20 个",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/model_trading.TradingTasks.new_task.symbols.md",
+    "help_id": "model_trading.TradingTasks.new_task.symbols"
+  },
+  {
+    "id": "help-model_trading.TradingTasks.new_task.capital",
+    "kind": "manual",
+    "module": "模拟交易",
+    "title": "输入新虚拟账户的初始资金，单位元",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/model_trading.TradingTasks.new_task.capital.md",
+    "help_id": "model_trading.TradingTasks.new_task.capital"
+  },
+  {
+    "id": "help-model_trading.TradingTasks.new_task.buttons",
+    "kind": "manual",
+    "module": "模拟交易",
+    "title": "创建并启动仿真会提交表单并准备规则，成功后启动独立账户；取消关闭表单，不建立账户",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/model_trading.TradingTasks.new_task.buttons.md",
+    "help_id": "model_trading.TradingTasks.new_task.buttons"
+  },
+  {
+    "id": "help-model_trading.TradingTasks.__init__.button",
+    "kind": "manual",
+    "module": "模拟交易",
+    "title": "刷新",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/model_trading.TradingTasks.__init__.button.md",
+    "help_id": "model_trading.TradingTasks.__init__.button"
+  },
+  {
+    "id": "help-onboarding.OnboardingTour.__init__.chapter",
+    "kind": "manual",
+    "module": "使用教程",
+    "title": "直接跳到使用教程的一个章节",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/onboarding.OnboardingTour.__init__.chapter.md",
+    "help_id": "onboarding.OnboardingTour.__init__.chapter"
+  },
+  {
+    "id": "help-onboarding.OnboardingTour.__init__.previous",
+    "kind": "manual",
+    "module": "使用教程",
+    "title": "上一步",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/onboarding.OnboardingTour.__init__.previous.md",
+    "help_id": "onboarding.OnboardingTour.__init__.previous"
+  },
+  {
+    "id": "help-onboarding.OnboardingTour.__init__.next",
+    "kind": "manual",
+    "module": "使用教程",
+    "title": "下一步",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/onboarding.OnboardingTour.__init__.next.md",
+    "help_id": "onboarding.OnboardingTour.__init__.next"
+  },
+  {
+    "id": "help-onboarding.OnboardingTour.__init__.skip",
+    "kind": "manual",
+    "module": "使用教程",
+    "title": "暂时跳过",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/onboarding.OnboardingTour.__init__.skip.md",
+    "help_id": "onboarding.OnboardingTour.__init__.skip"
+  },
+  {
+    "id": "help-operations_ui.OperationDialog.__init__.retry",
+    "kind": "manual",
+    "module": "报告、对比与录制恢复",
+    "title": "按窗口用途重新导出、刷新运行对比或重新整理录制",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/operations_ui.OperationDialog.__init__.retry.md",
+    "help_id": "operations_ui.OperationDialog.__init__.retry"
+  },
+  {
+    "id": "help-operations_ui.OperationDialog.__init__.cancel_button",
+    "kind": "manual",
+    "module": "报告、对比与录制恢复",
+    "title": "取消",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/operations_ui.OperationDialog.__init__.cancel_button.md",
+    "help_id": "operations_ui.OperationDialog.__init__.cancel_button"
+  },
+  {
+    "id": "help-operations_ui.OperationDialog.__init__.open_button",
+    "kind": "manual",
+    "module": "报告、对比与录制恢复",
+    "title": "成功后打开报告、查看选中运行或使用选中录制数据",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/operations_ui.OperationDialog.__init__.open_button.md",
+    "help_id": "operations_ui.OperationDialog.__init__.open_button"
+  },
+  {
+    "id": "help-operations_ui.OperationDialog.__init__.table",
+    "kind": "manual",
+    "module": "报告、对比与录制恢复",
+    "title": "对比各运行的名称、状态、模式、数据、收益、回撤、费用、成交数和比较依据",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/operations_ui.OperationDialog.__init__.table.md",
+    "help_id": "operations_ui.OperationDialog.__init__.table"
+  },
+  {
+    "id": "help-operations_ui.OperationDialog.__init__.button",
+    "kind": "manual",
+    "module": "报告、对比与录制恢复",
+    "title": "关闭",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/operations_ui.OperationDialog.__init__.button.md",
+    "help_id": "operations_ui.OperationDialog.__init__.button"
+  },
+  {
+    "id": "help-operations_ui.OperationDialog.__init__.table2",
+    "kind": "manual",
+    "module": "报告、对比与录制恢复",
+    "title": "对比各运行的名称、状态、模式、数据、收益、回撤、费用、成交数和比较依据",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/operations_ui.OperationDialog.__init__.table2.md",
+    "help_id": "operations_ui.OperationDialog.__init__.table2"
+  },
+  {
+    "id": "help-qmt_workspace.build_market.data_market_tabs",
+    "kind": "manual",
+    "module": "数据中心",
+    "title": "在历史数据和实时行情之间切换",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/qmt_workspace.build_market.data_market_tabs.md",
+    "help_id": "qmt_workspace.build_market.data_market_tabs"
+  },
+  {
+    "id": "help-qmt_workspace.build_market.data_overview_table",
+    "kind": "manual",
+    "module": "数据中心",
+    "title": "列出本地数据名称、类型、来源、起止时间和记录数",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/qmt_workspace.build_market.data_overview_table.md",
+    "help_id": "qmt_workspace.build_market.data_overview_table"
+  },
+  {
+    "id": "help-qmt_workspace.build_market.window.market_overview_table",
+    "kind": "manual",
+    "module": "数据中心",
+    "title": "行情列为代码/名称、最新价、买一、卖一、行情时间和年龄秒数",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/qmt_workspace.build_market.window.market_overview_table.md",
+    "help_id": "qmt_workspace.build_market.window.market_overview_table"
+  },
+  {
+    "id": "help-qmt_workspace.MigrationCourse.__init__.selector",
+    "kind": "manual",
+    "module": "数据中心",
+    "title": "选择八课迁移教程中的一课",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/qmt_workspace.MigrationCourse.__init__.selector.md",
+    "help_id": "qmt_workspace.MigrationCourse.__init__.selector"
+  },
+  {
+    "id": "help-qmt_workspace.MigrationCourse.__init__.body",
+    "kind": "manual",
+    "module": "数据中心",
+    "title": "阅读 QMT 与本软件的工作流差异及参考链接",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/qmt_workspace.MigrationCourse.__init__.body.md",
+    "help_id": "qmt_workspace.MigrationCourse.__init__.body"
+  },
+  {
+    "id": "help-qmt_workspace.MigrationCourse.__init__.answers",
+    "kind": "manual",
+    "module": "数据中心",
+    "title": "选择本课知识题答案，再点击检查答案",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/qmt_workspace.MigrationCourse.__init__.answers.md",
+    "help_id": "qmt_workspace.MigrationCourse.__init__.answers"
+  },
+  {
+    "id": "help-qmt_workspace.MigrationCourse.__init__.jump",
+    "kind": "manual",
+    "module": "数据中心",
+    "title": "打开练习入口",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/qmt_workspace.MigrationCourse.__init__.jump.md",
+    "help_id": "qmt_workspace.MigrationCourse.__init__.jump"
+  },
+  {
+    "id": "help-qmt_workspace.build_market.button",
+    "kind": "manual",
+    "module": "数据中心",
+    "title": "证券搜索 / 添加自选",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/qmt_workspace.build_market.button.md",
+    "help_id": "qmt_workspace.build_market.button"
+  },
+  {
+    "id": "help-qmt_workspace.build_market.button2",
+    "kind": "manual",
+    "module": "数据中心",
+    "title": "管理历史数据 / 下载 / 导入",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/qmt_workspace.build_market.button2.md",
+    "help_id": "qmt_workspace.build_market.button2"
+  },
+  {
+    "id": "help-qmt_workspace.build_market.refresh_data",
+    "kind": "manual",
+    "module": "数据中心",
+    "title": "刷新数据列表",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/qmt_workspace.build_market.refresh_data.md",
+    "help_id": "qmt_workspace.build_market.refresh_data"
+  },
+  {
+    "id": "help-qmt_workspace.build_market.write_strategy",
+    "kind": "manual",
+    "module": "数据中心",
+    "title": "去写策略",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/qmt_workspace.build_market.write_strategy.md",
+    "help_id": "qmt_workspace.build_market.write_strategy"
+  },
+  {
+    "id": "help-qmt_workspace.build_market.backtest",
+    "kind": "manual",
+    "module": "数据中心",
+    "title": "去历史回测",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/qmt_workspace.build_market.backtest.md",
+    "help_id": "qmt_workspace.build_market.backtest"
+  },
+  {
+    "id": "help-qmt_workspace.build_market.button3",
+    "kind": "manual",
+    "module": "数据中心",
+    "title": "连接 / 断开行情",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/qmt_workspace.build_market.button3.md",
+    "help_id": "qmt_workspace.build_market.button3"
+  },
+  {
+    "id": "help-qmt_workspace.build_market.button4",
+    "kind": "manual",
+    "module": "数据中心",
+    "title": "查看订阅标的",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/qmt_workspace.build_market.button4.md",
+    "help_id": "qmt_workspace.build_market.button4"
+  },
+  {
+    "id": "help-qmt_workspace.build_market.button5",
+    "kind": "manual",
+    "module": "数据中心",
+    "title": "去模拟交易",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/qmt_workspace.build_market.button5.md",
+    "help_id": "qmt_workspace.build_market.button5"
+  },
+  {
+    "id": "help-qmt_workspace.MigrationCourse.__init__.button",
+    "kind": "manual",
+    "module": "数据中心",
+    "title": "检查答案",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/qmt_workspace.MigrationCourse.__init__.button.md",
+    "help_id": "qmt_workspace.MigrationCourse.__init__.button"
+  },
+  {
+    "id": "help-qmt_workspace.MigrationCourse.__init__.button2",
+    "kind": "manual",
+    "module": "数据中心",
+    "title": "下一课",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/qmt_workspace.MigrationCourse.__init__.button2.md",
+    "help_id": "qmt_workspace.MigrationCourse.__init__.button2"
+  },
+  {
+    "id": "help-quality_ui.QualityDialog.__init__.table",
+    "kind": "manual",
+    "module": "数据缺口检查",
+    "title": "类型说明缺口性质，证券标识对象，起止时刻描述区间，数量带单位",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/quality_ui.QualityDialog.__init__.table.md",
+    "help_id": "quality_ui.QualityDialog.__init__.table"
+  },
+  {
+    "id": "help-quality_ui.QualityDialog.__init__.retry",
+    "kind": "manual",
+    "module": "数据缺口检查",
+    "title": "重新检查",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/quality_ui.QualityDialog.__init__.retry.md",
+    "help_id": "quality_ui.QualityDialog.__init__.retry"
+  },
+  {
+    "id": "help-quality_ui.QualityDialog.__init__.cancel_button",
+    "kind": "manual",
+    "module": "数据缺口检查",
+    "title": "取消检查",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/quality_ui.QualityDialog.__init__.cancel_button.md",
+    "help_id": "quality_ui.QualityDialog.__init__.cancel_button"
+  },
+  {
+    "id": "help-quality_ui.QualityDialog.__init__.open_button",
+    "kind": "manual",
+    "module": "数据缺口检查",
+    "title": "打开完整检查报告",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/quality_ui.QualityDialog.__init__.open_button.md",
+    "help_id": "quality_ui.QualityDialog.__init__.open_button"
+  },
+  {
+    "id": "help-quality_ui.QualityDialog.__init__.button",
+    "kind": "manual",
+    "module": "数据缺口检查",
+    "title": "关闭",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/quality_ui.QualityDialog.__init__.button.md",
+    "help_id": "quality_ui.QualityDialog.__init__.button"
+  },
+  {
+    "id": "help-rule_history_ui.RuleHistoryDialog.__init__.grid",
+    "kind": "manual",
+    "module": "历史证券规则",
+    "title": "编辑所选证券的有效日期区间、状态、涨跌幅、结算和来源",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/rule_history_ui.RuleHistoryDialog.__init__.grid.md",
+    "help_id": "rule_history_ui.RuleHistoryDialog.__init__.grid"
+  },
+  {
+    "id": "help-rule_history_ui.RuleHistoryDialog.__init__.symbols",
+    "kind": "manual",
+    "module": "历史证券规则",
+    "title": "选择要编辑的证券；新增区间和获取历史状态都作用于它",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/rule_history_ui.RuleHistoryDialog.__init__.symbols.md",
+    "help_id": "rule_history_ui.RuleHistoryDialog.__init__.symbols"
+  },
+  {
+    "id": "help-rule_history_ui.RuleHistoryDialog.__init__.add_button",
+    "kind": "manual",
+    "module": "历史证券规则",
+    "title": "新增日期区间",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/rule_history_ui.RuleHistoryDialog.__init__.add_button.md",
+    "help_id": "rule_history_ui.RuleHistoryDialog.__init__.add_button"
+  },
+  {
+    "id": "help-rule_history_ui.RuleHistoryDialog.__init__.remove_button",
+    "kind": "manual",
+    "module": "历史证券规则",
+    "title": "移除所选区间",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/rule_history_ui.RuleHistoryDialog.__init__.remove_button.md",
+    "help_id": "rule_history_ui.RuleHistoryDialog.__init__.remove_button"
+  },
+  {
+    "id": "help-rule_history_ui.RuleHistoryDialog.__init__.fetch_button",
+    "kind": "manual",
+    "module": "历史证券规则",
+    "title": "获取所选股票历史状态",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/rule_history_ui.RuleHistoryDialog.__init__.fetch_button.md",
+    "help_id": "rule_history_ui.RuleHistoryDialog.__init__.fetch_button"
+  },
+  {
+    "id": "help-rule_history_ui.RuleHistoryDialog.__init__.etf_button",
+    "kind": "manual",
+    "module": "历史证券规则",
+    "title": "查看 ETF 当前资料",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/rule_history_ui.RuleHistoryDialog.__init__.etf_button.md",
+    "help_id": "rule_history_ui.RuleHistoryDialog.__init__.etf_button"
+  },
+  {
+    "id": "help-rule_history_ui.RuleHistoryDialog.__init__.save_button",
+    "kind": "manual",
+    "module": "历史证券规则",
+    "title": "检查并另存版本",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/rule_history_ui.RuleHistoryDialog.__init__.save_button.md",
+    "help_id": "rule_history_ui.RuleHistoryDialog.__init__.save_button"
+  },
+  {
+    "id": "help-rule_history_ui.RuleHistoryDialog.__init__.cancel_button",
+    "kind": "manual",
+    "module": "历史证券规则",
+    "title": "取消检查",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/rule_history_ui.RuleHistoryDialog.__init__.cancel_button.md",
+    "help_id": "rule_history_ui.RuleHistoryDialog.__init__.cancel_button"
+  },
+  {
+    "id": "help-rule_history_ui.RuleHistoryDialog.append_period.status",
+    "kind": "manual",
+    "module": "历史证券规则",
+    "title": "选择区间内证券状态，如正常、停牌或未上市，以真实资料为依据",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/rule_history_ui.RuleHistoryDialog.append_period.status.md",
+    "help_id": "rule_history_ui.RuleHistoryDialog.append_period.status"
+  },
+  {
+    "id": "help-rule_history_ui.RuleHistoryDialog.append_period.limit",
+    "kind": "manual",
+    "module": "历史证券规则",
+    "title": "选择该区间适用的涨跌幅规则",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/rule_history_ui.RuleHistoryDialog.append_period.limit.md",
+    "help_id": "rule_history_ui.RuleHistoryDialog.append_period.limit"
+  },
+  {
+    "id": "help-rule_history_ui.RuleHistoryDialog.append_period.settlement",
+    "kind": "manual",
+    "module": "历史证券规则",
+    "title": "选择该区间可卖规则，区分当日回转和次日可卖",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/rule_history_ui.RuleHistoryDialog.append_period.settlement.md",
+    "help_id": "rule_history_ui.RuleHistoryDialog.append_period.settlement"
+  },
+  {
+    "id": "help-rule_history_ui.RuleHistoryDialog.show_status_preview.grid",
+    "kind": "manual",
+    "module": "历史证券规则",
+    "title": "预览从来源资料推导的历史状态区间，先核对日期、状态和缺失说明",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/rule_history_ui.RuleHistoryDialog.show_status_preview.grid.md",
+    "help_id": "rule_history_ui.RuleHistoryDialog.show_status_preview.grid"
+  },
+  {
+    "id": "help-rule_history_ui.RuleHistoryDialog.show_status_preview.adopt",
+    "kind": "manual",
+    "module": "历史证券规则",
+    "title": "将预览建议填入所选证券待保存区间；已有区间时替换的是编辑草稿",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/rule_history_ui.RuleHistoryDialog.show_status_preview.adopt.md",
+    "help_id": "rule_history_ui.RuleHistoryDialog.show_status_preview.adopt"
+  },
+  {
+    "id": "help-rule_history_ui.RuleHistoryDialog.__init__.button",
+    "kind": "manual",
+    "module": "历史证券规则",
+    "title": "关闭",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/rule_history_ui.RuleHistoryDialog.__init__.button.md",
+    "help_id": "rule_history_ui.RuleHistoryDialog.__init__.button"
+  },
+  {
+    "id": "help-rule_history_ui.RuleHistoryDialog.append_period.edit",
+    "kind": "manual",
+    "module": "历史证券规则",
+    "title": "输入本段开始或结束日期",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/rule_history_ui.RuleHistoryDialog.append_period.edit.md",
+    "help_id": "rule_history_ui.RuleHistoryDialog.append_period.edit"
+  },
+  {
+    "id": "help-rule_history_ui.RuleHistoryDialog.show_status_preview.button",
+    "kind": "manual",
+    "module": "历史证券规则",
+    "title": "返回，不采用",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/rule_history_ui.RuleHistoryDialog.show_status_preview.button.md",
+    "help_id": "rule_history_ui.RuleHistoryDialog.show_status_preview.button"
+  },
+  {
+    "id": "help-strategy_editor_window.StrategyEditorWindow.__init__.new_button",
+    "kind": "manual",
+    "module": "写策略",
+    "title": "新建策略",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/strategy_editor_window.StrategyEditorWindow.__init__.new_button.md",
+    "help_id": "strategy_editor_window.StrategyEditorWindow.__init__.new_button"
+  },
+  {
+    "id": "help-strategy_editor_window.StrategyEditorWindow.__init__.library_button",
+    "kind": "manual",
+    "module": "写策略",
+    "title": "模板与已存策略",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/strategy_editor_window.StrategyEditorWindow.__init__.library_button.md",
+    "help_id": "strategy_editor_window.StrategyEditorWindow.__init__.library_button"
+  },
+  {
+    "id": "help-strategy_editor_window.StrategyEditorWindow.__init__.button",
+    "kind": "manual",
+    "module": "写策略",
+    "title": "保存",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/strategy_editor_window.StrategyEditorWindow.__init__.button.md",
+    "help_id": "strategy_editor_window.StrategyEditorWindow.__init__.button"
+  },
+  {
+    "id": "help-strategy_editor_window.StrategyEditorWindow.__init__.button3",
+    "kind": "manual",
+    "module": "写策略",
+    "title": "去回测",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/strategy_editor_window.StrategyEditorWindow.__init__.button3.md",
+    "help_id": "strategy_editor_window.StrategyEditorWindow.__init__.button3"
+  },
+  {
+    "id": "help-strategy_editor_window.StrategyEditorWindow.__init__.button6",
+    "kind": "manual",
+    "module": "写策略",
+    "title": "策略接口",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/strategy_editor_window.StrategyEditorWindow.__init__.button6.md",
+    "help_id": "strategy_editor_window.StrategyEditorWindow.__init__.button6"
+  },
+  {
+    "id": "help-strategy_editor_window.StrategyEditorWindow.__init__.guide_button",
+    "kind": "manual",
+    "module": "写策略",
+    "title": "继续练习",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/strategy_editor_window.StrategyEditorWindow.__init__.guide_button.md",
+    "help_id": "strategy_editor_window.StrategyEditorWindow.__init__.guide_button"
+  },
+  {
+    "id": "help-strategy_editor_window.StrategyEditorWindow.__init__.output",
+    "kind": "manual",
+    "module": "写策略",
+    "title": "只读日志反映当前选中账户的执行消息",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/strategy_editor_window.StrategyEditorWindow.__init__.output.md",
+    "help_id": "strategy_editor_window.StrategyEditorWindow.__init__.output"
+  },
+  {
+    "id": "help-strategy_editor_window.StrategyEditorWindow.__init__.button4",
+    "kind": "manual",
+    "module": "写策略",
+    "title": "去模拟交易",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/strategy_editor_window.StrategyEditorWindow.__init__.button4.md",
+    "help_id": "strategy_editor_window.StrategyEditorWindow.__init__.button4"
+  },
+  {
+    "id": "help-strategy_editor_window.StrategyEditorWindow.__init__.button5",
+    "kind": "manual",
+    "module": "写策略",
+    "title": "数据预览",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/strategy_editor_window.StrategyEditorWindow.__init__.button5.md",
+    "help_id": "strategy_editor_window.StrategyEditorWindow.__init__.button5"
+  },
+  {
+    "id": "help-task_guide.TaskGuide.__init__.selector",
+    "kind": "manual",
+    "module": "历史任务核对资料",
+    "title": "选择一个操作任务",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/task_guide.TaskGuide.__init__.selector.md",
+    "help_id": "task_guide.TaskGuide.__init__.selector"
+  },
+  {
+    "id": "help-task_guide.TaskGuide.__init__.text",
+    "kind": "manual",
+    "module": "历史任务核对资料",
+    "title": "显示当前步骤的位置、操作方法与完成后核对项",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/task_guide.TaskGuide.__init__.text.md",
+    "help_id": "task_guide.TaskGuide.__init__.text"
+  },
+  {
+    "id": "help-task_guide.TaskGuide.__init__.previous",
+    "kind": "manual",
+    "module": "历史任务核对资料",
+    "title": "上一步",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/task_guide.TaskGuide.__init__.previous.md",
+    "help_id": "task_guide.TaskGuide.__init__.previous"
+  },
+  {
+    "id": "help-task_guide.TaskGuide.__init__.next",
+    "kind": "manual",
+    "module": "历史任务核对资料",
+    "title": "下一步（只翻页）",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/task_guide.TaskGuide.__init__.next.md",
+    "help_id": "task_guide.TaskGuide.__init__.next"
+  },
+  {
+    "id": "help-task_guide.TaskGuide.__init__.exit_button",
+    "kind": "manual",
+    "module": "历史任务核对资料",
+    "title": "结束引导",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/task_guide.TaskGuide.__init__.exit_button.md",
+    "help_id": "task_guide.TaskGuide.__init__.exit_button"
+  },
+  {
+    "id": "help-window.MainWindow.__init__.cancel_import_button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "取消数据导入",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.__init__.cancel_import_button.md",
+    "help_id": "window.MainWindow.__init__.cancel_import_button"
+  },
+  {
+    "id": "help-window.MainWindow._build_main.mode_combo",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "选择历史回测、快照回放或实时仿真",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_main.mode_combo.md",
+    "help_id": "window.MainWindow._build_main.mode_combo"
+  },
+  {
+    "id": "help-window.MainWindow._build_main.start_button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "▶  开始运行",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_main.start_button.md",
+    "help_id": "window.MainWindow._build_main.start_button"
+  },
+  {
+    "id": "help-window.MainWindow._build_main.pause_action",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "暂停",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_main.pause_action.md",
+    "help_id": "window.MainWindow._build_main.pause_action"
+  },
+  {
+    "id": "help-window.MainWindow._build_main.resume_action",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "继续",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_main.resume_action.md",
+    "help_id": "window.MainWindow._build_main.resume_action"
+  },
+  {
+    "id": "help-window.MainWindow._build_main.step_action",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "下一时刻",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_main.step_action.md",
+    "help_id": "window.MainWindow._build_main.step_action"
+  },
+  {
+    "id": "help-window.MainWindow._build_main.speed_combo",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "快照回放速度：1×按记录的报价间隔等待，5×等待原间隔的五分之一，单次最多等待60秒",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_main.speed_combo.md",
+    "help_id": "window.MainWindow._build_main.speed_combo"
+  },
+  {
+    "id": "help-window.MainWindow._build_main.stop",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "停止并撤单",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_main.stop.md",
+    "help_id": "window.MainWindow._build_main.stop"
+  },
+  {
+    "id": "help-window.MainWindow._build_main.guide_next",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "下一步",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_main.guide_next.md",
+    "help_id": "window.MainWindow._build_main.guide_next"
+  },
+  {
+    "id": "help-window.MainWindow._research_page.editor",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "编辑当前 Python 策略源码",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._research_page.editor.md",
+    "help_id": "window.MainWindow._research_page.editor"
+  },
+  {
+    "id": "help-window.MainWindow._research_page.preview_chart",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "上部展示所选证券的价格 K 线或报价曲线和买卖标记，下部为成交量",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._research_page.preview_chart.md",
+    "help_id": "window.MainWindow._research_page.preview_chart"
+  },
+  {
+    "id": "help-window.MainWindow._research_page.cancel_preview_button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "取消预览加载",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._research_page.cancel_preview_button.md",
+    "help_id": "window.MainWindow._research_page.cancel_preview_button"
+  },
+  {
+    "id": "help-window.MainWindow._backtest_page.backtest_choose_button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "选择策略",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._backtest_page.backtest_choose_button.md",
+    "help_id": "window.MainWindow._backtest_page.backtest_choose_button"
+  },
+  {
+    "id": "help-window.MainWindow._backtest_page.button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "回测设置",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._backtest_page.button.md",
+    "help_id": "window.MainWindow._backtest_page.button"
+  },
+  {
+    "id": "help-window.MainWindow._backtest_page.button7",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "开始回测",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._backtest_page.button7.md",
+    "help_id": "window.MainWindow._backtest_page.button7"
+  },
+  {
+    "id": "help-window.MainWindow._backtest_page.backtest_controls_toggle",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "展开运行控制（暂停 / 单步 / 速度）",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._backtest_page.backtest_controls_toggle.md",
+    "help_id": "window.MainWindow._backtest_page.backtest_controls_toggle"
+  },
+  {
+    "id": "help-window.MainWindow._backtest_page.analysis_expand",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "展开分析",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._backtest_page.analysis_expand.md",
+    "help_id": "window.MainWindow._backtest_page.analysis_expand"
+  },
+  {
+    "id": "help-window.MainWindow._backtest_page.details_toggle",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "显示数据范围与运行进度",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._backtest_page.details_toggle.md",
+    "help_id": "window.MainWindow._backtest_page.details_toggle"
+  },
+  {
+    "id": "help-window.MainWindow._backtest_page.result_tabs",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "在回测图表、运行依据、操作记录和诊断之间切换",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._backtest_page.result_tabs.md",
+    "help_id": "window.MainWindow._backtest_page.result_tabs"
+  },
+  {
+    "id": "help-window.MainWindow._backtest_page.equity_chart",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "上部比较策略权益和基准曲线，下部显示回撤百分比",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._backtest_page.equity_chart.md",
+    "help_id": "window.MainWindow._backtest_page.equity_chart"
+  },
+  {
+    "id": "help-window.MainWindow._backtest_page.chart_symbol",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "切换结果图表所查看的证券，不会改变已经运行的数据或账户",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._backtest_page.chart_symbol.md",
+    "help_id": "window.MainWindow._backtest_page.chart_symbol"
+  },
+  {
+    "id": "help-window.MainWindow._backtest_page.result_chart",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "上部展示所选证券的价格 K 线或报价曲线和买卖标记，下部为成交量",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._backtest_page.result_chart.md",
+    "help_id": "window.MainWindow._backtest_page.result_chart"
+  },
+  {
+    "id": "help-window.MainWindow._backtest_page.manifest_text",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "只读查看当前运行的数据、代码、费用、规则和引擎依据",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._backtest_page.manifest_text.md",
+    "help_id": "window.MainWindow._backtest_page.manifest_text"
+  },
+  {
+    "id": "help-window.MainWindow._backtest_page.activity_tabs",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "切换委托、成交和日志记录",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._backtest_page.activity_tabs.md",
+    "help_id": "window.MainWindow._backtest_page.activity_tabs"
+  },
+  {
+    "id": "help-window.MainWindow._backtest_page.activity_orders",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "逐项查看下单时间、订单号、证券、方向、委托量、已成交量、限价、状态及理由",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._backtest_page.activity_orders.md",
+    "help_id": "window.MainWindow._backtest_page.activity_orders"
+  },
+  {
+    "id": "help-window.MainWindow._backtest_page.activity_trades",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "查看实际模拟成交时间、成交编号、对应订单、证券、方向、数量、价格、费用和策略理由",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._backtest_page.activity_trades.md",
+    "help_id": "window.MainWindow._backtest_page.activity_trades"
+  },
+  {
+    "id": "help-window.MainWindow._backtest_page.activity_logs",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "只读查看当前运行的策略解释、状态变化和错误日志",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._backtest_page.activity_logs.md",
+    "help_id": "window.MainWindow._backtest_page.activity_logs"
+  },
+  {
+    "id": "help-window.MainWindow._backtest_page.diagnostics",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "查看分月收益、回撤峰谷与恢复时刻等诊断",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._backtest_page.diagnostics.md",
+    "help_id": "window.MainWindow._backtest_page.diagnostics"
+  },
+  {
+    "id": "help-window.MainWindow._live_page.connect_button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "连接行情",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._live_page.connect_button.md",
+    "help_id": "window.MainWindow._live_page.connect_button"
+  },
+  {
+    "id": "help-window.MainWindow._live_page.record_check",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "录制行情",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._live_page.record_check.md",
+    "help_id": "window.MainWindow._live_page.record_check"
+  },
+  {
+    "id": "help-window.MainWindow._live_page.refresh_live_rule_button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "更新当日规则",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._live_page.refresh_live_rule_button.md",
+    "help_id": "window.MainWindow._live_page.refresh_live_rule_button"
+  },
+  {
+    "id": "help-window.MainWindow._live_page.cancel_live_rule_button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "取消准备",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._live_page.cancel_live_rule_button.md",
+    "help_id": "window.MainWindow._live_page.cancel_live_rule_button"
+  },
+  {
+    "id": "help-window.MainWindow._live_page.quote_table",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "行情表显示证券、最新、买一、卖一、源时间和年龄秒数",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._live_page.quote_table.md",
+    "help_id": "window.MainWindow._live_page.quote_table"
+  },
+  {
+    "id": "help-window.MainWindow._live_page.live_tabs",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "在策略账户、行情快照与普通手动练习间切换",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._live_page.live_tabs.md",
+    "help_id": "window.MainWindow._live_page.live_tabs"
+  },
+  {
+    "id": "help-window.MainWindow._live_page.live_manifest_text",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "查看当前模拟交易账户实际保存的策略、参数、规则与数据来源",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._live_page.live_manifest_text.md",
+    "help_id": "window.MainWindow._live_page.live_manifest_text"
+  },
+  {
+    "id": "help-window.MainWindow._live_page.trading_pause_button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "暂停",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._live_page.trading_pause_button.md",
+    "help_id": "window.MainWindow._live_page.trading_pause_button"
+  },
+  {
+    "id": "help-window.MainWindow._live_page.trading_resume_button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "继续",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._live_page.trading_resume_button.md",
+    "help_id": "window.MainWindow._live_page.trading_resume_button"
+  },
+  {
+    "id": "help-window.MainWindow._live_page.trading_stop_button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "停止并撤单",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._live_page.trading_stop_button.md",
+    "help_id": "window.MainWindow._live_page.trading_stop_button"
+  },
+  {
+    "id": "help-window.MainWindow._live_page.manual_symbol",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "填写练习账户里要下单的证券代码",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._live_page.manual_symbol.md",
+    "help_id": "window.MainWindow._live_page.manual_symbol"
+  },
+  {
+    "id": "help-window.MainWindow._live_page.manual_side",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "选择买入或卖出",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._live_page.manual_side.md",
+    "help_id": "window.MainWindow._live_page.manual_side"
+  },
+  {
+    "id": "help-window.MainWindow._live_page.manual_qty",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "输入股数或份额，不是交易金额",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._live_page.manual_qty.md",
+    "help_id": "window.MainWindow._live_page.manual_qty"
+  },
+  {
+    "id": "help-window.MainWindow._live_page.manual_price",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "买入能接受的最高价或卖出能接受的最低价",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._live_page.manual_price.md",
+    "help_id": "window.MainWindow._live_page.manual_price"
+  },
+  {
+    "id": "help-window.MainWindow._live_page.create_manual_button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "建立练习账户",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._live_page.create_manual_button.md",
+    "help_id": "window.MainWindow._live_page.create_manual_button"
+  },
+  {
+    "id": "help-window.MainWindow._learning_page.lesson_reading",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "展开课程",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._learning_page.lesson_reading.md",
+    "help_id": "window.MainWindow._learning_page.lesson_reading"
+  },
+  {
+    "id": "help-window.MainWindow._learning_page.lesson_body",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "阅读原四课引擎实作的说明",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._learning_page.lesson_body.md",
+    "help_id": "window.MainWindow._learning_page.lesson_body"
+  },
+  {
+    "id": "help-window.MainWindow._learning_page.lesson_action",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "开始练习",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._learning_page.lesson_action.md",
+    "help_id": "window.MainWindow._learning_page.lesson_action"
+  },
+  {
+    "id": "help-window.MainWindow._learning_page.lesson_done_button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "标记本节已读",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._learning_page.lesson_done_button.md",
+    "help_id": "window.MainWindow._learning_page.lesson_done_button"
+  },
+  {
+    "id": "help-window.MainWindow._learning_page.lesson_offline",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "无网络 / 休市：离线演练",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._learning_page.lesson_offline.md",
+    "help_id": "window.MainWindow._learning_page.lesson_offline"
+  },
+  {
+    "id": "help-window.MainWindow._learning_page.lesson_resume_guide",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "显示当前练习提示",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._learning_page.lesson_resume_guide.md",
+    "help_id": "window.MainWindow._learning_page.lesson_resume_guide"
+  },
+  {
+    "id": "help-window.MainWindow._learning_page.equity_lesson_button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "载入分红与送转练习（离线）",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._learning_page.equity_lesson_button.md",
+    "help_id": "window.MainWindow._learning_page.equity_lesson_button"
+  },
+  {
+    "id": "help-window.MainWindow._learning_page.learning_sections",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "量化课程只显示 72 课",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._learning_page.learning_sections.md",
+    "help_id": "window.MainWindow._learning_page.learning_sections"
+  },
+  {
+    "id": "help-window.MainWindow._dock.detach",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "让此面板浮动或重新停靠，便于调整布局",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._dock.detach.md",
+    "help_id": "window.MainWindow._dock.detach"
+  },
+  {
+    "id": "help-window.MainWindow._dock.close",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "收起此面板，不删除其中的数据或策略",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._dock.close.md",
+    "help_id": "window.MainWindow._dock.close"
+  },
+  {
+    "id": "help-window.MainWindow._build_library.library",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "浏览策略模板、已保存模型和运行记录",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_library.library.md",
+    "help_id": "window.MainWindow._build_library.library"
+  },
+  {
+    "id": "help-window.MainWindow._build_parameters.dataset_combo",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "选择本次历史研究使用的数据",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_parameters.dataset_combo.md",
+    "help_id": "window.MainWindow._build_parameters.dataset_combo"
+  },
+  {
+    "id": "help-window.MainWindow._build_parameters.symbol_input",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "指定下一次连接行情订阅的证券，最多 20 个；代码带交易所后缀",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_parameters.symbol_input.md",
+    "help_id": "window.MainWindow._build_parameters.symbol_input"
+  },
+  {
+    "id": "help-window.MainWindow._build_parameters.capital",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "指定新运行起始资金，单位元",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_parameters.capital.md",
+    "help_id": "window.MainWindow._build_parameters.capital"
+  },
+  {
+    "id": "help-window.MainWindow._build_parameters.commission",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "佣金费率，单位万分之",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_parameters.commission.md",
+    "help_id": "window.MainWindow._build_parameters.commission"
+  },
+  {
+    "id": "help-window.MainWindow._build_parameters.minimum_fee",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "每笔收费约定中的最低佣金，单位元",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_parameters.minimum_fee.md",
+    "help_id": "window.MainWindow._build_parameters.minimum_fee"
+  },
+  {
+    "id": "help-window.MainWindow._build_parameters.participation",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "限制模拟订单可消耗本次可见流动性的比例，单位百分比；10表示10%，不是成交概率",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_parameters.participation.md",
+    "help_id": "window.MainWindow._build_parameters.participation"
+  },
+  {
+    "id": "help-window.MainWindow._build_parameters.slippage",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "按证券最小价格单位向不利方向调整模拟成交价格",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_parameters.slippage.md",
+    "help_id": "window.MainWindow._build_parameters.slippage"
+  },
+  {
+    "id": "help-window.MainWindow._build_parameters.position_limit",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "限制单只证券的持仓额度，单位为账户权益的百分比；例如50表示50%",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_parameters.position_limit.md",
+    "help_id": "window.MainWindow._build_parameters.position_limit"
+  },
+  {
+    "id": "help-window.MainWindow._build_parameters.order_limit",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "限制单笔委托金额，单位元",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_parameters.order_limit.md",
+    "help_id": "window.MainWindow._build_parameters.order_limit"
+  },
+  {
+    "id": "help-window.MainWindow._build_parameters.editor_settings",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "切换基本信息、策略参数、回测设置与操作指引",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_parameters.editor_settings.md",
+    "help_id": "window.MainWindow._build_parameters.editor_settings"
+  },
+  {
+    "id": "help-window.MainWindow._build_parameters.check_parameters_button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "检查参数",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_parameters.check_parameters_button.md",
+    "help_id": "window.MainWindow._build_parameters.check_parameters_button"
+  },
+  {
+    "id": "help-window.MainWindow._build_bottom.bottom_tabs",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "查看持仓、委托、成交、日志和权益流水",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_bottom.bottom_tabs.md",
+    "help_id": "window.MainWindow._build_bottom.bottom_tabs"
+  },
+  {
+    "id": "help-window.MainWindow._build_bottom.positions_table",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "持仓为总数量，可卖为当前可卖数量，成本金额为持仓账面成本，最新价用于估值，浮动盈亏随行情变化",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_bottom.positions_table.md",
+    "help_id": "window.MainWindow._build_bottom.positions_table"
+  },
+  {
+    "id": "help-window.MainWindow._build_bottom.orders_table",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "查看订单号、证券、方向、委托量、已成交、限价、状态及等待原因",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_bottom.orders_table.md",
+    "help_id": "window.MainWindow._build_bottom.orders_table"
+  },
+  {
+    "id": "help-window.MainWindow._build_bottom.trades_table",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "查看成交编号、时间、证券、方向、数量、价格、费用和策略理由",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_bottom.trades_table.md",
+    "help_id": "window.MainWindow._build_bottom.trades_table"
+  },
+  {
+    "id": "help-window.MainWindow._build_bottom.log_view",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "只读查看当前运行日志",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_bottom.log_view.md",
+    "help_id": "window.MainWindow._build_bottom.log_view"
+  },
+  {
+    "id": "help-window.MainWindow._build_bottom.equity_table",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "查看分红与送转的登记、现金到账、份额变化及可卖日期",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_bottom.equity_table.md",
+    "help_id": "window.MainWindow._build_bottom.equity_table"
+  },
+  {
+    "id": "help-window.MainWindow._build_menu.addAction",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "退出",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_menu.addAction.md",
+    "help_id": "window.MainWindow._build_menu.addAction"
+  },
+  {
+    "id": "help-window.MainWindow._build_menu.addAction2",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "切换深色 / 浅色",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_menu.addAction2.md",
+    "help_id": "window.MainWindow._build_menu.addAction2"
+  },
+  {
+    "id": "help-window.MainWindow._build_menu.addAction3",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "显示 / 隐藏教学提示",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_menu.addAction3.md",
+    "help_id": "window.MainWindow._build_menu.addAction3"
+  },
+  {
+    "id": "help-window.MainWindow._build_menu.addAction4",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "恢复默认布局",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_menu.addAction4.md",
+    "help_id": "window.MainWindow._build_menu.addAction4"
+  },
+  {
+    "id": "help-window.MainWindow._build_menu.replay_tutorial",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "使用教程重放",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_menu.replay_tutorial.md",
+    "help_id": "window.MainWindow._build_menu.replay_tutorial"
+  },
+  {
+    "id": "help-window.MainWindow._build_menu.initialize_app",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "初始化应用",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_menu.initialize_app.md",
+    "help_id": "window.MainWindow._build_menu.initialize_app"
+  },
+  {
+    "id": "help-window.MainWindow._build_menu.addAction9",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "关于 AStock",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_menu.addAction9.md",
+    "help_id": "window.MainWindow._build_menu.addAction9"
+  },
+  {
+    "id": "help-window.MainWindow.open_data_center.grid",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "数据中心列出名称、类型、起止日期、条数、权益核对和覆盖状态",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.open_data_center.grid.md",
+    "help_id": "window.MainWindow.open_data_center.grid"
+  },
+  {
+    "id": "help-window.MainWindow.open_data_center.notes",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "只读显示所选数据的来源、覆盖、权益与限制说明",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.open_data_center.notes.md",
+    "help_id": "window.MainWindow.open_data_center.notes"
+  },
+  {
+    "id": "help-window.MainWindow.open_data_center.cancel_download",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "取消下载",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.open_data_center.cancel_download.md",
+    "help_id": "window.MainWindow.open_data_center.cancel_download"
+  },
+  {
+    "id": "help-window.MainWindow.open_data_center.check",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "检查缺口",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.open_data_center.check.md",
+    "help_id": "window.MainWindow.open_data_center.check"
+  },
+  {
+    "id": "help-window.MainWindow.open_data_center.rules_button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "证券规则",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.open_data_center.rules_button.md",
+    "help_id": "window.MainWindow.open_data_center.rules_button"
+  },
+  {
+    "id": "help-window.MainWindow.open_data_center.button4",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "使用所选数据",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.open_data_center.button4.md",
+    "help_id": "window.MainWindow.open_data_center.button4"
+  },
+  {
+    "id": "help-window.MainWindow.download_dialog.symbols",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "填写下载的证券代码，逗号分隔并带 SH/SZ 后缀",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.download_dialog.symbols.md",
+    "help_id": "window.MainWindow.download_dialog.symbols"
+  },
+  {
+    "id": "help-window.MainWindow.download_dialog.period",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "选择日线或分钟频率",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.download_dialog.period.md",
+    "help_id": "window.MainWindow.download_dialog.period"
+  },
+  {
+    "id": "help-window.MainWindow.download_dialog.source",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "选择当前频率支持的数据来源",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.download_dialog.source.md",
+    "help_id": "window.MainWindow.download_dialog.source"
+  },
+  {
+    "id": "help-window.MainWindow.download_dialog.start",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "设置历史下载请求开始日期",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.download_dialog.start.md",
+    "help_id": "window.MainWindow.download_dialog.start"
+  },
+  {
+    "id": "help-window.MainWindow.download_dialog.end",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "设置历史下载请求结束日期",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.download_dialog.end.md",
+    "help_id": "window.MainWindow.download_dialog.end"
+  },
+  {
+    "id": "help-window.MainWindow.download_dialog.download_button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "开始下载",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.download_dialog.download_button.md",
+    "help_id": "window.MainWindow.download_dialog.download_button"
+  },
+  {
+    "id": "help-window.MainWindow._build_main.nav",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "左侧唯一主导航依次提供写策略、历史回测、模拟交易、数据中心、账户与记录、量化课程",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_main.nav.md",
+    "help_id": "window.MainWindow._build_main.nav"
+  },
+  {
+    "id": "help-window.MainWindow._build_main.button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "查看日志",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_main.button.md",
+    "help_id": "window.MainWindow._build_main.button"
+  },
+  {
+    "id": "help-window.MainWindow._build_main.button2",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "关闭",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_main.button2.md",
+    "help_id": "window.MainWindow._build_main.button2"
+  },
+  {
+    "id": "help-window.MainWindow._build_main.button3",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "使用教程",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_main.button3.md",
+    "help_id": "window.MainWindow._build_main.button3"
+  },
+  {
+    "id": "help-window.MainWindow._build_main.button4",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "收起",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_main.button4.md",
+    "help_id": "window.MainWindow._build_main.button4"
+  },
+  {
+    "id": "help-window.MainWindow._research_page.button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "另存副本",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._research_page.button.md",
+    "help_id": "window.MainWindow._research_page.button"
+  },
+  {
+    "id": "help-window.MainWindow._research_page.button2",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "导出源码",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._research_page.button2.md",
+    "help_id": "window.MainWindow._research_page.button2"
+  },
+  {
+    "id": "help-window.MainWindow._backtest_page.button8",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "返回最新行情",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._backtest_page.button8.md",
+    "help_id": "window.MainWindow._backtest_page.button8"
+  },
+  {
+    "id": "help-window.MainWindow._live_page.button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "启动策略仿真",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._live_page.button.md",
+    "help_id": "window.MainWindow._live_page.button"
+  },
+  {
+    "id": "help-window.MainWindow._live_page.button2",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "取对手价",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._live_page.button2.md",
+    "help_id": "window.MainWindow._live_page.button2"
+  },
+  {
+    "id": "help-window.MainWindow._live_page.button3",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "提交模拟委托",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._live_page.button3.md",
+    "help_id": "window.MainWindow._live_page.button3"
+  },
+  {
+    "id": "help-window.MainWindow._learning_page.button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "术语速查",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._learning_page.button.md",
+    "help_id": "window.MainWindow._learning_page.button"
+  },
+  {
+    "id": "help-window.MainWindow._learning_page.b",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "打开按钮名称对应的旧四课实作说明",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._learning_page.b.md",
+    "help_id": "window.MainWindow._learning_page.b"
+  },
+  {
+    "id": "help-window.MainWindow._build_library.button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "数据中心",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_library.button.md",
+    "help_id": "window.MainWindow._build_library.button"
+  },
+  {
+    "id": "help-window.MainWindow._build_library.button2",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "证券目录 / 搜索",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_library.button2.md",
+    "help_id": "window.MainWindow._build_library.button2"
+  },
+  {
+    "id": "help-window.MainWindow._build_library.button3",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "打开本机数据目录",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_library.button3.md",
+    "help_id": "window.MainWindow._build_library.button3"
+  },
+  {
+    "id": "help-window.MainWindow._build_parameters.button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "按名称 / 代码添加",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_parameters.button.md",
+    "help_id": "window.MainWindow._build_parameters.button"
+  },
+  {
+    "id": "help-window.MainWindow._build_parameters.button2",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "查看量化课程",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_parameters.button2.md",
+    "help_id": "window.MainWindow._build_parameters.button2"
+  },
+  {
+    "id": "help-window.MainWindow._build_parameters.button3",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "补充历史数据",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_parameters.button3.md",
+    "help_id": "window.MainWindow._build_parameters.button3"
+  },
+  {
+    "id": "help-window.MainWindow._build_parameters.button4",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "设置回测区间 / 基准",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_parameters.button4.md",
+    "help_id": "window.MainWindow._build_parameters.button4"
+  },
+  {
+    "id": "help-window.MainWindow._build_bottom.button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "撤销选中委托",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_bottom.button.md",
+    "help_id": "window.MainWindow._build_bottom.button"
+  },
+  {
+    "id": "help-window.MainWindow._build_menu.a",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "文件菜单提供保存策略 Ctrl+S、导入 Python Ctrl+O、报告归档 Ctrl+E、数据中心 Ctrl+D",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow._build_menu.a.md",
+    "help_id": "window.MainWindow._build_menu.a"
+  },
+  {
+    "id": "help-window.MainWindow.show_api.browser",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "只读查看策略结构、回调、上下文属性、行情和委托方法",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.show_api.browser.md",
+    "help_id": "window.MainWindow.show_api.browser"
+  },
+  {
+    "id": "help-window.MainWindow.show_api.actions",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "关闭策略接口说明窗口，返回原编辑页面",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.show_api.actions.md",
+    "help_id": "window.MainWindow.show_api.actions"
+  },
+  {
+    "id": "help-window.MainWindow.open_data_center.button",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "下载历史行情",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.open_data_center.button.md",
+    "help_id": "window.MainWindow.open_data_center.button"
+  },
+  {
+    "id": "help-window.MainWindow.open_data_center.button2",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "导入数据包",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.open_data_center.button2.md",
+    "help_id": "window.MainWindow.open_data_center.button2"
+  },
+  {
+    "id": "help-window.MainWindow.open_data_center.button3",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "恢复未完成录制",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.open_data_center.button3.md",
+    "help_id": "window.MainWindow.open_data_center.button3"
+  },
+  {
+    "id": "help-window.MainWindow.download_dialog.preset",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "将按钮对应的一组证券代码填入下载表单",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.download_dialog.preset.md",
+    "help_id": "window.MainWindow.download_dialog.preset"
+  },
+  {
+    "id": "help-window.MainWindow.download_dialog.preset2",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "将按钮对应的一组证券代码填入下载表单",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.download_dialog.preset2.md",
+    "help_id": "window.MainWindow.download_dialog.preset2"
+  },
+  {
+    "id": "help-window.MainWindow.rebuild_parameters.widget",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "整数策略参数，由 PARAMETERS 中的 label、help、default、min、max 决定",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.rebuild_parameters.widget.md",
+    "help_id": "window.MainWindow.rebuild_parameters.widget"
+  },
+  {
+    "id": "help-window.MainWindow.rebuild_parameters.widget2",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "整数策略参数，由 PARAMETERS 中的 label、help、default、min、max 决定",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.rebuild_parameters.widget2.md",
+    "help_id": "window.MainWindow.rebuild_parameters.widget2"
+  },
+  {
+    "id": "help-window.MainWindow.rebuild_parameters.widget3",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "整数策略参数，由 PARAMETERS 中的 label、help、default、min、max 决定",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.rebuild_parameters.widget3.md",
+    "help_id": "window.MainWindow.rebuild_parameters.widget3"
+  },
+  {
+    "id": "help-window.MainWindow.rebuild_parameters.widget4",
+    "kind": "manual",
+    "module": "主工作台",
+    "title": "整数策略参数，由 PARAMETERS 中的 label、help、default、min、max 决定",
+    "status": "published",
+    "version": 1,
+    "body": "manual/controls/window.MainWindow.rebuild_parameters.widget4.md",
+    "help_id": "window.MainWindow.rebuild_parameters.widget4"
+  },
+  {
+    "id": "task-first-backtest",
+    "kind": "manual",
+    "module": "完整操作任务",
+    "title": "第一次离线回测：策略 → 数据 → 运行 → 结果",
+    "status": "published",
+    "version": 1,
+    "body": "manual/task-first-backtest.md"
+  },
+  {
+    "id": "task-prepare-data",
+    "kind": "manual",
+    "module": "完整操作任务",
+    "title": "准备历史数据：下载、检查覆盖、修订规则",
+    "status": "published",
+    "version": 1,
+    "body": "manual/task-prepare-data.md"
+  },
+  {
+    "id": "task-edit-model",
+    "kind": "manual",
+    "module": "完整操作任务",
+    "title": "编辑策略：副本、参数、错误与保存",
+    "status": "published",
+    "version": 1,
+    "body": "manual/task-edit-model.md"
+  },
+  {
+    "id": "task-manual-trade",
+    "kind": "manual",
+    "module": "完整操作任务",
+    "title": "虚拟手动交易：报价、委托、撤单与停止",
+    "status": "published",
+    "version": 1,
+    "body": "manual/task-manual-trade.md"
+  },
+  {
+    "id": "task-compare-report",
+    "kind": "manual",
+    "module": "完整操作任务",
+    "title": "结果复盘：成交定位、运行对比和报告",
+    "status": "published",
+    "version": 1,
+    "body": "manual/task-compare-report.md"
+  },
+  {
+    "id": "task-study-course",
+    "kind": "manual",
+    "module": "完整操作任务",
+    "title": "长期学习：阅读、练习、自测与 Notebook",
+    "status": "published",
+    "version": 1,
+    "body": "manual/task-study-course.md"
+  }
+]

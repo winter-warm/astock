@@ -1,0 +1,31 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.15, pytest-9.2.0, pluggy-1.7.0 -- E:\project\astock\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+PySide6 6.12.0 -- Qt runtime 6.12.0 -- Qt compiled 6.12.0
+rootdir: E:\project\astock
+configfile: pyproject.toml
+plugins: qt-4.5.0
+collecting ... collected 20 items
+
+tests/test_single_instance.py::test_default_launches_share_user_lock_and_data_lock PASSED
+tests/test_single_instance.py::test_second_process_activates_existing_and_never_constructs_window PASSED
+tests/test_single_instance.py::test_activation_during_reset_waits_for_new_window PASSED
+tests/test_single_instance.py::test_running_legacy_portable_is_activated_before_creating_locks PASSED
+tests/test_single_instance.py::test_launcher_data_argument_still_checks_user_wide_instance PASSED
+tests/test_app_initialization.py::test_application_reopens_and_preserves_learning_after_initialization[30] PASSED
+tests/test_app_initialization.py::test_application_reopens_and_preserves_learning_after_initialization[700] PASSED
+tests/test_task_guide.py::test_all_task_steps_have_real_stable_targets PASSED
+tests/test_task_guide.py::test_task_navigation_never_activates_business_controls PASSED
+tests/test_tutorial_integration.py::test_destroyed_parent_tour_supports_next_help_and_shutdown[reopen] PASSED
+tests/test_tutorial_integration.py::test_destroyed_parent_tour_supports_next_help_and_shutdown[close] PASSED
+tests/test_tutorial_integration.py::test_destroyed_parent_point_help_can_be_replaced PASSED
+tests/test_tutorial_integration.py::test_main_window_instruction_preview_never_starts_jobs[quality] PASSED
+tests/test_tutorial_integration.py::test_main_window_instruction_preview_never_starts_jobs[report] PASSED
+tests/test_tutorial_integration.py::test_main_window_instruction_preview_never_starts_jobs[compare] PASSED
+tests/test_tutorial_integration.py::test_main_window_instruction_preview_never_starts_jobs[recover] PASSED
+tests/test_tutorial_integration.py::test_task_navigation_preserves_unsaved_model_without_business_actions PASSED
+tests/test_tutorial_integration.py::test_first_run_tour_targets_visible_and_never_saves_or_starts PASSED
+tests/test_tutorial_integration.py::test_tour_chapters_reveal_controls_and_restore_debug_view[False] PASSED
+tests/test_tutorial_integration.py::test_tour_chapters_reveal_controls_and_restore_debug_view[True] PASSED
+
+============================= 20 passed in 20.39s =============================

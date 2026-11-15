@@ -1,0 +1,717 @@
+[
+  {
+    "id": "q01",
+    "kind": "course",
+    "module": "交易经验到量化研究",
+    "title": "01 把交易经验写成可检验的规则",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q01.md",
+    "examples": [
+      {
+        "id": "q01",
+        "file": "examples/q01.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "此前三次均价为10.1，当前收盘10.3，按本课严格高于规则信号是否为真？填写 True 或 False。",
+      "answers": [
+        "true",
+        "真"
+      ],
+      "explanation": "10.3 大于 10.1，所以信号为 True；信号仍不是已经成交的订单。"
+    }
+  },
+  {
+    "id": "q02",
+    "kind": "course",
+    "module": "交易经验到量化研究",
+    "title": "02 数据、信号与成交的时间关系",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q02.md",
+    "examples": [
+      {
+        "id": "q02",
+        "file": "examples/q02.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "q02 人工样本中，索引1收盘形成意图，索引2（第三条观察）开盘为8，样例记录的成交价是多少？",
+      "answers": [
+        "8",
+        "8.0"
+      ],
+      "explanation": "样例先记录买入意图，再在下一条行情按开盘价8记录模型成交；并未回到产生信号的收盘成交。"
+    }
+  },
+  {
+    "id": "q03",
+    "kind": "course",
+    "module": "面向 C++ 学习者的 Python",
+    "title": "03 Python 与 C++ 的关键差异",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q03.md",
+    "examples": [
+      {
+        "id": "q03",
+        "file": "examples/q03.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "prices 的首项原为10.0，先 copy 保存 snapshot，再通过 alias 把原列表首项改9.0；snapshot 首项是多少？",
+      "answers": [
+        "10",
+        "10.0"
+      ],
+      "explanation": "浅复制创建了独立的外层列表，本例元素是数值，所以原列表首项替换不影响副本首项。"
+    }
+  },
+  {
+    "id": "q04",
+    "kind": "course",
+    "module": "面向 C++ 学习者的 Python",
+    "title": "04 函数、类与策略回调",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q04.md",
+    "examples": [
+      {
+        "id": "q04",
+        "file": "examples/q04.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "三期 RollingMean 依次收到10、11、12，首次有效均值是多少？",
+      "answers": [
+        "11",
+        "11.0"
+      ],
+      "explanation": "三个价格之和33，除以周期3得到11；此前未凑齐窗口返回 None。"
+    }
+  },
+  {
+    "id": "q05",
+    "kind": "course",
+    "module": "面向 C++ 学习者的 Python",
+    "title": "05 运行和调试 Python 项目",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q05.md",
+    "examples": [
+      {
+        "id": "q05",
+        "file": "examples/q05.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "q05 读出的收盘价为10.5，乘100得到多少？",
+      "answers": [
+        "1050",
+        "1050.0"
+      ],
+      "explanation": "先 float 转成数值，再乘数量100，结果1050；如果保留字符串，乘整数会重复文本。"
+    }
+  },
+  {
+    "id": "q06",
+    "kind": "course",
+    "module": "面向 C++ 学习者的 Python",
+    "title": "06 编写第一份 AStock 策略",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q06.md",
+    "examples": [
+      {
+        "id": "q06",
+        "file": "examples/q06.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      },
+      {
+        "id": "q06-strategy",
+        "file": "examples/q06-strategy.py",
+        "environment": "strategy",
+        "label": "AStock 均线策略与引擎回测"
+      }
+    ],
+    "check": {
+      "question": "价格12、11、10，周期3，quantity=100、available=0且无待成交单；decide 返回什么？",
+      "answers": [
+        "wait",
+        "等待"
+      ],
+      "explanation": "当前价格低于均值，但可卖数量为0，因此不能产生本例卖出决策，返回 WAIT。"
+    }
+  },
+  {
+    "id": "q07",
+    "kind": "course",
+    "module": "金融数据",
+    "title": "07 NumPy 数组",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q07.md",
+    "examples": [
+      {
+        "id": "q07",
+        "file": "examples/q07.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "第一期两资产收益分别10%和-10%，权重60%和40%，组合收益是多少？请用百分数填写。",
+      "answers": [
+        "2%",
+        "2％",
+        "百分之二"
+      ],
+      "explanation": "0.6×10%+0.4×(-10%)=2%；权重沿证券维求加权和。"
+    }
+  },
+  {
+    "id": "q08",
+    "kind": "course",
+    "module": "金融数据",
+    "title": "08 pandas 表格",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q08.md",
+    "examples": [
+      {
+        "id": "q08",
+        "file": "examples/q08.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "两个 Series 的 A 标签分别对应1与10，即使行顺序相反，对齐相加后的 A 值是多少？",
+      "answers": [
+        "11",
+        "11.0"
+      ],
+      "explanation": "pandas 按标签对齐，A 与 A 相加得11，而不是按屏幕上的行位置盲目相加。"
+    }
+  },
+  {
+    "id": "q09",
+    "kind": "course",
+    "module": "金融数据",
+    "title": "09 CSV 与日期",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q09.md",
+    "examples": [
+      {
+        "id": "q09",
+        "file": "examples/q09.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "q09 样例 CSV 中有一个无法解析的日期，errors='coerce' 后隔离表应有几行？",
+      "answers": [
+        "1",
+        "一"
+      ],
+      "explanation": "无法解析的日期成为 NaT，并被日期有效性检查隔离；不能把它当成可排序的正常时间。"
+    }
+  },
+  {
+    "id": "q10",
+    "kind": "course",
+    "module": "金融数据",
+    "title": "10 缺失数据与多证券对齐",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q10.md",
+    "examples": [
+      {
+        "id": "q10",
+        "file": "examples/q10.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "相邻两个观察点之一的价格缺失，pct_change(fill_method=None) 得到的收益应为 NaN 还是0？",
+      "answers": [
+        "nan",
+        "缺失"
+      ],
+      "explanation": "缺少价格端点，收益不可计算；零收益是一个确定数值，不能代替未知值。"
+    }
+  },
+  {
+    "id": "q11",
+    "kind": "course",
+    "module": "金融数据",
+    "title": "11 滚动计算与时间移动",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q11.md",
+    "examples": [
+      {
+        "id": "q11",
+        "file": "examples/q11.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "价格10、11、12、9，在索引3处，此前三期均值 prior_ma3 是多少？",
+      "answers": [
+        "11",
+        "11.0"
+      ],
+      "explanation": "索引3之前的三个价格是10、11、12，均值11；包含当前9的三期均值则为32/3。"
+    }
+  },
+  {
+    "id": "q12",
+    "kind": "course",
+    "module": "金融数据",
+    "title": "12 真实数据与复权",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q12.md",
+    "examples": [
+      {
+        "id": "q12",
+        "file": "examples/q12.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "人工分红例：昨价10，现价9.8，每份现金分红0.2，忽略费用的持有总收益为多少百分比？",
+      "answers": [
+        "0%",
+        "0％",
+        "0",
+        "零"
+      ],
+      "explanation": "价格变化为-0.2，现金权益为+0.2，总财富不变，所以收益为0%。"
+    }
+  },
+  {
+    "id": "q13",
+    "kind": "course",
+    "module": "量化数学与统计",
+    "title": "13 收益率与复利",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q13.md",
+    "examples": [
+      {
+        "id": "q13",
+        "file": "examples/q13.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "先上涨10%再下跌10%，累计收益是多少百分比？",
+      "answers": [
+        "-1%",
+        "-1％",
+        "负百分之一"
+      ],
+      "explanation": "1.1×0.9−1=-0.01，即-1%；百分数不能按时间直接相加。"
+    }
+  },
+  {
+    "id": "q14",
+    "kind": "course",
+    "module": "量化数学与统计",
+    "title": "14 描述统计",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q14.md",
+    "examples": [
+      {
+        "id": "q14",
+        "file": "examples/q14.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "收益样本-2%、-1%、0%、1%、12%的中位数是多少百分比？",
+      "answers": [
+        "0%",
+        "0％",
+        "0",
+        "零"
+      ],
+      "explanation": "五个有序数的中位数是第三个0%；它不是样本均值2%。"
+    }
+  },
+  {
+    "id": "q15",
+    "kind": "course",
+    "module": "量化数学与统计",
+    "title": "15 相关性",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q15.md",
+    "examples": [
+      {
+        "id": "q15",
+        "file": "examples/q15.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "非常量序列 A 与 -A 的 Pearson 相关系数是多少？",
+      "answers": [
+        "-1",
+        "-1.0"
+      ],
+      "explanation": "每个中心化偏差恰好反号，标准化协方差为-1，是完全负线性关系。"
+    }
+  },
+  {
+    "id": "q16",
+    "kind": "course",
+    "module": "量化数学与统计",
+    "title": "16 净值、基准与年化",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q16.md",
+    "examples": [
+      {
+        "id": "q16",
+        "file": "examples/q16.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "两年净值从1增长到1.21，等效年复合收益是多少百分比？",
+      "answers": [
+        "10%",
+        "10％",
+        "百分之十"
+      ],
+      "explanation": "sqrt(1.21)−1=0.1；连续两年各10%才得到总增长21%。"
+    }
+  },
+  {
+    "id": "q17",
+    "kind": "course",
+    "module": "量化数学与统计",
+    "title": "17 回撤、波动与夏普",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q17.md",
+    "examples": [
+      {
+        "id": "q17",
+        "file": "examples/q17.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "权益路径100→110→88→99→111的最大回撤幅度是多少百分比？",
+      "answers": [
+        "20%",
+        "20％",
+        "百分之二十"
+      ],
+      "explanation": "峰值110到谷底88，88/110−1=-20%，按正损失幅度报告20%。"
+    }
+  },
+  {
+    "id": "q18",
+    "kind": "course",
+    "module": "量化数学与统计",
+    "title": "18 胜率、盈亏比与成本",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q18.md",
+    "examples": [
+      {
+        "id": "q18",
+        "file": "examples/q18.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "五笔毛盈亏为20、20、20、20、-100，每笔成本2，总净盈亏是多少？",
+      "answers": [
+        "-30",
+        "-30.0"
+      ],
+      "explanation": "毛合计-20，五笔成本共10，净合计-30。80%胜率没有保证盈利。"
+    }
+  },
+  {
+    "id": "q19",
+    "kind": "course",
+    "module": "看图与技术指标",
+    "title": "19 K 线表示什么",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q19.md",
+    "examples": [
+      {
+        "id": "q19",
+        "file": "examples/q19.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "开盘10、最高12、最低9、收盘11，这根K线的全幅是多少？",
+      "answers": [
+        "3",
+        "3.0"
+      ],
+      "explanation": "全幅是最高减最低，即12−9=3，等于实体1加上影1加下影1。"
+    }
+  },
+  {
+    "id": "q20",
+    "kind": "course",
+    "module": "看图与技术指标",
+    "title": "20 趋势与价格位置",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q20.md",
+    "examples": [
+      {
+        "id": "q20",
+        "file": "examples/q20.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "当前收盘13，此前三个收盘11、12、11，历史突破上沿是多少？",
+      "answers": [
+        "12",
+        "12.0"
+      ],
+      "explanation": "此前窗口的最高值为12，当前13不参与构造这个过去上沿。"
+    }
+  },
+  {
+    "id": "q21",
+    "kind": "course",
+    "module": "看图与技术指标",
+    "title": "21 MA 与 EMA",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q21.md",
+    "examples": [
+      {
+        "id": "q21",
+        "file": "examples/q21.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "三期 EMA 权重0.5、初值10，依次输入11与12后，最新 EMA 是多少？",
+      "answers": [
+        "11.25"
+      ],
+      "explanation": "第一次更新为10.5，第二次为0.5×12+0.5×10.5=11.25。"
+    }
+  },
+  {
+    "id": "q22",
+    "kind": "course",
+    "module": "看图与技术指标",
+    "title": "22 MACD",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q22.md",
+    "examples": [
+      {
+        "id": "q22",
+        "file": "examples/q22.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "MACD 人工例初始快慢线均10，下一价11，快3慢5，则 DIF 是多少？可填写分数。",
+      "answers": [
+        "1/6",
+        "0.1666666667",
+        "0.1667"
+      ],
+      "explanation": "快线10.5，慢线10+1/3，两者差1/6；信号线此时是1/12。"
+    }
+  },
+  {
+    "id": "q23",
+    "kind": "course",
+    "module": "看图与技术指标",
+    "title": "23 RSI",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q23.md",
+    "examples": [
+      {
+        "id": "q23",
+        "file": "examples/q23.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "三期 RSI 首批差分为+1、-1、+2，按本课种子计算首次 RSI 是多少？",
+      "answers": [
+        "75",
+        "75.0"
+      ],
+      "explanation": "平均上涨1、平均下跌1/3，因此100×1/(1+1/3)=75。"
+    }
+  },
+  {
+    "id": "q24",
+    "kind": "course",
+    "module": "看图与技术指标",
+    "title": "24 KDJ",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q24.md",
+    "examples": [
+      {
+        "id": "q24",
+        "file": "examples/q24.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "KDJ 窗口最高13、最低9、当前收盘12，则 RSV 是多少？",
+      "answers": [
+        "75",
+        "75.0"
+      ],
+      "explanation": "100×(12−9)/(13−9)=75，表示区间位置，不表示上涨概率。"
+    }
+  },
+  {
+    "id": "q25",
+    "kind": "course",
+    "module": "看图与技术指标",
+    "title": "25 布林带",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q25.md",
+    "examples": [
+      {
+        "id": "q25",
+        "file": "examples/q25.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "价格10、11、12，以总体口径 ddof=0 计算方差是多少？可填写分数。",
+      "answers": [
+        "2/3",
+        "0.6666666667",
+        "0.6667"
+      ],
+      "explanation": "均值11，平方离差之和2，除以样本个数3得到2/3；标准差还需开方。"
+    }
+  },
+  {
+    "id": "q26",
+    "kind": "course",
+    "module": "看图与技术指标",
+    "title": "26 ATR",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q26.md",
+    "examples": [
+      {
+        "id": "q26",
+        "file": "examples/q26.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "最高13、最低12、前收盘10，该期真实波幅 TR 是多少？",
+      "answers": [
+        "3",
+        "3.0"
+      ],
+      "explanation": "max(13−12, |13−10|, |12−10|)=max(1,3,2)=3，包含跳空影响。"
+    }
+  },
+  {
+    "id": "q27",
+    "kind": "course",
+    "module": "看图与技术指标",
+    "title": "27 成交量、量比与 OBV",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q27.md",
+    "examples": [
+      {
+        "id": "q27",
+        "file": "examples/q27.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "本课 OBV 初值0，后续涨日量200、平日量300、跌日量400、涨日量500，末值是多少？",
+      "answers": [
+        "300",
+        "300.0"
+      ],
+      "explanation": "0+200+0−400+500=300；平收日按本课约定贡献0。"
+    }
+  },
+  {
+    "id": "q28",
+    "kind": "course",
+    "module": "看图与技术指标",
+    "title": "28 指标组合与冲突",
+    "status": "published",
+    "version": 2,
+    "body": "lessons/q28.md",
+    "examples": [
+      {
+        "id": "q28",
+        "file": "examples/q28.py",
+        "environment": "lab",
+        "label": "人工数据计算实验"
+      }
+    ],
+    "check": {
+      "question": "q28 人工样例趋势状态共5次，加入成交量条件后组合状态共几次？",
+      "answers": [
+        "3",
+        "三"
+      ],
+      "explanation": "相交筛选后保留3次，数量变少只能证明筛选更严格，不能单独证明净收益更好。"
+    }
+  }
+]

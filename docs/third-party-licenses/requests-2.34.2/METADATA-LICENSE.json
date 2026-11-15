@@ -1,0 +1,44 @@
+{
+  "Name": [
+    "requests"
+  ],
+  "Version": [
+    "2.34.2"
+  ],
+  "License": [
+    "Apache-2.0"
+  ],
+  "License-File": [
+    "LICENSE",
+    "NOTICE"
+  ],
+  "Project-URL": [
+    "Documentation, https://requests.readthedocs.io",
+    "Source, https://github.com/psf/requests"
+  ],
+  "Author-email": [
+    "Kenneth Reitz <me@kennethreitz.org>"
+  ],
+  "Classifier": [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Programming Language :: Python :: Free Threading :: 2 - Beta",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries"
+  ]
+}

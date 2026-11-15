@@ -1,0 +1,29 @@
+{
+  "Name": [
+    "pywin32-ctypes"
+  ],
+  "Version": [
+    "0.2.3"
+  ],
+  "License": [
+    "BSD-3-Clause"
+  ],
+  "Home-page": [
+    "https://github.com/enthought/pywin32-ctypes"
+  ],
+  "Author": [
+    "Enthought Inc."
+  ],
+  "Author-email": [
+    "info@enthough.com"
+  ],
+  "Classifier": [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11"
+  ]
+}

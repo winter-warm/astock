@@ -1,0 +1,45 @@
+{
+  "Name": [
+    "Pygments"
+  ],
+  "Version": [
+    "2.21.0"
+  ],
+  "License-Expression": [
+    "BSD-2-Clause"
+  ],
+  "License-File": [
+    "AUTHORS",
+    "LICENSE"
+  ],
+  "Project-URL": [
+    "Homepage, https://pygments.org",
+    "Documentation, https://pygments.org/docs",
+    "Source, https://github.com/pygments/pygments",
+    "Bug Tracker, https://github.com/pygments/pygments/issues",
+    "Changelog, https://github.com/pygments/pygments/blob/master/CHANGES"
+  ],
+  "Author-email": [
+    "Georg Brandl <georg@python.org>"
+  ],
+  "Classifier": [
+    "Development Status :: 6 - Mature",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: System Administrators",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Text Processing :: Filters",
+    "Topic :: Utilities"
+  ]
+}

@@ -1,0 +1,339 @@
+{
+  "description": "2026-11-14 交易所响应摘录；仅为测试选取少量真实记录，不是完整目录。",
+  "sources": [
+    {
+      "url": "https://query.sse.com.cn/commonQuery.do",
+      "params": {
+        "sqlId": "COMMON_JJZWZ_JJLB_L",
+        "isPagination": "true",
+        "CATEGORY": "F000",
+        "CATEGORY_ASC": 1,
+        "type": "inParams",
+        "pageHelp.pageSize": 2000,
+        "pageHelp.pageNo": 1,
+        "pageHelp.beginPage": 1,
+        "pageHelp.endPage": 1,
+        "pageHelp.cacheSize": 1
+      },
+      "file": "01.json",
+      "seconds": 1.8326348000000507
+    },
+    {
+      "url": "https://query.sse.com.cn/commonQuery.do",
+      "params": {
+        "sqlId": "COMMON_JJZWZ_JJLB_L",
+        "isPagination": "true",
+        "CATEGORY": "F000",
+        "CATEGORY_ASC": 1,
+        "type": "inParams",
+        "pageHelp.pageSize": 2000,
+        "pageHelp.pageNo": 1,
+        "pageHelp.beginPage": 1,
+        "pageHelp.endPage": 1,
+        "pageHelp.cacheSize": 1,
+        "SWING_TRADE": "是"
+      },
+      "file": "02.json",
+      "seconds": 1.1722293000000263
+    },
+    {
+      "url": "https://query.sse.com.cn/commonQuery.do",
+      "params": {
+        "sqlId": "COMMON_JJZWZ_JJLB_L",
+        "isPagination": "true",
+        "CATEGORY": "F000",
+        "CATEGORY_ASC": 1,
+        "type": "inParams",
+        "pageHelp.pageSize": 2000,
+        "pageHelp.pageNo": 1,
+        "pageHelp.beginPage": 1,
+        "pageHelp.endPage": 1,
+        "pageHelp.cacheSize": 1,
+        "SUBCLASS": "09,31,15"
+      },
+      "file": "03.json",
+      "seconds": 1.1359291999999641
+    },
+    {
+      "url": "https://www.szse.cn/api/report/ShowReport/data",
+      "params": {
+        "CATALOGID": "1000_lf",
+        "TABKEY": "tab1",
+        "selectJjlb": "ETF",
+        "SHOWTYPE": "JSON",
+        "PAGENO": 1
+      },
+      "file": "04.json",
+      "seconds": 0.4661155000000008
+    },
+    {
+      "url": "https://www.szse.cn/api/report/ShowReport",
+      "params": {
+        "CATALOGID": "1000_lf",
+        "TABKEY": "tab1",
+        "selectJjlb": "ETF",
+        "SHOWTYPE": "xlsx"
+      },
+      "file": "05.xlsx",
+      "seconds": 0.5125918999999612
+    },
+    {
+      "url": "https://www.szse.cn/api/report/ShowReport/data",
+      "params": {
+        "CATALOGID": "1000_lf",
+        "TABKEY": "tab3",
+        "selectJjlb": "ETF",
+        "SHOWTYPE": "JSON",
+        "PAGENO": 1
+      },
+      "file": "06.json",
+      "seconds": 0.3931258999999727
+    },
+    {
+      "url": "https://www.szse.cn/api/report/ShowReport",
+      "params": {
+        "CATALOGID": "1000_lf",
+        "TABKEY": "tab3",
+        "selectJjlb": "ETF",
+        "SHOWTYPE": "xlsx"
+      },
+      "file": "07.xlsx",
+      "seconds": 0.2781627000000526
+    },
+    {
+      "url": "https://www.szse.cn/api/report/ShowReport/data",
+      "params": {
+        "CATALOGID": "1000_lf",
+        "TABKEY": "tab2",
+        "selectJjlb": "ETF",
+        "SHOWTYPE": "JSON",
+        "PAGENO": 1
+      },
+      "file": "08.json",
+      "seconds": 0.2840194999999994
+    },
+    {
+      "url": "https://www.szse.cn/api/report/ShowReport",
+      "params": {
+        "CATALOGID": "1000_lf",
+        "TABKEY": "tab2",
+        "selectJjlb": "ETF",
+        "SHOWTYPE": "xlsx"
+      },
+      "file": "09.xlsx",
+      "seconds": 0.276163800000063
+    }
+  ],
+  "SH": [
+    [
+      {
+        "COMPANY_NAME": "易方达基金管理有限公司",
+        "FUND_CODE": "530060",
+        "CATEGORY": "F111",
+        "NUM": "12",
+        "FUND_ABBR": "上证综E",
+        "COMPANY_CODE": "900063",
+        "INDEX_NAME": "上证综合指数",
+        "FUND_EXPANSION_ABBR": "上证指数ETF易方达",
+        "SCALE": "10.9670",
+        "LISTING_DATE": "2026-02-10"
+      },
+      {
+        "COMPANY_NAME": "华泰柏瑞基金管理有限公司",
+        "FUND_CODE": "510300",
+        "CATEGORY": "F112",
+        "NUM": "571",
+        "FUND_ABBR": "300ETF",
+        "COMPANY_CODE": "900245",
+        "INDEX_NAME": "沪深300指数",
+        "FUND_EXPANSION_ABBR": "沪深300ETF华泰柏瑞",
+        "SCALE": "1862.7988",
+        "LISTING_DATE": "2012-05-28"
+      },
+      {
+        "COMPANY_NAME": "华夏基金管理有限公司",
+        "FUND_CODE": "588000",
+        "CATEGORY": "F114",
+        "NUM": "728",
+        "FUND_ABBR": "科创50",
+        "COMPANY_CODE": "900030",
+        "INDEX_NAME": "上证科创板50成份指数",
+        "FUND_EXPANSION_ABBR": "科创50ETF华夏",
+        "SCALE": "1399.9232",
+        "LISTING_DATE": "2020-11-16"
+      },
+      {
+        "COMPANY_NAME": "摩根基金管理（中国）有限公司",
+        "FUND_CODE": "551300",
+        "CATEGORY": "F121",
+        "NUM": "755",
+        "FUND_ABBR": "科创债摩",
+        "COMPANY_CODE": "900050",
+        "INDEX_NAME": "上证AAA科技创新公司债指数",
+        "FUND_EXPANSION_ABBR": "科创债ETF摩根",
+        "SCALE": "56.8833",
+        "LISTING_DATE": "2025-09-24"
+      },
+      {
+        "COMPANY_NAME": "华宝基金管理有限公司",
+        "FUND_CODE": "520880",
+        "CATEGORY": "F131",
+        "NUM": "807",
+        "FUND_ABBR": "港创新药",
+        "COMPANY_CODE": "900029",
+        "INDEX_NAME": "恒生港股通创新药精选指数",
+        "FUND_EXPANSION_ABBR": "港股通创新药ETF华宝",
+        "SCALE": "18.0074",
+        "LISTING_DATE": "2025-07-07"
+      },
+      {
+        "COMPANY_NAME": "财通基金管理有限公司",
+        "FUND_CODE": "501001",
+        "CATEGORY": "F213",
+        "NUM": "1046",
+        "FUND_ABBR": "财通精选",
+        "COMPANY_CODE": "910950",
+        "INDEX_NAME": "-",
+        "FUND_EXPANSION_ABBR": "财通精选混合LOF",
+        "SCALE": "0.0664",
+        "LISTING_DATE": "2015-09-25"
+      }
+    ],
+    [
+      {
+        "COMPANY_NAME": "摩根基金管理（中国）有限公司",
+        "FUND_CODE": "551300",
+        "CATEGORY": "F121",
+        "NUM": "1",
+        "FUND_ABBR": "科创债摩",
+        "COMPANY_CODE": "900050",
+        "INDEX_NAME": "上证AAA科技创新公司债指数",
+        "FUND_EXPANSION_ABBR": "科创债ETF摩根",
+        "SCALE": "56.8833",
+        "LISTING_DATE": "2025-09-24"
+      },
+      {
+        "COMPANY_NAME": "华宝基金管理有限公司",
+        "FUND_CODE": "520880",
+        "CATEGORY": "F131",
+        "NUM": "53",
+        "FUND_ABBR": "港创新药",
+        "COMPANY_CODE": "900029",
+        "INDEX_NAME": "恒生港股通创新药精选指数",
+        "FUND_EXPANSION_ABBR": "港股通创新药ETF华宝",
+        "SCALE": "18.0074",
+        "LISTING_DATE": "2025-07-07"
+      }
+    ],
+    [
+      {
+        "COMPANY_NAME": "华夏基金管理有限公司",
+        "FUND_CODE": "588000",
+        "CATEGORY": "F114",
+        "NUM": "125",
+        "FUND_ABBR": "科创50",
+        "COMPANY_CODE": "900030",
+        "INDEX_NAME": "上证科创板50成份指数",
+        "FUND_EXPANSION_ABBR": "科创50ETF华夏",
+        "SCALE": "1399.9232",
+        "LISTING_DATE": "2020-11-16"
+      }
+    ]
+  ],
+  "SZ": [
+    [
+      {
+        "基金代码": "158000",
+        "基金简称": "港股通金融ETF鹏华",
+        "基金类别": "ETF",
+        "投资类别": "股票基金",
+        "上市日期": "2026-08-26",
+        "当前规模(份)": "22,925,835",
+        "基金管理人": "鹏华基金管理有限公司",
+        "基金发起人": "",
+        "基金托管人": "",
+        "净值": "1.0387"
+      },
+      {
+        "基金代码": "158001",
+        "基金简称": "价值ETF嘉实",
+        "基金类别": "ETF",
+        "投资类别": "股票基金",
+        "上市日期": "2026-08-27",
+        "当前规模(份)": "114,392,624",
+        "基金管理人": "嘉实基金管理有限公司",
+        "基金发起人": "",
+        "基金托管人": "",
+        "净值": "0.9685"
+      },
+      {
+        "基金代码": "158011",
+        "基金简称": "创业板软件ETF国泰",
+        "基金类别": "ETF",
+        "投资类别": "股票基金",
+        "上市日期": "2026-09-04",
+        "当前规模(份)": "55,342,654",
+        "基金管理人": "国泰基金管理有限公司",
+        "基金发起人": "",
+        "基金托管人": "",
+        "净值": "0.8894"
+      },
+      {
+        "基金代码": "159915",
+        "基金简称": "创业板ETF易方达",
+        "基金类别": "ETF",
+        "投资类别": "股票基金",
+        "上市日期": "2011-12-09",
+        "当前规模(份)": "45,200,454,936",
+        "基金管理人": "易方达基金管理有限公司",
+        "基金发起人": "",
+        "基金托管人": "",
+        "净值": "2.5263"
+      }
+    ],
+    [
+      {
+        "基金代码": "158000",
+        "基金简称": "港股通金融ETF鹏华",
+        "基金类别": "ETF",
+        "投资类别": "股票基金",
+        "上市日期": "2026-08-26",
+        "当前规模(份)": "22,925,835",
+        "基金管理人": "鹏华基金管理有限公司",
+        "基金发起人": "",
+        "基金托管人": "",
+        "净值": "1.0387"
+      }
+    ],
+    [
+      {
+        "基金代码": "158011",
+        "基金简称": "创业板软件ETF国泰",
+        "基金类别": "ETF",
+        "投资类别": "股票基金",
+        "上市日期": "2026-09-04",
+        "涨跌幅限制": "20%",
+        "当前规模(份)": "55,342,654",
+        "基金管理人": "国泰基金管理有限公司",
+        "基金发起人": "",
+        "基金托管人": "",
+        "净值": "0.8894"
+      },
+      {
+        "基金代码": "159915",
+        "基金简称": "创业板ETF易方达",
+        "基金类别": "ETF",
+        "投资类别": "股票基金",
+        "上市日期": "2011-12-09",
+        "涨跌幅限制": "20%",
+        "当前规模(份)": "45,200,454,936",
+        "基金管理人": "易方达基金管理有限公司",
+        "基金发起人": "",
+        "基金托管人": "",
+        "净值": "2.5263"
+      }
+    ]
+  ],
+  "observed": "2026-11-14T20:00:00+08:00",
+  "source_date": "2026-11-13"
+}

@@ -1,0 +1,39 @@
+{
+  "Name": [
+    "webencodings"
+  ],
+  "Version": [
+    "0.6.1"
+  ],
+  "License-File": [
+    "LICENSE"
+  ],
+  "Project-URL": [
+    "Changelog, https://github.com/CourtBouillon/webencodings/releases",
+    "Code, https://github.com/CourtBouillon/webencodings",
+    "Documentation, https://doc.courtbouillon.org/webencodings",
+    "Donation, https://opencollective.com/courtbouillon",
+    "Homepage, https://github.com/CourtBouillon/webencodings",
+    "Issues, https://github.com/CourtBouillon/webencodings/issues"
+  ],
+  "Author-email": [
+    "Simon Sapin <simon.sapin@exyr.org>"
+  ],
+  "Classifier": [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Internet :: WWW/HTTP"
+  ]
+}

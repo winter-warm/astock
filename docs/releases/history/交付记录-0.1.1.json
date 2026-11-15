@@ -1,0 +1,23 @@
+{
+  "version": "0.1.1",
+  "created_at": "2026-11-13T21:59:57.9110301+08:00",
+  "status": "verified_patch_full_plan_in_progress",
+  "full_plan_complete": false,
+  "windows_package": "AStock-0.1.1-Windows-x64.zip",
+  "source_package": "AStock-0.1.1-source.zip",
+  "tests_passed": 63,
+  "lint_passed": true,
+  "release_evidence": "output/release-check-20261113-215503/release-result.json",
+  "windows_sha256": "95D445F7F6DECDE320E9F25EAACB68E38948270DDAE9B9600C9F3EAA0AEA5DA5",
+  "source_sha256": "4196FE691A689C9D6D84B15F31FA5D5CE28E0A38FB2E7ACD2A75728B9D4BE5A8",
+  "public_quote_connectivity": true,
+  "one_hour_market_acceptance": false,
+  "coverage_audit": "docs/PLAN_COVERAGE.md",
+  "remaining_work": [
+    "在线运行全部输入快照自动留存与版本绑定，核对接收时间和回放新鲜度",
+    "数据集预览/导入异步化与多账户大数据响应测试",
+    "证券资料、规则日期范围、行情缺口诊断与分钟端点测试",
+    "带部分成交的强制中断恢复和权益流水守恒验收",
+    "开市连续一小时行情验收及真实新用户反馈"
+  ]
+}

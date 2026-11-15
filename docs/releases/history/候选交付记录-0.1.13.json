@@ -1,0 +1,178 @@
+{
+  "version": "0.1.13",
+  "status": "candidate_with_external_acceptance_failure",
+  "full_plan_complete": false,
+  "windows_package": "AStock-0.1.13-Windows-x64.zip",
+  "source_package": "AStock-0.1.13-source.zip",
+  "integrity": {
+    "Windows-x64": {
+      "sha256": "fd8ccc00e81d6decd5c13c066215eae2e3a5af30f6f10def4f7dc076acd08d90",
+      "files": 2283,
+      "crc_passed": true
+    },
+    "source": {
+      "sha256": "f4246251d37211330028b24341d85feb840c921b75251b993eab8a244469f6f9",
+      "files": 100,
+      "crc_passed": true
+    },
+    "source_matches_workspace": true,
+    "bundled_docs_match": true,
+    "acceptance_complete": false
+  },
+  "automated_tests_passed": 346,
+  "checks": {
+    "live-rules": {
+      "passed": true,
+      "error": "",
+      "seconds": 4.7451852
+    },
+    "operations": {
+      "passed": true,
+      "error": "",
+      "seconds": 8.5975047
+    },
+    "minute": {
+      "passed": true,
+      "error": "",
+      "seconds": 16.4923693
+    },
+    "catalog": {
+      "passed": true,
+      "error": "",
+      "seconds": 16.8711298
+    },
+    "status": {
+      "passed": false,
+      "error": "历史状态资料服务已关闭连接，未返回完整响应；请稍后重试。原规则未修改。",
+      "seconds": 6.6854496
+    },
+    "rules": {
+      "passed": true,
+      "error": "",
+      "seconds": 4.1202531
+    },
+    "learning": {
+      "passed": true,
+      "error": "",
+      "seconds": 11.8530048
+    },
+    "quality": {
+      "passed": true,
+      "error": "",
+      "seconds": 3.5817055
+    },
+    "backtest": {
+      "status": "COMPLETED",
+      "mode": "backtest",
+      "statistics": {
+        "equity": 121281.36,
+        "return": 0.21281360000000005,
+        "max_drawdown": 0.005594752707809958,
+        "fees": 103.84,
+        "trades": 13,
+        "realized": 12470.94,
+        "dividends_paid": 0.0,
+        "dividends_receivable": 0.0,
+        "profitable_sells": 0.8,
+        "benchmark_return": 0.15086206896551735
+      },
+      "orders": 13,
+      "trades": 13,
+      "engine_alive": true,
+      "window": [
+        1280,
+        760
+      ],
+      "device_pixel_ratio": 1.5,
+      "preview_rows": 180,
+      "preview_ready": true,
+      "trade_rows": 13,
+      "equity_rows": 0,
+      "equity_entries": 0,
+      "available_positions": {
+        "510300.SH": 6500,
+        "518880.SH": 3700,
+        "159915.SZ": 11900
+      }
+    },
+    "replay": {
+      "status": "COMPLETED",
+      "mode": "replay",
+      "statistics": {
+        "equity": 100291.71,
+        "return": 0.002917100000000117,
+        "max_drawdown": 0.0053202999999999445,
+        "fees": 58.99,
+        "trades": 22,
+        "realized": 497.76,
+        "dividends_paid": 0.0,
+        "dividends_receivable": 0.0,
+        "profitable_sells": 0.6666666666666666,
+        "benchmark_return": 0.008181818181818068
+      },
+      "orders": 8,
+      "trades": 22,
+      "engine_alive": true,
+      "window": [
+        1280,
+        760
+      ],
+      "device_pixel_ratio": 1.5,
+      "preview_rows": 360,
+      "preview_ready": true,
+      "trade_rows": 22,
+      "equity_rows": 0,
+      "equity_entries": 0,
+      "available_positions": {
+        "510300.SH": 0,
+        "159915.SZ": 0,
+        "518880.SH": 0
+      }
+    },
+    "equity": {
+      "status": "COMPLETED",
+      "mode": "backtest",
+      "statistics": {
+        "equity": 99993.99,
+        "return": -6.009999999989635E-05,
+        "max_drawdown": 6.009999999989635E-05,
+        "fees": 5.01,
+        "trades": 1,
+        "realized": 0.0,
+        "dividends_paid": 100.0,
+        "dividends_receivable": 0.0,
+        "profitable_sells": null,
+        "benchmark_return": -0.55
+      },
+      "orders": 1,
+      "trades": 1,
+      "engine_alive": true,
+      "window": [
+        1280,
+        760
+      ],
+      "device_pixel_ratio": 1.5,
+      "preview_rows": 5,
+      "preview_ready": true,
+      "trade_rows": 1,
+      "equity_rows": 2,
+      "equity_entries": 2,
+      "available_positions": {
+        "600000.SH": 200
+      }
+    }
+  },
+  "evidence": "output/release-check-20261114-224724",
+  "quote_connectivity_passed": true,
+  "one_hour_market_acceptance": false,
+  "historical_status_positive_acceptance": false,
+  "historical_status_failure_handled": true,
+  "source_preserved": true,
+  "remaining": [
+    "历史状态服务恢复后重新验证成功获取流程",
+    "开市连续一小时行情验收",
+    "实际首次使用者体验反馈",
+    "历史特殊交易规则与日历覆盖仍有限"
+  ],
+  "previous_verified_delivery": "交付记录.json"
+}

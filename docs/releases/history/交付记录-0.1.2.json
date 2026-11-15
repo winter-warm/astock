@@ -1,0 +1,25 @@
+{
+  "version": "0.1.2",
+  "created_at": "2026-11-13T22:16:12.5599047+08:00",
+  "status": "verified_patch_full_plan_in_progress",
+  "full_plan_complete": false,
+  "windows_package": "AStock-0.1.2-Windows-x64.zip",
+  "source_package": "AStock-0.1.2-source.zip",
+  "tests_passed": 72,
+  "lint_passed": true,
+  "source_matches_workspace": true,
+  "release_evidence": "output/release-check-20261113-221516/release-result.json",
+  "windows_sha256": "B76C53311F9C9710FF100B3EC5EE62394D420F66269014D2593CF3F810DEAE55",
+  "source_sha256": "4509C1CED0D6B473ECC4BF0CE420181FCEA2555C2432C6C35453DAF0C30EFB0F",
+  "public_quote_connectivity": true,
+  "one_hour_market_acceptance": false,
+  "live_input_evidence": "output/live-input-012/result.json",
+  "live_input_replay_evidence": "output/live-input-012/replay.json",
+  "coverage_audit": "docs/PLAN_COVERAGE.md",
+  "remaining_work": [
+    "数据集预览/导入异步化，长运行输入清单展示和多账户大数据响应测试",
+    "证券资料、规则日期范围、行情缺口诊断与分钟端点测试",
+    "权益事件现金与持仓流水守恒及完整新手操作路径验收",
+    "开市连续一小时行情验收、真实新用户反馈及 Windows 10 实机验证"
+  ]
+}

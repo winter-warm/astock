@@ -1,0 +1,24 @@
+{
+  "Name": [
+    "pyinstaller-hooks-contrib"
+  ],
+  "Version": [
+    "2026.10"
+  ],
+  "License-File": [
+    "LICENSE"
+  ],
+  "Home-page": [
+    "https://github.com/pyinstaller/pyinstaller-hooks-contrib"
+  ],
+  "Classifier": [
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "License :: OSI Approved :: Apache Software License",
+    "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3"
+  ]
+}

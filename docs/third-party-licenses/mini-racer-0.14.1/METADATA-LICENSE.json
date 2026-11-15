@@ -1,0 +1,27 @@
+{
+  "Name": [
+    "mini-racer"
+  ],
+  "Version": [
+    "0.14.1"
+  ],
+  "License-Expression": [
+    "ISC"
+  ],
+  "License-File": [
+    "LICENSE",
+    "AUTHORS.md"
+  ],
+  "Project-URL": [
+    "Homepage, https://github.com/bpcreech/PyMiniRacer"
+  ],
+  "Author-email": [
+    "bpcreech <mini-racer@bpcreech.com>, Sqreen <support@sqreen.com>"
+  ],
+  "Classifier": [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "snapshot_digest": "9dfc6f109d37411fe1a98462f7057560df2b080c45c979e479d519d293c42669",
+  "evidence": {
+    "content": {
+      "report": "output/tutorial-release-20261115-222453/content.json",
+      "sha256": "cf284e807e30ddcdcd3bb86a327b64b8ded08849907ba8d2dca33825a8500d39"
+    },
+    "interface_coverage": {
+      "report": "output/tutorial-release-20261115-222453/interface_coverage.json",
+      "sha256": "73d2aa8ff9f10f9f7c1b205c3ae7d532cd3dac6ebd48d5185ae7bed39c394ffd"
+    },
+    "gui": {
+      "report": "output/tutorial-release-20261115-222453/gui.json",
+      "sha256": "1f8c04edf4f760174e82cdac62d06503c63d3c9357c17cc7d3b93d7a91e2073e"
+    },
+    "regression": {
+      "report": "output/tutorial-release-20261115-222453/regression.json",
+      "sha256": "57348cdcf499c74341352f9ab5a4a8376f53b224aee866378a42a990431303fb"
+    },
+    "notebooks": {
+      "report": "output/tutorial-release-20261115-222453/notebooks.json",
+      "sha256": "06a5a1456c106af2f49f4734ab856b60b020fea391425128c9755e806fc08258"
+    }
+  }
+}

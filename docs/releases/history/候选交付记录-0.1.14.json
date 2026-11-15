@@ -1,0 +1,44 @@
+{
+  "version": "0.1.14",
+  "status": "candidate_offline_and_quote_probe_verified",
+  "full_plan_complete": false,
+  "windows_package": "AStock-0.1.14-Windows-x64.zip",
+  "source_package": "AStock-0.1.14-source.zip",
+  "integrity": {
+    "Windows-x64": {
+      "sha256": "27c3ef3a06f98b208552bd1637c7f7e9c42db34cc68c92e68db9f37c0acaa026",
+      "files": 2283,
+      "crc_passed": true
+    },
+    "source": {
+      "sha256": "7493d6f046c16c8babc5d7b4b71fc04f89949fad64580e6ac1483381bdc4024e",
+      "files": 101,
+      "crc_passed": true
+    },
+    "source_matches_workspace": true,
+    "bundled_docs_match": true,
+    "acceptance_complete": false
+  },
+  "automated_tests_passed": 358,
+  "test_log": "output/test-market-gate-full.log",
+  "build_log": "output/build-014.log",
+  "release_evidence": "output/release-check-20261114-225937/release-result.json",
+  "market_evidence": "output/release-check-20261114-225937/market-validation.json",
+  "quote_connectivity_passed": true,
+  "one_hour_market_acceptance": false,
+  "historical_status_positive_acceptance_this_release": false,
+  "external_workflows_retested": [
+    "腾讯报价连通与新增验收字段",
+    "BaoStock历史状态获取：服务关闭连接，失败提示与原资料保护通过，成功流程未通过"
+  ],
+  "remaining": [
+    "历史状态资料服务成功获取流程重新验收",
+    "开市连续一小时采集验收",
+    "实际新手体验反馈",
+    "特殊历史规则与日历覆盖边界"
+  ],
+  "previous_formal_record": "交付记录.json",
+  "historical_status_evidence": "output/release-check-20261114-225937/status/status-result.json",
+  "historical_status_failure_handled": true,
+  "historical_status_source_preserved": true
+}

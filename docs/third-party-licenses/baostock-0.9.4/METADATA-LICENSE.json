@@ -1,0 +1,29 @@
+{
+  "Name": [
+    "baostock"
+  ],
+  "Version": [
+    "0.9.4"
+  ],
+  "License": [
+    "BSD License"
+  ],
+  "Home-page": [
+    "http://www.baostock.com"
+  ],
+  "Author": [
+    "baostock"
+  ],
+  "Author-email": [
+    "baostock@163.com"
+  ],
+  "Classifier": [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Software Development :: Libraries"
+  ]
+}

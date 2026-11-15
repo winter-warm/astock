@@ -1,0 +1,58 @@
+{
+  "basic": [
+    {
+      "code": "sh.600654",
+      "code_name": "中安科",
+      "ipoDate": "1990-12-19",
+      "outDate": "",
+      "type": "1",
+      "status": "1"
+    }
+  ],
+  "days": [
+    {
+      "date": "2024-06-20",
+      "code": "sh.600654",
+      "tradestatus": "1",
+      "isST": "1"
+    },
+    {
+      "date": "2024-06-21",
+      "code": "sh.600654",
+      "tradestatus": "1",
+      "isST": "1"
+    },
+    {
+      "date": "2024-06-24",
+      "code": "sh.600654",
+      "tradestatus": "1",
+      "isST": "1"
+    },
+    {
+      "date": "2024-06-25",
+      "code": "sh.600654",
+      "tradestatus": "0",
+      "isST": "1"
+    },
+    {
+      "date": "2024-06-26",
+      "code": "sh.600654",
+      "tradestatus": "1",
+      "isST": "0"
+    },
+    {
+      "date": "2024-06-27",
+      "code": "sh.600654",
+      "tradestatus": "1",
+      "isST": "0"
+    },
+    {
+      "date": "2024-06-28",
+      "code": "sh.600654",
+      "tradestatus": "1",
+      "isST": "0"
+    }
+  ],
+  "announcement": "https://static.cninfo.com.cn/finalpage/2024-06-25/1220444804.PDF",
+  "observed_at": "2026-11-14"
+}

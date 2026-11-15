@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "static": {
+    "exit_code": 0,
+    "log": "output/tutorial-release-20261115-173811/control-registration.log",
+    "sha256": "9f5cee1d9bf9ffb2c73badb802db5d57a298dd268c6c17e72739ed40c1df5d66"
+  },
+  "matrices": [
+    {
+      "case": "dark-1.25-1280",
+      "exit_code": 0,
+      "log": "output/tutorial-release-20261115-173811/dark-1.25-1280.log",
+      "sha256": "b73495d1320449ff18d9266dd71b71a96fe0153cd0269656032dd3ee76b389e1",
+      "report": "output\\tutorial-release-20261115-173811\\dark-1.25-1280\\interface-report.json",
+      "passed": true,
+      "surfaces": 77,
+      "observed": 256,
+      "uncovered": [],
+      "missing_targets": []
+    },
+    {
+      "case": "light-1.25-1100",
+      "exit_code": 0,
+      "log": "output/tutorial-release-20261115-173811/light-1.25-1100.log",
+      "sha256": "b73495d1320449ff18d9266dd71b71a96fe0153cd0269656032dd3ee76b389e1",
+      "report": "output\\tutorial-release-20261115-173811\\light-1.25-1100\\interface-report.json",
+      "passed": true,
+      "surfaces": 77,
+      "observed": 256,
+      "uncovered": [],
+      "missing_targets": []
+    },
+    {
+      "case": "dark-1.5-1100",
+      "exit_code": 0,
+      "log": "output/tutorial-release-20261115-173811/dark-1.5-1100.log",
+      "sha256": "b73495d1320449ff18d9266dd71b71a96fe0153cd0269656032dd3ee76b389e1",
+      "report": "output\\tutorial-release-20261115-173811\\dark-1.5-1100\\interface-report.json",
+      "passed": true,
+      "surfaces": 77,
+      "observed": 256,
+      "uncovered": [],
+      "missing_targets": []
+    },
+    {
+      "case": "light-1.5-1280",
+      "exit_code": 0,
+      "log": "output/tutorial-release-20261115-173811/light-1.5-1280.log",
+      "sha256": "b73495d1320449ff18d9266dd71b71a96fe0153cd0269656032dd3ee76b389e1",
+      "report": "output\\tutorial-release-20261115-173811\\light-1.5-1280\\interface-report.json",
+      "passed": true,
+      "surfaces": 77,
+      "observed": 256,
+      "uncovered": [],
+      "missing_targets": []
+    }
+  ],
+  "uncovered": [],
+  "missing_targets": [],
+  "snapshot_digest": "e83b4f1eccb7fc356f41b29e318bcb6696a91ceeb68e0008c5c32912a46d328e"
+}

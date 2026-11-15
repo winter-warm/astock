@@ -1,0 +1,43 @@
+{
+  "Name": [
+    "pytest"
+  ],
+  "Version": [
+    "9.2.0"
+  ],
+  "License-Expression": [
+    "MIT"
+  ],
+  "License-File": [
+    "LICENSE"
+  ],
+  "Project-URL": [
+    "Changelog, https://docs.pytest.org/en/stable/changelog.html",
+    "Contact, https://docs.pytest.org/en/stable/contact.html",
+    "Funding, https://docs.pytest.org/en/stable/sponsor.html",
+    "Homepage, https://docs.pytest.org/en/latest/",
+    "Source, https://github.com/pytest-dev/pytest",
+    "Tracker, https://github.com/pytest-dev/pytest/issues"
+  ],
+  "Author": [
+    "Brianna Laugher, Bruno Oliveira, Floris Bruynooghe, Freya Bruhin, Holger Krekel, Others (See AUTHORS), Ronny Pfannschmidt"
+  ],
+  "Classifier": [
+    "Development Status :: 6 - Mature",
+    "Intended Audience :: Developers",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Utilities"
+  ]
+}

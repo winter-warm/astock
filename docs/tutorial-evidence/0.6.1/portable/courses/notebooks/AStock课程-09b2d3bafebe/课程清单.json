@@ -1,0 +1,506 @@
+[
+  {
+    "id": "q01",
+    "title": "01 把交易经验写成可检验的规则",
+    "file": "q01.ipynb",
+    "version": 2,
+    "sha256": "6188e2217b889070e468ac0b4ddc5090351a1b1368db673f01addab1e00fb17f"
+  },
+  {
+    "id": "q02",
+    "title": "02 数据、信号与成交的时间关系",
+    "file": "q02.ipynb",
+    "version": 2,
+    "sha256": "a175f7b4111bdea308191bf6cac5ff10871501030106db49111e3e91093c9650"
+  },
+  {
+    "id": "q03",
+    "title": "03 Python 与 C++ 的关键差异",
+    "file": "q03.ipynb",
+    "version": 2,
+    "sha256": "58ea3b0b223406ad854ab84a39ba51e61dab24870bf36f8f32d12e55578b0efe"
+  },
+  {
+    "id": "q04",
+    "title": "04 函数、类与策略回调",
+    "file": "q04.ipynb",
+    "version": 2,
+    "sha256": "31b3bbdb87014a61915ce092d4436ab5d53db0a6784548822193d563810fa8a0"
+  },
+  {
+    "id": "q05",
+    "title": "05 运行和调试 Python 项目",
+    "file": "q05.ipynb",
+    "version": 2,
+    "sha256": "96f747dfb7f740375f9dfa7a5745b2afca646eed2e6e46ac5f36dd9ea0282a39"
+  },
+  {
+    "id": "q06",
+    "title": "06 编写第一份 AStock 策略",
+    "file": "q06.ipynb",
+    "version": 2,
+    "sha256": "67b60a7332412b244863a215234cbb72b63d7eedbe85cee6ae35d240f947733f"
+  },
+  {
+    "id": "q07",
+    "title": "07 NumPy 数组",
+    "file": "q07.ipynb",
+    "version": 2,
+    "sha256": "07d1ccf7df3ffd77f95929f50276696f764c7e498972f67d87d50f40b9d65ffc"
+  },
+  {
+    "id": "q08",
+    "title": "08 pandas 表格",
+    "file": "q08.ipynb",
+    "version": 2,
+    "sha256": "7894c4ab9e589a212f665960d98558ea91dbb406d77cfd1f8c2c8876d0e5068b"
+  },
+  {
+    "id": "q09",
+    "title": "09 CSV 与日期",
+    "file": "q09.ipynb",
+    "version": 2,
+    "sha256": "f590805d263286b13dff7128a2e8e5e0e78c9116df52d17b5419c5be8940bee8"
+  },
+  {
+    "id": "q10",
+    "title": "10 缺失数据与多证券对齐",
+    "file": "q10.ipynb",
+    "version": 2,
+    "sha256": "a66d307291b1a6f271852e7783ffc68567d419b453b0326182da00369e1f2367"
+  },
+  {
+    "id": "q11",
+    "title": "11 滚动计算与时间移动",
+    "file": "q11.ipynb",
+    "version": 2,
+    "sha256": "add1da6d07224d25a48efdb722c93ecc9c47c2fbee3eb179b3a79714e0d96adb"
+  },
+  {
+    "id": "q12",
+    "title": "12 真实数据与复权",
+    "file": "q12.ipynb",
+    "version": 2,
+    "sha256": "54f9f9be7d5280218ca7452f815647afe2a4a71bfaaa2009748d83034097825c"
+  },
+  {
+    "id": "q13",
+    "title": "13 收益率与复利",
+    "file": "q13.ipynb",
+    "version": 2,
+    "sha256": "a58c85200e08aed13bca75afd53a77b443a7e55df9528ce6a64c15dd8bdc3982"
+  },
+  {
+    "id": "q14",
+    "title": "14 描述统计",
+    "file": "q14.ipynb",
+    "version": 2,
+    "sha256": "f7bcb51be56b6ea4f036a326d334d6799ee0e617cf859594c803d598277b5936"
+  },
+  {
+    "id": "q15",
+    "title": "15 相关性",
+    "file": "q15.ipynb",
+    "version": 2,
+    "sha256": "930a334dea2b8828bd3742cfed89e57ec98a9e23769c65e25163e86dc5afd3a7"
+  },
+  {
+    "id": "q16",
+    "title": "16 净值、基准与年化",
+    "file": "q16.ipynb",
+    "version": 2,
+    "sha256": "70c8aa4f6bf3eb629c169da2d2960f1db5647a0292df33811d2b9859273445de"
+  },
+  {
+    "id": "q17",
+    "title": "17 回撤、波动与夏普",
+    "file": "q17.ipynb",
+    "version": 2,
+    "sha256": "545944440a0cb63dbd942c6f6363372b29ed97b2ceec2046fd1f615d83c10d35"
+  },
+  {
+    "id": "q18",
+    "title": "18 胜率、盈亏比与成本",
+    "file": "q18.ipynb",
+    "version": 2,
+    "sha256": "eecd7369b6d23a7dba4c9c252db19900a0cafac3f6d55c1113171b49a581d8d3"
+  },
+  {
+    "id": "q19",
+    "title": "19 K 线表示什么",
+    "file": "q19.ipynb",
+    "version": 2,
+    "sha256": "ec804a789b04932c3165c69d6f0f4ec0218fddfe9fd051b36b0a0cab103accaf"
+  },
+  {
+    "id": "q20",
+    "title": "20 趋势与价格位置",
+    "file": "q20.ipynb",
+    "version": 2,
+    "sha256": "bdd09ab2cc6836650e361755628377dce698b26dc9e2b8d583bfbe01f91afcaf"
+  },
+  {
+    "id": "q21",
+    "title": "21 MA 与 EMA",
+    "file": "q21.ipynb",
+    "version": 2,
+    "sha256": "97e2476ff676ff3b953629f7c18b43e99a8f214c97cf60a6ca467b1095f0dcc0"
+  },
+  {
+    "id": "q22",
+    "title": "22 MACD",
+    "file": "q22.ipynb",
+    "version": 2,
+    "sha256": "fdaa2dbfa9ff108093662b4af62f7507fc465791e0757e633767fa412568013c"
+  },
+  {
+    "id": "q23",
+    "title": "23 RSI",
+    "file": "q23.ipynb",
+    "version": 2,
+    "sha256": "f62418ac2c77e44b8a6a8e998e7c5f02a0888abe35a227b8eca9c2a357c95e5d"
+  },
+  {
+    "id": "q24",
+    "title": "24 KDJ",
+    "file": "q24.ipynb",
+    "version": 2,
+    "sha256": "42f3b51bb0c10c524096dbdc900ebfb22941e64c22c858051602cd516d3d1b1f"
+  },
+  {
+    "id": "q25",
+    "title": "25 布林带",
+    "file": "q25.ipynb",
+    "version": 2,
+    "sha256": "63e15a06263d2c67b21b16d9a2a561a5c4b9f73dd1c4301f9608bee5809d04a8"
+  },
+  {
+    "id": "q26",
+    "title": "26 ATR",
+    "file": "q26.ipynb",
+    "version": 2,
+    "sha256": "3f29f67d98378baf14ffdd45716ce8275f57b1bc82f39f6304e66b2f5f597c3b"
+  },
+  {
+    "id": "q27",
+    "title": "27 成交量、量比与 OBV",
+    "file": "q27.ipynb",
+    "version": 2,
+    "sha256": "6b241beea1ddf76de613f7efbb4bb5e7ee12c24a0d95d364778e60851e0bf535"
+  },
+  {
+    "id": "q28",
+    "title": "28 指标组合与冲突",
+    "file": "q28.ipynb",
+    "version": 2,
+    "sha256": "ec4b29536296a2262dcbf0c297eca4d52ca81696afdf44225a8f8d8b129b5c0c"
+  },
+  {
+    "id": "q29",
+    "title": "29 双均线趋势",
+    "file": "q29.ipynb",
+    "version": 1,
+    "sha256": "addeea52c12e9e74703eb8582a84c7fe29f3a021a4e39689671f2e08b13b0511"
+  },
+  {
+    "id": "q30",
+    "title": "30 通道突破",
+    "file": "q30.ipynb",
+    "version": 1,
+    "sha256": "ff7887b172d0dd4c64199096ee97f6bae57a9e849fa83ecc530957ce276841de"
+  },
+  {
+    "id": "q31",
+    "title": "31 布林带均值回归",
+    "file": "q31.ipynb",
+    "version": 1,
+    "sha256": "033bf8755df57f8eab4be28f7e224a574c9d3e921aa0db2b026399d6e20f1605"
+  },
+  {
+    "id": "q32",
+    "title": "32 RSI 与趋势过滤",
+    "file": "q32.ipynb",
+    "version": 1,
+    "sha256": "3fc12f6356d95895005af87dabb10efc6bb6e0840e57468d9739e6f6d74eb4b3"
+  },
+  {
+    "id": "q33",
+    "title": "33 ETF 动量轮动",
+    "file": "q33.ipynb",
+    "version": 1,
+    "sha256": "ec69a244b01f5d9118d47999ccf4bd78dc44acf1e35906a31f551fed927bdc97"
+  },
+  {
+    "id": "q34",
+    "title": "34 信号确认与减少反复交易",
+    "file": "q34.ipynb",
+    "version": 1,
+    "sha256": "42d5fd3d186cad2656f44edb128e4e30634ea2ce9cc7d366d0d928feaeaff96a"
+  },
+  {
+    "id": "q35",
+    "title": "35 不同行情中的策略表现",
+    "file": "q35.ipynb",
+    "version": 1,
+    "sha256": "7f3718b28d647f15b7028694cc203ec5b7d0f74bcd3bbd7c83330500fa54daa3"
+  },
+  {
+    "id": "q36",
+    "title": "36 组合规则与消融实验",
+    "file": "q36.ipynb",
+    "version": 1,
+    "sha256": "41c47c485e7ed9a69b11efc0605457a5116e7d16922c7cdff6f7932c1551d392"
+  },
+  {
+    "id": "q37",
+    "title": "37 亲手写回测器",
+    "file": "q37.ipynb",
+    "version": 1,
+    "sha256": "f257702ff00222a938c4fad5606cbc032b672266bb23041fd690b086acbbf4d8"
+  },
+  {
+    "id": "q38",
+    "title": "38 事件驱动回测",
+    "file": "q38.ipynb",
+    "version": 1,
+    "sha256": "7e4373cbb83cd46728ed7c330f3d2f5282d6e58b14b529fa1edb68a45afc8ec9"
+  },
+  {
+    "id": "q39",
+    "title": "39 成交模型",
+    "file": "q39.ipynb",
+    "version": 1,
+    "sha256": "bcbca6676124f09e8a10ddadcc34193827b83c670b456654165055136fd7d9f0"
+  },
+  {
+    "id": "q40",
+    "title": "40 识别回测作弊",
+    "file": "q40.ipynb",
+    "version": 1,
+    "sha256": "45d17882887863748968a5a31734e50a8855f095858427f086b49b158333eaaf"
+  },
+  {
+    "id": "q41",
+    "title": "41 样本外检验与参数稳定性",
+    "file": "q41.ipynb",
+    "version": 1,
+    "sha256": "142374791db1f8d0ae0dcb5fe29eaf953c55041056b72ff191b69562f1ee82d8"
+  },
+  {
+    "id": "q42",
+    "title": "42 跨框架结果对照",
+    "file": "q42.ipynb",
+    "version": 1,
+    "sha256": "3039101c9c1ea01b61e984c7ac037365583b56d021fb90c849589483282bfd24"
+  },
+  {
+    "id": "q43",
+    "title": "43 一笔交易买多少",
+    "file": "q43.ipynb",
+    "version": 1,
+    "sha256": "154b864d4b3bf1431c6de9a8fc60e2ace37fda6bf6d7af8cd1ca1732e3fb0c2b"
+  },
+  {
+    "id": "q44",
+    "title": "44 止损与退出",
+    "file": "q44.ipynb",
+    "version": 1,
+    "sha256": "8ed31b326f3020f1aa789530aa514d24b20c8e3e5673df4634b4b9e621c2d5e9"
+  },
+  {
+    "id": "q45",
+    "title": "45 投资组合",
+    "file": "q45.ipynb",
+    "version": 1,
+    "sha256": "d4187f102d09caed88b2b8bcbab4e08cd5a145f0cff7769127703d6152be130d"
+  },
+  {
+    "id": "q46",
+    "title": "46 再平衡与换手",
+    "file": "q46.ipynb",
+    "version": 1,
+    "sha256": "2345d5b85388357f843cb33e1eac1814b08c28ea23d434a6dce2d5c3c8d9ea9f"
+  },
+  {
+    "id": "q47",
+    "title": "47 回撤控制与压力测试",
+    "file": "q47.ipynb",
+    "version": 1,
+    "sha256": "dc81fcaf0ad50dd1786a0716c5173517ceabb7a4247994022f8f087f87e93398"
+  },
+  {
+    "id": "q48",
+    "title": "48 基础综合项目",
+    "file": "q48.ipynb",
+    "version": 1,
+    "sha256": "c4ec7ebcf22cfc7a7f2f461784ded8a948411806591ecadfb7bc2ccaeea422b8"
+  },
+  {
+    "id": "q49",
+    "title": "49 指标、因子与排序",
+    "file": "q49.ipynb",
+    "version": 1,
+    "sha256": "723cb20ef72e1d3d0929e90e1ca0aa62f1f1ea272a4c086f8aa5780b8f267040"
+  },
+  {
+    "id": "q50",
+    "title": "50 价量因子",
+    "file": "q50.ipynb",
+    "version": 1,
+    "sha256": "f98b904488a23bbc0c2dd35f1426e4e40ba29cfb1162a11c23d20fc4048fc625"
+  },
+  {
+    "id": "q51",
+    "title": "51 基本面与公告时点",
+    "file": "q51.ipynb",
+    "version": 1,
+    "sha256": "1eaa7d399a31b3674349edf2c1980d93401b596631f6a10dfe2ec5102ae01a84"
+  },
+  {
+    "id": "q52",
+    "title": "52 因子预处理",
+    "file": "q52.ipynb",
+    "version": 1,
+    "sha256": "347da35f7df82e9127030134a22de22b75c3e40905beaf3b90d32f887aee3f0d"
+  },
+  {
+    "id": "q53",
+    "title": "53 IC 与分组评价",
+    "file": "q53.ipynb",
+    "version": 1,
+    "sha256": "1439edc82ed3c476b95b0cf31f676b9bf2167bf7ca3cac26b62fff8a52371963"
+  },
+  {
+    "id": "q54",
+    "title": "54 多因子项目",
+    "file": "q54.ipynb",
+    "version": 1,
+    "sha256": "46042d00da6f7a7064cb13dbba00dc9e3e0d0597d277eb463f01698f8880f1ae"
+  },
+  {
+    "id": "q55",
+    "title": "55 任务与标签",
+    "file": "q55.ipynb",
+    "version": 1,
+    "sha256": "c286ddc457ef8781636bd3d98581200532df698de5545be4efd4aa08b65a4846"
+  },
+  {
+    "id": "q56",
+    "title": "56 特征工程与泄漏",
+    "file": "q56.ipynb",
+    "version": 1,
+    "sha256": "5c726707bd652ea9978c16863b5b35e1b5bb85316eea230c459fee41a5a80fba"
+  },
+  {
+    "id": "q57",
+    "title": "57 简单基线",
+    "file": "q57.ipynb",
+    "version": 1,
+    "sha256": "f9169dd0a87d4eb98e0c166299d00a6fd501269f250e55f54df8c99f707cb055"
+  },
+  {
+    "id": "q58",
+    "title": "58 树模型与集成",
+    "file": "q58.ipynb",
+    "version": 1,
+    "sha256": "8d7b4d16f723f34980c5564021b4b68300e5f0535b281f650f46712ea9068ca4"
+  },
+  {
+    "id": "q59",
+    "title": "59 时间序列验证",
+    "file": "q59.ipynb",
+    "version": 1,
+    "sha256": "f9f1cc54f7be47c613ffe96658251fb09e5d6afbdf55531baa0f3017d07c98b2"
+  },
+  {
+    "id": "q60",
+    "title": "60 预测转持仓",
+    "file": "q60.ipynb",
+    "version": 1,
+    "sha256": "afe6a5b6e40a9ef21374b8854effbc5e1e80328bd0111a12306c78a0fd3524ef"
+  },
+  {
+    "id": "q61",
+    "title": "61 PyTorch 训练流程",
+    "file": "q61.ipynb",
+    "version": 1,
+    "sha256": "0f5837610d7c3911c98a277014863d478afb4cd61ae2980cd377067c83018a4e"
+  },
+  {
+    "id": "q62",
+    "title": "62 构造序列样本",
+    "file": "q62.ipynb",
+    "version": 1,
+    "sha256": "44176400674b1155aaa425264bc8734393ec25cf1bb4d099ec691bcc3769e0af"
+  },
+  {
+    "id": "q63",
+    "title": "63 MLP",
+    "file": "q63.ipynb",
+    "version": 1,
+    "sha256": "06bf50ecb60eaed582ab150e15cfbb589702fe89a1a049ef53b183e9cfd3f972"
+  },
+  {
+    "id": "q64",
+    "title": "64 LSTM",
+    "file": "q64.ipynb",
+    "version": 1,
+    "sha256": "8226ac76599fe8c3a902d09a2b59d76548d02eb1c8d1009910d7a8459b6631fe"
+  },
+  {
+    "id": "q65",
+    "title": "65 Attention 与 Transformer",
+    "file": "q65.ipynb",
+    "version": 1,
+    "sha256": "e8e097489948c340cce171ac3e49feb111a6bf4a860929a8c485772945414ed0"
+  },
+  {
+    "id": "q66",
+    "title": "66 模型对照实验",
+    "file": "q66.ipynb",
+    "version": 1,
+    "sha256": "72a99806f35c7ad1b62e3287760fcb10b27808bba6e33003425a71f4c08d9254"
+  },
+  {
+    "id": "q67",
+    "title": "67 大模型的用途",
+    "file": "q67.ipynb",
+    "version": 1,
+    "sha256": "9d6f5763adafed81515dbfef3b5092f917d2473ff34445e2b130197f39d92ebd"
+  },
+  {
+    "id": "q68",
+    "title": "68 可检验的研究假设",
+    "file": "q68.ipynb",
+    "version": 1,
+    "sha256": "d32272f8d977b32858d0d93ae2588083b3291add6b9f7ba8e7786e7c52ccd517"
+  },
+  {
+    "id": "q69",
+    "title": "69 生成代码与检查",
+    "file": "q69.ipynb",
+    "version": 1,
+    "sha256": "641974e2588c53b43eb2643739f53f8abe6a62c706fca53e037b1baf4a47469c"
+  },
+  {
+    "id": "q70",
+    "title": "70 建立评估流程",
+    "file": "q70.ipynb",
+    "version": 1,
+    "sha256": "53e158172986c184896f5bf6706636321350131f9a41f0aae38ef0cfe2528ba2"
+  },
+  {
+    "id": "q71",
+    "title": "71 多智能体研究循环",
+    "file": "q71.ipynb",
+    "version": 1,
+    "sha256": "01328406dccf7298318c5f05c6211f081f1b4c41128f48bcacf149b0e698b7ed"
+  },
+  {
+    "id": "q72",
+    "title": "72 毕业项目",
+    "file": "q72.ipynb",
+    "version": 1,
+    "sha256": "a828859f28bd731215f99206c5e7c541a306a2ef2544e00c10fcb3c3753a9398"
+  }
+]
